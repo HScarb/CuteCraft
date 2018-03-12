@@ -1,0 +1,188 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scripts/Unit.gd" type="Script" id=1]
+[ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=2]
+[ext_resource path="res://addons/net.kivano.fsm/assets/ico2d.png" type="Texture" id=3]
+[ext_resource path="res://FSM/states/STAND/STAND.tscn" type="PackedScene" id=4]
+[ext_resource path="res://FSM/states/ATTACK/ATTACK.tscn" type="PackedScene" id=5]
+[ext_resource path="res://FSM/states/DEAD/DEAD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://FSM/states/MOVE/MOVE.tscn" type="PackedScene" id=7]
+[ext_resource path="res://FSM/states/IDLE/IDLE.tscn" type="PackedScene" id=8]
+[ext_resource path="res://FSM/transitions/on_idle/on_idle.tscn" type="PackedScene" id=9]
+[ext_resource path="res://FSM/transitions/on_idle_end/on_idle_end.tscn" type="PackedScene" id=10]
+[ext_resource path="res://FSM/transitions/on_attack/on_attack.tscn" type="PackedScene" id=11]
+[ext_resource path="res://FSM/transitions/on_attack_end/on_attack_end.tscn" type="PackedScene" id=12]
+[ext_resource path="res://FSM/transitions/on_move/on_move.tscn" type="PackedScene" id=13]
+[ext_resource path="res://FSM/transitions/on_move_end/on_move_end.tscn" type="PackedScene" id=14]
+[ext_resource path="res://FSM/transitions/on_die/on_die.tscn" type="PackedScene" id=15]
+[ext_resource path="res://frames/Zergling.tres" type="SpriteFrames" id=16]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="Unit" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pickable", "Transform" ]
+is_main_character = false
+sprite_frames = null
+face_angle = null
+face_direction = 5
+radius = null
+
+[node name="FSM2D" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
+script = ExtResource( 2 )
+_sections_unfolded = [ "Create new:" ]
+__meta__ = {
+"_editor_icon": ExtResource( 3 )
+}
+path2LogicRoot = NodePath("..")
+onlyActiveStateOnTheScene = false
+initManually = false
+updateMode = 1
+receiceSignalsOnly4ActiveStatesAndTransitions = true
+enableDebug = false
+"Initial state:" = ""
+"Create new:/Subdirectory for FSM nodes:" = "FSM"
+"Create new:/Create state with name:" = null
+"Create new:/Create transition with name:" = null
+GraphData = {
+"ATTACK": Vector2( 931, 444 ),
+"ATTACK_": Vector2( 931, 444 ),
+"ATTACK__": Vector2( 931, 444 ),
+"DEAD": Vector2( 415, 793 ),
+"DEAD_": Vector2( 415, 793 ),
+"DEAD__": Vector2( 415, 793 ),
+"IDLE": Vector2( 489, 84 ),
+"IDLE_": Vector2( 489, 84 ),
+"IDLE__": Vector2( 489, 84 ),
+"MOVE": Vector2( 17, 430 ),
+"MOVE_": Vector2( 17, 430 ),
+"MOVE__": Vector2( 17, 430 ),
+"STAND": Vector2( 438, 442 ),
+"STAND_": Vector2( 438, 442 ),
+"STAND__": Vector2( 438, 442 ),
+"on_attack": Vector2( 750, 263 ),
+"on_attack_": Vector2( 750, 263 ),
+"on_attack__": Vector2( 694, 372 ),
+"on_attack_end": Vector2( 683, 482 ),
+"on_attack_end_": Vector2( 683, 482 ),
+"on_attack_end__": Vector2( 683, 482 ),
+"on_die": Vector2( 415, 604 ),
+"on_die2": Vector2( 451, 639 ),
+"on_die2_": Vector2( 451, 639 ),
+"on_die2__": Vector2( 451, 639 ),
+"on_die_": Vector2( 415, 604 ),
+"on_die__": Vector2( 415, 604 ),
+"on_idle": Vector2( 382, 247 ),
+"on_idle_": Vector2( 382, 247 ),
+"on_idle__": Vector2( 382, 247 ),
+"on_idle_end": Vector2( 551, 258 ),
+"on_idle_end_": Vector2( 551, 258 ),
+"on_idle_end__": Vector2( 551, 258 ),
+"on_move": Vector2( 198, 342 ),
+"on_move_": Vector2( 198, 342 ),
+"on_move__": Vector2( 198, 342 ),
+"on_move_end": Vector2( 216, 515 ),
+"on_move_end_": Vector2( 216, 515 ),
+"on_move_end__": Vector2( 216, 515 ),
+"state1": Vector2( 310, 103 ),
+"state1_": Vector2( 310, 103 ),
+"state1__": Vector2( 310, 103 ),
+"state2": Vector2( 299, 425 ),
+"state2_": Vector2( 299, 425 ),
+"state2__": Vector2( 263, 422 ),
+"t_attack": Vector2( 722, 368 ),
+"t_attack_": Vector2( 722, 368 ),
+"t_attack__": Vector2( 722, 368 ),
+"t_die": Vector2( 127, 529 ),
+"t_die_": Vector2( 127, 529 ),
+"t_die__": Vector2( 127, 529 ),
+"t_idle": Vector2( 914, 525 ),
+"t_idle_": Vector2( 914, 525 ),
+"t_idle__": Vector2( 914, 525 ),
+"trans1": Vector2( 305, 267 ),
+"trans1_": Vector2( 305, 267 ),
+"trans1__": Vector2( 289, 249 ),
+"trans2": Vector2( 641, 256 ),
+"trans2_": Vector2( 641, 256 ),
+"trans2__": Vector2( 641, 256 )
+}
+
+[node name="States" type="Node2D" parent="FSM2D" index="0"]
+
+editor/display_folded = true
+
+[node name="STAND" parent="FSM2D/States" index="0" instance=ExtResource( 4 )]
+
+[node name="ATTACK" parent="FSM2D/States" index="1" instance=ExtResource( 5 )]
+
+[node name="DEAD" parent="FSM2D/States" index="2" instance=ExtResource( 6 )]
+
+[node name="MOVE" parent="FSM2D/States" index="3" instance=ExtResource( 7 )]
+
+[node name="IDLE" parent="FSM2D/States" index="4" instance=ExtResource( 8 )]
+
+[node name="Transitions" type="Node2D" parent="FSM2D" index="1"]
+
+editor/display_folded = true
+
+[node name="on_idle" parent="FSM2D/Transitions" index="0" instance=ExtResource( 9 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/STAND") ]
+path2TargetState = NodePath("../../States/IDLE")
+
+[node name="on_idle_end" parent="FSM2D/Transitions" index="1" instance=ExtResource( 10 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/IDLE") ]
+path2TargetState = NodePath("../../States/STAND")
+
+[node name="on_attack" parent="FSM2D/Transitions" index="2" instance=ExtResource( 11 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/STAND"), NodePath("../../States/IDLE"), NodePath("../../States/MOVE") ]
+path2TargetState = NodePath("../../States/ATTACK")
+
+[node name="on_attack_end" parent="FSM2D/Transitions" index="3" instance=ExtResource( 12 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/ATTACK") ]
+path2TargetState = NodePath("../../States/STAND")
+
+[node name="on_move" parent="FSM2D/Transitions" index="4" instance=ExtResource( 13 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/STAND") ]
+path2TargetState = NodePath("../../States/MOVE")
+
+[node name="on_move_end" parent="FSM2D/Transitions" index="5" instance=ExtResource( 14 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/MOVE") ]
+path2TargetState = NodePath("../../States/STAND")
+
+[node name="on_die" parent="FSM2D/Transitions" index="6" instance=ExtResource( 15 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/STAND"), NodePath("../../States/MOVE"), NodePath("../../States/ATTACK"), NodePath("../../States/IDLE") ]
+path2TargetState = NodePath("../../States/DEAD")
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( 0, -82 )
+frames = ExtResource( 16 )
+animation = "stand_5"
+frame = 3
+playing = true
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+
