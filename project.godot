@@ -11,12 +11,17 @@ config_version=3
 [application]
 
 config/name="CuteCraft"
-run/main_scene="res://dungeon.tscn"
+run/main_scene="res://scenes/MainScene.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]
 
 enabled=PoolStringArray( "ch.fischspiele.tilesethelper", "net.kivano.fsm" )
+
+[input]
+
+ui_attack=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
 
 [rendering]
 

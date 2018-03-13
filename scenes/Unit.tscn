@@ -22,7 +22,7 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Unit" type="KinematicBody2D"]
+[node name="Unit" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -38,7 +38,6 @@ radius = null
 
 [node name="FSM2D" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
 script = ExtResource( 2 )
 _sections_unfolded = [ "Create new:" ]
 __meta__ = {
@@ -175,7 +174,7 @@ path2TargetState = NodePath("../../States/DEAD")
 position = Vector2( 0, -82 )
 frames = ExtResource( 16 )
 animation = "stand_5"
-frame = 3
+frame = 2
 playing = true
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 

@@ -8,7 +8,7 @@ export(int,"north","north_east","east","south_east","south","south_west","west",
 
 export(float) var radius		# 内部半径
 
-const MOTION_SPEED = 260 # Pixels/second
+const MOTION_SPEED = 250 # Pixels/second
 
 # class member variables go here, for example:
 # var a = 2
@@ -62,5 +62,5 @@ func _physics_process(delta):
 		$AnimatedSprite.play("move_%d" % face_direction)
 	
 	motion = motion.normalized() * MOTION_SPEED
-
+	
 	move_and_slide(motion)
