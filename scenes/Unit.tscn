@@ -54,8 +54,8 @@ enableDebug = false
 "Create new:/Create state with name:" = null
 "Create new:/Create transition with name:" = null
 GraphData = {
-"ATTACK": Vector2( 931, 444 ),
-"ATTACK_": Vector2( 931, 444 ),
+"ATTACK": Vector2( 1078, 507 ),
+"ATTACK_": Vector2( 1078, 507 ),
 "ATTACK__": Vector2( 931, 444 ),
 "DEAD": Vector2( 415, 793 ),
 "DEAD_": Vector2( 415, 793 ),
@@ -118,8 +118,6 @@ GraphData = {
 
 [node name="States" type="Node2D" parent="FSM2D" index="0"]
 
-editor/display_folded = true
-
 [node name="STAND" parent="FSM2D/States" index="0" instance=ExtResource( 4 )]
 
 [node name="ATTACK" parent="FSM2D/States" index="1" instance=ExtResource( 5 )]
@@ -131,8 +129,6 @@ editor/display_folded = true
 [node name="IDLE" parent="FSM2D/States" index="4" instance=ExtResource( 8 )]
 
 [node name="Transitions" type="Node2D" parent="FSM2D" index="1"]
-
-editor/display_folded = true
 
 [node name="on_idle" parent="FSM2D/Transitions" index="0" instance=ExtResource( 9 )]
 
@@ -174,7 +170,6 @@ path2TargetState = NodePath("../../States/DEAD")
 position = Vector2( 0, -82 )
 frames = ExtResource( 16 )
 animation = "stand_5"
-frame = 2
 playing = true
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 

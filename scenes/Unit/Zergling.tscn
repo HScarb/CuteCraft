@@ -12,6 +12,5 @@ sprite_frames = ExtResource( 2 )
 
 frames = null
 animation = "move_4"
-frame = 0
 
 
