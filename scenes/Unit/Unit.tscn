@@ -34,7 +34,13 @@ is_main_character = false
 sprite_frames = null
 face_angle = null
 face_direction = 5
+life = 10
+life_max = 10
+enegy = 10
+enegy_max = 10
 radius = null
+speed = 3
+acceleration = 0
 
 [node name="FSM2D" type="Node2D" parent="." index="0"]
 
@@ -46,10 +52,10 @@ __meta__ = {
 path2LogicRoot = NodePath("..")
 onlyActiveStateOnTheScene = false
 initManually = false
-updateMode = 1
+updateMode = 2
 receiceSignalsOnly4ActiveStatesAndTransitions = true
 enableDebug = false
-"Initial state:" = ""
+"Initial state:" = "STAND"
 "Create new:/Subdirectory for FSM nodes:" = "FSM"
 "Create new:/Create state with name:" = null
 "Create new:/Create transition with name:" = null
@@ -118,6 +124,8 @@ GraphData = {
 
 [node name="States" type="Node2D" parent="FSM2D" index="0"]
 
+editor/display_folded = true
+
 [node name="STAND" parent="FSM2D/States" index="0" instance=ExtResource( 4 )]
 
 [node name="ATTACK" parent="FSM2D/States" index="1" instance=ExtResource( 5 )]
@@ -129,6 +137,8 @@ GraphData = {
 [node name="IDLE" parent="FSM2D/States" index="4" instance=ExtResource( 8 )]
 
 [node name="Transitions" type="Node2D" parent="FSM2D" index="1"]
+
+editor/display_folded = true
 
 [node name="on_idle" parent="FSM2D/Transitions" index="0" instance=ExtResource( 9 )]
 
@@ -170,6 +180,7 @@ path2TargetState = NodePath("../../States/DEAD")
 position = Vector2( 0, -82 )
 frames = ExtResource( 16 )
 animation = "stand_5"
+frame = 9
 playing = true
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
@@ -178,5 +189,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 scale = Vector2( 3, 3 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+
+[connection signal="animation_finished" from="AnimatedSprite" to="FSM2D/States/ATTACK" method="_on_AnimatedSprite_animation_finished"]
 
 

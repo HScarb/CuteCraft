@@ -183,27 +183,27 @@
 resource_name = "Zergling"
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
-"loop": false,
+"loop": true,
 "name": "attack_3",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": false,
+"loop": true,
 "name": "attack_1",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
-"loop": false,
+"loop": true,
 "name": "attack_2",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": false,
+"loop": true,
 "name": "attack_5s",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
-"loop": false,
+"loop": true,
 "name": "attack_0",
 "speed": 10.0
 }, {
@@ -303,27 +303,27 @@ animations = [ {
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 158 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ) ],
-"loop": false,
+"loop": true,
 "name": "attack_4",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ) ],
-"loop": false,
+"loop": true,
 "name": "attack_6",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ) ],
-"loop": false,
+"loop": true,
 "name": "attack_3s",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 170 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 173 ) ],
-"loop": false,
+"loop": true,
 "name": "attack_5",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ) ],
-"loop": false,
+"loop": true,
 "name": "attack_7",
 "speed": 10.0
 } ]

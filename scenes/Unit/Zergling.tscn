@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://scenes/Unit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Unit/Unit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://frames/Zergling.tres" type="SpriteFrames" id=2]
 
 [node name="Zergling" index="0" instance=ExtResource( 1 )]
@@ -12,5 +12,6 @@ sprite_frames = ExtResource( 2 )
 
 frames = null
 animation = "move_4"
+frame = 0
 
 

@@ -2,43 +2,31 @@ extends KinematicBody2D
 
 export(bool) var is_main_character = false
 
-export(SpriteFrames) var sprite_frames = null
-export(float) var face_angle
-export(int,"north","north_east","east","south_east","south","south_west","west","north_west") var face_direction = 5
+export(SpriteFrames) var sprite_frames = null		# 序列帧动画
+export(float) var face_angle						# 面向角度
+export(int,"north","north_east","east","south_east","south","south_west","west","north_west") var face_direction = 5		# 朝向
+export(int) var life = 10							# 生命值
+export(int) var life_max = 10						# 生命最大值
+export(int) var enegy = 10							# 能量
+export(int) var enegy_max = 10						# 能量最大值
+export(float) var radius							# 内部半径
+export(float) var speed = 3							# 移动速度
+export(float) var acceleration = 0					# 加速度
 
-export(float) var radius		# 内部半径
-
-const MOTION_SPEED = 250 # Pixels/second
-
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+var motion = Vector2()								# 真实移动向量
+var is_dead = false									# 是否死亡
+var is_moving = false								# 是否移动中
+var is_attacking = false							# 是否攻击中
+var is_idling = false								# 是否摸鱼中
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
 	$AnimatedSprite.frames = sprite_frames
 	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
 
 func _physics_process(delta):
 	if not is_main_character:
 		return
-	var motion = Vector2()
-	
-	if Input.is_action_pressed("ui_up"):
-		motion += Vector2(0, -1)
-	if Input.is_action_pressed("ui_down"):
-		motion += Vector2(0, 1)
-	if Input.is_action_pressed("ui_left"):
-		motion += Vector2(-1, 0)
-	if Input.is_action_pressed("ui_right"):
-		motion += Vector2(1, 0)
-	
+
 	if motion.x == 0 and motion.y < 0:
 		face_direction = 0
 	elif motion.x > 0 and motion.y < 0:
@@ -56,11 +44,26 @@ func _physics_process(delta):
 	elif motion.x < 0 and motion.y < 0:
 		face_direction = 7
 	
-	if motion.x == 0 and motion.y == 0:
-		$AnimatedSprite.play("stand_%d" % face_direction)
-	else:
-		$AnimatedSprite.play("move_%d" % face_direction)
-	
-	motion = motion.normalized() * MOTION_SPEED
-	
-	move_and_slide(motion)
+
+	motion = Vector2()
+
+# 获取武器的攻击间隔
+func get_attack_interval():
+	# 先简单处理
+	return 1.0
+
+# virtual
+func get_is_attacking():
+	if is_dead:
+		return false
+	pass
+
+# virtual
+func get_is_moving():
+	if is_dead:
+		return false
+
+# virtual
+func get_is_idling():
+	if is_dead:
+		return false
