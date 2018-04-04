@@ -7,8 +7,13 @@
 
 script = ExtResource( 2 )
 
+[node name="on_move_end" parent="FSM2D/Transitions" index="5"]
+
+path2TargetState = NodePath("../../States/STAND")
+
 [node name="AnimatedSprite" parent="." index="1"]
 
-frame = 1
+frames = null
+frame = 0
 
 

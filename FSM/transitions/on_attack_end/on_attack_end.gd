@@ -30,5 +30,4 @@ func prepare(inNewStateID, inArg0 = null, inArg1 = null, inArg2 = null):
 func transitionCondition(inDeltaTime, inParam0=null, inParam1=null, inParam2=null, inParam3=null, inParam4=null): 
 	#YOU MUST IMPLEMENT TRANSITION CONDITION CHECK HERE: Return true/false
 	# 玩家松开攻击按钮以及当次攻击动画播放完成
-	var ret = (not Input.is_action_pressed("ui_attack")) and (not logicRoot.get_node("AnimatedSprite").is_playing())
-	return ret;
+	return logicRoot.get_on_attack_end_condi()

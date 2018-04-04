@@ -63,7 +63,7 @@ GraphData = {
 "ATTACK": Vector2( 1078, 507 ),
 "ATTACK_": Vector2( 1078, 507 ),
 "ATTACK__": Vector2( 931, 444 ),
-"DEAD": Vector2( 415, 793 ),
+"DEAD": Vector2( 428, 804 ),
 "DEAD_": Vector2( 415, 793 ),
 "DEAD__": Vector2( 415, 793 ),
 "IDLE": Vector2( 489, 84 ),
@@ -72,7 +72,7 @@ GraphData = {
 "MOVE": Vector2( 17, 430 ),
 "MOVE_": Vector2( 17, 430 ),
 "MOVE__": Vector2( 17, 430 ),
-"STAND": Vector2( 438, 442 ),
+"STAND": Vector2( 443, 451 ),
 "STAND_": Vector2( 438, 442 ),
 "STAND__": Vector2( 438, 442 ),
 "on_attack": Vector2( 750, 263 ),
@@ -167,9 +167,6 @@ path2TargetState = NodePath("../../States/MOVE")
 
 [node name="on_move_end" parent="FSM2D/Transitions" index="5" instance=ExtResource( 14 )]
 
-path2SourceStates = [ NodePath(""), NodePath("../../States/MOVE") ]
-path2TargetState = NodePath("../../States/STAND")
-
 [node name="on_die" parent="FSM2D/Transitions" index="6" instance=ExtResource( 15 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/STAND"), NodePath("../../States/MOVE"), NodePath("../../States/ATTACK"), NodePath("../../States/IDLE") ]
@@ -180,7 +177,7 @@ path2TargetState = NodePath("../../States/DEAD")
 position = Vector2( 0, -82 )
 frames = ExtResource( 16 )
 animation = "stand_5"
-frame = 9
+frame = 6
 playing = true
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 

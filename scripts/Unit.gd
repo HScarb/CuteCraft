@@ -24,46 +24,41 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	if not is_main_character:
-		return
-
-	if motion.x == 0 and motion.y < 0:
-		face_direction = 0
-	elif motion.x > 0 and motion.y < 0:
-		face_direction = 1
-	elif motion.x > 0 and motion.y == 0:
-		face_direction = 2
-	elif motion.x > 0 and motion.y > 0:
-		face_direction = 3
-	elif motion.x == 0 and motion.y > 0:
-		face_direction = 4
-	elif motion.x < 0 and motion.y > 0:
-		face_direction = 5
-	elif motion.x < 0 and motion.y == 0:
-		face_direction = 6
-	elif motion.x < 0 and motion.y < 0:
-		face_direction = 7
-	
-
-	motion = Vector2()
+	pass
 
 # 获取武器的攻击间隔
 func get_attack_interval():
 	# 先简单处理
 	return 1.0
 
-# virtual
-func get_is_attacking():
+# virtual 攻击状态开启条件
+func get_on_attack_condi():
 	if is_dead:
 		return false
 	pass
 
-# virtual
-func get_is_moving():
+# virtual 攻击状态结束条件
+func get_on_attack_end_condi():
+	pass
+
+# virtual 移动状态开启条件
+func get_on_move_condi():
 	if is_dead:
 		return false
 
-# virtual
-func get_is_idling():
+# virtual 移动状态结束条件
+func get_on_move_end_condi():
+	return false
+
+# virtual 闲置状态开启条件
+func get_on_idle_condi():
 	if is_dead:
 		return false
+
+# virtual 闲置状态结束条件
+func get_on_idle_end_condi():
+	return false
+
+# virtual 死亡状态开启条件
+func get_on_die_condi():
+	return false

@@ -32,22 +32,39 @@ func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inA
 func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param4=null):
 	logicRoot.motion = Vector2()
 
+	# 设置motion
 	if Input.is_action_pressed("ui_up"):
-		motion += Vector2(0, -1)
+		logicRoot.motion += Vector2(0, -1)
 	if Input.is_action_pressed("ui_down"):
-		motion += Vector2(0, 1)
+		logicRoot.motion += Vector2(0, 1)
 	if Input.is_action_pressed("ui_left"):
-		motion += Vector2(-1, 0)
+		logicRoot.motion += Vector2(-1, 0)
 	if Input.is_action_pressed("ui_right"):
-		motion += Vector2(1, 0)
+		logicRoot.motion += Vector2(1, 0)
+
+	# 设置朝向
+	if logicRoot.motion.x == 0 and logicRoot.motion.y < 0:
+		logicRoot.face_direction = 0
+	elif logicRoot.motion.x > 0 and logicRoot.motion.y < 0:
+		logicRoot.face_direction = 1
+	elif logicRoot.motion.x > 0 and logicRoot.motion.y == 0:
+		logicRoot.face_direction = 2
+	elif logicRoot.motion.x > 0 and logicRoot.motion.y > 0:
+		logicRoot.face_direction = 3
+	elif logicRoot.motion.x == 0 and logicRoot.motion.y > 0:
+		logicRoot.face_direction = 4
+	elif logicRoot.motion.x < 0 and logicRoot.motion.y > 0:
+		logicRoot.face_direction = 5
+	elif logicRoot.motion.x < 0 and logicRoot.motion.y == 0:
+		logicRoot.face_direction = 6
+	elif logicRoot.motion.x < 0 and logicRoot.motion.y < 0:
+		logicRoot.face_direction = 7
 
 	# 播放动画
 	logicRoot.get_node("AnimatedSprite").play("move_%d" % logicRoot.face_direction)
 	# 移动
-	motion = motion.normalized() * Global.MOTION_SPEED
-	move_and_slide(motion)
-		
-	pass
+	logicRoot.motion = logicRoot.motion.normalized() * Global.MOTION_SPEED
+	logicRoot.move_and_slide(logicRoot.motion)
 
 #when exiting state
 func exit(toState=null):

@@ -29,7 +29,4 @@ func prepare(inNewStateID, inArg0 = null, inArg1 = null, inArg2 = null):
 
 func transitionCondition(inDeltaTime, inParam0=null, inParam1=null, inParam2=null, inParam3=null, inParam4=null): 
 	#YOU MUST IMPLEMENT TRANSITION CONDITION CHECK HERE: Return true/false
-	if logicRoot.is_dead:
-		return false
-	var ret = Input.is_action_pressed("ui_attack")
-	return ret;
+	return logicRoot.get_on_attack_condi()
