@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scripts/Unit.gd" type="Script" id=1]
 [ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=2]
@@ -15,14 +15,13 @@
 [ext_resource path="res://FSM/transitions/on_move/on_move.tscn" type="PackedScene" id=13]
 [ext_resource path="res://FSM/transitions/on_move_end/on_move_end.tscn" type="PackedScene" id=14]
 [ext_resource path="res://FSM/transitions/on_die/on_die.tscn" type="PackedScene" id=15]
-[ext_resource path="res://frames/Zergling.tres" type="SpriteFrames" id=16]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Unit" type="KinematicBody2D" index="0"]
+[node name="Unit" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -176,9 +175,7 @@ path2TargetState = NodePath("../../States/DEAD")
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
 position = Vector2( 0, -82 )
-frames = ExtResource( 16 )
-animation = "stand_2"
-frame = 1
+animation = "stand_4"
 playing = true
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
