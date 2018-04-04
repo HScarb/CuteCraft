@@ -28,7 +28,8 @@ func get_on_attack_condi():
 func get_on_attack_end_condi():
 	if is_dead:
 		return false
-	var ret = (not Input.is_action_pressed("ui_attack") and (not $AnimatedSprite.is_playing()))
+	var ret = (not Input.is_action_pressed("ui_attack")\
+			and (not $AnimatedSprite.is_playing()))
 	return ret
 
 # virtual 移动状态开启条件
@@ -53,7 +54,6 @@ func get_on_move_end_condi():
 		or Input.is_action_pressed("ui_left")\
 		or Input.is_action_pressed("ui_right"):
 		ret = false
-	print("on_move_end_condi: ", ret)
 	return ret
 
 # virtual 闲置状态开启条件
@@ -67,4 +67,5 @@ func get_on_idle_end_condi():
 
 # virtual 死亡状态开启条件
 func get_on_die_condi():
-	return false
+	# return life <= 0
+	return Input.is_action_pressed("ui_die")

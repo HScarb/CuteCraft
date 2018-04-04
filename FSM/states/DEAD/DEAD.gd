@@ -25,8 +25,16 @@ func stateInit(inParam1=null,inParam2=null,inParam3=null,inParam4=null, inParam5
 #when entering state, usually you will want to reset internal state here somehow
 func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inArg2=null):
 	print("enter DEAD")
+	randomize()
 	logicRoot.is_dead = true
-	pass
+	# 统计死亡动画个数
+	var frames = logicRoot.get_node("AnimatedSprite").frames
+	var death_anim_num = 0
+	while frames.has_animation("death_%d" % death_anim_num):
+		death_anim_num += 1
+	var i = randi() % death_anim_num
+	# 播放死亡动画
+	logicRoot.get_node("AnimatedSprite").play("death_%d" % i)
 
 #when updating state, paramx can be used only if updating fsm manually
 func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param4=null):
