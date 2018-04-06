@@ -7,10 +7,10 @@ path="res://.import/RoachDeath_03.png-d73940ce29237cdbd4d552b2d0b7c637.stex"
 [deps]
 
 source_file="res://images/Roach/Death/RoachDeath_03.png"
-source_md5="3b4e3e33398f50f92d7853d73902efd3"
+source_md5="13182911c20ce2c32f10c27c8d8d05f8"
 
 dest_files=[ "res://.import/RoachDeath_03.png-d73940ce29237cdbd4d552b2d0b7c637.stex" ]
-dest_md5="1cb6402a1b9668b64654eb0a70048395"
+dest_md5="d5d7c48ef17068dcf58187dcf56c3adb"
 
 [params]
 

@@ -7,10 +7,10 @@ path="res://.import/Stalker3AttackEtc_32.png-5f809c0556d189c935698cf97622cea3.st
 [deps]
 
 source_file="res://images/Stalker/Attack/Stalker3AttackEtc_32.png"
-source_md5="0f93be2c088e5912de294808053f54ae"
+source_md5="9eb0432240bfbdcdd014f46200f54418"
 
 dest_files=[ "res://.import/Stalker3AttackEtc_32.png-5f809c0556d189c935698cf97622cea3.stex" ]
-dest_md5="e596ef3db090dfd787a18b6723302259"
+dest_md5="360aeb89bfd6331a7919da65ad5a68dc"
 
 [params]
 

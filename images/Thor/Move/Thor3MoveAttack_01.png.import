@@ -7,10 +7,10 @@ path="res://.import/Thor3MoveAttack_01.png-b0ac19e9a389ff366909dd5ce72bc15e.stex
 [deps]
 
 source_file="res://images/Thor/Move/Thor3MoveAttack_01.png"
-source_md5="b0a92edf7b5ca5ee5601f9c7e93491fe"
+source_md5="db9e42fc0561953b59877958beffa071"
 
 dest_files=[ "res://.import/Thor3MoveAttack_01.png-b0ac19e9a389ff366909dd5ce72bc15e.stex" ]
-dest_md5="b27b2b9c56cbb083508c008197157411"
+dest_md5="6ecdb1f6fc237139d4060a7fb6e61162"
 
 [params]
 

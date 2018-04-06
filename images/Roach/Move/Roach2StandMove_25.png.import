@@ -7,10 +7,10 @@ path="res://.import/Roach2StandMove_25.png-618d72ea60b8eba365cf52111ea7fc74.stex
 [deps]
 
 source_file="res://images/Roach/Move/Roach2StandMove_25.png"
-source_md5="6d2fec213a34498955b24fad4730d1b6"
+source_md5="a281f3772a7eb4d45bf39cad591e85c6"
 
 dest_files=[ "res://.import/Roach2StandMove_25.png-618d72ea60b8eba365cf52111ea7fc74.stex" ]
-dest_md5="b5935da23a722372a56388278092b927"
+dest_md5="4f45014ae0b40186e312b9975be2bd97"
 
 [params]
 

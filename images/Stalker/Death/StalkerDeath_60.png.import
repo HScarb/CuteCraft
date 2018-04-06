@@ -7,7 +7,7 @@ path="res://.import/StalkerDeath_60.png-2019e5878cb84c5da716753de5deb90b.stex"
 [deps]
 
 source_file="res://images/Stalker/Death/StalkerDeath_60.png"
-source_md5="59cf9b3448f86804bae300e31bd890b2"
+source_md5="39171be7067df84cb3ccde1a3ccef692"
 
 dest_files=[ "res://.import/StalkerDeath_60.png-2019e5878cb84c5da716753de5deb90b.stex" ]
 dest_md5="2d36c955013882d93ab1747a127250f5"

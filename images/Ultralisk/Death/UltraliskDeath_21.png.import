@@ -7,10 +7,10 @@ path="res://.import/UltraliskDeath_21.png-87a3020f1bc2f3d35bd266b07605cba4.stex"
 [deps]
 
 source_file="res://images/Ultralisk/Death/UltraliskDeath_21.png"
-source_md5="ba5d99e24dab8bafefc23674affb9ddc"
+source_md5="35c393bc95a23031db5161615b3fcaee"
 
 dest_files=[ "res://.import/UltraliskDeath_21.png-87a3020f1bc2f3d35bd266b07605cba4.stex" ]
-dest_md5="6dd4037e713301f8bf61941ce60bf74a"
+dest_md5="bd3038211fee51f3da6b8d81ac278972"
 
 [params]
 

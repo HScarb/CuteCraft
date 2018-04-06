@@ -7,7 +7,7 @@ path="res://.import/RoachImpact_02.png-4facf9ae2228893ad4dc6118c41e814b.stex"
 [deps]
 
 source_file="res://images/Roach/Impact/RoachImpact_02.png"
-source_md5="f4372259bc9f31946ab9e2b944fb65be"
+source_md5="571ca365a6487d7db71fcad133973664"
 
 dest_files=[ "res://.import/RoachImpact_02.png-4facf9ae2228893ad4dc6118c41e814b.stex" ]
 dest_md5="7f6cad6912e243c69d0a3a661d443c02"

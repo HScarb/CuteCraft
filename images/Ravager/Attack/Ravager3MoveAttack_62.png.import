@@ -7,10 +7,10 @@ path="res://.import/Ravager3MoveAttack_62.png-41adf2d513157468feb69713626ee7ba.s
 [deps]
 
 source_file="res://images/Ravager/Attack/Ravager3MoveAttack_62.png"
-source_md5="a4111e80eaa2e89459581c1f785f4e82"
+source_md5="4f89d7ff9136b2062a0b48aca0fabecf"
 
 dest_files=[ "res://.import/Ravager3MoveAttack_62.png-41adf2d513157468feb69713626ee7ba.stex" ]
-dest_md5="139bcc304ad39698821a695322d00930"
+dest_md5="4d8aee704a1dd68a7ae33b03ccd7ca16"
 
 [params]
 

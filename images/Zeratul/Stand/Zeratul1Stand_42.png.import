@@ -7,10 +7,10 @@ path="res://.import/Zeratul1Stand_42.png-fd0bf581455c75674c70ba7eac5d3f09.stex"
 [deps]
 
 source_file="res://images/Zeratul/Stand/Zeratul1Stand_42.png"
-source_md5="8917639a69ccef875deb6ec7905512fc"
+source_md5="0ca1e8bfc01ca23521e1c5560c948855"
 
 dest_files=[ "res://.import/Zeratul1Stand_42.png-fd0bf581455c75674c70ba7eac5d3f09.stex" ]
-dest_md5="d3017f7cb35d8a7e5c30a0314aad2823"
+dest_md5="45c1f05d65ec739861701ade052ba450"
 
 [params]
 

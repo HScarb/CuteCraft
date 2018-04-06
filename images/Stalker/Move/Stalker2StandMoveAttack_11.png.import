@@ -7,10 +7,10 @@ path="res://.import/Stalker2StandMoveAttack_11.png-964caed376bed6216c4c968b810d7
 [deps]
 
 source_file="res://images/Stalker/Move/Stalker2StandMoveAttack_11.png"
-source_md5="936d0cfdc05af43c01fe68bc60e49672"
+source_md5="305b44f8e0b6fc5d08c080c41940b2cd"
 
 dest_files=[ "res://.import/Stalker2StandMoveAttack_11.png-964caed376bed6216c4c968b810d75c4.stex" ]
-dest_md5="cb219648226ecf0c32a12cee7d25127e"
+dest_md5="9d6d00240c8415e991eeecbd14e40569"
 
 [params]
 

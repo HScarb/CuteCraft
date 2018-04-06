@@ -7,10 +7,10 @@ path="res://.import/Adept1StandAttack_60.png-9f06fbfb04e6f814976986818896b5bc.st
 [deps]
 
 source_file="res://images/Adept/Attack/Adept1StandAttack_60.png"
-source_md5="58d6e32ef38767e8100aadd65eea5a33"
+source_md5="9bec69f79603fb4315e9109e08165e3f"
 
 dest_files=[ "res://.import/Adept1StandAttack_60.png-9f06fbfb04e6f814976986818896b5bc.stex" ]
-dest_md5="0116575eeeb7169b398c94273234db17"
+dest_md5="efa8acce338c56ce00dde4081e653208"
 
 [params]
 

@@ -7,7 +7,7 @@ path="res://.import/StalkerImpact_01.png-c92e29150368cc43e4c377b0bc147bd6.stex"
 [deps]
 
 source_file="res://images/Stalker/Impact/StalkerImpact_01.png"
-source_md5="1f451cc4975d280942e000b2383235fe"
+source_md5="cd6f5184021682df025295911486b096"
 
 dest_files=[ "res://.import/StalkerImpact_01.png-c92e29150368cc43e4c377b0bc147bd6.stex" ]
 dest_md5="d3fd75aade7cbc75db11758103f1b8fa"

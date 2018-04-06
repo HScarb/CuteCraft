@@ -7,7 +7,7 @@ path="res://.import/RoachProjectile_03.png-585099163aa9bdfabd18257f1e657796.stex
 [deps]
 
 source_file="res://images/Roach/Projectile/RoachProjectile_03.png"
-source_md5="6aab710b716aa27c5ffcab9494d00468"
+source_md5="746f3548c0b0bb862771c7956751464a"
 
 dest_files=[ "res://.import/RoachProjectile_03.png-585099163aa9bdfabd18257f1e657796.stex" ]
 dest_md5="06039eb89e86eb93d7d23838d030c3bb"

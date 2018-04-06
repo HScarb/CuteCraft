@@ -7,10 +7,10 @@ path="res://.import/Ravager1Stand_47.png-bf86d76b7318146d8e9fe758b1a15ec7.stex"
 [deps]
 
 source_file="res://images/Ravager/Stand/Ravager1Stand_47.png"
-source_md5="ac0258424c240a0fbdcb9bbd45b8dca2"
+source_md5="86ba46062e53de9c0400880119016d49"
 
 dest_files=[ "res://.import/Ravager1Stand_47.png-bf86d76b7318146d8e9fe758b1a15ec7.stex" ]
-dest_md5="d55cc61f6eb91c2574d34e6447fab767"
+dest_md5="f0576f911dd4ad21fb77a9ad958b0dcb"
 
 [params]
 

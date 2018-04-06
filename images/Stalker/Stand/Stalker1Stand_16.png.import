@@ -7,10 +7,10 @@ path="res://.import/Stalker1Stand_16.png-dd2f31d6b63769b4f4599ec23fe9769e.stex"
 [deps]
 
 source_file="res://images/Stalker/Stand/Stalker1Stand_16.png"
-source_md5="b455f78fde34341610ad267d2de44536"
+source_md5="e705c80ea8bf2fc6ebc1a6a65791d512"
 
 dest_files=[ "res://.import/Stalker1Stand_16.png-dd2f31d6b63769b4f4599ec23fe9769e.stex" ]
-dest_md5="3413b1bb5656081d748b35c4ea4393f2"
+dest_md5="b9967da46f9af511787094f043998b59"
 
 [params]
 

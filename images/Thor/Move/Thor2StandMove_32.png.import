@@ -7,10 +7,10 @@ path="res://.import/Thor2StandMove_32.png-8e9ed7914a6c2918c47f6db45f647c37.stex"
 [deps]
 
 source_file="res://images/Thor/Move/Thor2StandMove_32.png"
-source_md5="70a13bb5319b876a02ae57ddb65b65f8"
+source_md5="43ba2c76a8525912fb4dbccd01607792"
 
 dest_files=[ "res://.import/Thor2StandMove_32.png-8e9ed7914a6c2918c47f6db45f647c37.stex" ]
-dest_md5="03cd7f083b90f74703674bcfefbce2fa"
+dest_md5="6dd934fabe024d9017f728c353750613"
 
 [params]
 

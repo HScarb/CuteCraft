@@ -7,10 +7,10 @@ path="res://.import/RavagerDeath_04.png-9ef0c7444688adc6f1b443caf3495ad0.stex"
 [deps]
 
 source_file="res://images/Ravager/Death/RavagerDeath_04.png"
-source_md5="f5368da27a2eafa6e65055d5a7701f39"
+source_md5="12ba6ffaae35ce1ac2beed1b7ab7d709"
 
 dest_files=[ "res://.import/RavagerDeath_04.png-9ef0c7444688adc6f1b443caf3495ad0.stex" ]
-dest_md5="cf23d39954eded93547956bbc49745fc"
+dest_md5="20057479be34a2d54651a538c61ca843"
 
 [params]
 

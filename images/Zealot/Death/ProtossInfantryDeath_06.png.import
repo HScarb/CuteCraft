@@ -7,10 +7,10 @@ path="res://.import/ProtossInfantryDeath_06.png-b7ee101a75ff427360320530935443b6
 [deps]
 
 source_file="res://images/Zealot/Death/ProtossInfantryDeath_06.png"
-source_md5="528e61a85512db1b1d164ff3d39ff853"
+source_md5="b38eb8041a453ecb7d14631c0c928d60"
 
 dest_files=[ "res://.import/ProtossInfantryDeath_06.png-b7ee101a75ff427360320530935443b6.stex" ]
-dest_md5="49c0b760182ed40b8569d58c4c609b52"
+dest_md5="aaa47734abd070a662865c669315960f"
 
 [params]
 

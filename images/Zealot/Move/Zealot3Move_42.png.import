@@ -7,10 +7,10 @@ path="res://.import/Zealot3Move_42.png-45b3f9cb7ffd108f61bb1e7eac313ccb.stex"
 [deps]
 
 source_file="res://images/Zealot/Move/Zealot3Move_42.png"
-source_md5="0f535e43184463f4878c005bc1fba48c"
+source_md5="ce0cc8159889e0b662954544dfbaa1e7"
 
 dest_files=[ "res://.import/Zealot3Move_42.png-45b3f9cb7ffd108f61bb1e7eac313ccb.stex" ]
-dest_md5="205b1705664c65947b1f51316ae62d39"
+dest_md5="0fb28943bfb19e6b03979f3ff876ad09"
 
 [params]
 

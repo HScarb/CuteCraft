@@ -7,10 +7,10 @@ path="res://.import/Roach3MoveAttack_46.png-c5325497a24212615750403bd8833310.ste
 [deps]
 
 source_file="res://images/Roach/Attack/Roach3MoveAttack_46.png"
-source_md5="1d0d662093d6a82c4c99a7b9d0ef494c"
+source_md5="113ffb0891d3b5b06b9db71d6bfe219f"
 
 dest_files=[ "res://.import/Roach3MoveAttack_46.png-c5325497a24212615750403bd8833310.stex" ]
-dest_md5="8c25a5df9002039fb986a07151982766"
+dest_md5="9ce1ce097c41b59a494d398f870ffa14"
 
 [params]
 

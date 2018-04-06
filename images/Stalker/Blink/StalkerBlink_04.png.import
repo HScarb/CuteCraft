@@ -7,10 +7,10 @@ path="res://.import/StalkerBlink_04.png-53fa256d7b816716439672f4983eb186.stex"
 [deps]
 
 source_file="res://images/Stalker/Blink/StalkerBlink_04.png"
-source_md5="df49ce797847ca5586dca3cf07b6bde4"
+source_md5="e97588b50282769eccdb699128dd3a00"
 
 dest_files=[ "res://.import/StalkerBlink_04.png-53fa256d7b816716439672f4983eb186.stex" ]
-dest_md5="358c549c93632cf3c1c4faa8e405197f"
+dest_md5="4e92945f5b83adfe4b460bafb9d9096c"
 
 [params]
 

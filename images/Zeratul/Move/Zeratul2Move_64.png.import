@@ -7,10 +7,10 @@ path="res://.import/Zeratul2Move_64.png-058061e410cf5949ed8ae591d9d15e7b.stex"
 [deps]
 
 source_file="res://images/Zeratul/Move/Zeratul2Move_64.png"
-source_md5="763c91460073f11f7ff8d6560d19ff04"
+source_md5="37ed5fae10fff6a8dc1f7ed72c0fbe75"
 
 dest_files=[ "res://.import/Zeratul2Move_64.png-058061e410cf5949ed8ae591d9d15e7b.stex" ]
-dest_md5="d2cedf0e4e02608218c933911bef1f0a"
+dest_md5="ce881ceffe039c20fd9c5d3f10ff66e7"
 
 [params]
 
