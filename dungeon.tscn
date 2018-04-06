@@ -2,7 +2,7 @@
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Unit/Hero.tscn" type="PackedScene" id=2]
-[ext_resource path="res://frames/thor.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://frames/stalker.tres" type="SpriteFrames" id=3]
 
 [node name="dungeon" type="Node2D" index="0"]
 
@@ -29,7 +29,7 @@ _sections_unfolded = [ "Cell" ]
 
 [node name="walls" type="TileMap" parent="." index="1"]
 
-position = Vector2( 0, -1 )
+position = Vector2( -0.914429, -0.085556 )
 mode = 1
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 128, 64 )
@@ -51,7 +51,7 @@ _sections_unfolded = [ "Cell" ]
 
 [node name="Hero" parent="walls" index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 525.806, 308.826 )
+position = Vector2( 525.806, 306.826 )
 sprite_frames = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="walls/Hero" index="3"]
