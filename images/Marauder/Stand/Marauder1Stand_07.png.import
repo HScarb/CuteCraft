@@ -7,10 +7,10 @@ path="res://.import/Marauder1Stand_07.png-4836cc67af31af7385ea47f7996af3f3.stex"
 [deps]
 
 source_file="res://images/Marauder/Stand/Marauder1Stand_07.png"
-source_md5="8ef1e16fc17ee2ccde2f90d2d99e2994"
+source_md5="b11bc528380324879a6849e5ac06ea95"
 
 dest_files=[ "res://.import/Marauder1Stand_07.png-4836cc67af31af7385ea47f7996af3f3.stex" ]
-dest_md5="95a4f1791792b9accf63ac3cf8b7579c"
+dest_md5="af9dd73336ed77a872125c032d4ca103"
 
 [params]
 

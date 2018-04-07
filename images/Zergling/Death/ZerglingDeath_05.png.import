@@ -7,10 +7,10 @@ path="res://.import/ZerglingDeath_05.png-048e9e6163d4e89ffb035f7bee510b79.stex"
 [deps]
 
 source_file="res://images/Zergling/Death/ZerglingDeath_05.png"
-source_md5="870764fe3dcf4d1aa55f6013afcad87d"
+source_md5="fa5d82d4fc1ce98067a0e1051f65082a"
 
 dest_files=[ "res://.import/ZerglingDeath_05.png-048e9e6163d4e89ffb035f7bee510b79.stex" ]
-dest_md5="9589ba9647efc3db927bbe703a424941"
+dest_md5="d49de191fb6f93a6e7f4c2c078236286"
 
 [params]
 
