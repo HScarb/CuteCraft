@@ -7,3 +7,6 @@ const DESIGN_SCREEN_SIZE = Vector2(1920, 1080)
 
 # 全局常量
 const MOTION_SPEED = 250
+
+const X_ZOOM = 1
+const Y_ZOOM = 0.5 

@@ -1,0 +1,56 @@
+[gd_resource type="SpriteFrames" load_steps=29 format=2]
+
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunchImpact_01.png" type="Texture" id=1]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunchImpact_02.png" type="Texture" id=2]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunchImpact_03.png" type="Texture" id=3]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunchImpact_04.png" type="Texture" id=4]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunchImpact_05.png" type="Texture" id=5]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunchImpact_06.png" type="Texture" id=6]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunchImpact_07.png" type="Texture" id=7]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunchImpact_08.png" type="Texture" id=8]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunch_01.png" type="Texture" id=9]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunch_02.png" type="Texture" id=10]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunch_03.png" type="Texture" id=11]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunch_04.png" type="Texture" id=12]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunch_05.png" type="Texture" id=13]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunch_06.png" type="Texture" id=14]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunch_07.png" type="Texture" id=15]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileLaunch_08.png" type="Texture" id=16]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileMissile_01.png" type="Texture" id=17]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileMissile_02.png" type="Texture" id=18]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileMissile_03.png" type="Texture" id=19]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerCorrosiveBileMissile_04.png" type="Texture" id=20]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerDeathAndCorrosiveBileImpact_01.png" type="Texture" id=21]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerDeathAndCorrosiveBileImpact_02.png" type="Texture" id=22]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerDeathAndCorrosiveBileImpact_03.png" type="Texture" id=23]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerDeathAndCorrosiveBileImpact_04.png" type="Texture" id=24]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerDeathAndCorrosiveBileImpact_05.png" type="Texture" id=25]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerDeathAndCorrosiveBileImpact_06.png" type="Texture" id=26]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerDeathAndCorrosiveBileImpact_07.png" type="Texture" id=27]
+[ext_resource path="res://images/Ravager/CorrosiveBile/RavagerDeathAndCorrosiveBileImpact_08.png" type="Texture" id=28]
+
+[resource]
+
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "New Anim 1",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "New Anim 2",
+"speed": 12.0
+} ]
+_sections_unfolded = [ "Resource" ]
+

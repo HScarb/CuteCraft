@@ -21,7 +21,7 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Unit" type="KinematicBody2D"]
+[node name="Unit" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -175,7 +175,7 @@ path2TargetState = NodePath("../../States/DEAD")
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
 position = Vector2( 0, -82 )
-animation = "move_7"
+animation = "default"
 playing = true
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 

@@ -34,13 +34,13 @@ func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param
 
 	# 设置motion
 	if Input.is_action_pressed("ui_up"):
-		logicRoot.motion += Vector2(0, -1)
+		logicRoot.motion += Vector2(0, -Global.Y_ZOOM)
 	if Input.is_action_pressed("ui_down"):
-		logicRoot.motion += Vector2(0, 1)
+		logicRoot.motion += Vector2(0, Global.Y_ZOOM)
 	if Input.is_action_pressed("ui_left"):
-		logicRoot.motion += Vector2(-1, 0)
+		logicRoot.motion += Vector2(-Global.X_ZOOM, 0)
 	if Input.is_action_pressed("ui_right"):
-		logicRoot.motion += Vector2(1, 0)
+		logicRoot.motion += Vector2(Global.X_ZOOM, 0)
 
 	# 设置朝向
 	if logicRoot.motion.x == 0 and logicRoot.motion.y < 0:

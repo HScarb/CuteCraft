@@ -22,14 +22,17 @@ func _ready():
 func get_on_attack_condi():
 	if is_dead:
 		return false
-	return Input.is_action_pressed("ui_attack")
+	var ret = Input.is_action_pressed("ui_attack")\
+			and get_attack_time() <= 0
+	return ret
 
 # virtual 攻击状态结束条件
 func get_on_attack_end_condi():
 	if is_dead:
 		return false
-	var ret = (not Input.is_action_pressed("ui_attack")\
-			and (not $AnimatedSprite.is_playing()))
+	# 松开攻击按键以及没有正在播放攻击动画
+	var ret = (not Input.is_action_pressed("ui_attack"))\
+			and (not $AnimatedSprite.animation.begins_with("attack"))
 	return ret
 
 # virtual 移动状态开启条件

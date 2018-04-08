@@ -18,18 +18,36 @@ var is_dead = false									# 是否死亡
 var is_moving = false								# 是否移动中
 var is_attacking = false							# 是否攻击中
 var is_idling = false								# 是否摸鱼中
+var attack_time = 0	setget set_attack_time, get_attack_time	# 一次攻击之后需要等待的时间，之后放到武器中
+const attack_interval = 1.0
 
 func _ready():
 	$AnimatedSprite.frames = sprite_frames
+	print($FSM2D.getStateID())
 	pass
 
 func _physics_process(delta):
+	if attack_time > 0:
+		attack_time -= delta
+	else:
+		attack_time = 0
 	pass
 
 # 获取武器的攻击间隔
 func get_attack_interval():
 	# 先简单处理
-	return 1.0
+	return attack_interval
+
+# 获取一次攻击之后等待的时间
+func get_attack_time():
+	# 先简单处理，之后放到武器中
+	return attack_time
+
+func set_attack_time(value):
+	if value <= 0:
+		attack_time = 0
+	else:
+		attack_time = value
 
 # virtual 攻击状态开启条件
 func get_on_attack_condi():

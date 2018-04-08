@@ -9,7 +9,7 @@
 position = Vector2( 150.049, 61.1264 )
 texture = ExtResource( 1 )
 centered = false
-offset = Vector2( -66, -42 )
+offset = Vector2( -70, -42 )
 region_enabled = true
 region_rect = Rect2( 28, 92, 132, 84 )
 _sections_unfolded = [ "Offset", "Region" ]
