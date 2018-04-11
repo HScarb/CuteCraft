@@ -28,7 +28,7 @@ func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inA
 	logicRoot.is_attacking = true
 	# 开始时播放一次攻击动画
 	logicRoot.attack_time = logicRoot.get_attack_interval()
-	logicRoot.get_node("AnimatedSprite").play("attack_%d" % logicRoot.face_direction)
+	logicRoot.emit_signal("play_animation", "attack")
 	# logicRoot.get_node("AnimatedSprite").frames.set_animation_loop("attack_%d" % logicRoot.face_direction, true)
 	pass
 
@@ -36,13 +36,8 @@ func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inA
 func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param4=null):
 	# 播放动画
 	if logicRoot.attack_time <= 0:
-		logicRoot.get_node("AnimatedSprite").play("attack_%d" % logicRoot.face_direction)
+		logicRoot.emit_signal("play_animation", "attack")
 		logicRoot.attack_time = logicRoot.get_attack_interval()
-	# logicRoot.attack_time += deltaTime
-	# if logicRoot.attack_time >= logicRoot.get_attack_interval():
-	# 	logicRoot.attack_time = 0
-	# 	logicRoot.get_node("AnimatedSprite").play("attack_%d" % logicRoot.face_direction)
-	# logicRoot.get_node("AnimatedSprite").play("attack_%d" % logicRoot.face_direction)
 	pass
 
 #when exiting state
@@ -54,11 +49,6 @@ func exit(toState=null):
 ##################################################################################
 #########                       Connected Signals                        #########
 ##################################################################################
-func _on_AnimatedSprite_animation_finished():
-	print("Animate finished")
-	# logicRoot.get_node("AnimatedSprite").stop()
-	logicRoot.get_node("AnimatedSprite").play("stand_%d" % logicRoot.face_direction)
-	pass # replace with function body
 
 ##################################################################################
 #########     Methods fired because of events (usually via Groups interface)  ####

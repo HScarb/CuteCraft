@@ -16,12 +16,14 @@
 [ext_resource path="res://FSM/transitions/on_move_end/on_move_end.tscn" type="PackedScene" id=14]
 [ext_resource path="res://FSM/transitions/on_die/on_die.tscn" type="PackedScene" id=15]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 10.0
+height = 10.0
+_sections_unfolded = [ "Resource" ]
 
-[node name="Unit" type="KinematicBody2D" index="0"]
+[node name="Unit" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -30,19 +32,20 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pickable", "Transform" ]
 is_main_character = false
-sprite_frames = null
+stand_after_attack = true
 face_angle = null
 face_direction = 5
 life = 10
 life_max = 10
 enegy = 10
 enegy_max = 10
-radius = null
+radius = 10
 speed = 3
 acceleration = 0
 
 [node name="FSM2D" type="Node2D" parent="." index="0"]
 
+editor/display_folded = true
 script = ExtResource( 2 )
 _sections_unfolded = [ "Create new:" ]
 __meta__ = {
@@ -123,6 +126,8 @@ GraphData = {
 
 [node name="States" type="Node2D" parent="FSM2D" index="0"]
 
+editor/display_folded = true
+
 [node name="STAND" parent="FSM2D/States" index="0" instance=ExtResource( 4 )]
 
 [node name="ATTACK" parent="FSM2D/States" index="1" instance=ExtResource( 5 )]
@@ -172,19 +177,11 @@ path2TargetState = NodePath("../../States/STAND")
 path2SourceStates = [ NodePath(""), NodePath("../../States/STAND"), NodePath("../../States/MOVE"), NodePath("../../States/ATTACK"), NodePath("../../States/IDLE") ]
 path2TargetState = NodePath("../../States/DEAD")
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0, -82 )
-animation = "default"
-playing = true
-_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
-
+rotation = 1.5708
 scale = Vector2( 3, 3 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
-
-[connection signal="animation_finished" from="AnimatedSprite" to="FSM2D/States/ATTACK" method="_on_AnimatedSprite_animation_finished"]
 
 

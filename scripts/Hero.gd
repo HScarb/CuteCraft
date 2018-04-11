@@ -7,6 +7,7 @@ extends "res://scripts/Unit.gd"
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
+signal test_signal(arg)
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -30,9 +31,15 @@ func get_on_attack_condi():
 func get_on_attack_end_condi():
 	if is_dead:
 		return false
-	# 松开攻击按键以及没有正在播放攻击动画
-	var ret = (not Input.is_action_pressed("ui_attack"))\
-			and (not $AnimatedSprite.animation.begins_with("attack"))
+	var ret = false
+	if self.stand_after_attack:
+		# 松开攻击按键以及没有正在播放攻击动画
+		ret = (not Input.is_action_pressed("ui_attack"))\
+				and (not $ActorUnit.get_playing_animation())
+	else:
+		# 松开攻击按键以及没有正在播放动画
+		ret = (not Input.is_action_pressed("ui_attack"))\
+				and (not $ActorUnit.is_playing())
 	return ret
 
 # virtual 移动状态开启条件

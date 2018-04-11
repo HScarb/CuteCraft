@@ -34,7 +34,8 @@ func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inA
 		death_anim_num += 1
 	var i = randi() % death_anim_num
 	# 播放死亡动画
-	logicRoot.get_node("AnimatedSprite").play("death_%d" % i)
+	logicRoot.emit_signal("play_animation", "death_%d" % i)
+	pass
 
 #when updating state, paramx can be used only if updating fsm manually
 func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param4=null):

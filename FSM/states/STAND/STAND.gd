@@ -33,7 +33,7 @@ func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inA
 #when updating state, paramx can be used only if updating fsm manually
 func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param4=null):
 	# 播放动画
-	logicRoot.get_node("AnimatedSprite").play("stand_%d" % logicRoot.face_direction)
+	logicRoot.emit_signal("play_animation", "stand")
 	pass
 
 #when exiting state

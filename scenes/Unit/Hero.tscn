@@ -8,8 +8,4 @@
 scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 2 )
 
-[node name="AnimatedSprite" parent="." index="1"]
-
-position = Vector2( 0, -83.6667 )
-
 
