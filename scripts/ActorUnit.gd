@@ -7,9 +7,6 @@ extends "res://scripts/Actor.gd"
 onready var logicRoot = $".."
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	# 事件注册
 	logicRoot.connect("play_animation", self, "play_animation")
 	logicRoot.connect("stop_animation", self, "stop_animation")
 	pass
@@ -30,11 +27,6 @@ func get_playing_animation():
 
 func is_playing():
 	return $AnimatedSprite.is_playing()
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
 
 func _on_AnimatedSprite_animation_finished():
 	if logicRoot.stand_after_attack:

@@ -19,13 +19,16 @@ var is_moving = false								# 是否移动中
 var is_attacking = false							# 是否攻击中
 var is_idling = false								# 是否摸鱼中
 var attack_time = 0	setget set_attack_time, get_attack_time	# 一次攻击之后需要等待的时间，之后放到武器中
+var unit_actor = null
 const attack_interval = 1.0
 
 signal play_animation(anim_name)
 signal stop_animation
 
 func _ready():
-	print($FSM2D.getStateID())
+	# 设置单位演算体
+	self.unit_actor = $ActorUnit
+	# 设置移动碰撞体大小
 	var shape = $CollisionShape2D.get_shape()
 	shape.set_radius(self.radius)
 	shape.set_height(self.radius)

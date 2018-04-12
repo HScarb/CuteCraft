@@ -13,6 +13,10 @@ _sections_unfolded = [ "Resource" ]
 [node name="HeroMarine" index="0" instance=ExtResource( 1 )]
 
 is_main_character = true
+life = 45
+life_max = 45
+enegy = 0
+enegy_max = 0
 acceleration = 1000.0
 
 [node name="FSM2D" parent="." index="0"]
