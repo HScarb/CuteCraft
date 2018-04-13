@@ -24,6 +24,7 @@ const attack_interval = 1.0
 
 signal play_animation(anim_name)
 signal stop_animation
+signal attack_begin
 
 func _ready():
 	# 设置单位演算体

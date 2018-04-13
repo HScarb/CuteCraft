@@ -5,6 +5,9 @@
 
 [node name="dungeon" type="Node2D"]
 
+z_index = -2
+_sections_unfolded = [ "Transform", "Z Index" ]
+
 [node name="floor" type="TileMap" parent="." index="0"]
 
 position = Vector2( 0.685364, 0 )

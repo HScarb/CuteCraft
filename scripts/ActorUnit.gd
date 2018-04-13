@@ -28,6 +28,12 @@ func get_playing_animation():
 func is_playing():
 	return $AnimatedSprite.is_playing()
 
+func get_muzzle(index = null):
+	if index == null:
+		return get_node("Muzzles/Muzzle_%d" % logicRoot.face_direction)
+	else:
+		return get_node("Muzzles/Muzzle_%d" % index)
+
 func _on_AnimatedSprite_animation_finished():
 	if logicRoot.stand_after_attack:
 		play_animation("stand")

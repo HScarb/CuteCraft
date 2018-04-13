@@ -29,7 +29,7 @@ func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inA
 	# 开始时播放一次攻击动画
 	logicRoot.attack_time = logicRoot.get_attack_interval()
 	logicRoot.emit_signal("play_animation", "attack")
-	# logicRoot.get_node("AnimatedSprite").frames.set_animation_loop("attack_%d" % logicRoot.face_direction, true)
+	logicRoot.emit_signal("attack_begin")
 	pass
 
 #when updating state, paramx can be used only if updating fsm manually
@@ -37,6 +37,7 @@ func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param
 	# 播放动画
 	if logicRoot.attack_time <= 0:
 		logicRoot.emit_signal("play_animation", "attack")
+		logicRoot.emit_signal("attack_begin")
 		logicRoot.attack_time = logicRoot.get_attack_interval()
 	pass
 
