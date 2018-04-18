@@ -26,20 +26,13 @@ func stateInit(inParam1=null,inParam2=null,inParam3=null,inParam4=null, inParam5
 func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inArg2=null):
 	print("enter ATTACK")
 	logicRoot.is_attacking = true
-	# 开始时播放一次攻击动画
-	logicRoot.attack_time = logicRoot.get_attack_interval()
-	logicRoot.emit_signal("play_animation", "attack")
-	logicRoot.emit_signal("attack_begin")
+	logicRoot.attack()
 	pass
 
 #when updating state, paramx can be used only if updating fsm manually
 func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param4=null):
 	# 播放动画
-	if logicRoot.attack_time <= 0:
-		logicRoot.emit_signal("play_animation", "attack")
-		logicRoot.emit_signal("attack_begin")
-		logicRoot.attack_time = logicRoot.get_attack_interval()
-	pass
+	logicRoot.attack()
 
 #when exiting state
 func exit(toState=null):

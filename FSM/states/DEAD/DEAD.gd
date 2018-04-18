@@ -35,6 +35,8 @@ func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inA
 	var i = randi() % death_anim_num
 	# 播放死亡动画
 	logicRoot.emit_signal("play_animation", "death_%d" % i)
+	# 调用单位死亡函数
+	logicRoot.die()
 	pass
 
 #when updating state, paramx can be used only if updating fsm manually

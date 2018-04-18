@@ -17,7 +17,7 @@ func get_on_attack_condi():
 	if is_dead:
 		return false
 	var ret = Input.is_action_pressed("ui_attack")\
-			and get_attack_time() <= 0
+			and self.weapon.get_can_fire()
 	return ret
 
 # virtual 攻击状态结束条件

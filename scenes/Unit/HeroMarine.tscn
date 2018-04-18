@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Unit/Hero.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Actor/ActorUnitMarine.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Actor/ActorAttackMarine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Weapon/WeaponMarine.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Effect/EffectDamage.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -21,7 +23,7 @@ enegy = 0
 enegy_max = 0
 acceleration = 1000.0
 unit_actor_path = NodePath("ActorUnitMarine")
-weapon_path = null
+weapon_path = NodePath("WeaponMarine")
 
 [node name="FSM2D" parent="." index="0"]
 
@@ -95,5 +97,9 @@ shape = SubResource( 1 )
 [node name="ActorUnitMarine" parent="." index="2" instance=ExtResource( 2 )]
 
 [node name="ActorAttackMarine" parent="." index="3" instance=ExtResource( 3 )]
+
+[node name="WeaponMarine" parent="." index="4" instance=ExtResource( 4 )]
+
+effect_scene = ExtResource( 5 )
 
 

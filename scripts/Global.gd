@@ -24,6 +24,17 @@ var FACE_DIRECTION = {
     "north_west": 7
 }
 
+var TARGET_DATA = {
+    "origin_point" = 0,
+    "origin_unit" = 1,
+    "source_point" = 2,
+    "source_unit" = 3,
+    "caster_point" = 4,
+    "caster_unit" = 5,
+    "target_point" = 6,
+    "target_unit" = 7
+}
+
 var EFFECT_TREE_NODE = {
     "Missle": 1,
     "Caster": 2,

@@ -1,9 +1,5 @@
 extends "res://scripts/Actor.gd"
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
 onready var logicRoot = $".."
 
 func _ready():
@@ -35,8 +31,12 @@ func get_muzzle(index = null):
 		return get_node("Muzzles/Muzzle_%d" % index)
 
 func _on_AnimatedSprite_animation_finished():
-	if logicRoot.stand_after_attack:
-		play_animation("stand")
-	else:
-		stop_animation()
-	pass # replace with function body
+	if $AnimatedSprite.animation.begins_with("attack"):
+		# 如果是攻击动画播放完成
+		if logicRoot.stand_after_attack:
+			play_animation("stand")
+		else:
+			stop_animation()
+	elif $AnimatedSprite.animation.begins_with("death"):
+		# 如果是死亡动画播放完成
+		logicRoot.dead()
