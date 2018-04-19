@@ -1,4 +1,4 @@
-extends "res://scripts/ActorAttack.gd"
+extends "res://scripts/Actor/ActorAttack.gd"
 
 func _ready():
 	# 设置事件监听

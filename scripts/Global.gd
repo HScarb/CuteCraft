@@ -25,14 +25,14 @@ var FACE_DIRECTION = {
 }
 
 var TARGET_DATA = {
-    "origin_point" = 0,
-    "origin_unit" = 1,
-    "source_point" = 2,
-    "source_unit" = 3,
-    "caster_point" = 4,
-    "caster_unit" = 5,
-    "target_point" = 6,
-    "target_unit" = 7
+    "origin_point": 0,
+    "origin_unit": 1,
+    "source_point": 2,
+    "source_unit": 3,
+    "caster_point": 4,
+    "caster_unit": 5,
+    "target_point": 6,
+    "target_unit": 7
 }
 
 var EFFECT_TREE_NODE = {
@@ -43,3 +43,12 @@ var EFFECT_TREE_NODE = {
     "TargetPos": 5,
     "Effect": 6
 }
+
+###### 全局函数 ######
+# 等视角坐标转换成平面坐标
+func iso_2_plane(pos):
+    return Vector2(pos.x, pos.y * 2)
+
+# 平面坐标转换成等视角坐标
+func plane_2_iso(pos):
+    return Vector2(pos.x, pos.y / 2)

@@ -1,6 +1,6 @@
 # ActorAttack.gd
 # 攻击动作演算体
-extends "res://scripts/Actor.gd"
+extends "res://scripts/Actor/Actor.gd"
 
 export(SpriteFrames) var launch_frames = null
 export(SpriteFrames) var impact_frames = null

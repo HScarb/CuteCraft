@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Actor/ActorAttack.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scripts/ActorAttackMarine.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Actor/ActorAttackMarine.gd" type="Script" id=2]
 [ext_resource path="res://frames/marine_launch.tres" type="SpriteFrames" id=3]
 [ext_resource path="res://frames/marine_impact.tres" type="SpriteFrames" id=4]
+
 
 [node name="ActorAttackMarine" instance=ExtResource( 1 )]
 

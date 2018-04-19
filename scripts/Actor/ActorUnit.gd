@@ -1,4 +1,4 @@
-extends "res://scripts/Actor.gd"
+extends "res://scripts/Actor/Actor.gd"
 
 onready var logicRoot = $".."
 
