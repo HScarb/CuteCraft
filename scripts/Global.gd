@@ -52,3 +52,17 @@ func iso_2_plane(pos):
 # 平面坐标转换成等视角坐标
 func plane_2_iso(pos):
     return Vector2(pos.x, pos.y / 2)
+
+# 将角度转换成godot坐标系的角度
+func deg_2_godot(degree):
+    var deg = degree - 90
+    if deg < 0:
+        deg += 360
+    return deg
+
+# 将godot坐标系的角度转换成北面为x轴时的角度
+func godot_2_deg(degree):
+    var deg = degree + 90
+    if deg >= 360:
+        deg -= 360
+    return deg

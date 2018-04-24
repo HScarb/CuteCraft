@@ -29,7 +29,7 @@ func implements(obj, interface = {}):
 		return false
 	if not (typeof(obj) == TYPE_OBJECT):
 		return false
-	if typeof(interface) == TYPE_OBJECT and obj extends interface:
+	if typeof(interface) == TYPE_OBJECT and obj is interface:
 		return true
 	elif typeof(interface) == TYPE_DICTIONARY:
 		var passed = true

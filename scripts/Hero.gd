@@ -7,6 +7,9 @@ extends "res://scripts/Unit.gd"
 func _ready():
 	pass
 
+func _physics_process(delta):
+	pass
+
 # override 攻击状态开启条件
 func get_on_attack_condi():
 	if is_dead:

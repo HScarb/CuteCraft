@@ -8,5 +8,5 @@ func _ready():
 		UnitManager.add_unit(unit)
 	
 	# TEST:创建一个单位
-	UnitManager.create_unit("UnitMarine", Vector2(600, 200))
+	# UnitManager.create_unit("UnitMarine", Vector2(600, 200))
 	pass

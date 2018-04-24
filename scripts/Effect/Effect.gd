@@ -30,6 +30,28 @@ func trans_target_data(sub_effect):
 	sub_effect.target_unit = self.target_unit
 	pass
 
+# 根据目标数据的类型获取该效果所带具体的目标数据点
+func get_pos_by_target_data_type(target_data_type):
+	match target_data_type:
+		Global.TARGET_DATA.origin_point:
+			return self.origin_point
+		Global.TARGET_DATA.origin_unit:
+			return self.origin_unit.position
+		Global.TARGET_DATA.source_point:
+			return self.source_point
+		Global.TARGET_DATA.source_unit:
+			return self.source_unit.position
+		Global.TARGET_DATA.caster_point:
+			return self.caster_point
+		Global.TARGET_DATA.caster_unit:
+			return self.caster_unit.position
+		Global.TARGET_DATA.target_point:
+			return self.target_point
+		Global.TARGET_DATA.target_unit:
+			return self.target_unit.position
+		_:
+			return null
+
 # virtual
 func run():
 	print("run effect")

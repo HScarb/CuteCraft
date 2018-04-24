@@ -7,5 +7,6 @@ export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster
 export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit") var impact_location = 7
 
 func run():
-	for unit in target_unit:
-		unit.take_damage(amount)
+	if target_unit != null:
+		for unit in target_unit:
+			unit.take_damage(amount)

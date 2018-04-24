@@ -4,7 +4,7 @@ export(bool) var is_main_character = false
 export(bool) var stand_after_attack = true			# 攻击之后是否进入站立动画
 
 export(int) var player = 1							# 隶属玩家
-export(float) var face_angle						# 初始面向角度
+export(float) var face_angle = 225					# 初始面向角度
 export(int,"north","north_east","east","south_east","south","south_west","west","north_west") var face_direction = 5		# 朝向
 export(int) var life = 10							# 生命值
 export(int) var life_max = 10						# 生命最大值
@@ -28,6 +28,8 @@ signal play_animation(anim_name)
 signal stop_animation
 signal attack_begin
 
+var class_hero = load("res://scripts/Hero.gd")
+
 func _ready():
 	# 设置单位演算体
 	if unit_actor_path != null:
@@ -42,6 +44,44 @@ func _ready():
 	pass
 
 func _physics_process(delta):
+	if (self is class_hero) or self.face_angle == null:
+		# 如果是英雄，face_direction控制face_angle
+		match self.face_direction:
+			Global.FACE_DIRECTION.north:
+				self.face_angle = 0
+			Global.FACE_DIRECTION.north_east:
+				self.face_angle = 45
+			Global.FACE_DIRECTION.east:
+				self.face_angle = 90
+			Global.FACE_DIRECTION.south_east:
+				self.face_angle = 135
+			Global.FACE_DIRECTION.south:
+				self.face_angle = 180
+			Global.FACE_DIRECTION.south_west:
+				self.face_angle = 225
+			Global.FACE_DIRECTION.west:
+				self.face_angle = 270
+			Global.FACE_DIRECTION.north_west:
+				self.face_angle = 315
+	else:
+		# 如果是普通单位
+		if (self.face_angle <= 22.5 and self.face_angle >= 0)\
+			or (self.face_angle <= 360 and self.face_angle >= 337.5):
+			self.face_direction = Global.FACE_DIRECTION.north
+		elif self.face_angle >= 22.5 and self.face_angle <= 67.5:
+			self.face_direction = Global.FACE_DIRECTION.north_east
+		elif self.face_angle >= 67.5 and self.face_angle <= 112.5:
+			self.face_direction = Global.FACE_DIRECTION.east
+		elif self.face_angle >= 112.5 and self.face_angle <= 157.5:
+			self.face_direction = Global.FACE_DIRECTION.south_east
+		elif self.face_angle >= 157.5 and self.face_angle <= 202.5:
+			self.face_direction = Global.FACE_DIRECTION.south
+		elif self.face_angle >= 202.5 and self.face_angle <= 247.5:
+			self.face_direction = Global.FACE_DIRECTION.south_west
+		elif self.face_angle >= 247.5 and self.face_angle <= 292.5:
+			self.face_direction = Global.FACE_DIRECTION.west
+		elif self.face_angle >= 292.5 and self.face_angle <= 337.5:
+			self.face_direction = Global.FACE_DIRECTION.north_west
 	pass
 
 func attack():
