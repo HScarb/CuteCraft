@@ -17,6 +17,9 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://scripts/Global.gd"
+UnitManager="*res://scripts/Manager/UnitManager.gd"
+MapManager="*res://scripts/Manager/MapManager.gd"
+Util="*res://scripts/Util.gd"
 
 [editor_plugins]
 

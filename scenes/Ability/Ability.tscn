@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/Ability/Ability.gd" type="Script" id=1]
+
+[node name="Ability" type="Node" index="0"]
+
+script = ExtResource( 1 )
+ability_name = null
+cost_life = 0
+cost_enegy = 0
+time_start = 0
+time_use = 1
+
+

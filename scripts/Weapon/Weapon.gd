@@ -41,7 +41,6 @@ func fire():
 func trans_target_data(effect):
 	effect.origin_unit = logicRoot
 	effect.origin_point = logicRoot.position
-	
 
 # 获取攻击间隔计时器剩下的时间
 func get_attack_time():

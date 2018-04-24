@@ -6,5 +6,7 @@
 [node name="EffectCreateUnit" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+unit_type = null
+position = Vector2( 0, 0 )
 
 

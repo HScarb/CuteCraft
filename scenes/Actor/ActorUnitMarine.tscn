@@ -47,8 +47,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="AnimatedSprite" parent="." index="1"]
 
 frames = ExtResource( 2 )
-animation = "attack_7"
-frame = 1
+animation = "attack_2"
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 

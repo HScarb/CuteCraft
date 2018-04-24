@@ -23,7 +23,7 @@ radius = 10.0
 height = 10.0
 _sections_unfolded = [ "Resource" ]
 
-[node name="Unit" type="KinematicBody2D"]
+[node name="Unit" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -33,6 +33,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Pickable", "Transform" ]
 is_main_character = false
 stand_after_attack = true
+player = 1
 face_angle = null
 face_direction = 5
 life = 10
@@ -42,6 +43,8 @@ enegy_max = 10
 radius = 10
 speed = 3
 acceleration = 0
+unit_actor_path = null
+weapon_path = null
 
 [node name="FSM2D" type="Node2D" parent="." index="0"]
 
@@ -183,5 +186,7 @@ rotation = 1.5708
 scale = Vector2( 3, 3 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Abilities" type="Node" parent="." index="2"]
 
 

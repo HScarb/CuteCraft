@@ -7,11 +7,6 @@ extends "res://scripts/Unit.gd"
 func _ready():
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
-
 # override 攻击状态开启条件
 func get_on_attack_condi():
 	if is_dead:
