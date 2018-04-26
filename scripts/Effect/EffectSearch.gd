@@ -92,6 +92,7 @@ func run():
 	var sub_effect = self.effect.instance()
 	self.trans_target_data(sub_effect)
 	sub_effect.run()
+	update()
 
 func trans_target_data(sub_effect):
 	.trans_target_data(sub_effect)

@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 # 目标数据
 var origin_point = null			# 起源点

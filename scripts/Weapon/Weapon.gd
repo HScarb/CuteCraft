@@ -64,7 +64,7 @@ func trans_target_data(effect):
 		# 将平面坐标转换为等视角坐标
 		target_pos = Global.plane_2_iso(target_pos)
 		effect.target_point = target_pos
-	print("target_pos: ", target_pos)
+	print("Weapon target_pos: ", target_pos)
 
 # 获取攻击间隔计时器剩下的时间
 func get_attack_time():

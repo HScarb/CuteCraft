@@ -1,17 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://scripts/Effect/EffectSearch.gd" type="Script" id=1]
-[ext_resource path="res://scenes/Effect/EffectDamageTest.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Effect/EffectSearchCircleTest.gd" type="Script" id=1]
 
-[node name="EffectSearchCircleTest" type="Node2D" index="0"]
+[node name="EffectSearchCircleTest" type="Node2D"]
 
 script = ExtResource( 1 )
 search_type = 0
 arc = 360
 facing_adjustment = 0
-radius = 200.0
+radius = 100.0
 maximum_count = -1
-effect = ExtResource( 2 )
+effect = null
 include_self = false
 launch_location = 3
 impact_location = 6
