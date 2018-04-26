@@ -28,5 +28,10 @@ func create_unit(type_name, pos):
     var unit_type = load(unit_path)
     return create_unit_by_type(unit_type, pos)
 
+# 添加单位
 func add_unit(unit):
     arr_unit.append(unit)
+
+# 获取所有单位
+func get_all_units():
+    return self.arr_unit

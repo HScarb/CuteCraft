@@ -52,6 +52,29 @@ func get_pos_by_target_data_type(target_data_type):
 		_:
 			return null
 
+# 根据目标数据的类型获取该效果所带的具体目标单位
+func get_unit_by_target_data_type(target_data_type):
+	match target_data_type:
+		Global.TARGET_DATA.origin_point:
+			return null
+		Global.TARGET_DATA.origin_unit:
+			return self.origin_unit
+		Global.TARGET_DATA.source_point:
+			return null
+		Global.TARGET_DATA.source_unit:
+			return self.source_unit
+		Global.TARGET_DATA.caster_point:
+			return null
+		Global.TARGET_DATA.caster_unit:
+			return self.caster_unit
+		Global.TARGET_DATA.target_point:
+			return null
+		Global.TARGET_DATA.target_unit:
+			# targt_unit为list
+			return self.target_unit[0]
+		_:
+			return null
+
 # virtual
 func run():
 	print("run effect")

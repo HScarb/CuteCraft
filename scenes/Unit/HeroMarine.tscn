@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/Actor/ActorUnitMarine.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Actor/ActorAttackMarine.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Weapon/WeaponMarine.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Effect/EffectCreateUnitTest.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Effect/EffectSearchCircleTest.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -13,11 +13,10 @@ radius = 10.0
 height = 10.0
 _sections_unfolded = [ "Resource" ]
 
-[node name="HeroMarine" index="0" instance=ExtResource( 1 )]
+[node name="HeroMarine" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Pickable", "Transform", "Z Index" ]
 is_main_character = true
-face_angle = 225
 life = 45
 life_max = 45
 enegy = 0
@@ -101,7 +100,7 @@ shape = SubResource( 1 )
 
 [node name="WeaponMarine" parent="." index="4" instance=ExtResource( 4 )]
 
-weapon_range = 100.0
+weapon_range = 300.0
 effect_scene = ExtResource( 5 )
 
 

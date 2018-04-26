@@ -24,6 +24,8 @@ var is_idling = false								# 是否摸鱼中
 var unit_actor = null								# 单位演算体
 var weapon = null									# 武器
 
+signal unit_ready
+signal life_enegy_change							# 生命值或者能量值变化
 signal play_animation(anim_name)
 signal stop_animation
 signal attack_begin
@@ -41,6 +43,7 @@ func _ready():
 	var shape = $CollisionShape2D.get_shape()
 	shape.set_radius(self.radius)
 	shape.set_height(self.radius)
+	self.emit_signal("unit_ready")
 	pass
 
 func _physics_process(delta):
@@ -97,6 +100,7 @@ func attack():
 # 承受伤害
 func take_damage(amount):
 	life -= amount
+	self.emit_signal("life_enegy_change")
 
 # 单位死亡调用
 func die():

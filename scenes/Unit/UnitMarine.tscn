@@ -5,11 +5,10 @@
 [ext_resource path="res://scenes/Actor/ActorAttackMarine.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Weapon/WeaponMarine.tscn" type="PackedScene" id=4]
 
-[node name="UnitMarine" index="0" instance=ExtResource( 1 )]
+[node name="UnitMarine" instance=ExtResource( 1 )]
 
 scale = Vector2( 0.6, 0.6 )
 _sections_unfolded = [ "Pickable", "Transform", "Z Index" ]
-face_angle = 225
 unit_actor_path = NodePath("ActorUnitMarine")
 weapon_path = NodePath("WeaponMarine")
 

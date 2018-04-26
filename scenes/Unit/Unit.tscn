@@ -23,7 +23,7 @@ radius = 10.0
 height = 10.0
 _sections_unfolded = [ "Resource" ]
 
-[node name="Unit" type="KinematicBody2D" index="0"]
+[node name="Unit" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -34,7 +34,7 @@ _sections_unfolded = [ "Pickable", "Transform" ]
 is_main_character = false
 stand_after_attack = true
 player = 1
-face_angle = null
+face_angle = 225
 face_direction = 5
 life = 10
 life_max = 10
