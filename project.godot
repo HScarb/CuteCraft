@@ -20,6 +20,7 @@ Global="*res://scripts/Global.gd"
 UnitManager="*res://scripts/Manager/UnitManager.gd"
 MapManager="*res://scripts/Manager/MapManager.gd"
 Util="*res://scripts/Util.gd"
+SignalManager="*res://scripts/Manager/SignalManager.gd"
 
 [editor_plugins]
 

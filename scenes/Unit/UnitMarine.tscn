@@ -9,7 +9,6 @@
 
 scale = Vector2( 0.6, 0.6 )
 _sections_unfolded = [ "Pickable", "Transform", "Z Index" ]
-unit_actor_path = NodePath("ActorUnitMarine")
 weapon_path = NodePath("WeaponMarine")
 
 [node name="ActorUnitMarine" parent="." index="2" instance=ExtResource( 2 )]

@@ -26,11 +26,12 @@ func get_on_attack_end_condi():
 	if self.stand_after_attack:
 		# 松开攻击按键以及没有正在播放攻击动画
 		ret = (not Input.is_action_pressed("ui_attack"))\
-				and (not self.unit_actor.get_playing_animation())
+				and (not self.model.get_playing_animation().begins_with("attack"))
 	else:
 		# 松开攻击按键以及没有正在播放动画
 		ret = (not Input.is_action_pressed("ui_attack"))\
-				and (not self.unit_actor.is_playing())
+				and (not self.model.is_playing())
+	print("on attack end condi: ", ret)
 	return ret
 
 # virtual 移动状态开启条件

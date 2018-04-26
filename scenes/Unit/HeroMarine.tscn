@@ -13,7 +13,7 @@ radius = 10.0
 height = 10.0
 _sections_unfolded = [ "Resource" ]
 
-[node name="HeroMarine" index="0" instance=ExtResource( 1 )]
+[node name="HeroMarine" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Pickable", "Transform", "Z Index" ]
 is_main_character = true
@@ -22,7 +22,6 @@ life_max = 45
 enegy = 0
 enegy_max = 0
 acceleration = 1000.0
-unit_actor_path = NodePath("ActorUnitMarine")
 weapon_path = NodePath("WeaponMarine")
 
 [node name="FSM2D" parent="." index="0"]

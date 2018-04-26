@@ -11,7 +11,7 @@ func _ready():
 	pass
 
 func play_launch_animation(effect_tree_node):
-	var launch_sprite = create_effect(launch_frames, logicRoot.unit_actor.get_muzzle())
+	var launch_sprite = create_effect(launch_frames, logicRoot.model.get_muzzle())
 	# 设置缩放等
 	match logicRoot.face_direction:
 		Global.FACE_DIRECTION.north:

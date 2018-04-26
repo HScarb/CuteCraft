@@ -43,7 +43,6 @@ enegy_max = 10
 radius = 10
 speed = 3
 acceleration = 0
-unit_actor_path = null
 weapon_path = null
 
 [node name="FSM2D" type="Node2D" parent="." index="0"]

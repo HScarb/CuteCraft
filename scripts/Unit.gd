@@ -13,7 +13,6 @@ export(int) var enegy_max = 10						# 能量最大值
 export(float) var radius = 10						# 内部半径
 export(float) var speed = 3							# 移动速度
 export(float) var acceleration = 0					# 加速度
-export(NodePath) var unit_actor_path = null			# 单位演算体路径
 export(NodePath) var weapon_path = null				# 武器路径
 
 var motion = Vector2()								# 真实移动向量
@@ -21,8 +20,8 @@ var is_dead = false									# 是否死亡
 var is_moving = false								# 是否移动中
 var is_attacking = false							# 是否攻击中
 var is_idling = false								# 是否摸鱼中
-var unit_actor = null								# 单位演算体
 var weapon = null									# 武器
+var model = null									# 单位模型(包含状态条等)
 
 signal unit_ready
 signal life_enegy_change							# 生命值或者能量值变化
@@ -33,9 +32,6 @@ signal attack_begin
 var class_hero = load("res://scripts/Hero.gd")
 
 func _ready():
-	# 设置单位演算体
-	if unit_actor_path != null:
-		self.unit_actor = get_node(unit_actor_path)
 	# 设置武器
 	if weapon_path != null:
 		self.weapon = get_node(weapon_path)
@@ -43,7 +39,8 @@ func _ready():
 	var shape = $CollisionShape2D.get_shape()
 	shape.set_radius(self.radius)
 	shape.set_height(self.radius)
-	self.emit_signal("unit_ready")
+	# 发送演算体消息
+	SignalManager.emit_signal("unit_birth", self.get_name(), self)
 	pass
 
 func _physics_process(delta):
