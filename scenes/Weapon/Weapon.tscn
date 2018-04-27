@@ -2,15 +2,15 @@
 
 [ext_resource path="res://scripts/Weapon/Weapon.gd" type="Script" id=1]
 
-
 [node name="Weapon" type="Node"]
 
 script = ExtResource( 1 )
 period = 1.0
-name = "武器"
+weapon_name = "Unknow Weapon"
+weapon_range = -1
 damage_frame = 0
 backswing = 0
-effect = null
+effect_scene = null
 can_fire = true
 
 [node name="AttackIntervalTimer" type="Timer" parent="." index="0"]

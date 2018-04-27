@@ -36,6 +36,7 @@ func fire():
 		return
 	set_can_fire(false)
 	$AttackIntervalTimer.start()
+	SignalManager.emit_signal("weapon_start", self)
 	if effect != null:
 		trans_target_data(effect)
 		effect.run()

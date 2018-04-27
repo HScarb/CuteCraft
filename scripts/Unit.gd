@@ -40,7 +40,7 @@ func _ready():
 	shape.set_radius(self.radius)
 	shape.set_height(self.radius)
 	# 发送全局演算体消息
-	SignalManager.emit_signal("unit_birth", self.get_name(), self)
+	SignalManager.emit_signal("unit_birth", self)
 	# 给Model发送消息
 	self.emit_signal("unit_ready")
 	pass

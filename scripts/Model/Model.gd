@@ -42,6 +42,7 @@ func refresh_status_bars():
 		$EnegyBar.set_value(logicRoot.enegy / logicRoot.enegy_max * 100)
 	pass
 
+# 获取炮口位置
 func get_muzzle(index = null):
 	if index == null:
 		return get_node("Muzzles/Muzzle_%d" % logicRoot.face_direction)
