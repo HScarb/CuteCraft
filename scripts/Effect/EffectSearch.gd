@@ -21,6 +21,7 @@ func _init():
 	pass
 
 func run():
+	.run()
 	# 如果没有子效果，直接返回
 	if effect == null:
 		return

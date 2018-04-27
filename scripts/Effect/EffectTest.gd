@@ -4,6 +4,7 @@ extends "res://scripts/Effect/Effect.gd"
 
 # override
 func run():
+	.run()
 	print("###### Effect target data: #######")
 	if origin_point != null:
 		print("origin_point: ", origin_point.x, origin_point.y)

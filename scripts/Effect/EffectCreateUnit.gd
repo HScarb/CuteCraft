@@ -12,6 +12,7 @@ var target_location = 6
 var class_unit = load("res://scripts/Unit.gd")
 
 func run():
+    .run()
     var spawn_pos = get_pos_by_target_data_type(target_location)
     if spawn_pos == null:
         print("[Error]EffectCreateUnit.run: spawn_pos == null")

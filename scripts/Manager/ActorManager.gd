@@ -13,6 +13,8 @@ func _ready():
     self.add_actor_by_name("ActorUnitMarine")
     # ##### ActorAttack #####
     self.add_actor_by_name("ActorAttackMarine")
+    # ##### ActorSprite.. #####
+    self.add_actor_by_name("ActorSpriteFramesTest")
     # 初始化所有演算体
     for actor in arr_actor:
         actor.init()

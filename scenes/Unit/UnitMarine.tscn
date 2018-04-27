@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/Unit/Unit.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Actor/ActorUnitMarine.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Actor/ActorAttackMarine.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Weapon/WeaponMarine.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Weapon/WeaponMarine.tscn" type="PackedScene" id=2]
 
 [node name="UnitMarine" instance=ExtResource( 1 )]
 
@@ -11,10 +9,6 @@ scale = Vector2( 0.6, 0.6 )
 _sections_unfolded = [ "Pickable", "Transform", "Z Index" ]
 weapon_path = NodePath("WeaponMarine")
 
-[node name="ActorUnitMarine" parent="." index="2" instance=ExtResource( 2 )]
-
-[node name="ActorAttackMarine" parent="." index="3" instance=ExtResource( 3 )]
-
-[node name="WeaponMarine" parent="." index="4" instance=ExtResource( 4 )]
+[node name="WeaponMarine" parent="." index="2" instance=ExtResource( 2 )]
 
 

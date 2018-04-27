@@ -77,7 +77,8 @@ func get_unit_by_target_data_type(target_data_type):
 
 # virtual
 func run():
-	print("run effect")
+	print("run effect ", self.get_name())
+	SignalManager.emit_signal("effect_start", self)
 
 # 操作初始化
 func _init():

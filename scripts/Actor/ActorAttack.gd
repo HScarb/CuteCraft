@@ -13,9 +13,10 @@ func init():
 # 创建发射动画
 # weapon: weapon.gd
 func play_launch_animation(weapon):
+	print("play_launch_animation")
 	# 检测类型
 	var weapon_name = weapon.get_name()
-	if not .check_type(weapon_name):
+	if not check_type(weapon_name):
 		return
 	# 从武器获取源单位
 	var unit = weapon.logicRoot

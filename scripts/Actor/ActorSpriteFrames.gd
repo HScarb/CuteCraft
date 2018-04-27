@@ -16,14 +16,13 @@ func play_animation(effect):
         return
     # 检测类型
     var effect_name = effect.get_name()
-    if not .check_type(effect_name):
+    if not check_type(effect_name):
         return
     # 创建动画
     var sprite_pos = effect.get_pos_by_target_data_type(at_location)
     if sprite_pos == null:
         print("[Error]ActorSpriteFrames.play_animation: sprite_pos == null")
         return
-    var animated_sprite = .create_animated_sprite(frames, sprite_pos)
     # 在地图位置添加动画精灵
-    MapManager.get_layer_unit().add_child(animated_sprite, sprite_pos)
-    
+    var animated_sprite = create_animated_sprite(frames, MapManager.get_layer_unit())
+    animated_sprite.set_position(sprite_pos)

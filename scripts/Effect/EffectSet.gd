@@ -8,4 +8,5 @@ export(PackedScene) var effect_4 = null
 export(PackedScene) var effect_5 = null
 
 func run():
+	.run()
 	pass
