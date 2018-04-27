@@ -13,9 +13,13 @@ func init():
 # 创建发射动画
 # weapon: weapon.gd
 func play_launch_animation(weapon):
+	# 检测类型
+	var weapon_name = weapon.get_name()
+	if not .check_type(weapon_name):
+		return
 	# 从武器获取源单位
 	var unit = weapon.logicRoot
-	var launch_sprite = create_animated_sprite(launch_frames, unit.model.get_muzzle())
+	var launch_sprite = .create_animated_sprite(launch_frames, unit.model.get_muzzle())
 	# 设置缩放等
 	match unit.face_direction:
 		Global.FACE_DIRECTION.north:
@@ -58,20 +62,5 @@ func play_launch_animation(weapon):
 	pass
 
 func play_impact_animation(effect_tree_node):
-	print("play_impact_animation", effect_tree_node)
+	
 	pass
-
-# 创建序列帧动画
-# sprite_frames: [SpriteFrames]
-# parent_node: [Node2D]
-# under_node: [bool]
-# return: [SpriteFrames]
-func create_animated_sprite(sprite_frames, parent_node):
-	if sprite_frames == null or parent_node == null:
-		return
-	var animated_sprite = AnimatedSprite.new()
-	animated_sprite.frames = sprite_frames
-	animated_sprite.connect("tree_entered", animated_sprite, "play")
-	animated_sprite.connect("animation_finished", animated_sprite, "queue_free")
-	parent_node.add_child(animated_sprite)
-	return animated_sprite
