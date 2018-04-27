@@ -71,8 +71,3 @@ func create_effect(sprite_frames, parent_node):
 	animated_sprite.connect("animation_finished", animated_sprite, "queue_free")
 	parent_node.add_child(animated_sprite)
 	return animated_sprite
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass

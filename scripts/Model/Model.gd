@@ -10,9 +10,10 @@ func init_by_unit(unit):
     unit.model = self
     self.logicRoot = unit
 
-    logicRoot.connect("play_animation", self, "play_animation")
-    logicRoot.connect("stop_animation", self, "stop_animation")
-    pass
+    self.logicRoot.connect("play_animation", self, "play_animation")
+    self.logicRoot.connect("stop_animation", self, "stop_animation")
+    self.logicRoot.connect("unit_ready", self, "refresh_status_bars")
+    self.logicRoot.connect("life_enegy_change", self, "refresh_status_bars")
 
 func play_animation(animation_name):
     if animation_name.begins_with("stand")\

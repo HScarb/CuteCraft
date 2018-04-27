@@ -39,12 +39,14 @@ func _ready():
 	var shape = $CollisionShape2D.get_shape()
 	shape.set_radius(self.radius)
 	shape.set_height(self.radius)
-	# 发送演算体消息
+	# 发送全局演算体消息
 	SignalManager.emit_signal("unit_birth", self.get_name(), self)
+	# 给Model发送消息
+	self.emit_signal("unit_ready")
 	pass
 
 func _physics_process(delta):
-	if (self is class_hero) or self.face_angle == null:
+	if self is class_hero or self.face_angle == null:
 		# 如果是英雄，face_direction控制face_angle
 		match self.face_direction:
 			Global.FACE_DIRECTION.north:

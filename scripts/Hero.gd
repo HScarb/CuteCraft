@@ -4,12 +4,6 @@
 # 2018/04/03
 extends "res://scripts/Unit.gd"
 
-func _ready():
-	pass
-
-func _physics_process(delta):
-	pass
-
 # override 攻击状态开启条件
 func get_on_attack_condi():
 	if is_dead:
@@ -31,7 +25,6 @@ func get_on_attack_end_condi():
 		# 松开攻击按键以及没有正在播放动画
 		ret = (not Input.is_action_pressed("ui_attack"))\
 				and (not self.model.is_playing())
-	print("on attack end condi: ", ret)
 	return ret
 
 # virtual 移动状态开启条件
