@@ -7,7 +7,9 @@
 
 [node name="Model" type="Node2D"]
 
+scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Muzzles" type="Node2D" parent="." index="0"]
 

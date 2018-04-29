@@ -44,6 +44,10 @@ var EFFECT_TREE_NODE = {
     "Effect": 6
 }
 
+###### 全局路径常量 ######
+const ACTOR_DIR = "res://scenes/Actor/Implement/"
+const EFFECT_DIR = "res://scenes/Effect/Implement/"
+
 ###### 全局函数 ######
 # 等视角坐标转换成平面坐标
 func iso_2_plane(pos):

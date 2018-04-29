@@ -10,8 +10,11 @@ var caster_unit = null			# 施法者
 var target_point = null			# 目标点
 var target_unit = []			# 目标单位
 
-func _ready():
-	pass
+# virtual
+func run():
+	print("run effect ", self.get_name())
+	# 发送全局消息
+	SignalManager.emit_signal("effect_start", self)
 
 # virtual
 # 传递目标数据
@@ -75,10 +78,6 @@ func get_unit_by_target_data_type(target_data_type):
 		_:
 			return null
 
-# virtual
-func run():
-	print("run effect ", self.get_name())
-	SignalManager.emit_signal("effect_start", self)
 
 # 操作初始化
 func _init():

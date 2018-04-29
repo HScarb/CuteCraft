@@ -10,6 +10,9 @@ var at_location = 6             # 序列帧动画创建的位置
 #     SignalManager.connect("effect_start", self, "play_animation")
 #     pass
 
+# 创建动画精灵并且播放
+# effect: [Effect.gd]
+# return: [AnimatedSprite]
 func play_animation(effect):
     # 判空
     if effect == null:
@@ -26,3 +29,4 @@ func play_animation(effect):
     # 在地图位置添加动画精灵
     var animated_sprite = create_animated_sprite(frames, MapManager.get_layer_unit())
     animated_sprite.set_position(sprite_pos)
+    return animated_sprite

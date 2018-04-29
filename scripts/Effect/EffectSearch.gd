@@ -90,10 +90,10 @@ func run():
 	# 设置子效果的目标并且运行子效果
 	print(self.name, " target_list: ", target_list)
 	self.arr_search_unit = target_list
+	# 创建自效果实例并且运行
 	var sub_effect = self.effect.instance()
 	self.trans_target_data(sub_effect)
 	sub_effect.run()
-	update()
 
 func trans_target_data(sub_effect):
 	.trans_target_data(sub_effect)
