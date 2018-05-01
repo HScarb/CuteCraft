@@ -1,4 +1,9 @@
-extends Node2D
+extends Node
+
+# 效果树数据
+var effect_origin = null		# 效果树的起源
+var parent_effect = null		# 该效果的父效果
+var children_effect = []		# 该效果的子效果(list)
 
 # 目标数据
 var origin_point = null			# 起源点
@@ -9,6 +14,23 @@ var caster_point = null			# 施法者点
 var caster_unit = null			# 施法者
 var target_point = null			# 目标点
 var target_unit = []			# 目标单位
+
+
+# 操作初始化
+func _init():
+	origin_point = null			# 起源点
+	origin_unit = null			# 起源单位
+	source_point = null			# 源点
+	source_unit = null			# 源单位
+	caster_point = null			# 施法者点
+	caster_unit = null			# 施法者
+	target_point = null			# 目标点
+	target_unit = []			# 目标单位
+
+	effect_origin = null		# 效果树的起源
+	parent_effect = null		# 该效果的父效果
+	children_effect = []		# 该效果的子效果
+	pass
 
 # virtual
 func run():
@@ -22,6 +44,11 @@ func run():
 func trans_target_data(sub_effect):
 	if sub_effect == null:
 		return
+	# 传递效果树数据
+	sub_effect.effect_origin = self.effect_origin
+	sub_effect.parent_effect = self
+	self.children_effect.append(sub_effect)
+
 	# 传递目标数据
 	sub_effect.origin_point = self.origin_point
 	sub_effect.origin_unit = self.origin_unit
@@ -77,19 +104,6 @@ func get_unit_by_target_data_type(target_data_type):
 			return self.target_unit[0]
 		_:
 			return null
-
-
-# 操作初始化
-func _init():
-	origin_point = null			# 起源点
-	origin_unit = null			# 起源单位
-	source_point = null			# 源点
-	source_unit = null			# 源单位
-	caster_point = null			# 施法者点
-	caster_unit = null			# 施法者
-	target_point = null			# 目标点
-	target_unit = []			# 目标单位
-	pass
 
 # 操作创建
 func create():

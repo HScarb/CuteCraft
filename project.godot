@@ -23,6 +23,11 @@ Util="*res://scripts/Util.gd"
 SignalManager="*res://scripts/Manager/SignalManager.gd"
 ActorManager="*res://scripts/Manager/ActorManager.gd"
 
+[display]
+
+window/size/width=1280
+window/size/height=720
+
 [editor_plugins]
 
 enabled=PoolStringArray( "ch.fischspiele.tilesethelper", "net.kivano.fsm" )

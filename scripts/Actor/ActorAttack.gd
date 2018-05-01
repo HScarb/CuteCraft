@@ -4,21 +4,41 @@ extends "res://scripts/Actor/Actor.gd"
 
 export(SpriteFrames) var launch_frames = null
 export(SpriteFrames) var impact_frames = null
+export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+var launch_location = 5
+export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+var impact_location = 6
 
 # override
 func init():
 	# SignalManager.connect("weapon_start", self, "play_launch_animation")
 	pass
 
+# virtual
+# 用于检测传入参数类型是否是演算体launch对应的类型
+func check_type_launch(type_name):
+	return false
+
+# virtual
+# 用于检测传入参数类型是否是演算体impact对应的类型
+func check_type_impact(type_name):
+	return false
+
 # 创建发射动画
 # weapon: weapon.gd
-func play_launch_animation(weapon):
-	print("play_launch_animation")
+func play_launch_animation(effect_tree_node):
 	# 检测类型
-	var weapon_name = weapon.get_name()
-	if not check_type(weapon_name):
+	var node_name = effect_tree_node.get_name()
+	if not check_type_launch(node_name):
 		return
 	# 从武器获取源单位
+	var weapon = null
+	if effect_tree_node is load("res://scripts/Weapon/Weapon.gd"):
+		weapon = effect_tree_node
+	else:
+		weapon = effect_tree_node.effect_origin
+	if weapon == null:
+		return
 	var unit = weapon.logicRoot
 	var launch_sprite = .create_animated_sprite(launch_frames, unit.model.get_muzzle())
 	# 设置缩放等
@@ -63,5 +83,10 @@ func play_launch_animation(weapon):
 	pass
 
 func play_impact_animation(effect_tree_node):
-	
+	# 检测类型
+	var node_name = effect_tree_node.get_name()
+	if not check_type_impact(node_name):
+		return
+	# 创建动画
+	var sprite_pos = effect_tree_node.get_pos_by_target_data_type()
 	pass

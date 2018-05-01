@@ -15,7 +15,8 @@ func check_type(type_name):
 
 # override
 func play_animation(effect):
-    print("fuckfuckfuck")
     var animated_sprite = .play_animation(effect)
+    if animated_sprite == null:
+        return
     # 设置大小
     animated_sprite.set_scale(Vector2(0.5, 0.5))

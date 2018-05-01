@@ -41,7 +41,12 @@ func fire():
 		trans_target_data(effect)
 		effect.run()
 
+# 向子效果传递目标数据
 func trans_target_data(effect):
+	# 先传递效果树数据
+	effect.effect_origin = self
+	effect.parent_effect = null
+	# 传递目标数据
 	effect.origin_unit = logicRoot							# or null
 	effect.origin_point = logicRoot.position
 	effect.source_unit = logicRoot
@@ -49,6 +54,7 @@ func trans_target_data(effect):
 	effect.caster_unit = logicRoot
 	effect.caster_point = logicRoot.position
 	effect.target_unit = null
+	# 	计算目标点
 	effect.target_point = null
 	var target_pos = null
 	# 如果不是近战武器
