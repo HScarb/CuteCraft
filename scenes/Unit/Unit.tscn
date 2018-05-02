@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scripts/Unit.gd" type="Script" id=1]
 [ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=2]
@@ -23,14 +23,20 @@ radius = 10.0
 height = 10.0
 _sections_unfolded = [ "Resource" ]
 
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
 [node name="Unit" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 3
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pickable", "Transform" ]
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 is_main_character = false
 stand_after_attack = true
 player = 1
@@ -179,13 +185,33 @@ path2TargetState = NodePath("../../States/STAND")
 path2SourceStates = [ NodePath(""), NodePath("../../States/STAND"), NodePath("../../States/MOVE"), NodePath("../../States/ATTACK"), NodePath("../../States/IDLE") ]
 path2TargetState = NodePath("../../States/DEAD")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="GroundShape" type="CollisionShape2D" parent="." index="1"]
 
 rotation = 1.5708
 scale = Vector2( 3, 3 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Abilities" type="Node" parent="." index="2"]
+[node name="BodyArea" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 4
+collision_mask = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
+
+[node name="BodyShape" type="CollisionShape2D" parent="BodyArea" index="0"]
+
+position = Vector2( 0, -41 )
+scale = Vector2( 3.9, 3 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="Abilities" type="Node" parent="." index="3"]
 
 

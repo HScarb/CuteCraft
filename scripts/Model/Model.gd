@@ -49,6 +49,10 @@ func get_muzzle(index = null):
 	else:
 		return get_node("Muzzles/Muzzle_%d" % index)
 
+# 获取模型被轰击时的轰击点位置
+func get_impact_node():
+	return get_node("AnimatedSprite")
+
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation.begins_with("attack"):
 		# 如果是攻击动画播放完成

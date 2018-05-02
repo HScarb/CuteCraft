@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/Weapon/Weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Effect/Implement/WeaponMarineSearch.tscn" type="PackedScene" id=2]
 
 [node name="WeaponMarine" instance=ExtResource( 1 )]
 
 period = 0.86
-weapon_name = "Unknow Weapon"
-weapon_range = -1
+weapon_range = 300.0
 backswing = 3
-effect_scene = null
+effect_scene = ExtResource( 2 )
 
 

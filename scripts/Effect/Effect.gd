@@ -1,7 +1,7 @@
 extends Node
 
 # 效果树数据
-var effect_origin = null		# 效果树的起源
+var effect_origin = null		# 效果树的起源(可以是效果、武器、技能等)
 var parent_effect = null		# 该效果的父效果
 var children_effect = []		# 该效果的子效果(list)
 
@@ -33,6 +33,7 @@ func _init():
 	pass
 
 # virtual
+# 发送全局消息
 func run():
 	print("run effect ", self.get_name())
 	# 发送全局消息
@@ -101,7 +102,7 @@ func get_unit_by_target_data_type(target_data_type):
 			return null
 		Global.TARGET_DATA.target_unit:
 			# targt_unit为list
-			return self.target_unit[0]
+			return self.target_unit
 		_:
 			return null
 

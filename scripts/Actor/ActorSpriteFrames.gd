@@ -3,7 +3,7 @@
 extends "res://scripts/Actor/Actor.gd"
 
 export(SpriteFrames) var frames = null
-export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit", "effect_tree_descendent")\
 var at_location = 6             # 序列帧动画创建的位置
 
 # func init():

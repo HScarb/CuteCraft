@@ -5,6 +5,12 @@
 
 [node name="ModelMarine" instance=ExtResource( 1 )]
 
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="Muzzles" parent="." index="0"]
+
+editor/display_folded = true
+
 [node name="Muzzle_0" type="Position2D" parent="Muzzles" index="0"]
 
 position = Vector2( -50.8292, -67.1859 )
@@ -44,5 +50,6 @@ _sections_unfolded = [ "Transform" ]
 
 frames = ExtResource( 2 )
 animation = "attack_2"
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 

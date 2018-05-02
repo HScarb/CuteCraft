@@ -4,10 +4,10 @@ extends "res://scripts/Actor/Actor.gd"
 
 export(SpriteFrames) var launch_frames = null
 export(SpriteFrames) var impact_frames = null
-export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit", "effect_tree_descendent")\
 var launch_location = 5
-export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
-var impact_location = 6
+export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit", "effect_tree_descendent")\
+var impact_location = 7
 
 # override
 func init():
@@ -24,22 +24,15 @@ func check_type_launch(type_name):
 func check_type_impact(type_name):
 	return false
 
-# 创建发射动画
-# weapon: weapon.gd
+# 创建并播放发射动画
 func play_launch_animation(effect_tree_node):
 	# 检测类型
 	var node_name = effect_tree_node.get_name()
 	if not check_type_launch(node_name):
 		return
-	# 从武器获取源单位
-	var weapon = null
-	if effect_tree_node is load("res://scripts/Weapon/Weapon.gd"):
-		weapon = effect_tree_node
-	else:
-		weapon = effect_tree_node.effect_origin
-	if weapon == null:
-		return
-	var unit = weapon.logicRoot
+	# 获取单位
+	var unit = effect_tree_node.get_unit_by_target_data_type(launch_location)
+	# 创建动画精灵
 	var launch_sprite = .create_animated_sprite(launch_frames, unit.model.get_muzzle())
 	# 设置缩放等
 	match unit.face_direction:
@@ -80,13 +73,30 @@ func play_launch_animation(effect_tree_node):
 			launch_sprite.set_scale(Vector2(0.28, 0.4))
 			launch_sprite.set_offset(Vector2(-90, 0))
 			launch_sprite.set_rotation_degrees(18)
-	pass
+	return launch_sprite
 
+# 创建并播放轰击动画
 func play_impact_animation(effect_tree_node):
 	# 检测类型
 	var node_name = effect_tree_node.get_name()
 	if not check_type_impact(node_name):
 		return
-	# 创建动画
-	var sprite_pos = effect_tree_node.get_pos_by_target_data_type()
-	pass
+	# 动画精灵
+	var impact_sprite = null
+	# 获取目标单位或点
+	if impact_location % 2 == 0:
+		# 如果目标类型是点
+		var impact_pos = effect_tree_node.get_pos_by_target_data_type(impact_location)
+		impact_sprite = .create_animated_sprite(impact_frames, impact_pos)
+	else:
+		# 如果目标类型是单位
+		var target_unit = effect_tree_node.get_unit_by_target_data_type(impact_location)
+		if typeof(target_unit) == TYPE_ARRAY:
+			# 如果是单位组
+			impact_sprite = []
+			for unit in target_unit:
+				impact_sprite.append(.create_animated_sprite(impact_frames, unit.model.get_impact_node()))
+		else:
+			# 如果是单个单位
+			if target_unit != null:
+				impact_sprite = .create_animated_sprite(impact_frames, target_unit.model.get_impact_node())

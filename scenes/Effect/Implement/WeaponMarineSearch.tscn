@@ -5,9 +5,11 @@
 
 [node name="WeaponMarineSearch" index="0" instance=ExtResource( 1 )]
 
+search_type = 1
+radius = 300.0
 effect = ExtResource( 2 )
 include_self = false
 launch_location = 3
-impact_location = 6
+impact_location = 5
 
 

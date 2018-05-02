@@ -27,6 +27,7 @@ func run():
 		return
 	# 搜索起始点
 	var search_pos = get_pos_by_target_data_type(self.impact_location)
+	print("Search_pos: ", search_pos)
 	var target_list = []
 	if search_pos == null:
 		print("[Error]EffectSearch.run: search_pos == null")
@@ -36,7 +37,7 @@ func run():
 		# 如果是圆形范围搜索
 		for unit in UnitManager.get_all_units():
 			# 计算单位点(转化为平面坐标)与搜索起始点之间的距离
-			var vector = Global.iso_2_plane(unit.position) - search_pos
+			var vector = Global.iso_2_plane(unit.position - search_pos)
 			# 如果距离小于搜索半径，则加入目标列表
 			if vector.length() <= radius:
 				# 处理不包含自身
@@ -51,20 +52,24 @@ func run():
 	elif search_type == 1:
 		# 如果是直线搜索
 		# 根据发射单位的朝向求出线段终点
+		# 	获取发射单位
 		var launch_unit = get_unit_by_target_data_type(self.launch_location)
 		if launch_unit == null:
 			print("[Error]EffectSearch.run: launch_unit == null")
 			return
+		# 	获取武器
+		var weapon = self.effect_origin
+		var weapon_range = weapon.weapon_range
 		# 发射单位到目标点的弧度
 		var rad = deg2rad(Global.deg_2_godot(launch_unit.face_angle + self.facing_adjustment))
 		# 计算线段终点
-		var end_pos = search_pos
-		end_pos.x += self.radius * cos(rad)
-		end_pos.y += self.radius * sin(rad)
+		var end_pos = Global.iso_2_plane(search_pos)
+		end_pos.x += weapon_range * cos(rad)
+		end_pos.y += weapon_range * sin(rad)
 		# 线段向量
 		var vector = Vector2()
-		vector.x = self.radius * cos(rad)
-		vector.y = self.radius * sin(rad)
+		vector.x = weapon_range * cos(rad)
+		vector.y = weapon_range * sin(rad)
 		# 与线段向量垂直的向量
 		var vector_vertical = Vector2()
 		vector_vertical.x = -vector.y
@@ -72,10 +77,11 @@ func run():
 		for unit in UnitManager.get_all_units():
 			# 单位的平面位置
 			var unit_plane_pos = Global.iso_2_plane(unit.position)
-			# 单位与点的距离向量
+			# 单位与end_pos之间的向量
+			var unit_to_end = end_pos - unit_plane_pos
 			var dis = Vector2()
-			dis.x = unit_plane_pos.x * vector_vertical.normalized()
-			dis.y = unit_plane_pos.y * vector_vertical.normalized()
+			dis = unit_to_end * vector_vertical.normalized()
+			print("dis = ", dis)
 			# 将单位与点的距离和单位的半径比较
 			if dis.length() <= unit.radius:
 				# 处理不包含自身

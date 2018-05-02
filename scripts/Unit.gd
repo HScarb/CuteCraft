@@ -36,7 +36,7 @@ func _ready():
 	if weapon_path != null:
 		self.weapon = get_node(weapon_path)
 	# 设置移动碰撞体大小
-	var shape = $CollisionShape2D.get_shape()
+	var shape = $GroundShape.get_shape()
 	shape.set_radius(self.radius)
 	shape.set_height(self.radius)
 	# 发送全局演算体消息
