@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/Unit/UnitMarine.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Unit/HeroMarine.tscn" type="PackedScene" id=4]
 
-[node name="Map" type="Node2D"]
+[node name="Map" type="Node2D" index="0"]
 
 z_index = -2
 script = ExtResource( 1 )
@@ -57,12 +57,12 @@ _sections_unfolded = [ "Cell", "Collision" ]
 
 [node name="UnitMarine" parent="walls" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 843.733, 152.639 )
+position = Vector2( 800, 150 )
 collision_mask = 1
 
 [node name="HeroMarine" parent="walls" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 400, 280.928 )
+position = Vector2( 400, 300 )
 
 [node name="Camera2D" type="Camera2D" parent="walls/HeroMarine" index="5"]
 
