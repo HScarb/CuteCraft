@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/GhostEMP BLEND.png-b4746c3021cc650f3e4192fc5881c057.stex"
+
+[deps]
+
+source_file="res://images/Ghost/EMP/GhostEMP BLEND.png"
+source_md5="aa31392d23e937066ff3edb01e921f83"
+
+dest_files=[ "res://.import/GhostEMP BLEND.png-b4746c3021cc650f3e4192fc5881c057.stex" ]
+dest_md5="37395ea2879382dd44565be24545f92c"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

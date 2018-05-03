@@ -91,7 +91,8 @@ func run():
 			var dis = unit_to_end.dot(vector_vertical.normalized())
 			print("dis = ", dis)
 			# 将单位与点的距离和单位的半径比较
-			if abs(dis) <= unit.radius and check_point_in_line(unit_plane_pos, search_pos, end_pos):
+			if abs(dis) <= unit.radius + self.radius\
+				and check_point_in_line(unit_plane_pos, search_pos, end_pos):
 				target_list.append(unit)
 	# 设置子效果的目标并且运行子效果
 	print(self.name, " target_list: ", target_list)
@@ -115,7 +116,7 @@ func check_point_in_line(p, p1, p2):
 	var d1 = v1.dot(l1)	# dot1
 	var d2 = v2.dot(l1)	# dot2
 	print("d1 = ", d1, " d2 = ", d2)
-	if (d1 <= 0 and d2 >= 0) or (d1 >= 0 and d2 <= 0):
+	if d1 <= 0 and d2 >= 0 or d1 >= 0 and d2 <= 0:
 		return true
 	return false
 
