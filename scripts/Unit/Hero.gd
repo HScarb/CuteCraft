@@ -4,10 +4,6 @@
 # 2018/04/03
 extends "res://scripts/Unit/Unit.gd"
 
-# func _physics_process(delta):
-# 	# 英雄根据朝向刷新面向角度
-# 	refresh_face_angle()
-
 #########################
 # override 攻击状态开启条件
 func get_on_attack_condi():

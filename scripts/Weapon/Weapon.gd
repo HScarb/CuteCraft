@@ -21,8 +21,6 @@ var caster_unit = null			# 施法者
 var target_point = null			# 目标点
 var target_unit = []			# 目标单位
 
-var effect = null
-
 signal can_fire_again											# 可以再次开火
 
 func set_can_fire(val):
@@ -49,10 +47,6 @@ func _ready():
 	# 初始化攻击计时器
 	$AttackIntervalTimer.wait_time = period
 	$AttackIntervalTimer.connect("timeout", self, "set_can_fire", [true])
-	# 创建效果实体
-	if effect_scene != null:
-		effect = effect_scene.instance()
-	pass
 
 # 每次攻击都刷新目标数据
 func refresh_target_data():
@@ -76,24 +70,31 @@ func fire():
 	$AttackIntervalTimer.start()
 	# 发送武器开启信号
 	SignalManager.emit_signal("weapon_start", self)
+	# 运行效果
+	if self.effect_scene == null:
+		return
+	# 	等待模型发来的信号
+	# 	等到真正攻击帧时才运行效果
+	yield(logicRoot.model, "reach_damage_frame")
+	var effect = effect_scene.instance()
 	if effect != null:
 		trans_target_data(effect)
 		effect.run()
 
 # 向子效果传递目标数据
-func trans_target_data(effect):
+func trans_target_data(sub_effect):
 	# 先传递效果树数据
-	effect.effect_origin = self
-	effect.parent_effect = null
+	sub_effect.effect_origin = self
+	sub_effect.parent_effect = null
 	# 传递目标数据
-	effect.origin_unit = self.origin_unit							# or null
-	effect.origin_point = self.origin_point
-	effect.source_unit = self.source_unit
-	effect.source_point = self.source_point
-	effect.caster_unit = self.caster_unit
-	effect.caster_point = self.caster_point
-	effect.target_point = self.target_point
-	effect.target_unit = self.target_unit
+	sub_effect.origin_unit = self.origin_unit							# or null
+	sub_effect.origin_point = self.origin_point
+	sub_effect.source_unit = self.source_unit
+	sub_effect.source_point = self.source_point
+	sub_effect.caster_unit = self.caster_unit
+	sub_effect.caster_point = self.caster_point
+	sub_effect.target_point = self.target_point
+	sub_effect.target_unit = self.target_unit
 
 # 获取攻击间隔计时器剩下的时间
 func get_attack_time():

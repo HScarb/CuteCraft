@@ -48,39 +48,43 @@ func _ready():
 	self.emit_signal("unit_ready")
 	pass
 
-func _physics_process(delta):
-	# 单位根据面向角度调整朝向
-	# refresh_face_direction()
-	refresh_face_angel_by_motion()
+# func _physics_process(delta):
+# 	# 单位根据面向角度调整朝向
+# 	# refresh_face_direction()
+# 	refresh_face_angel_by_motion()
 
 # 根据motion(速度向量)来调整面向角度
 func refresh_face_angel_by_motion():
-	var rad = self.motion.angle()
+	var plane_motion = Global.iso_2_plane(self.motion)
+	var rad = plane_motion.angle()
 	var deg = rad2deg(rad)
 	print("motion: ", motion, " rad: ", rad, " deg: ", deg)
+	self.face_angle = rad
 
 	refresh_face_direction()
+	print("face_direction: ", face_direction)
 	pass
 
 # 根据面向角度调整朝向
 func refresh_face_direction():
-	if (self.face_angle <= 22.5 and self.face_angle >= 0)\
-		or (self.face_angle <= 360 and self.face_angle >= 337.5):
-		self.face_direction = Global.FACE_DIRECTION.north
-	elif self.face_angle >= 22.5 and self.face_angle <= 67.5:
-		self.face_direction = Global.FACE_DIRECTION.north_east
-	elif self.face_angle >= 67.5 and self.face_angle <= 112.5:
+	if (self.face_angle <= PI / 8 and self.face_angle >= 0)\
+		or (self.face_angle <= 0 and self.face_angle >= - PI / 8):
 		self.face_direction = Global.FACE_DIRECTION.east
-	elif self.face_angle >= 112.5 and self.face_angle <= 157.5:
+	elif self.face_angle >= PI / 8 and self.face_angle <= PI / 8 * 3:
 		self.face_direction = Global.FACE_DIRECTION.south_east
-	elif self.face_angle >= 157.5 and self.face_angle <= 202.5:
+	elif self.face_angle >= PI / 8 * 3 and self.face_angle <= PI / 8 * 5:
 		self.face_direction = Global.FACE_DIRECTION.south
-	elif self.face_angle >= 202.5 and self.face_angle <= 247.5:
+	elif self.face_angle >= PI / 8 * 5 and self.face_angle <= PI / 8 * 7:
 		self.face_direction = Global.FACE_DIRECTION.south_west
-	elif self.face_angle >= 247.5 and self.face_angle <= 292.5:
+	elif (self.face_angle >= PI / 8 * 7 and self.face_angle <= PI)\
+		or (self.face_angle <= - PI / 8 * 7 and self.face_angle >= 0):
 		self.face_direction = Global.FACE_DIRECTION.west
-	elif self.face_angle >= 292.5 and self.face_angle <= 337.5:
+	elif self.face_angle <= - PI / 8 * 5 and self.face_angle >= - PI / 8 * 7:
 		self.face_direction = Global.FACE_DIRECTION.north_west
+	elif self.face_angle <= - PI / 8 * 3 and self.face_angle >= - PI / 8 * 5:
+		self.face_direction = Global.FACE_DIRECTION.north
+	elif self.face_angle <= - PI / 8 * 1 and self.face_angle >= - PI / 8 * 3:
+		self.face_direction = Global.FACE_DIRECTION.north_east
 	pass
 
 # 根据朝向调整面向角度
@@ -117,10 +121,12 @@ func attack():
 func take_damage(amount):
 	life -= amount
 	self.emit_signal("life_enegy_change")
+	if life <= 0:
+		die()
 
 # 单位死亡调用
 func die():
-	print("unit die")
+	self.is_dead = true
 	pass
 
 # 死亡动画播放完成调用
@@ -166,4 +172,4 @@ func get_on_idle_end_condi():
 
 # virtual 死亡状态开启条件
 func get_on_die_condi():
-	return false
+	return self.is_dead

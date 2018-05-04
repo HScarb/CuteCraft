@@ -57,18 +57,7 @@ _sections_unfolded = [ "Cell", "Collision" ]
 [node name="HeroRoach" parent="walls" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 500.373, 245.06 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 3
-collision/safe_margin = 0.08
-_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
-is_main_character = false
-stand_after_attack = true
-player = 1
-face_angle = 1.571
-face_direction = 2
-acceleration = 0
-weapon_path = null
+is_main_character = true
 
 [node name="Camera2D" type="Camera2D" parent="walls/HeroRoach" index="4"]
 

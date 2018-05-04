@@ -30,6 +30,7 @@ func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inA
 
 #when updating state, paramx can be used only if updating fsm manually
 func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param4=null):
+	# 建立motion
 	if logicRoot.is_main_character:
 		logicRoot.motion = Vector2()
 		# 设置motion
@@ -41,6 +42,8 @@ func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param
 			logicRoot.motion += Vector2(-Global.X_ZOOM, 0)
 		if Input.is_action_pressed("ui_right"):
 			logicRoot.motion += Vector2(Global.X_ZOOM, 0)
+
+	logicRoot.refresh_face_angel_by_motion()
 
 	# # 设置朝向
 	# if logicRoot.motion.x == 0 and logicRoot.motion.y < 0:

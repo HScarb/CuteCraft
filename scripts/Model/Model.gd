@@ -4,6 +4,8 @@ extends Node2D
 
 var logicRoot = null
 
+signal reach_damage_frame
+
 # 用unit初始化
 func init_by_unit(unit):
     unit.add_child(self)
@@ -55,6 +57,7 @@ func get_muzzle(index = null):
 func get_impact_node():
 	return get_node("AnimatedSprite")
 
+# 动画播放结束调用
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation.begins_with("attack"):
 		# 如果是攻击动画播放完成
@@ -65,3 +68,12 @@ func _on_AnimatedSprite_animation_finished():
 	elif $AnimatedSprite.animation.begins_with("death"):
 		# 如果是死亡动画播放完成
 		logicRoot.dead()
+
+# 在动画的每一帧调用 攻击动画伤害帧
+func _on_AnimatedSprite_frame_changed():
+	if logicRoot.weapon == null:
+		return
+	if $AnimatedSprite.animation.begins_with("attack"):
+		if $AnimatedSprite.frame == logicRoot.weapon.damage_frame:
+			emit_signal("reach_damage_frame")
+			print("reach_damage_frame")

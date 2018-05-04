@@ -83,4 +83,6 @@ _sections_unfolded = [ "Margin", "Rect", "Textures" ]
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 
+[connection signal="frame_changed" from="AnimatedSprite" to="." method="_on_AnimatedSprite_frame_changed"]
+
 
