@@ -6,8 +6,8 @@ export(bool) var is_main_character = false
 export(bool) var stand_after_attack = true			# 攻击之后是否进入站立动画
 
 export(int) var player = 1							# 隶属玩家
-export(float) var face_angle = 225					# 初始面向角度
-export(int,"north","north_east","east","south_east","south","south_west","west","north_west") var face_direction = 5		# 朝向
+export(float) var face_angle = PI / 2				# 初始面向角度
+export(int,"east","south_east","south","south_west","west","north_west","north","north_east") var face_direction = 2		# 朝向
 export(int) var life = 10							# 生命值
 export(int) var life_max = 10						# 生命最大值
 export(int) var enegy = 10							# 能量

@@ -30,35 +30,35 @@ func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inA
 
 #when updating state, paramx can be used only if updating fsm manually
 func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param4=null):
-	logicRoot.motion = Vector2()
+	if logicRoot.is_main_character:
+		logicRoot.motion = Vector2()
+		# 设置motion
+		if Input.is_action_pressed("ui_up"):
+			logicRoot.motion += Vector2(0, -Global.Y_ZOOM)
+		if Input.is_action_pressed("ui_down"):
+			logicRoot.motion += Vector2(0, Global.Y_ZOOM)
+		if Input.is_action_pressed("ui_left"):
+			logicRoot.motion += Vector2(-Global.X_ZOOM, 0)
+		if Input.is_action_pressed("ui_right"):
+			logicRoot.motion += Vector2(Global.X_ZOOM, 0)
 
-	# 设置motion
-	if Input.is_action_pressed("ui_up"):
-		logicRoot.motion += Vector2(0, -Global.Y_ZOOM)
-	if Input.is_action_pressed("ui_down"):
-		logicRoot.motion += Vector2(0, Global.Y_ZOOM)
-	if Input.is_action_pressed("ui_left"):
-		logicRoot.motion += Vector2(-Global.X_ZOOM, 0)
-	if Input.is_action_pressed("ui_right"):
-		logicRoot.motion += Vector2(Global.X_ZOOM, 0)
-
-	# 设置朝向
-	if logicRoot.motion.x == 0 and logicRoot.motion.y < 0:
-		logicRoot.face_direction = 0
-	elif logicRoot.motion.x > 0 and logicRoot.motion.y < 0:
-		logicRoot.face_direction = 1
-	elif logicRoot.motion.x > 0 and logicRoot.motion.y == 0:
-		logicRoot.face_direction = 2
-	elif logicRoot.motion.x > 0 and logicRoot.motion.y > 0:
-		logicRoot.face_direction = 3
-	elif logicRoot.motion.x == 0 and logicRoot.motion.y > 0:
-		logicRoot.face_direction = 4
-	elif logicRoot.motion.x < 0 and logicRoot.motion.y > 0:
-		logicRoot.face_direction = 5
-	elif logicRoot.motion.x < 0 and logicRoot.motion.y == 0:
-		logicRoot.face_direction = 6
-	elif logicRoot.motion.x < 0 and logicRoot.motion.y < 0:
-		logicRoot.face_direction = 7
+	# # 设置朝向
+	# if logicRoot.motion.x == 0 and logicRoot.motion.y < 0:
+	# 	logicRoot.face_direction = 0
+	# elif logicRoot.motion.x > 0 and logicRoot.motion.y < 0:
+	# 	logicRoot.face_direction = 1
+	# elif logicRoot.motion.x > 0 and logicRoot.motion.y == 0:
+	# 	logicRoot.face_direction = 2
+	# elif logicRoot.motion.x > 0 and logicRoot.motion.y > 0:
+	# 	logicRoot.face_direction = 3
+	# elif logicRoot.motion.x == 0 and logicRoot.motion.y > 0:
+	# 	logicRoot.face_direction = 4
+	# elif logicRoot.motion.x < 0 and logicRoot.motion.y > 0:
+	# 	logicRoot.face_direction = 5
+	# elif logicRoot.motion.x < 0 and logicRoot.motion.y == 0:
+	# 	logicRoot.face_direction = 6
+	# elif logicRoot.motion.x < 0 and logicRoot.motion.y < 0:
+	# 	logicRoot.face_direction = 7
 
 	# 播放动画
 	logicRoot.emit_signal("play_animation", "move")

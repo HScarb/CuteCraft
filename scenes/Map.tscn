@@ -65,8 +65,8 @@ _sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 is_main_character = false
 stand_after_attack = true
 player = 1
-face_angle = 225
-face_direction = 5
+face_angle = 1.571
+face_direction = 2
 acceleration = 0
 weapon_path = null
 

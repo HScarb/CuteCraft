@@ -266,97 +266,97 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ) ],
 "loop": true,
-"name": "attack_3",
+"name": "attack_1",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ) ],
 "loop": true,
-"name": "move_7",
+"name": "move_5",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ) ],
 "loop": true,
-"name": "stand_5",
+"name": "stand_3",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ) ],
 "loop": true,
-"name": "stand_1",
+"name": "stand_7",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ) ],
 "loop": true,
-"name": "stand_4",
+"name": "stand_2",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
 "loop": true,
-"name": "stand_0",
+"name": "stand_6",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ) ],
 "loop": true,
-"name": "move_3",
+"name": "move_1",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ) ],
 "loop": true,
-"name": "move_2",
+"name": "move_0",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ) ],
 "loop": true,
-"name": "move_4",
+"name": "move_2",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ) ],
 "loop": true,
-"name": "move_1",
+"name": "move_7",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ) ],
 "loop": true,
-"name": "move_0",
+"name": "move_6",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ) ],
 "loop": true,
-"name": "move_5",
+"name": "move_3",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ) ],
 "loop": true,
-"name": "attack_4",
+"name": "attack_2",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ) ],
 "loop": true,
-"name": "attack_6",
+"name": "attack_4",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ) ],
 "loop": true,
-"name": "attack_5",
+"name": "attack_3",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ) ],
 "loop": true,
-"name": "attack_7",
+"name": "attack_5",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 155 ), ExtResource( 156 ), ExtResource( 157 ) ],
 "loop": true,
-"name": "attack_1",
+"name": "attack_7",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 158 ), ExtResource( 159 ), ExtResource( 160 ) ],
 "loop": true,
-"name": "attack_2",
+"name": "attack_0",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ) ],
 "loop": true,
-"name": "attack_0",
+"name": "attack_6",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ) ],
@@ -366,7 +366,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ), ExtResource( 185 ) ],
 "loop": true,
-"name": "move_6",
+"name": "move_4",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 186 ), ExtResource( 187 ), ExtResource( 188 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ) ],
@@ -381,22 +381,22 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 216 ), ExtResource( 217 ), ExtResource( 218 ), ExtResource( 219 ), ExtResource( 220 ), ExtResource( 221 ), ExtResource( 222 ), ExtResource( 223 ) ],
 "loop": true,
-"name": "stand_2",
+"name": "stand_0",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 224 ) ],
 "loop": true,
-"name": "stand_7",
+"name": "stand_5",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 225 ), ExtResource( 226 ), ExtResource( 227 ), ExtResource( 228 ), ExtResource( 229 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 232 ) ],
 "loop": true,
-"name": "stand_6",
+"name": "stand_4",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 233 ), ExtResource( 234 ), ExtResource( 235 ), ExtResource( 236 ), ExtResource( 237 ), ExtResource( 238 ), ExtResource( 239 ), ExtResource( 240 ) ],
 "loop": true,
-"name": "stand_3",
+"name": "stand_1",
 "speed": 5.0
 } ]
 _sections_unfolded = [ "Resource" ]

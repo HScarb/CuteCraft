@@ -14,14 +14,14 @@ const Y_ZOOM = 0.5
 const Z_INDEX_UNIT = 2
 
 var FACE_DIRECTION = {
-    "north": 0,
-    "north_east": 1,
-    "east": 2,
-    "south_east": 3,
-    "south": 4,
-    "south_west": 5,
-    "west": 6,
-    "north_west": 7
+    "east": 0,
+    "south_east": 1,
+    "south": 2,
+    "south_west": 3,
+    "west": 4,
+    "north_west": 5,
+    "north": 6,
+    "north_east": 7
 }
 
 var TARGET_DATA = {
