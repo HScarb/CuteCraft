@@ -1,3 +1,5 @@
+# Unit.gd
+# 单位
 extends KinematicBody2D
 
 export(bool) var is_main_character = false
@@ -29,16 +31,17 @@ signal play_animation(anim_name)
 signal stop_animation
 signal attack_begin
 
-var class_hero = load("res://scripts/Hero.gd")
+var class_hero = load("res://scripts/Unit/Hero.gd")
 
 func _ready():
 	# 设置武器
 	if weapon_path != null:
 		self.weapon = get_node(weapon_path)
 	# 设置移动碰撞体大小
-	var shape = $GroundShape.get_shape()
+	var shape = CapsuleShape2D.new()
 	shape.set_radius(self.radius)
 	shape.set_height(self.radius)
+	$GroundShape.set_shape(shape)
 	# 发送全局演算体消息
 	SignalManager.emit_signal("unit_birth", self)
 	# 给Model发送消息
@@ -46,45 +49,59 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	if self is class_hero or self.face_angle == null:
-		# 如果是英雄，face_direction控制face_angle
-		match self.face_direction:
-			Global.FACE_DIRECTION.north:
-				self.face_angle = 0
-			Global.FACE_DIRECTION.north_east:
-				self.face_angle = 45
-			Global.FACE_DIRECTION.east:
-				self.face_angle = 90
-			Global.FACE_DIRECTION.south_east:
-				self.face_angle = 135
-			Global.FACE_DIRECTION.south:
-				self.face_angle = 180
-			Global.FACE_DIRECTION.south_west:
-				self.face_angle = 225
-			Global.FACE_DIRECTION.west:
-				self.face_angle = 270
-			Global.FACE_DIRECTION.north_west:
-				self.face_angle = 315
-	else:
-		# 如果是普通单位
-		if (self.face_angle <= 22.5 and self.face_angle >= 0)\
-			or (self.face_angle <= 360 and self.face_angle >= 337.5):
-			self.face_direction = Global.FACE_DIRECTION.north
-		elif self.face_angle >= 22.5 and self.face_angle <= 67.5:
-			self.face_direction = Global.FACE_DIRECTION.north_east
-		elif self.face_angle >= 67.5 and self.face_angle <= 112.5:
-			self.face_direction = Global.FACE_DIRECTION.east
-		elif self.face_angle >= 112.5 and self.face_angle <= 157.5:
-			self.face_direction = Global.FACE_DIRECTION.south_east
-		elif self.face_angle >= 157.5 and self.face_angle <= 202.5:
-			self.face_direction = Global.FACE_DIRECTION.south
-		elif self.face_angle >= 202.5 and self.face_angle <= 247.5:
-			self.face_direction = Global.FACE_DIRECTION.south_west
-		elif self.face_angle >= 247.5 and self.face_angle <= 292.5:
-			self.face_direction = Global.FACE_DIRECTION.west
-		elif self.face_angle >= 292.5 and self.face_angle <= 337.5:
-			self.face_direction = Global.FACE_DIRECTION.north_west
+	# 单位根据面向角度调整朝向
+	# refresh_face_direction()
+	refresh_face_angel_by_motion()
+
+# 根据motion(速度向量)来调整面向角度
+func refresh_face_angel_by_motion():
+	var rad = self.motion.angle()
+	var deg = rad2deg(rad)
+	print("motion: ", motion, " rad: ", rad, " deg: ", deg)
+
+	refresh_face_direction()
 	pass
+
+# 根据面向角度调整朝向
+func refresh_face_direction():
+	if (self.face_angle <= 22.5 and self.face_angle >= 0)\
+		or (self.face_angle <= 360 and self.face_angle >= 337.5):
+		self.face_direction = Global.FACE_DIRECTION.north
+	elif self.face_angle >= 22.5 and self.face_angle <= 67.5:
+		self.face_direction = Global.FACE_DIRECTION.north_east
+	elif self.face_angle >= 67.5 and self.face_angle <= 112.5:
+		self.face_direction = Global.FACE_DIRECTION.east
+	elif self.face_angle >= 112.5 and self.face_angle <= 157.5:
+		self.face_direction = Global.FACE_DIRECTION.south_east
+	elif self.face_angle >= 157.5 and self.face_angle <= 202.5:
+		self.face_direction = Global.FACE_DIRECTION.south
+	elif self.face_angle >= 202.5 and self.face_angle <= 247.5:
+		self.face_direction = Global.FACE_DIRECTION.south_west
+	elif self.face_angle >= 247.5 and self.face_angle <= 292.5:
+		self.face_direction = Global.FACE_DIRECTION.west
+	elif self.face_angle >= 292.5 and self.face_angle <= 337.5:
+		self.face_direction = Global.FACE_DIRECTION.north_west
+	pass
+
+# 根据朝向调整面向角度
+func refresh_face_angle():
+	match self.face_direction:
+		Global.FACE_DIRECTION.north:
+			self.face_angle = 0
+		Global.FACE_DIRECTION.north_east:
+			self.face_angle = 45
+		Global.FACE_DIRECTION.east:
+			self.face_angle = 90
+		Global.FACE_DIRECTION.south_east:
+			self.face_angle = 135
+		Global.FACE_DIRECTION.south:
+			self.face_angle = 180
+		Global.FACE_DIRECTION.south_west:
+			self.face_angle = 225
+		Global.FACE_DIRECTION.west:
+			self.face_angle = 270
+		Global.FACE_DIRECTION.north_west:
+			self.face_angle = 315
 
 func attack():
 	if self.weapon.get_can_fire():

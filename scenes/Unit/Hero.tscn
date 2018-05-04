@@ -1,11 +1,15 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/Unit/Unit.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scripts/Hero.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Unit/Hero.gd" type="Script" id=2]
 
 [node name="Hero" instance=ExtResource( 1 )]
 
 scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 2 )
+
+[node name="FSM2D" parent="." index="0"]
+
+editor/display_folded = false
 
 

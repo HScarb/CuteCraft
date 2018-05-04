@@ -44,6 +44,8 @@ func refresh_status_bars():
 
 # 获取炮口位置
 func get_muzzle(index = null):
+	if get_node("Muzzles").get_child_count() <= 0:
+		return get_node("Muzzles")
 	if index == null:
 		return get_node("Muzzles/Muzzle_%d" % logicRoot.face_direction)
 	else:

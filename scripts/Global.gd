@@ -70,3 +70,9 @@ func godot_2_deg(degree):
     if deg >= 360:
         deg -= 360
     return deg
+
+# 判断目标数据类型是否是单位
+func is_target_data_unit(target_data_type):
+    if target_data_type % 2 == 1:
+        return true
+    return false

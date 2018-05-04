@@ -63,7 +63,7 @@ func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param
 	# 播放动画
 	logicRoot.emit_signal("play_animation", "move")
 	# 移动
-	logicRoot.motion = logicRoot.motion.normalized() * Global.MOTION_SPEED
+	logicRoot.motion = logicRoot.motion.normalized() * logicRoot.speed
 	logicRoot.move_and_slide(logicRoot.motion)
 
 #when exiting state

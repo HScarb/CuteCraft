@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RoachProjectile_01.png-19da88aae2b292da8eaf8a56c26dd1d4.stex"
+path="res://.import/RoachProjectile_01.png-d80e1b24d9e485079b22139b32d0fafe.stex"
 
 [deps]
 
-source_file="res://images/Roach/Impact/RoachProjectile_01.png"
-source_md5="7eda365ffc174859783dc6ff70ee4e8e"
+source_file="res://images/Roach/Projectile/RoachProjectile_01.png"
+source_md5="c1d352fb995155e7bab2279a61893736"
 
-dest_files=[ "res://.import/RoachProjectile_01.png-19da88aae2b292da8eaf8a56c26dd1d4.stex" ]
+dest_files=[ "res://.import/RoachProjectile_01.png-d80e1b24d9e485079b22139b32d0fafe.stex" ]
 dest_md5="9331a156901042b52c241822b22f4c12"
 
 [params]

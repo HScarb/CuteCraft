@@ -2,7 +2,8 @@
 
 [ext_resource path="res://scenes/Actor/ActorSpriteFrames.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Actor/ActorSpriteFramesTest.gd" type="Script" id=2]
-[ext_resource path="res://frames/marine_impact.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://frames/marine/marine_impact.tres" type="SpriteFrames" id=3]
+
 
 [node name="ActorSpriteFramesTest" instance=ExtResource( 1 )]
 

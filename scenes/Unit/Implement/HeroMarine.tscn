@@ -1,13 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/Unit/Hero.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Weapon/WeaponMarine.tscn" type="PackedScene" id=2]
-
-[sub_resource type="CapsuleShape2D" id=2]
-
-custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
+[ext_resource path="res://scenes/Weapon/Implement/WeaponMarine.tscn" type="PackedScene" id=2]
 
 [node name="HeroMarine" instance=ExtResource( 1 )]
 
@@ -17,10 +11,12 @@ life = 45
 life_max = 45
 enegy = 0
 enegy_max = 0
+speed = 225.0
 weapon_path = NodePath("WeaponMarine")
 
 [node name="FSM2D" parent="." index="0"]
 
+editor/display_folded = false
 GraphData = {
 "ATTACK": Vector2( 1078, 507 ),
 "ATTACK_": Vector2( 1078, 507 ),
@@ -84,26 +80,10 @@ GraphData = {
 "trans2__": Vector2( 641, 256 )
 }
 
-[node name="Area2D" type="Area2D" parent="." index="2"]
+[node name="BodyArea" parent="." index="2"]
 
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-collision_layer = 4
-collision_mask = 8
-audio_bus_override = false
-audio_bus_name = "Master"
-_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
+editor/display_folded = false
 
-[node name="BodyShape" type="CollisionShape2D" parent="Area2D" index="0"]
-
-position = Vector2( 0, -41 )
-scale = Vector2( 3.9, 3 )
-shape = SubResource( 2 )
-_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
-
-[node name="WeaponMarine" parent="." index="4" instance=ExtResource( 2 )]
+[node name="WeaponMarine" parent="." index="3" instance=ExtResource( 2 )]
 
 

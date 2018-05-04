@@ -2,7 +2,7 @@ extends Node
 
 export(float) var period = 1.0									# 周期
 export(String) var weapon_name = "Unknow Weapon"				# 武器名称
-export(float) var weapon_range = -1								# 武器射程，<0时为近战
+export(float) var shoot_range = -1								# 武器射程，<0时为近战
 export(int) var damage_frame = 0								# 造成伤害的攻击动画帧
 export(int) var backswing = 0									# 攻击动画后摇帧数 
 export(PackedScene) var effect_scene = null						# 效果
@@ -104,7 +104,7 @@ func get_attack_time():
 func calc_target_point():
 	var target_pos = null
 	# 如果不是近战武器
-	if self.weapon_range > 0:
+	if self.shoot_range > 0:
 		# 计算目标点
 		# 首先将单位点转换为平面坐标
 		var plane_pos = Global.iso_2_plane(logicRoot.position)
@@ -112,8 +112,8 @@ func calc_target_point():
 		# 根据单位的朝向和武器射程计算出目标点
 		# 单位的朝向转化成弧度
 		var rad = deg2rad(Global.deg_2_godot(logicRoot.face_angle))
-		target_pos.y += sin(rad) * self.weapon_range
-		target_pos.x += cos(rad) * self.weapon_range
+		target_pos.y += sin(rad) * self.shoot_range
+		target_pos.x += cos(rad) * self.shoot_range
 		# 将平面坐标转换为等视角坐标
 		target_pos = Global.plane_2_iso(target_pos)
 	else:

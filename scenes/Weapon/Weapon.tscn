@@ -7,7 +7,7 @@
 script = ExtResource( 1 )
 period = 1.0
 weapon_name = "Unknow Weapon"
-weapon_range = -1
+shoot_range = -1
 damage_frame = 0
 backswing = 0
 effect_scene = null

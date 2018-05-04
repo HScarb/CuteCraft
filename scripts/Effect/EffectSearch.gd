@@ -60,17 +60,17 @@ func run():
 			return
 		# 	获取武器
 		var weapon = self.effect_origin
-		var weapon_range = weapon.weapon_range
+		var shoot_range = weapon.shoot_range
 		# 发射单位到目标点的弧度
 		var rad = deg2rad(Global.deg_2_godot(launch_unit.face_angle + self.facing_adjustment))
 		# 计算线段终点
 		var end_pos = search_pos
-		end_pos.x += weapon_range * cos(rad)
-		end_pos.y += weapon_range * sin(rad)
+		end_pos.x += shoot_range * cos(rad)
+		end_pos.y += shoot_range * sin(rad)
 		# 线段向量
 		var vector = Vector2()
-		vector.x = weapon_range * cos(rad)
-		vector.y = weapon_range * sin(rad)
+		vector.x = shoot_range * cos(rad)
+		vector.y = shoot_range * sin(rad)
 		# 与线段向量垂直的向量
 		var vector_vertical = Vector2()
 		vector_vertical.x = -vector.y

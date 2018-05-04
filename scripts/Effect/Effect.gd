@@ -61,50 +61,81 @@ func trans_target_data(sub_effect):
 	sub_effect.target_unit = self.target_unit
 	pass
 
-# 根据目标数据的类型获取该效果所带具体的目标数据点
-func get_pos_by_target_data_type(target_data_type):
+###### 根据目标数据类型返回目标数据函数 ######
+# 根据目标数据类型获取数据(点或单位或list)
+func get_data_by_target_data_type(target_data_type):
 	match target_data_type:
 		Global.TARGET_DATA.origin_point:
 			return self.origin_point
 		Global.TARGET_DATA.origin_unit:
-			return self.origin_unit.position
+			return self.origin_unit
 		Global.TARGET_DATA.source_point:
 			return self.source_point
 		Global.TARGET_DATA.source_unit:
-			return self.source_unit.position
+			return self.source_unit
 		Global.TARGET_DATA.caster_point:
 			return self.caster_point
 		Global.TARGET_DATA.caster_unit:
-			return self.caster_unit.position
+			return self.caster_unit
 		Global.TARGET_DATA.target_point:
 			return self.target_point
 		Global.TARGET_DATA.target_unit:
-			return self.target_unit.position
+			return self.target_unit
+		_:
+			return null
+
+# 根据目标数据的类型获取该效果所带具体的目标数据点
+func get_pos_by_target_data_type(target_data_type):
+	# 如果目标类型是单位，返回单位位置
+	var unit = get_unit_by_target_data_type(target_data_type)
+	if typeof(unit) == TYPE_ARRAY:
+		var pos_list = []
+		for u in unit:
+			pos_list_append(u.position)
+		return pos_list
+	if unit != null:
+		return unit.position
+	# 如果目标类型是点，首先判断该目标点对应的单位是否为空
+	# 不为空则返回单位位置，否则返回点位置
+	match target_data_type:
+		Global.TARGET_DATA.origin_point:
+			if self.origin_unit != null:
+				return self.origin_unit.position
+			return self.origin_point
+		Global.TARGET_DATA.source_point:
+			if self.source_unit != null:
+				return self.source_unit.position
+			return self.source_point
+		Global.TARGET_DATA.caster_point:
+			if self.caster_unit != null:
+				return self.caster_unit.position
+			return self.caster_point
+		Global.TARGET_DATA.target_point:
+			if not self.target_unit.empty():
+				var pos_list = []
+				for unit in self.target_unit:
+					pos_list.append(unit.position)
+				return pos_list
+			return self.target_point
 		_:
 			return null
 
 # 根据目标数据的类型获取该效果所带的具体目标单位
 func get_unit_by_target_data_type(target_data_type):
 	match target_data_type:
-		Global.TARGET_DATA.origin_point:
-			return null
 		Global.TARGET_DATA.origin_unit:
 			return self.origin_unit
-		Global.TARGET_DATA.source_point:
-			return null
 		Global.TARGET_DATA.source_unit:
 			return self.source_unit
-		Global.TARGET_DATA.caster_point:
-			return null
 		Global.TARGET_DATA.caster_unit:
 			return self.caster_unit
-		Global.TARGET_DATA.target_point:
-			return null
 		Global.TARGET_DATA.target_unit:
 			# targt_unit为list
 			return self.target_unit
 		_:
 			return null
+
+#########################################
 
 # 操作创建
 func create():

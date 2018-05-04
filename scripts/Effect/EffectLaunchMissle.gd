@@ -2,5 +2,53 @@
 # 发射发射物效果
 extends "res://scripts/Effect/Effect.gd"
 
+# export(int,"creator") var ammo_owner = 0                # 发射物所有者
+export(PackedScene) var ammo_unit = null                # 发射物单位
+# 发射效果是飞弹发射时“对发射单位引发的效果”。对于发射效果属性的字效果而言，飞弹单位是其源单位，而发射飞弹的源单位是其目标单位。
+export(PackedScene) var launch_effect = null            # 发射效果
+# 轰击效果的作用是当飞弹命中目标以后，“对目标引发的效果”。因此，对于轰击效果属性的子效果而言，飞弹单位是其源单位，轰击的单位/点(通常也是发射飞弹效果的目标单位/点)是其目标单位/点。
+export(PackedScene) var impact_effect = null            # 轰击效果
+export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+var launch_location = 3                                 # 发射位置，默认是源单位
+export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+var impact_location = 6                                 # 轰击位置，默认是目标点
+
 func run():
+    if ammo_unit == null:
+        return
+    # if launch_effect == null and impact_effect == null:
+    #     return
     .run()
+    # 创建发射物实体
+    var missile = ammo_unit.instance()
+    var unit_launch = .get_unit_by_target_data_type(launch_location)
+    missile.player = unit_launch.player
+    # 运行发射效果
+    var effect_launch = null
+    if launch_effect != null:
+        effect_launch = launch_effect.instance()
+        trans_target_data(effect_launch)
+        # 发射效果是飞弹发射时“对发射飞弹的单位引发的效果”
+        # 对于发射效果属性的字效果而言，飞弹单位是其源单位，而发射飞弹的源单位是其目标单位。
+        effect_launch.source_unit = missle
+        effect_launch.target_unit.append(self.source_unit)
+        effect_launch.run()
+    # 将轰击效果赋予发射物
+    var effect_impact = null
+    if impact_effect != null:
+        effect_impact = impact_effect.instance()
+        trans_target_data(effect_impact)
+        # 轰击效果的作用是当飞弹命中目标以后，“对目标引发的效果”。
+        # 对于轰击效果属性的子效果而言，飞弹单位是其源单位，轰击的单位/点(通常也是发射飞弹效果的目标单位/点)是其目标单位/点。
+        effect_impact.source_unit = missle
+        #   如果当前效果的轰击位置是单位
+        if Global.is_target_data_unit(impact_location):
+            effect_impact.target_unit.append(.get_unit_by_target_data_type(impact_location))
+        else:
+            effect_impact.target_point = .get_pos_by_target_data_type(impact_location)
+        missile.effect_impact = effect_impact
+    # 将发射物放置在正确位置(单位模型的炮口)
+    var map_pos = unit_launch.model.get_muzzle() + unit_launch.position
+    MapManager.get_layer_unit().add_child(missile)
+    # 命令发射物移动
+    

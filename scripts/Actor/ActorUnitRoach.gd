@@ -1,5 +1,5 @@
-# ActorUnitMarine.gd
-# Marine单位演算体
+# ActorUnitRoach.gd
+# Roach单位演算体
 extends "res://scripts/Actor/ActorUnit.gd"
 
 # override
@@ -8,6 +8,6 @@ func init():
 
 # override
 func check_type(type_name):
-	if type_name.ends_with("Marine"):
+	if type_name.ends_with("Roach"):
 		return true
 	return false

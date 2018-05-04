@@ -2,11 +2,18 @@
 # 主角单位
 # Scarb
 # 2018/04/03
-extends "res://scripts/Unit.gd"
+extends "res://scripts/Unit/Unit.gd"
 
+# func _physics_process(delta):
+# 	# 英雄根据朝向刷新面向角度
+# 	refresh_face_angle()
+
+#########################
 # override 攻击状态开启条件
 func get_on_attack_condi():
 	if is_dead:
+		return false
+	if self.weapon == null:
 		return false
 	var ret = Input.is_action_pressed("ui_attack")\
 			and self.weapon.get_can_fire()

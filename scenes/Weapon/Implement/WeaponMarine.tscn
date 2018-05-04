@@ -6,7 +6,8 @@
 [node name="WeaponMarine" instance=ExtResource( 1 )]
 
 period = 0.86
-weapon_range = 300.0
+weapon_name = "C-14 Gauss Rifle"
+shoot_range = 300.0
 backswing = 3
 effect_scene = ExtResource( 2 )
 
