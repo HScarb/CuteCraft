@@ -16,6 +16,7 @@ points = PoolVector2Array( -4, -22, 12, -22, 28, -6, 4, 10, -4, 10, -20, -6 )
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -21.905, 23.3748, 50.095, -8.62516, 66.095, -0.62516, -5.90501, 31.3748 )
+_sections_unfolded = [ "Resource" ]
 
 [resource]
 
@@ -36,7 +37,12 @@ points = PoolVector2Array( -21.905, 23.3748, 50.095, -8.62516, 66.095, -0.62516,
 1/is_autotile = false
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
-1/shapes = [  ]
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": true,
+"shape": null,
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 2/name = "wall"
 2/texture = ExtResource( 1 )
 2/tex_offset = Vector2( -69.3109, -99.8051 )
@@ -79,4 +85,5 @@ points = PoolVector2Array( -21.905, 23.3748, 50.095, -8.62516, 66.095, -0.62516,
 "shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
+_sections_unfolded = [ "3", "4" ]
 

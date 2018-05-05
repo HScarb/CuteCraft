@@ -23,6 +23,7 @@ func run():
     var missile = ammo_unit.instance()
     var unit_launch = .get_unit_by_target_data_type(launch_location)
     missile.player = unit_launch.player
+    missile.parent_unit = unit_launch
     # 运行发射效果
     var effect_launch = null
     if launch_effect != null:

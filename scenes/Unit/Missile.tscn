@@ -41,4 +41,8 @@ position = Vector2( 0, 0 )
 scale = Vector2( 3, 3 )
 shape = SubResource( 1 )
 
+[connection signal="area_entered" from="BodyArea" to="." method="_on_BodyArea_area_entered"]
+
+[connection signal="body_entered" from="BodyArea" to="." method="_on_BodyArea_body_entered"]
+
 

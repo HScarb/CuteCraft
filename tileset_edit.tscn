@@ -32,7 +32,7 @@ centered = false
 offset = Vector2( -69.3109, -99.8051 )
 region_enabled = true
 region_rect = Rect2( 28, 220, 132, 136 )
-_sections_unfolded = [ "Offset", "Region" ]
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="wall" index="0"]
 
@@ -49,6 +49,26 @@ _sections_unfolded = [ "Transform" ]
 
 build_mode = 0
 polygon = PoolVector2Array( -68, 2, -4, 34, 60, 2, -4, -30 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Area2D" type="Area2D" parent="wall" index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 4
+collision_mask = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Audio Bus", "Collision" ]
+
+[node name="collision" type="CollisionPolygon2D" parent="wall/Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -68, 2, -4, 34, 60, 2, 60, -66, -4, -96, -68, -61 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="column" type="Sprite" parent="." index="3"]
 
