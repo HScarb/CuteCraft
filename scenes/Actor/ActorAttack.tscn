@@ -3,11 +3,12 @@
 [ext_resource path="res://scenes/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Actor/ActorAttack.gd" type="Script" id=2]
 
-
 [node name="ActorAttack" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 launch_frames = null
 impact_frames = null
+launch_location = 5
+impact_location = 7
 
 

@@ -11,7 +11,8 @@ var impact_location = 7
 
 # override
 func init():
-	# SignalManager.connect("weapon_start", self, "play_launch_animation")
+	SignalManager.connect("effect_start", self, "play_launch_animation")
+	SignalManager.connect("effect_start", self, "play_impact_animation")
 	pass
 
 # virtual
@@ -26,6 +27,8 @@ func check_type_impact(type_name):
 
 # 创建并播放发射动画
 func play_launch_animation(effect_tree_node):
+	if self.launch_frames == null:
+		return
 	# 检测类型
 	var node_name = effect_tree_node.get_name()
 	if not check_type_launch(node_name):
@@ -77,6 +80,8 @@ func play_launch_animation(effect_tree_node):
 
 # 创建并播放轰击动画
 func play_impact_animation(effect_tree_node):
+	if self.impact_frames == null:
+		return
 	# 检测类型
 	var node_name = effect_tree_node.get_name()
 	if not check_type_impact(node_name):

@@ -14,7 +14,8 @@ func get_on_move_condi():
 # 轰击
 func impact(target_unit):
     if effect_impact != null:
-        effect_impact.target_unit.append(target_unit)
+        if target_unit != null:
+            effect_impact.target_unit.append(target_unit)
         effect_impact.run()
     queue_free()
 

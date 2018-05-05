@@ -10,6 +10,6 @@ var impact_location = 7
 
 func run():
 	.run()
-	if target_unit != null:
+	if target_unit != null and not target_unit.empty():
 		for unit in target_unit:
 			unit.take_damage(amount)

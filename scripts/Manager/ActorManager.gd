@@ -4,8 +4,6 @@ extends Node
 
 var arr_actor = []
 
-signal unit_birth(unit_type_name, unit)     # 单位创建消息.单位类型名称(Marine)，单位实体
-
 func _ready():
     # 根据路径加载演算体
     auto_add_actors()
