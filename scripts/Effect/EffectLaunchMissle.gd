@@ -21,6 +21,9 @@ func run():
     .run()
     # 创建发射物实体
     var missile = ammo_unit.instance()
+    # 设置发射物持续存在的时间
+    add_timer_for_missile(missile)
+    # 设置发射物属性
     var unit_launch = .get_unit_by_target_data_type(launch_location)
     missile.player = unit_launch.player
     missile.parent_unit = unit_launch
@@ -56,3 +59,14 @@ func run():
     #   根据单位当前的面向角度设置发射物的速度
     var motion = Vector2(cos(unit_launch.face_angle), sin(unit_launch.face_angle) / 2)
     missile.motion = motion.normalized()
+
+# 子弹到达攻击距离后如果没有遇到单位则原地爆炸
+func add_timer_for_missile(missile):
+    var weapon = self.effect_origin
+    var burst_time = weapon.shoot_range / missile.speed
+    var impact_timer = Timer.new()
+    impact_timer.set_wait_time(burst_time)
+    impact_timer.set_one_shot(true)
+    impact_timer.set_autostart(true)
+    impact_timer.connect("timeout", missile, "impact", [null])
+    missile.add_child(impact_timer)

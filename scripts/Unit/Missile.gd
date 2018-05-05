@@ -11,8 +11,10 @@ func get_on_move_condi():
         return false
     return true
 
-func impact():
+# 轰击
+func impact(target_unit):
     if effect_impact != null:
+        effect_impact.target_unit.append(target_unit)
         effect_impact.run()
     queue_free()
 
@@ -21,7 +23,7 @@ func _on_BodyArea_area_entered(area):
     var target_unit = area.get_parent()
     if parent_unit == target_unit:
         return
-    impact()
+    impact(target_unit)
     pass # replace with function body
 
 func _on_BodyArea_body_entered(body):

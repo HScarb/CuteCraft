@@ -82,6 +82,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="StaticBody" type="StaticBody2D" parent="column" index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -96,7 +97,24 @@ _sections_unfolded = [ "Transform" ]
 build_mode = 0
 polygon = PoolVector2Array( -20, -6, -4, 10, 4, 10, 28, -6, 12, -22, -4, -22 )
 
-[node name="door1" type="Sprite" parent="." index="4"]
+[node name="Area2D" type="Area2D" parent="column" index="1"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="column/Area2D" index="0"]
+
+position = Vector2( 0.181458, 0.181488 )
+build_mode = 0
+polygon = PoolVector2Array( -22.2767, -2.33478, -11.4288, 10.3211, 10.832, 10.4341, 22.7095, -1.52231, 15.352, -12.1657, 13.77, -68.5522, -1.60925, -74.8416, -14.9318, -67.7612, -14.7058, -12.2787 )
+
+[node name="door" type="Sprite" parent="." index="4"]
 
 position = Vector2( -24.1548, 142.216 )
 texture = ExtResource( 1 )
@@ -106,8 +124,9 @@ region_enabled = true
 region_rect = Rect2( 24, 408, 132, 136 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="door1" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="door" index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -117,9 +136,25 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door/StaticBody2D" index="0"]
 
 build_mode = 0
 polygon = PoolVector2Array( -5.90501, 31.3748, 66.095, -0.62516, 50.095, -8.62516, -21.905, 23.3748 )
+
+[node name="Area2D" type="Area2D" parent="door" index="1"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door/Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -5.90501, 31.3748, 63.9738, -0.388336, 61.2648, -61.6795, 46.7039, -69.1292, -13.5713, -37.6371, -18.3121, 23.654 )
 
 

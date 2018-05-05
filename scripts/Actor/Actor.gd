@@ -1,5 +1,5 @@
 # ActorAnimation
-extends Node2D
+extends Node
 
 # virtual
 # 这里注册全局监听信号事件

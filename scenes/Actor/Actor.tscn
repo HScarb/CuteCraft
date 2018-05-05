@@ -2,8 +2,7 @@
 
 [ext_resource path="res://scripts/Actor/Actor.gd" type="Script" id=1]
 
-
-[node name="Actor" type="Node2D"]
+[node name="Actor" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
