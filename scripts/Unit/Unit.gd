@@ -57,12 +57,9 @@ func _ready():
 func refresh_face_angel_by_motion():
 	var plane_motion = Global.iso_2_plane(self.motion)
 	var rad = plane_motion.angle()
-	var deg = rad2deg(rad)
-	print("motion: ", motion, " rad: ", rad, " deg: ", deg)
 	self.face_angle = rad
 
 	refresh_face_direction()
-	print("face_direction: ", face_direction)
 	pass
 
 # 根据面向角度调整朝向
@@ -88,26 +85,28 @@ func refresh_face_direction():
 	pass
 
 # 根据朝向调整面向角度
-func refresh_face_angle():
-	match self.face_direction:
-		Global.FACE_DIRECTION.north:
-			self.face_angle = 0
-		Global.FACE_DIRECTION.north_east:
-			self.face_angle = 45
-		Global.FACE_DIRECTION.east:
-			self.face_angle = 90
-		Global.FACE_DIRECTION.south_east:
-			self.face_angle = 135
-		Global.FACE_DIRECTION.south:
-			self.face_angle = 180
-		Global.FACE_DIRECTION.south_west:
-			self.face_angle = 225
-		Global.FACE_DIRECTION.west:
-			self.face_angle = 270
-		Global.FACE_DIRECTION.north_west:
-			self.face_angle = 315
+# func refresh_face_angle():
+# 	match self.face_direction:
+# 		Global.FACE_DIRECTION.north:
+# 			self.face_angle = 0
+# 		Global.FACE_DIRECTION.north_east:
+# 			self.face_angle = 45
+# 		Global.FACE_DIRECTION.east:
+# 			self.face_angle = 90
+# 		Global.FACE_DIRECTION.south_east:
+# 			self.face_angle = 135
+# 		Global.FACE_DIRECTION.south:
+# 			self.face_angle = 180
+# 		Global.FACE_DIRECTION.south_west:
+# 			self.face_angle = 225
+# 		Global.FACE_DIRECTION.west:
+# 			self.face_angle = 270
+# 		Global.FACE_DIRECTION.north_west:
+# 			self.face_angle = 315
 
 func attack():
+	if self.weapon == null:
+		return
 	if self.weapon.get_can_fire():
 		print("attack")
 		# 播放攻击动画信号

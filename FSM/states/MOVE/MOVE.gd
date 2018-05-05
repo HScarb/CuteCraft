@@ -45,24 +45,6 @@ func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param
 
 	logicRoot.refresh_face_angel_by_motion()
 
-	# # 设置朝向
-	# if logicRoot.motion.x == 0 and logicRoot.motion.y < 0:
-	# 	logicRoot.face_direction = 0
-	# elif logicRoot.motion.x > 0 and logicRoot.motion.y < 0:
-	# 	logicRoot.face_direction = 1
-	# elif logicRoot.motion.x > 0 and logicRoot.motion.y == 0:
-	# 	logicRoot.face_direction = 2
-	# elif logicRoot.motion.x > 0 and logicRoot.motion.y > 0:
-	# 	logicRoot.face_direction = 3
-	# elif logicRoot.motion.x == 0 and logicRoot.motion.y > 0:
-	# 	logicRoot.face_direction = 4
-	# elif logicRoot.motion.x < 0 and logicRoot.motion.y > 0:
-	# 	logicRoot.face_direction = 5
-	# elif logicRoot.motion.x < 0 and logicRoot.motion.y == 0:
-	# 	logicRoot.face_direction = 6
-	# elif logicRoot.motion.x < 0 and logicRoot.motion.y < 0:
-	# 	logicRoot.face_direction = 7
-
 	# 播放动画
 	logicRoot.emit_signal("play_animation", "move")
 	# 移动

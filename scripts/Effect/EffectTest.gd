@@ -21,5 +21,5 @@ func run():
 	if target_point != null:
 		print("target_point: ", target_point.x, target_point.y)
 	if target_unit != null:
-		print("target_unit: ", target_unit, target_unit.name)
+		print("target_unit: ", target_unit)
 	print("##################################")

@@ -76,4 +76,4 @@ func _on_AnimatedSprite_frame_changed():
 	if $AnimatedSprite.animation.begins_with("attack"):
 		if $AnimatedSprite.frame == logicRoot.weapon.damage_frame:
 			emit_signal("reach_damage_frame")
-			print("reach_damage_frame")
+			

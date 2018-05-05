@@ -4,7 +4,7 @@
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/Unit/Implement/HeroRoach.tscn" type="PackedScene" id=3]
 
-[node name="Map" type="Node2D" index="0"]
+[node name="Map" type="Node2D"]
 
 z_index = -2
 script = ExtResource( 1 )
@@ -56,7 +56,7 @@ _sections_unfolded = [ "Cell", "Collision" ]
 
 [node name="HeroRoach" parent="walls" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 500.373, 245.06 )
+position = Vector2( 500.373, 244.06 )
 is_main_character = true
 
 [node name="Camera2D" type="Camera2D" parent="walls/HeroRoach" index="4"]
