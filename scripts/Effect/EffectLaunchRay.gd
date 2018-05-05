@@ -1,6 +1,5 @@
 # EffectLaunchRay.gd
 # 发射射线
-# 目标数据保持不变
 extends "res://scripts/Effect/Effect.gd"
 
 export(PackedScene) var launch_effect = null            # 发射效果

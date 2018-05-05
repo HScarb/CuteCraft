@@ -8,22 +8,31 @@ signal reach_damage_frame
 
 # 用unit初始化
 func init_by_unit(unit):
-    unit.add_child(self)
-    unit.model = self
-    self.logicRoot = unit
-
-    self.logicRoot.connect("play_animation", self, "play_animation")
-    self.logicRoot.connect("stop_animation", self, "stop_animation")
-    self.logicRoot.connect("unit_ready", self, "refresh_status_bars")
-    self.logicRoot.connect("life_enegy_change", self, "refresh_status_bars")
+	unit.add_child(self)
+	unit.model = self
+	self.logicRoot = unit
+	self.logicRoot.connect("play_animation", self, "play_animation")
+	self.logicRoot.connect("stop_animation", self, "stop_animation")
+	self.logicRoot.connect("unit_ready", self, "refresh_status_bars")
+	self.logicRoot.connect("life_enegy_change", self, "refresh_status_bars")
+	
+	# 如果不是发射物，需要监听帧变动，用于武器前摇
+	if not self.logicRoot is load("res://scripts/Unit/Missile.gd"):
+		$AnimatedSprite.connect("frame_changed", self, "_on_AnimatedSprite_frame_changed")
 
 func play_animation(animation_name):
-    if animation_name.begins_with("stand")\
+	var full_animation_name = animation_name						# 最终动画全名
+	if animation_name.begins_with("stand")\
         or animation_name.begins_with("move")\
-        or animation_name.begins_with("attack"):
-        $AnimatedSprite.play(animation_name + "_%d" % logicRoot.face_direction)
-    else:
-        $AnimatedSprite.play(animation_name)
+		or animation_name.begins_with("attack"):
+		full_animation_name = animation_name + "_%d" % logicRoot.face_direction
+	# 尝试播放动画
+	# 如果没有该动画则播放默认
+	var sprite_frames = $AnimatedSprite.get_sprite_frames()
+	if sprite_frames.has_animation(full_animation_name):
+		$AnimatedSprite.play(full_animation_name)
+	else:
+		$AnimatedSprite.play("default")
 
 func stop_animation():
     $AnimatedSprite.stop()

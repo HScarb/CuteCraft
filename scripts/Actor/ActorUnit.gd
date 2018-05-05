@@ -4,8 +4,8 @@ export(PackedScene) var model = null
 
 # virtual
 # 这里注册全局监听信号事件
-# func init():
-# 	pass
+func init():
+	SignalManager.connect("unit_birth", self, "create_model")
 
 # virtual
 # 检测创建的单位类型是否为该演算体对应的类型，需要派生类重载
@@ -16,8 +16,9 @@ export(PackedScene) var model = null
 # parent_unit:[Unit.gd]
 func create_model(parent_unit):
 	# 先验证单位类型名称
-	var unit_type_name = parent_unit.get_name()
-	if not check_type(unit_type_name):
+	var file_name = parent_unit.get_filename()
+	file_name = file_name.get_basename().get_file()
+	if not check_type(file_name):
 		return null
 	# 根据模型参数创建模型
 	if self.model == null:
