@@ -36,7 +36,7 @@ func play_launch_animation(effect_tree_node):
 	# 获取单位
 	var unit = effect_tree_node.get_unit_by_target_data_type(launch_location)
 	# 创建动画精灵
-	var launch_sprite = .create_animated_sprite(launch_frames, unit.model.get_muzzle())
+	var launch_sprite = create_animated_sprite(launch_frames, unit.model.get_muzzle())
 	# 设置缩放等
 	match unit.face_direction:
 		Global.FACE_DIRECTION.north:
@@ -92,7 +92,7 @@ func play_impact_animation(effect_tree_node):
 	if impact_location % 2 == 0:
 		# 如果目标类型是点
 		var impact_pos = effect_tree_node.get_pos_by_target_data_type(impact_location)
-		impact_sprite = .create_animated_sprite(impact_frames, impact_pos)
+		impact_sprite = create_animated_sprite(impact_frames, MapManager.get_layer_unit(), impact_pos)
 	else:
 		# 如果目标类型是单位
 		var target_unit = effect_tree_node.get_unit_by_target_data_type(impact_location)
@@ -100,8 +100,9 @@ func play_impact_animation(effect_tree_node):
 			# 如果是单位组
 			impact_sprite = []
 			for unit in target_unit:
-				impact_sprite.append(.create_animated_sprite(impact_frames, unit.model.get_impact_node()))
+				impact_sprite.append(create_animated_sprite(impact_frames, unit.model.get_impact_node()))
 		else:
 			# 如果是单个单位
 			if target_unit != null:
-				impact_sprite = .create_animated_sprite(impact_frames, target_unit.model.get_impact_node())
+				impact_sprite = create_animated_sprite(impact_frames, target_unit.model.get_impact_node())
+	return impact_sprite

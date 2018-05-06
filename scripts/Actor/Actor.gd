@@ -14,13 +14,16 @@ func check_type(type_name):
 # 创建序列帧动画
 # sprite_frames: [SpriteFrames]
 # parent_node: [Node2D]
-# under_node: [bool]
+# pos: [Vector2]
 # return: [SpriteFrames]
-func create_animated_sprite(sprite_frames, parent_node):
+func create_animated_sprite(sprite_frames, parent_node, pos = null):
 	if sprite_frames == null or parent_node == null:
 		return
+	if pos == null:
+		pos = Vector2(0 ,0)
 	var animated_sprite = AnimatedSprite.new()
 	animated_sprite.frames = sprite_frames
+	animated_sprite.set_position(pos)
 	animated_sprite.connect("tree_entered", animated_sprite, "play")
 	animated_sprite.connect("animation_finished", animated_sprite, "queue_free")
 	parent_node.add_child(animated_sprite)

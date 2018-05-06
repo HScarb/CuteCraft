@@ -111,11 +111,6 @@ func get_pos_by_target_data_type(target_data_type):
 				return self.caster_unit.position
 			return self.caster_point
 		Global.TARGET_DATA.target_point:
-			if not self.target_unit.empty():
-				var pos_list = []
-				for unit in self.target_unit:
-					pos_list.append(unit.position)
-				return pos_list
 			return self.target_point
 		_:
 			return null

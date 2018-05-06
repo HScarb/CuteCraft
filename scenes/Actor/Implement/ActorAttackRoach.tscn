@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Actor/ActorAttack.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Actor/ActorAttackRoach.gd" type="Script" id=2]
+[ext_resource path="res://frames/roach/roach_impact.tres" type="SpriteFrames" id=3]
 
 [node name="ActorAttackRoach" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+impact_frames = ExtResource( 3 )
+impact_location = 6
 
 
