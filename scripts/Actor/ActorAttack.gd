@@ -36,12 +36,9 @@ func play_launch_animation(effect_tree_node):
 	# 获取单位
 	var unit = effect_tree_node.get_unit_by_target_data_type(launch_location)
 	# 创建动画精灵
-	var new_launch_model = launch_model.instance()
-	new_launch_model.init()
+	var new_launch_model = create_animated_model(launch_model, unit.model.get_muzzle())
 	# 根据朝向进行形变
 	new_launch_model.modify_by_direction(unit.face_direction)
-	# 添加到父节点
-	unit.model.get_muzzle().add_child(new_launch_model)
 	
 	return new_launch_model
 
@@ -53,14 +50,16 @@ func play_impact_animation(effect_tree_node):
 	var node_name = effect_tree_node.get_name()
 	if not check_type_impact(node_name):
 		return
+	var new_impact_model = null
 	# 获取目标单位或点
 	var impact_pos = effect_tree_node.get_pos_by_target_data_type(impact_location)
-	# 创建新的轰击模型
-	var new_impact_model = impact_model.instance()
-	new_impact_model.init()
-	new_impact_model.set_position(impact_pos)
-	# 添加到地图
-	MapManager.get_layer_unit().add_child(new_impact_model)
+	if typeof(impact_pos) == TYPE_ARRAY:
+		new_impact_model = []
+		for pos in impact_pos:
+			new_impact_model.append(create_animated_model(impact_model, MapManager.get_layer_front(), pos))
+			pass
+	else:
+		new_impact_model = create_animated_model(impact_model, MapManager.get_layer_front(), impact_pos)
 	# if impact_location % 2 == 0:
 	# 	# 如果目标类型是点
 	# 	var impact_pos = effect_tree_node.get_pos_by_target_data_type(impact_location)

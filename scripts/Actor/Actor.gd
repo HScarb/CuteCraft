@@ -28,3 +28,22 @@ func create_animated_sprite(sprite_frames, parent_node, pos = null):
 	animated_sprite.connect("animation_finished", animated_sprite, "queue_free")
 	parent_node.add_child(animated_sprite)
 	return animated_sprite
+
+# 创建序列帧动画
+# model_scene: [PackedScene]
+# parent_node: [Node2D]
+# pos: [Vector2]
+# return: [Model.gd]
+func create_animated_model(model_scene, parent_node, pos = null):
+	if model_scene == null or parent_node == null:
+		return
+	if pos == null:
+		pos = Vector2(0, 0)
+	# 创建新的模型
+	var new_model = model_scene.instance()
+	# 进入场景树后开始播放动画
+	new_model.init()
+	new_model.set_position(pos)
+	# 添加到父节点
+	parent_node.add_child(new_model)
+	return new_model

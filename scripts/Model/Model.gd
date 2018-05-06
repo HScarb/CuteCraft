@@ -43,14 +43,6 @@ func is_playing():
 
 func modify_by_direction(direction):
 	match direction:
-		Global.FACE_DIRECTION.north:
-			$AnimatedSprite.set_scale(Vector2(0.25, 1))
-			$AnimatedSprite.set_offset(Vector2(-90, 0))
-		Global.FACE_DIRECTION.north_east:
-			$AnimatedSprite.set_scale(Vector2(0.7, 1))
-			$AnimatedSprite.set_flip_h(true)
-			$AnimatedSprite.set_offset(Vector2(90, 0))
-			$AnimatedSprite.set_rotation_degrees(-18)
 		Global.FACE_DIRECTION.east:
 			$AnimatedSprite.set_offset(Vector2(90, 0))
 			$AnimatedSprite.set_flip_h(true)
@@ -60,6 +52,7 @@ func modify_by_direction(direction):
 			$AnimatedSprite.set_offset(Vector2(90, 0))
 			$AnimatedSprite.set_flip_h(true)
 			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
+			$AnimatedSprite.set_rotation_degrees(24)
 		Global.FACE_DIRECTION.south:
 			$AnimatedSprite.set_scale(Vector2(0.5, 1))
 			$AnimatedSprite.set_offset(Vector2(90, 0))
@@ -70,7 +63,7 @@ func modify_by_direction(direction):
 			$AnimatedSprite.set_scale(Vector2(0.7, 1))
 			$AnimatedSprite.set_offset(Vector2(-90, 0))
 			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
-			$AnimatedSprite.set_rotation_degrees(-18)
+			$AnimatedSprite.set_rotation_degrees(-24)
 		Global.FACE_DIRECTION.west:
 			$AnimatedSprite.set_scale(Vector2(1, 1))
 			$AnimatedSprite.set_offset(Vector2(-90, 0))
@@ -78,7 +71,16 @@ func modify_by_direction(direction):
 		Global.FACE_DIRECTION.north_west:
 			$AnimatedSprite.set_scale(Vector2(0.7, 1))
 			$AnimatedSprite.set_offset(Vector2(-90, 0))
-			$AnimatedSprite.set_rotation_degrees(18)
+			$AnimatedSprite.set_rotation_degrees(24)
+		Global.FACE_DIRECTION.north:
+			$AnimatedSprite.set_scale(Vector2(0.25, 1))
+			$AnimatedSprite.set_offset(Vector2(-90, 0))
+			$AnimatedSprite.set_rotation_degrees(90)
+		Global.FACE_DIRECTION.north_east:
+			$AnimatedSprite.set_scale(Vector2(0.7, 1))
+			$AnimatedSprite.set_flip_h(true)
+			$AnimatedSprite.set_offset(Vector2(90, 0))
+			$AnimatedSprite.set_rotation_degrees(-24)
 
 # 动画播放结束调用
 func _on_AnimatedSprite_animation_finished():
