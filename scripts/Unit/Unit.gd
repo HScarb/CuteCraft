@@ -59,11 +59,11 @@ func refresh_face_angel_by_motion():
 	var rad = plane_motion.angle()
 	self.face_angle = rad
 
-	refresh_face_direction()
+	_refresh_face_direction()
 	pass
 
 # 根据面向角度调整朝向
-func refresh_face_direction():
+func _refresh_face_direction():
 	if (self.face_angle <= PI / 8 and self.face_angle >= 0)\
 		or (self.face_angle <= 0 and self.face_angle >= - PI / 8):
 		self.face_direction = Global.FACE_DIRECTION.east
@@ -84,33 +84,22 @@ func refresh_face_direction():
 		self.face_direction = Global.FACE_DIRECTION.north_east
 	pass
 
-# 根据朝向调整面向角度
-# func refresh_face_angle():
-# 	match self.face_direction:
-# 		Global.FACE_DIRECTION.north:
-# 			self.face_angle = 0
-# 		Global.FACE_DIRECTION.north_east:
-# 			self.face_angle = 45
-# 		Global.FACE_DIRECTION.east:
-# 			self.face_angle = 90
-# 		Global.FACE_DIRECTION.south_east:
-# 			self.face_angle = 135
-# 		Global.FACE_DIRECTION.south:
-# 			self.face_angle = 180
-# 		Global.FACE_DIRECTION.south_west:
-# 			self.face_angle = 225
-# 		Global.FACE_DIRECTION.west:
-# 			self.face_angle = 270
-# 		Global.FACE_DIRECTION.north_west:
-# 			self.face_angle = 315
+func stand():
+	# 播放站立动画
+	play_stand_animation()
+
+func move():
+	# 播放移动动画
+	play_move_animation()
+	# 移动
+	move_and_slide(self.motion)
 
 func attack():
 	if self.weapon == null:
 		return
 	if self.weapon.get_can_fire():
-		print("attack")
-		# 播放攻击动画信号
-		self.emit_signal("play_animation", "attack")
+		# 播放攻击动画
+		play_attack_animation()
 		# 攻击开始信号
 		self.emit_signal("attack_begin")
 		# 武器攻击
@@ -139,6 +128,49 @@ func get_attack_interval():
 # 获取一次攻击之后等待的时间
 func get_attack_time():
 	return self.weapon.get_attack_time()
+
+###### 播放动画 ######
+# 播放站立动画
+func play_stand_animation():
+	emit_signal("play_animation", "stand")
+	
+# 播放移动动画
+func play_move_animation():
+	emit_signal("play_animation", "move")
+
+# 播放攻击动画
+func play_attack_animation():
+	emit_signal("play_animation", "attack")
+
+# 播放死亡动画
+# 死亡动画规则:
+# - 如果有4方向的死亡动画，根据单位的当前朝向播放
+# - 否则随机播放一个死亡动画
+func play_dead_animation():
+	var dir = self.face_direction
+	var frames = self.model.get_node("AnimatedSprite").get_sprite_frames()
+	if frames.has_animation("death_0"):
+		# 如果有4方向死亡动画
+		match dir:
+			0, 7:
+				self.emit_signal("play_animation", "death_0")
+			1, 2, 3:
+				self.emit_signal("play_animation", "death_1")
+			4, 5:
+				self.emit_signal("play_animation", "death_2")
+			6:
+				self.emit_signal("play_animation", "death_3")
+	else:
+		# 如果没有，随机一个死亡动画
+		randomize()
+		self.is_dead = true
+		# 	统计死亡动画个数
+		var death_anim_num = 0
+		while frames.has_animation("death%d" % death_anim_num):
+			death_anim_num += 1
+		var i = randi() % death_anim_num
+		# 	随机播放死亡动画
+		self.emit_signal("play_animation", "death%d" % i)
 
 ###### 状态切换条件 ######
 # virtual 攻击状态开启条件

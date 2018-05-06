@@ -27,7 +27,7 @@ func check_type_impact(type_name):
 
 # 创建并播放发射动画
 func play_launch_animation(effect_tree_node):
-	if self.launch_model == null:
+	if launch_model == null:
 		return
 	# 检测类型
 	var node_name = effect_tree_node.get_name()

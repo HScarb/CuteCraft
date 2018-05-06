@@ -29,31 +29,7 @@ func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inA
 	# 死亡动画规则:
 	# - 如果有4方向的死亡动画，根据单位的当前朝向播放
 	# - 否则随机播放一个死亡动画
-	var dir = logicRoot.face_direction
-	var frames = logicRoot.get_node("AnimatedSprite").frames
-	if frames.has_animation("death_0"):
-		# 如果有4方向死亡动画
-		match dir:
-			0, 1, 7:
-				logicRoot.emit_signal("play_animation", "death_0")
-			2:
-				logicRoot.emit_signal("play_animation", "death_1")
-			3, 4, 5:
-				logicRoot.emit_signal("play_animation", "death_2")
-			6:
-				logicRoot.emit_signal("play_animation", "death_3")
-	else:
-		# 如果没有，随机一个死亡动画
-		randomize()
-		logicRoot.is_dead = true
-		# 	统计死亡动画个数
-		var death_anim_num = 0
-		while frames.has_animation("death%d" % death_anim_num):
-			death_anim_num += 1
-		var i = randi() % death_anim_num
-		# 	随机播放死亡动画
-		logicRoot.emit_signal("play_animation", "death%d" % i)
-	pass
+	logicRoot.play_dead_animation()
 
 #when updating state, paramx can be used only if updating fsm manually
 func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param4=null):

@@ -5,7 +5,7 @@
 
 [node name="WeaponRoach" instance=ExtResource( 1 )]
 
-period = 2.0
+period = 1.5
 weapon_name = "Acid"
 shoot_range = 200.0
 damage_frame = 2

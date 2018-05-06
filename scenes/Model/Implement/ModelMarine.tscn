@@ -12,7 +12,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="AnimatedSprite" parent="." index="0"]
 
-position = Vector2( 0, -60 )
+position = Vector2( 0.709127, -60 )
 frames = ExtResource( 3 )
 animation = "attack_0"
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]

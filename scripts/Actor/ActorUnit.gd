@@ -21,7 +21,7 @@ func create_model(parent_unit):
 	if not check_type(file_name):
 		return null
 	# 根据模型参数创建模型
-	if self.model == null:
+	if model == null:
 		return null
 	var new_model = self.model.instance()
 	new_model.init_by_unit(parent_unit)

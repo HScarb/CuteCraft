@@ -59,6 +59,9 @@ func run():
     #   根据单位当前的面向角度设置发射物的速度
     var motion = Vector2(cos(unit_launch.face_angle), sin(unit_launch.face_angle) / 2)
     missile.motion = motion.normalized()
+    
+    missile.refresh_face_angel_by_motion()
+    missile.modify_by_direction()
 
 # 子弹到达攻击距离后如果没有遇到单位则原地爆炸
 func add_timer_for_missile(missile):

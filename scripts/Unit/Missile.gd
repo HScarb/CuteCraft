@@ -20,6 +20,10 @@ func impact(target_unit):
         effect_impact.run()
     queue_free()
 
+func modify_by_direction():
+    if self.model != null:
+        self.model.modify_by_direction(self.face_direction)
+
 func _on_BodyArea_area_entered(area):
     print("area_enter")
     var target_unit = area.get_parent()
