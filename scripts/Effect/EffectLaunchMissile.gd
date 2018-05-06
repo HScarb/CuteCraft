@@ -1,4 +1,4 @@
-# EffectLaunchMissle.gd
+# EffectLaunchMissile.gd
 # 发射发射物效果
 extends "res://scripts/Effect/Effect.gd"
 
@@ -24,7 +24,7 @@ func run():
     # 设置发射物持续存在的时间
     add_timer_for_missile(missile)
     # 设置发射物属性
-    var unit_launch = .get_unit_by_target_data_type(launch_location)
+    var unit_launch = get_unit_by_target_data_type(launch_location)
     missile.player = unit_launch.player
     missile.parent_unit = unit_launch
     # 运行发射效果
@@ -47,9 +47,9 @@ func run():
         effect_impact.source_unit = missile
         #   如果当前效果的轰击位置是单位
         if Global.is_target_data_unit(impact_location):
-            effect_impact.target_unit.append(.get_unit_by_target_data_type(impact_location))
+            effect_impact.target_unit.append(get_unit_by_target_data_type(impact_location))
         else:
-            effect_impact.target_point = .get_pos_by_target_data_type(impact_location)
+            effect_impact.target_point = get_pos_by_target_data_type(impact_location)
         missile.effect_impact = effect_impact
     # 将发射物放置在正确位置(单位模型的炮口)
     var map_pos = unit_launch.model.get_muzzle().position + unit_launch.position

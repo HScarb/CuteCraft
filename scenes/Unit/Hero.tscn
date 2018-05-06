@@ -12,4 +12,8 @@ script = ExtResource( 2 )
 
 editor/display_folded = false
 
+[node name="States" parent="FSM2D" index="0"]
+
+editor/display_folded = true
+
 

@@ -3,27 +3,14 @@
 [ext_resource path="res://scenes/Model/Model.tscn" type="PackedScene" id=1]
 [ext_resource path="res://frames/roach/roach_missile.tres" type="SpriteFrames" id=2]
 
-[node name="ModelRoachMissile" index="0" instance=ExtResource( 1 )]
+[node name="ModelRoachMissile" instance=ExtResource( 1 )]
 
 scale = Vector2( 0.15, 0.15 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+free_after_finished = true
 
-[node name="Muzzles" parent="." index="0"]
+[node name="AnimatedSprite" parent="." index="0"]
 
-visible = false
-
-[node name="AnimatedSprite" parent="." index="1"]
-
-position = Vector2( 0, 0 )
 frames = ExtResource( 2 )
-frame = 2
-
-[node name="LifeBar" parent="." index="2"]
-
-visible = false
-
-[node name="EnegyBar" parent="." index="3"]
-
-visible = false
 
 

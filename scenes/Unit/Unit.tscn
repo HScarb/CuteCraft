@@ -19,8 +19,8 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
+radius = 50.0
+height = 70.0
 
 [node name="Unit" type="KinematicBody2D"]
 
@@ -40,7 +40,7 @@ life = 10
 life_max = 10
 enegy = 10
 enegy_max = 10
-radius = 10
+radius = 30.0
 speed = 200.0
 acceleration = 0
 weapon_path = null
@@ -180,12 +180,11 @@ path2TargetState = NodePath("../../States/DEAD")
 [node name="GroundShape" type="CollisionShape2D" parent="." index="1"]
 
 rotation = 1.5708
-scale = Vector2( 3, 3 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="BodyArea" type="Area2D" parent="." index="2"]
 
-editor/display_folded = true
+position = Vector2( 0, -41 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -199,8 +198,6 @@ _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
 
 [node name="BodyShape" type="CollisionShape2D" parent="BodyArea" index="0"]
 
-position = Vector2( 0, -41 )
-scale = Vector2( 3.9, 3 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 

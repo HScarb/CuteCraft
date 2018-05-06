@@ -1,88 +1,88 @@
 # Model.gd
-# 单位模型控制脚本
+# 模型(包含一个动画精灵)
 extends Node2D
 
-var logicRoot = null
+export(bool)var free_after_finished = false					# 是否在动画结束之后销毁
 
-signal reach_damage_frame
+var logicRoot
 
-# 用unit初始化
 func init_by_unit(unit):
 	unit.add_child(self)
 	unit.model = self
 	self.logicRoot = unit
 	self.logicRoot.connect("play_animation", self, "play_animation")
 	self.logicRoot.connect("stop_animation", self, "stop_animation")
-	self.logicRoot.connect("unit_ready", self, "refresh_status_bars")
-	self.logicRoot.connect("life_enegy_change", self, "refresh_status_bars")
-	
-	# 如果不是发射物，需要监听帧变动，用于武器前摇
-	if not self.logicRoot is load("res://scripts/Unit/Missile.gd"):
-		$AnimatedSprite.connect("frame_changed", self, "_on_AnimatedSprite_frame_changed")
 
-func play_animation(animation_name):
-	var full_animation_name = animation_name						# 最终动画全名
-	if animation_name.begins_with("stand")\
-        or animation_name.begins_with("move")\
-		or animation_name.begins_with("attack"):
-		full_animation_name = animation_name + "_%d" % logicRoot.face_direction
+func init():
+    self.connect("tree_entered", $AnimatedSprite, "play")
+
+# 根据动画名称播放动画，如果动画名称不存在则播放默认动画
+func play_animation(animation_name = null):
+	if animation_name == null:
+		$AnimatedSprite.play("default")
+		return
 	# 尝试播放动画
 	# 如果没有该动画则播放默认
 	var sprite_frames = $AnimatedSprite.get_sprite_frames()
-	if sprite_frames.has_animation(full_animation_name):
-		$AnimatedSprite.play(full_animation_name)
+	if sprite_frames.has_animation(animation_name):
+		$AnimatedSprite.play(animation_name)
 	else:
 		$AnimatedSprite.play("default")
 
+# 停止播放动画
 func stop_animation():
-    $AnimatedSprite.stop()
+	$AnimatedSprite.stop()
 
+# 获取播放动画的名称
 func get_playing_animation():
-    return $AnimatedSprite.animation
+	return $AnimatedSprite.animation
 
+# 获取动画是否在播放中
 func is_playing():
-    return $AnimatedSprite.is_playing()
+	return $AnimatedSprite.is_playing()
 
-# 刷新状态条
-func refresh_status_bars():
-	print("refresh_status_bars")
-	$LifeBar.set_value(logicRoot.life / logicRoot.life_max * 100)
-	if logicRoot.enegy_max <= 0:
-		$EnegyBar.set_visible(false)
-	else:
-		$EnegyBar.set_value(logicRoot.enegy / logicRoot.enegy_max * 100)
-	pass
-
-# 获取炮口位置
-func get_muzzle(index = null):
-	if get_node("Muzzles").get_child_count() <= 0:
-		return get_node("Muzzles")
-	if index == null:
-		return get_node("Muzzles/Muzzle_%d" % logicRoot.face_direction)
-	else:
-		return get_node("Muzzles/Muzzle_%d" % index)
-
-# 获取模型被轰击时的轰击点位置
-func get_impact_node():
-	return get_node("AnimatedSprite")
+func modify_by_direction(direction):
+	match direction:
+		Global.FACE_DIRECTION.north:
+			$AnimatedSprite.set_scale(Vector2(0.1, 0.4))
+			$AnimatedSprite.set_offset(Vector2(-90, 0))
+		Global.FACE_DIRECTION.north_east:
+			$AnimatedSprite.set_scale(Vector2(0.28, 0.4))
+			$AnimatedSprite.set_flip_h(true)
+			$AnimatedSprite.set_offset(Vector2(90, 0))
+			$AnimatedSprite.set_rotation_degrees(-18)
+		Global.FACE_DIRECTION.east:
+			$AnimatedSprite.set_scale(Vector2(0.4, 0.4))
+			$AnimatedSprite.set_offset(Vector2(90, 0))
+			$AnimatedSprite.set_flip_h(true)
+			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
+		Global.FACE_DIRECTION.south_east:
+			$AnimatedSprite.set_scale(Vector2(0.28, 0.4))
+			$AnimatedSprite.set_offset(Vector2(90, 0))
+			$AnimatedSprite.set_flip_h(true)
+			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
+		Global.FACE_DIRECTION.south:
+			$AnimatedSprite.set_scale(Vector2(0.2, 0.4))
+			$AnimatedSprite.set_offset(Vector2(90, 0))
+			$AnimatedSprite.set_flip_h(true)
+			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
+			$AnimatedSprite.set_rotation_degrees(90)
+		Global.FACE_DIRECTION.south_west:
+			$AnimatedSprite.set_scale(Vector2(0.28, 0.4))
+			$AnimatedSprite.set_offset(Vector2(-90, 0))
+			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
+			$AnimatedSprite.set_rotation_degrees(-18)
+		Global.FACE_DIRECTION.west:
+			$AnimatedSprite.set_scale(Vector2(0.4, 0.4))
+			$AnimatedSprite.set_offset(Vector2(-90, 0))
+			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
+		Global.FACE_DIRECTION.north_west:
+			$AnimatedSprite.set_scale(Vector2(0.28, 0.4))
+			$AnimatedSprite.set_offset(Vector2(-90, 0))
+			$AnimatedSprite.set_rotation_degrees(18)
 
 # 动画播放结束调用
 func _on_AnimatedSprite_animation_finished():
-	if $AnimatedSprite.animation.begins_with("attack"):
-		# 如果是攻击动画播放完成
-		if logicRoot.stand_after_attack:
-			play_animation("stand")
-		else:
-			stop_animation()
-	elif $AnimatedSprite.animation.begins_with("death"):
-		# 如果是死亡动画播放完成
-		logicRoot.dead()
-
-# 在动画的每一帧调用 攻击动画伤害帧
-func _on_AnimatedSprite_frame_changed():
-	if logicRoot.weapon == null:
-		return
-	if $AnimatedSprite.animation.begins_with("attack"):
-		if $AnimatedSprite.frame == logicRoot.weapon.damage_frame:
-			emit_signal("reach_damage_frame")
-			
+	if free_after_finished:
+		queue_free()
+	pass # replace with function body

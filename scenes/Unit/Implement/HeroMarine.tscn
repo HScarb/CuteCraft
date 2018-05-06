@@ -16,7 +16,6 @@ weapon_path = NodePath("WeaponMarine")
 
 [node name="FSM2D" parent="." index="0"]
 
-editor/display_folded = false
 GraphData = {
 "ATTACK": Vector2( 1078, 507 ),
 "ATTACK_": Vector2( 1078, 507 ),
@@ -82,7 +81,11 @@ GraphData = {
 
 [node name="BodyArea" parent="." index="2"]
 
-editor/display_folded = false
+position = Vector2( 0, 0 )
+
+[node name="BodyShape" parent="BodyArea" index="0"]
+
+position = Vector2( 0, -41 )
 
 [node name="WeaponMarine" parent="." index="3" instance=ExtResource( 2 )]
 

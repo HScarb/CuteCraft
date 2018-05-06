@@ -16,6 +16,7 @@ func impact(target_unit):
     if effect_impact != null:
         if target_unit != null:
             effect_impact.target_unit.append(target_unit)
+        effect_impact.target_point = self.get_position()
         effect_impact.run()
     queue_free()
 

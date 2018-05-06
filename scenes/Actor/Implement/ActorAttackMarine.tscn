@@ -2,15 +2,14 @@
 
 [ext_resource path="res://scenes/Actor/ActorAttack.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Actor/ActorAttackMarine.gd" type="Script" id=2]
-[ext_resource path="res://frames/marine/marine_launch.tres" type="SpriteFrames" id=3]
-[ext_resource path="res://frames/marine/marine_impact.tres" type="SpriteFrames" id=4]
-
+[ext_resource path="res://scenes/Model/Implement/ModelMarineLaunch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Model/Implement/ModelMarineImpact.tscn" type="PackedScene" id=4]
 
 [node name="ActorAttackMarine" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
-launch_frames = ExtResource( 3 )
-impact_frames = ExtResource( 4 )
+launch_model = ExtResource( 3 )
+impact_model = ExtResource( 4 )
 
 
