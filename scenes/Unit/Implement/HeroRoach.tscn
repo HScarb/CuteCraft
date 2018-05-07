@@ -6,17 +6,16 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 39.0
+radius = 35.0
 height = 50.0
 
 [node name="HeroRoach" instance=ExtResource( 1 )]
 
-position = Vector2( 0, 1 )
 life = 125
 life_max = 125
 enegy = 0
 enegy_max = 0
-radius = 30.0
+radius = 25.0
 speed = 225.0
 weapon_path = NodePath("WeaponRoach")
 
@@ -87,7 +86,7 @@ GraphData = {
 
 [node name="BodyArea" parent="." index="2"]
 
-position = Vector2( 0, -60 )
+position = Vector2( 0, -50 )
 
 [node name="BodyShape" parent="BodyArea" index="0"]
 

@@ -59,14 +59,14 @@ func run():
     #   根据单位当前的面向角度设置发射物的速度
     var motion = Vector2(cos(unit_launch.face_angle), sin(unit_launch.face_angle) / 2)
     missile.motion = motion.normalized()
-    
     missile.refresh_face_angel_by_motion()
     missile.modify_by_direction()
 
 # 子弹到达攻击距离后如果没有遇到单位则原地爆炸
 func add_timer_for_missile(missile):
     var weapon = self.effect_origin
-    var burst_time = weapon.shoot_range / missile.speed
+    var shoot_vector = weapon.get_shoot_vector()
+    var burst_time = shoot_vector.length() / missile.speed
     var impact_timer = Timer.new()
     impact_timer.set_wait_time(burst_time)
     impact_timer.set_one_shot(true)

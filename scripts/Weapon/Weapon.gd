@@ -100,6 +100,13 @@ func trans_target_data(sub_effect):
 func get_attack_time():
 	return $AttackIntervalTimer.time_left
 
+# 获取武器射击向量
+func get_shoot_vector():
+	var rad = logicRoot.face_angle
+	var shoot_vector = Vector2(cos(rad) * shoot_range, sin(rad) * shoot_range)
+	shoot_vector = Global.cart_2_iso(shoot_vector)
+	return shoot_vector
+
 # 计算目标点位置
 # Muzzle点位置+射程
 # return: [Vector2]
@@ -112,9 +119,8 @@ func calc_target_point():
 		target_pos = muzzle_pos + logicRoot.position
 		# 根据单位的朝向和武器射程计算出目标点
 		# 单位的朝向转化成弧度
-		var rad = logicRoot.face_angle
-		var shoot_vector = Vector2(cos(rad) * shoot_range, sin(rad) * shoot_range)
-		target_pos = target_pos + Global.cart_2_iso(shoot_vector)
+		var shoot_vector = get_shoot_vector()
+		target_pos = target_pos + shoot_vector
 	else:
 		# *** 计算近战武器目标点
 		target_pos = logicRoot.position

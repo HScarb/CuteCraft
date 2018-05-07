@@ -58,4 +58,4 @@ func run():
         effect_impact.run()
     # 销毁raycast
     print(target)
-    # raycast.queue_free()
+    raycast.queue_free()

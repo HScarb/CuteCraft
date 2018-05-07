@@ -11,7 +11,7 @@ radius = 12.0
 
 face_angle = 1.5708
 radius = 10.0
-speed = 400.0
+speed = 500.0
 
 [node name="BodyShape" parent="BodyArea" index="0"]
 

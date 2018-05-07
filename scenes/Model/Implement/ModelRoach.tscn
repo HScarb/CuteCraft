@@ -11,7 +11,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="AnimatedSprite" parent="." index="0"]
 
-position = Vector2( 0, -60 )
+position = Vector2( 0, -50 )
+scale = Vector2( 0.8, 0.8 )
 frames = ExtResource( 3 )
 animation = "attack_7"
 frame = 4
@@ -27,37 +28,53 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_1" type="Position2D" parent="Muzzles" index="1"]
 
-position = Vector2( 19.7123, 7.38016 )
+position = Vector2( 17, 6 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_2" type="Position2D" parent="Muzzles" index="2"]
 
-position = Vector2( 0, 11 )
+position = Vector2( 0, 10 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_3" type="Position2D" parent="Muzzles" index="3"]
 
-position = Vector2( -11.3283, -1.37686 )
+position = Vector2( -7.23151, -4.78603 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_4" type="Position2D" parent="Muzzles" index="4"]
 
-position = Vector2( -29.3297, -20.1643 )
+position = Vector2( -26.0735, -17.7222 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_5" type="Position2D" parent="Muzzles" index="5"]
 
-position = Vector2( -42.0913, -11.416 )
+position = Vector2( -33.1369, -11.6195 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_6" type="Position2D" parent="Muzzles" index="6"]
 
-position = Vector2( 0, -75 )
+position = Vector2( 0, -88 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_7" type="Position2D" parent="Muzzles" index="7"]
 
-position = Vector2( 46.6598, -11.7491 )
+position = Vector2( 35.4667, -14.5982 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="LifeBar" parent="." index="2"]
+
+margin_left = -75.0
+margin_top = -142.0
+margin_right = 66.0
+margin_bottom = -134.0
+rect_scale = Vector2( 0.6, 0.6 )
+
+[node name="EnegyBar" parent="." index="3"]
+
+margin_left = -75.0
+margin_top = -137.0
+margin_right = 66.0
+margin_bottom = -129.0
+rect_scale = Vector2( 0.6, 0.6 )
 
 
