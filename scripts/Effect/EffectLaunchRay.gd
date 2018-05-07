@@ -11,11 +11,47 @@ var impact_location = 6                             # 轰击位置，默认是�
 
 func run():
     .run()
+    # 判断发射单位是否是单位
+    var launch_unit = get_data_by_target_data_type(launch_location)
+    if not launch_unit is load("res://scripts/Unit/Unit.gd"):
+        return
+    # 运行发射效果
+    var effect_launch = null
+    if launch_effect != null:
+        effect_launch = launch_effect.instance()
+        # 给发射效果传递目标数据
+        trans_target_data(effect_launch)
+        effect_launch.target_unit.append(launch_unit)
+        effect_launch.run()
+    # 创建并激活raycast
     var raycast = RayCast2D.new()
     raycast.enabled = true
-    var unit = get_data_by_target_data_type(launch_location)
+    raycast.set_collision_mask_bit(2, true)
+    # 获取武器或者技能的范围，调整raycast射向
     var origin = self.effect_origin
-    if not unit is load("res://scripts/Unit/Unit.gd"):
-        return
-    unit.model.get_muzzle().add_child(raycast)
+    var cast_vec = Vector2()
+    cast_vec.x = origin.shoot_range * cos(launch_unit.face_angle)
+    cast_vec.y = origin.shoot_range * sin(launch_unit.face_angle)
+    cast_vec = Global.cart_2_iso(cast_vec)
+    raycast.set_cast_to(cast_vec)
+    # 添加到单位模型
+    launch_unit.model.get_muzzle().add_child(raycast)
+    # 检测raycast碰撞
+    var target = null
+    raycast.force_raycast_update()
+    if raycast.is_colliding():
+        # 获取碰撞单位
+        target = raycast.get_collider()
+        target = target.get_parent()
+    # 运行轰击效果
+    var effect_impact = null
+    if impact_effect != null:
+        effect_impact = impact_effect.instance()
+        trans_target_data(effect_impact)
+        if target != null and target != launch_unit:
+            effect_impact.target_unit.append(target)
+        effect_impact.run()
+    # 销毁raycast
+    print(target)
+    # raycast.queue_free()
     

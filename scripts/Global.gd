@@ -49,12 +49,12 @@ const ACTOR_DIR = "res://scenes/Actor/Implement/"
 const EFFECT_DIR = "res://scenes/Effect/Implement/"
 
 ###### 全局函数 ######
-# 等视角坐标转换成平面坐标
-func iso_2_plane(pos):
+# 等视角坐标转换成笛卡尔坐标
+func iso_2_cart(pos):
     return Vector2(pos.x, pos.y * 2)
 
-# 平面坐标转换成等视角坐标
-func plane_2_iso(pos):
+# 笛卡尔坐标转换成等视角坐标
+func cart_2_iso(pos):
     return Vector2(pos.x, pos.y / 2)
 
 # 将角度转换成godot坐标系的角度

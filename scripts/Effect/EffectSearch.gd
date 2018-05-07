@@ -27,7 +27,7 @@ func run():
 		return
 	# 搜索起始点
 	var search_pos = get_pos_by_target_data_type(self.impact_location)
-	search_pos = Global.iso_2_plane(search_pos)
+	search_pos = Global.iso_2_cart(search_pos)
 	print("Search_pos: ", search_pos)
 	var target_list = []
 	if search_pos == null:
@@ -38,7 +38,7 @@ func run():
 		# 如果是圆形范围搜索
 		for unit in UnitManager.get_all_units():
 			# 计算单位点(转化为平面坐标)与搜索起始点之间的距离
-			var vector = Global.iso_2_plane(unit.position) - search_pos
+			var vector = Global.iso_2_cart(unit.position) - search_pos
 			# 如果距离小于搜索半径，则加入目标列表
 			if vector.length() <= radius:
 				# 处理不包含自身
@@ -84,7 +84,7 @@ func run():
 				if unit == self_unit:
 					continue
 			# 被搜索单位的平面位置
-			var unit_plane_pos = Global.iso_2_plane(unit.position)
+			var unit_plane_pos = Global.iso_2_cart(unit.position)
 			# 单位与end_pos之间的向量
 			var unit_to_end = end_pos - unit_plane_pos
 			# 单位点到线段终点的向量与 与线段垂直的单位向量 的点积

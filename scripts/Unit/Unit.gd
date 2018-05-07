@@ -55,7 +55,7 @@ func _ready():
 
 # 根据motion(速度向量)来调整面向角度
 func refresh_face_angel_by_motion():
-	var plane_motion = Global.iso_2_plane(self.motion)
+	var plane_motion = Global.iso_2_cart(self.motion)
 	var rad = plane_motion.angle()
 	self.face_angle = rad
 

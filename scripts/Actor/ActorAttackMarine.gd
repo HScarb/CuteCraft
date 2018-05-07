@@ -4,7 +4,7 @@ extends "res://scripts/Actor/ActorAttack.gd"
 
 # override
 func check_type_launch(type_name):
-	if type_name == "WeaponMarineSearch":
+	if type_name == "WeaponMarineLaunchRay":
 		return true
 	return false
 

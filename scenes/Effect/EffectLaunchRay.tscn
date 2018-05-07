@@ -6,5 +6,9 @@
 [node name="EffectLaunchRay" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+launch_effect = null
+impact_effect = null
+launch_location = 3
+impact_location = 6
 
 

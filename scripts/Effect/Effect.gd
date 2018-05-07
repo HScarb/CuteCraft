@@ -91,7 +91,7 @@ func get_pos_by_target_data_type(target_data_type):
 	if typeof(unit) == TYPE_ARRAY:
 		var pos_list = []
 		for u in unit:
-			pos_list_append(u.position)
+			pos_list.append(u.position)
 		return pos_list
 	if unit != null:
 		return unit.position
