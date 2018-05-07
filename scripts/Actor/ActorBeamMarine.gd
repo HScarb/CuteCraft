@@ -7,7 +7,6 @@ func init():
     SignalManager.connect("effect_start", self, "create_beam")
 
 func check_type(type_name):
-    if type_name == "WeaponMarineLaunchRay":
+    if type_name == "WeaponMarineDamage":
         return true
     return false
-    

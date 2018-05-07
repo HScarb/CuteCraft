@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/Model/ModelUnit.gd" type="Script" id=2]
 [ext_resource path="res://frames/roach/roach.tres" type="SpriteFrames" id=3]
 
-[node name="ModelRoach" instance=ExtResource( 1 )]
+[node name="ModelRoach" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
@@ -13,47 +13,51 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 0, -60 )
 frames = ExtResource( 3 )
-animation = "attack_0"
+animation = "attack_7"
 frame = 4
+
+[node name="Muzzles" parent="." index="1"]
+
+_sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_0" type="Position2D" parent="Muzzles" index="0"]
 
-position = Vector2( 34.0492, -33.2154 )
+position = Vector2( 39.8183, -16.1388 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_1" type="Position2D" parent="Muzzles" index="1"]
 
-position = Vector2( 16.2508, -23.5423 )
+position = Vector2( 19.7123, 7.38016 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_2" type="Position2D" parent="Muzzles" index="2"]
 
-position = Vector2( 0, -10 )
+position = Vector2( 0, 11 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_3" type="Position2D" parent="Muzzles" index="3"]
 
-position = Vector2( -3.48231, -34.3762 )
+position = Vector2( -11.3283, -1.37686 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_4" type="Position2D" parent="Muzzles" index="4"]
 
-position = Vector2( -16.6377, -37.4716 )
+position = Vector2( -29.3297, -20.1643 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_5" type="Position2D" parent="Muzzles" index="5"]
 
-position = Vector2( -28.2454, -40.9539 )
+position = Vector2( -42.0913, -11.416 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_6" type="Position2D" parent="Muzzles" index="6"]
 
-position = Vector2( 0.386963, -78.4855 )
+position = Vector2( 0, -75 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_7" type="Position2D" parent="Muzzles" index="7"]
 
-position = Vector2( 33.2754, -45.21 )
+position = Vector2( 46.6598, -11.7491 )
 _sections_unfolded = [ "Transform" ]
 
 

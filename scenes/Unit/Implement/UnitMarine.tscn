@@ -6,12 +6,11 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 39.0
-height = 45.0
+radius = 28.0
+height = 30.0
 
 [node name="UnitMarine" instance=ExtResource( 1 )]
 
-scale = Vector2( 0.6, 0.6 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Z Index", "collision" ]
 life = 45
 life_max = 45

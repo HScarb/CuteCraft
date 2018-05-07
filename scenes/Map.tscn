@@ -9,7 +9,7 @@
 
 z_index = -2
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="floor" type="TileMap" parent="." index="0"]
 
@@ -59,12 +59,20 @@ position = Vector2( 929.566, 189.864 )
 
 [node name="HeroMarine" parent="walls" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 844.138, 174.186 )
+position = Vector2( 400, 300 )
+input_pickable = false
+collision_layer = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 is_main_character = true
+player = 1
+face_angle = 1.571
+face_direction = 2
+radius = 20.0
+acceleration = 0
 
 [node name="Camera2D" type="Camera2D" parent="walls/HeroMarine" index="5"]
 
-position = Vector2( -572.941, 116.457 )
 scale = Vector2( 0.5, 0.5 )
 anchor_mode = 1
 rotating = false
@@ -93,5 +101,10 @@ _sections_unfolded = [ "Transform" ]
 [node name="FrontLayer" type="Node2D" parent="." index="2"]
 
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="Position2D" type="Position2D" parent="FrontLayer" index="0"]
+
+position = Vector2( 416, 237 )
+_sections_unfolded = [ "Transform" ]
 
 

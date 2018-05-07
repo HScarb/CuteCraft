@@ -6,8 +6,8 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 39.0
-height = 45.0
+radius = 28.0
+height = 30.0
 
 [node name="HeroMarine" instance=ExtResource( 1 )]
 
@@ -91,7 +91,7 @@ position = Vector2( 0, 0 )
 
 [node name="BodyShape" parent="BodyArea" index="0"]
 
-position = Vector2( 0, -41 )
+position = Vector2( 0, -30 )
 shape = SubResource( 1 )
 
 [node name="WeaponMarine" parent="." index="3" instance=ExtResource( 2 )]

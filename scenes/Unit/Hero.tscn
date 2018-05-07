@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Unit/Unit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Unit/Hero.gd" type="Script" id=2]
 
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 28.0
+height = 30.0
+
 [node name="Hero" instance=ExtResource( 1 )]
 
-scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 2 )
 
 [node name="FSM2D" parent="." index="0"]
@@ -15,5 +20,9 @@ editor/display_folded = false
 [node name="States" parent="FSM2D" index="0"]
 
 editor/display_folded = true
+
+[node name="BodyShape" parent="BodyArea" index="0"]
+
+shape = SubResource( 1 )
 
 

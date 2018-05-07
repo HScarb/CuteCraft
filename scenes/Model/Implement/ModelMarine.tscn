@@ -6,54 +6,73 @@
 
 [node name="ModelMarine" instance=ExtResource( 1 )]
 
-scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="AnimatedSprite" parent="." index="0"]
 
-position = Vector2( 0.709127, -60 )
+position = Vector2( 0, -30 )
+scale = Vector2( 0.4, 0.4 )
 frames = ExtResource( 3 )
-animation = "attack_0"
+animation = "attack_7"
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Muzzles" parent="." index="1"]
 
-position = Vector2( 0.709178, 0.709178 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_0" type="Position2D" parent="Muzzles" index="0"]
 
-position = Vector2( 119.339, -87.1128 )
+position = Vector2( 50.8494, -30.6654 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_1" type="Position2D" parent="Muzzles" index="1"]
 
-position = Vector2( 64.3037, -44.7287 )
+position = Vector2( 27.2934, -14.1352 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_2" type="Position2D" parent="Muzzles" index="2"]
 
-position = Vector2( 16.5426, -54.8503 )
+position = Vector2( 5.77853, -17.4008 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_3" type="Position2D" parent="Muzzles" index="3"]
 
-position = Vector2( -66.3278, -44.0961 )
+position = Vector2( -26.5601, -12.8559 )
 
 [node name="Muzzle_4" type="Position2D" parent="Muzzles" index="4"]
 
-position = Vector2( -124.843, -88.0617 )
+position = Vector2( -51.229, -32.107 )
 
 [node name="Muzzle_5" type="Position2D" parent="Muzzles" index="5"]
 
-position = Vector2( -89.1014, -99.4484 )
+position = Vector2( -40.4197, -38.1015 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_6" type="Position2D" parent="Muzzles" index="6"]
 
-position = Vector2( -50.8292, -67.1859 )
+position = Vector2( -24.6067, -44.2246 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Muzzle_7" type="Position2D" parent="Muzzles" index="7"]
 
-position = Vector2( 88.0262, -92.1736 )
+position = Vector2( 37.7616, -36.2445 )
+
+[node name="LifeBar" parent="." index="2"]
+
+margin_left = -60.0
+margin_top = -83.0
+margin_right = 81.0
+margin_bottom = -75.0
+rect_scale = Vector2( 0.4, 0.4 )
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Textures" ]
+
+[node name="EnegyBar" parent="." index="3"]
+
+margin_left = -60.0
+margin_top = -79.0
+margin_right = 81.0
+margin_bottom = -71.0
+rect_scale = Vector2( 0.4, 0.4 )
 
 

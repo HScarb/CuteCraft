@@ -30,8 +30,7 @@ func play_launch_animation(effect_tree_node):
 	if launch_model == null:
 		return
 	# 检测类型
-	var node_name = effect_tree_node.get_name()
-	if not check_type_launch(node_name):
+	if not check_name(effect_tree_node, "check_type_launch"):
 		return
 	# 获取单位
 	var unit = effect_tree_node.get_unit_by_target_data_type(launch_location)
@@ -47,8 +46,7 @@ func play_impact_animation(effect_tree_node):
 	if self.impact_model == null:
 		return
 	# 检测类型
-	var node_name = effect_tree_node.get_name()
-	if not check_type_impact(node_name):
+	if not check_name(effect_tree_node, "check_type_impact"):
 		return
 	var new_impact_model = null
 	# 获取目标单位或点

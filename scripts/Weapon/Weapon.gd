@@ -43,7 +43,7 @@ func _init():
 
 func _ready():
 	# 刷新目标数据
-	self.refresh_target_data()
+	# self.refresh_target_data()
 	# 初始化攻击计时器
 	$AttackIntervalTimer.wait_time = period
 	$AttackIntervalTimer.connect("timeout", self, "set_can_fire", [true])
@@ -101,22 +101,22 @@ func get_attack_time():
 	return $AttackIntervalTimer.time_left
 
 # 计算目标点位置
+# Muzzle点位置+射程
 # return: [Vector2]
 func calc_target_point():
 	var target_pos = null
 	# 如果不是近战武器
 	if self.shoot_range > 0:
 		# 计算目标点
-		# 首先将单位点转换为平面坐标
-		var plane_pos = Global.iso_2_cart(logicRoot.position)
-		target_pos = plane_pos
+		var muzzle_pos = logicRoot.model.get_muzzle().position
+		target_pos = muzzle_pos + logicRoot.position
 		# 根据单位的朝向和武器射程计算出目标点
 		# 单位的朝向转化成弧度
-		var rad = deg2rad(Global.deg_2_godot(logicRoot.face_angle))
-		target_pos.y += sin(rad) * self.shoot_range
+		var rad = logicRoot.face_angle
 		target_pos.x += cos(rad) * self.shoot_range
+		target_pos.y += sin(rad) * self.shoot_range
 		# 将平面坐标转换为等视角坐标
-		target_pos = Global.cart_2_iso(target_pos)
+		# target_pos = Global.cart_2_iso(target_pos)
 	else:
 		# *** 计算近战武器目标点
 		target_pos = logicRoot.position

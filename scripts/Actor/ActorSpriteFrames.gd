@@ -18,8 +18,7 @@ func play_animation(effect):
     if effect == null:
         return
     # 检测类型
-    var effect_name = effect.get_name()
-    if not check_type(effect_name):
+    if not check_name(effect):
         return
     # 创建动画
     var sprite_pos = effect.get_pos_by_target_data_type(at_location)
