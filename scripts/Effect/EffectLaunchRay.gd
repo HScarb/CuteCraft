@@ -26,6 +26,8 @@ func run():
     # 创建并激活raycast
     var raycast = RayCast2D.new()
     raycast.enabled = true
+    raycast.add_exception(launch_unit.get_node("BodyArea"))             # 防止射线与自身碰撞
+    raycast.set_collision_mask_bit(0, false)
     raycast.set_collision_mask_bit(2, true)
     # 获取武器或者技能的范围，调整raycast射向
     var origin = self.effect_origin
@@ -53,5 +55,4 @@ func run():
         effect_impact.run()
     # 销毁raycast
     print(target)
-    # raycast.queue_free()
-    
+    raycast.queue_free()

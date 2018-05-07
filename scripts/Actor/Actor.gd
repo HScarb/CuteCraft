@@ -6,6 +6,13 @@ extends Node
 func init():
 	pass
 
+# 使用check_type检查node的名称
+func check_name(node, check_func = "check_type"):
+	var file_name = node.get_filename()
+	file_name = file_name.get_basename().get_file()
+	var ret = call(check_func, file_name)
+	return ret
+
 # virtual
 # 用于检测传入参数的类型是否是演算体对应的类型(根据名称判断)，需要派生类重载
 func check_type(type_name):

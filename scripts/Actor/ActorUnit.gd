@@ -16,9 +16,7 @@ func init():
 # parent_unit:[Unit.gd]
 func create_model(parent_unit):
 	# 先验证单位类型名称
-	var file_name = parent_unit.get_filename()
-	file_name = file_name.get_basename().get_file()
-	if not check_type(file_name):
+	if not check_name(parent_unit):
 		return null
 	# 根据模型参数创建模型
 	if model == null:
