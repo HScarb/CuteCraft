@@ -6,8 +6,8 @@
 [node name="ActorAttack" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-launch_frames = null
-impact_frames = null
+launch_model = null
+impact_model = null
 launch_location = 5
 impact_location = 7
 

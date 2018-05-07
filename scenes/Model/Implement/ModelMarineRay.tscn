@@ -1,23 +1,38 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Model/ModelSprite.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/Other/plain_white.png" type="Texture" id=2]
 
+[sub_resource type="Animation" id=1]
+
+resource_name = "default"
+length = 0.2
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 0.607843, 1 ), Color( 1, 1, 0.607843, 0 ) ]
+}
+
 [node name="ModelMarineRay" instance=ExtResource( 1 )]
 
-modulate = Color( 1, 1, 0, 1 )
+modulate = Color( 1, 1, 0.607843, 1 )
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 300, 1 )
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="AnimationPlayer" parent="." index="0"]
 
-position = Vector2( -0.443375, -0.221687 )
-texture = ExtResource( 2 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 4, 4 )
-_sections_unfolded = [ "Region", "Transform" ]
+anims/default = SubResource( 1 )
 
 

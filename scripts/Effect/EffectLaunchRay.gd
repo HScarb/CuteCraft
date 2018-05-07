@@ -40,11 +40,13 @@ func run():
     launch_unit.model.get_muzzle().add_child(raycast)
     # 检测raycast碰撞
     var target = null
+    var collision_pos = null
     raycast.force_raycast_update()
     if raycast.is_colliding():
         # 获取碰撞单位
-        target = raycast.get_collider()
-        target = target.get_parent()
+        target = raycast.get_collider()     # BodyArea
+        target = target.get_parent()        # Unit
+        collision_pos = raycast.get_collision_point()
     # 运行轰击效果
     var effect_impact = null
     if impact_effect != null:
@@ -52,7 +54,8 @@ func run():
         trans_target_data(effect_impact)
         if target != null and target != launch_unit:
             effect_impact.target_unit.append(target)
+            effect_impact.target_point = collision_pos
         effect_impact.run()
     # 销毁raycast
     print(target)
-    raycast.queue_free()
+    # raycast.queue_free()

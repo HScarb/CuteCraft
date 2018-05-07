@@ -3,6 +3,7 @@
 extends Node2D
 
 export(bool)var free_after_finished = false					# 是否在动画结束之后销毁
+export(float) var scale_factor = 1
 
 var logicRoot
 
@@ -14,7 +15,8 @@ func init_by_unit(unit):
 	self.logicRoot.connect("stop_animation", self, "stop_animation")
 
 func init():
-    self.connect("tree_entered", $AnimatedSprite, "play")
+	$AnimatedSprite.set_scale(Vector2(1, 1) * scale_factor)
+	self.connect("tree_entered", $AnimatedSprite, "play")
 
 # 根据动画名称播放动画，如果动画名称不存在则播放默认动画
 func play_animation(animation_name = null):
@@ -44,40 +46,41 @@ func is_playing():
 func modify_by_direction(direction):
 	match direction:
 		Global.FACE_DIRECTION.east:
+			$AnimatedSprite.set_scale(Vector2(1, 1) * scale_factor)
 			$AnimatedSprite.set_offset(Vector2(90, 0))
 			$AnimatedSprite.set_flip_h(true)
 			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
 		Global.FACE_DIRECTION.south_east:
-			$AnimatedSprite.set_scale(Vector2(0.7, 1))
+			$AnimatedSprite.set_scale(Vector2(0.7, 1) * scale_factor)
 			$AnimatedSprite.set_offset(Vector2(90, 0))
 			$AnimatedSprite.set_flip_h(true)
 			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
 			$AnimatedSprite.set_rotation_degrees(24)
 		Global.FACE_DIRECTION.south:
-			$AnimatedSprite.set_scale(Vector2(0.5, 1))
+			$AnimatedSprite.set_scale(Vector2(0.5, 1) * scale_factor)
 			$AnimatedSprite.set_offset(Vector2(90, 0))
 			$AnimatedSprite.set_flip_h(true)
 			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
 			$AnimatedSprite.set_rotation_degrees(90)
 		Global.FACE_DIRECTION.south_west:
-			$AnimatedSprite.set_scale(Vector2(0.7, 1))
+			$AnimatedSprite.set_scale(Vector2(0.7, 1) * scale_factor)
 			$AnimatedSprite.set_offset(Vector2(-90, 0))
 			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
 			$AnimatedSprite.set_rotation_degrees(-24)
 		Global.FACE_DIRECTION.west:
-			$AnimatedSprite.set_scale(Vector2(1, 1))
+			$AnimatedSprite.set_scale(Vector2(1, 1) * scale_factor)
 			$AnimatedSprite.set_offset(Vector2(-90, 0))
 			$AnimatedSprite.set_z_index(Global.Z_INDEX_UNIT)
 		Global.FACE_DIRECTION.north_west:
-			$AnimatedSprite.set_scale(Vector2(0.7, 1))
+			$AnimatedSprite.set_scale(Vector2(0.7, 1) * scale_factor)
 			$AnimatedSprite.set_offset(Vector2(-90, 0))
 			$AnimatedSprite.set_rotation_degrees(24)
 		Global.FACE_DIRECTION.north:
-			$AnimatedSprite.set_scale(Vector2(0.25, 1))
+			$AnimatedSprite.set_scale(Vector2(0.25, 1) * scale_factor)
 			$AnimatedSprite.set_offset(Vector2(-90, 0))
 			$AnimatedSprite.set_rotation_degrees(90)
 		Global.FACE_DIRECTION.north_east:
-			$AnimatedSprite.set_scale(Vector2(0.7, 1))
+			$AnimatedSprite.set_scale(Vector2(0.7, 1) * scale_factor)
 			$AnimatedSprite.set_flip_h(true)
 			$AnimatedSprite.set_offset(Vector2(90, 0))
 			$AnimatedSprite.set_rotation_degrees(-24)

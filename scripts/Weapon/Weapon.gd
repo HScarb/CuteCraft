@@ -113,10 +113,8 @@ func calc_target_point():
 		# 根据单位的朝向和武器射程计算出目标点
 		# 单位的朝向转化成弧度
 		var rad = logicRoot.face_angle
-		target_pos.x += cos(rad) * self.shoot_range
-		target_pos.y += sin(rad) * self.shoot_range
-		# 将平面坐标转换为等视角坐标
-		# target_pos = Global.cart_2_iso(target_pos)
+		var shoot_vector = Vector2(cos(rad) * shoot_range, sin(rad) * shoot_range)
+		target_pos = target_pos + Global.cart_2_iso(shoot_vector)
 	else:
 		# *** 计算近战武器目标点
 		target_pos = logicRoot.position
