@@ -25,6 +25,8 @@ var is_idling = false								# 是否摸鱼中
 var weapon = null									# 武器
 var model = null									# 单位模型(包含状态条等)
 
+var map_attr = {}									# 单位真正属性表
+
 signal unit_ready
 signal life_enegy_change							# 生命值或者能量值变化
 signal play_animation(anim_name)
@@ -32,6 +34,17 @@ signal stop_animation
 signal attack_begin
 
 var class_hero = load("res://scripts/Unit/Hero.gd")
+var class_attr = load("res://scripts/Unit/UnitAttr.gd")
+
+func _init():
+	# 初始化属性表
+	map_attr.clear()
+	# 初始化添加属性
+	_add_attr("life", life, life_max)
+	_add_attr("enegy", enegy, enegy_max)
+	_add_attr("speed", speed)
+	_add_attr("acceleration", 0)
+	_add_attr("attack_speed_muti", 1)
 
 func _ready():
 	# 设置武器
@@ -47,6 +60,20 @@ func _ready():
 	# 给Model发送消息
 	self.emit_signal("unit_ready")
 	pass
+
+func _add_attr(name, base, max):
+	if max == null:
+		max = base
+	var attr = class_attr.instance()
+	attr.init_by_data(base, max)
+	map_attr["name"] = attr
+	return attr
+
+func modify_attr(name, base = 0.0, percent = 0.0, fix = 0.0):
+	map_attr[name].modify(base, percent, fix)
+
+func get_attr_value(name):
+	return map_attr[name].get_value()
 
 # func _physics_process(delta):
 # 	# 单位根据面向角度调整朝向

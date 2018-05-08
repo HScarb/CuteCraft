@@ -45,7 +45,7 @@ func _ready():
 	# 刷新目标数据
 	# self.refresh_target_data()
 	# 初始化攻击计时器
-	$AttackIntervalTimer.wait_time = period
+	$AttackIntervalTimer.wait_time = period * logicRoot.get_attr("attack_speed_multi")
 	$AttackIntervalTimer.connect("timeout", self, "set_can_fire", [true])
 
 # 每次攻击都刷新目标数据

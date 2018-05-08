@@ -60,7 +60,17 @@ position = Vector2( 929.566, 189.864 )
 [node name="HeroStalker" parent="walls" index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 400, 300 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 3
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 is_main_character = true
+stand_after_attack = true
+player = 1
+face_angle = 1.571
+face_direction = 2
+acceleration = 0
 
 [node name="Camera2D" type="Camera2D" parent="walls/HeroStalker" index="4"]
 

@@ -44,6 +44,12 @@ var EFFECT_TREE_NODE = {
     "Effect": 6
 }
 
+var PROPERTY = {
+    0: "life",
+    1: "enegy",
+    
+}
+
 ###### 全局路径常量 ######
 const ACTOR_DIR = "res://scenes/Actor/Implement/"
 const EFFECT_DIR = "res://scenes/Effect/Implement/"

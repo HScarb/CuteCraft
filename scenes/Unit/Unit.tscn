@@ -202,4 +202,6 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Abilities" type="Node" parent="." index="3"]
 
+[node name="Behaviors" type="Node" parent="." index="4"]
+
 

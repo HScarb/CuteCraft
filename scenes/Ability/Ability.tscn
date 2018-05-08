@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/Ability/Ability.gd" type="Script" id=1]
 
-[node name="Ability" type="Node" index="0"]
+[node name="Ability" type="Node"]
 
 script = ExtResource( 1 )
 ability_name = null
@@ -10,5 +10,20 @@ cost_life = 0
 cost_enegy = 0
 time_start = 0
 time_use = 1
+time_prepare = 0
+
+[node name="TimerStart" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="TimerCoolDown" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
 
 
