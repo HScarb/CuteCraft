@@ -55,7 +55,6 @@ func play_impact_animation(effect_tree_node):
 		new_impact_model = []
 		for pos in impact_pos:
 			new_impact_model.append(create_animated_model(impact_model, MapManager.get_layer_front(), pos))
-			pass
 	else:
 		new_impact_model = create_animated_model(impact_model, MapManager.get_layer_front(), impact_pos)
 	# if impact_location % 2 == 0:
