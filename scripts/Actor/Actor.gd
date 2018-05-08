@@ -1,6 +1,8 @@
 # ActorAnimation
 extends Node
 
+export(String) var check_type_name = null
+
 # virtual
 # 这里注册全局监听信号事件
 func init():
@@ -16,6 +18,8 @@ func check_name(node, check_func = "check_type"):
 # virtual
 # 用于检测传入参数的类型是否是演算体对应的类型(根据名称判断)，需要派生类重载
 func check_type(type_name):
+	if check_type_name != null:
+		return type_name == check_type_name
 	return false
 
 # 创建序列帧动画

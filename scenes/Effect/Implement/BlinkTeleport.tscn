@@ -10,6 +10,6 @@ unit_location = 5
 unit_effect = null
 target_location = 6
 target_effect = null
-teleport_range = -1.0
+teleport_range = 500.0
 
 

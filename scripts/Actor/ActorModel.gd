@@ -21,5 +21,5 @@ func play_model_animation(effect_tree_node):
         for pos in model_pos:
             new_model.append(create_animated_model(model, MapManager.get_layer_front(), pos))
     else:
-        new_model = create_animated_model(model, MapManager.get_layer_front(), pos)
+        new_model = create_animated_model(model, MapManager.get_layer_front(), model_pos)
     return new_model

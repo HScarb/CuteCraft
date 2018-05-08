@@ -14,17 +14,6 @@ export(PackedScene) var target_effect = null    # 在目标点运行的效果
 export(float) var teleport_range = -1           # 传送(最大)距离
 
 func run():
-    .run()
-    # 获取需要被传送的单位
-    var teleport_unit_list = []
-    var teleport_unit = get_unit_by_target_data_type(unit_location)
-    if typeof(teleport_unit) == TYPE_ARRAY:
-        for tu in teleport_unit:
-            teleport_unit_list.append(tu)
-    elif teleport_unit == null:
-        pass
-    else:
-        teleport_unit_list.append(teleport_unit)
     # 获取传送目标点
     var teleport_pos = null                     # 真正传送点
     var target_pos = get_pos_by_target_data_type(target_location)
@@ -36,9 +25,22 @@ func run():
     var source_pos = get_pos_by_target_data_type(source_location)
     if teleport_range >= 0:
         # 计算源点到目标点的角度
-        var rad = source_pos.angle_to_point(teleport_pos)
+        var rad = teleport_pos.angle_to_point(source_pos)
         var teleport_vector = Vector2(cos(rad) * teleport_range, sin(rad) * teleport_range)
-        teleport_pos = source_pos + teleport_vector
+        teleport_pos = source_pos + Global.cart_2_iso(teleport_vector)
+    self.target_point = teleport_pos
+    # 运行本效果
+    .run()
+    # 获取需要被传送的单位
+    var teleport_unit_list = []
+    var teleport_unit = get_unit_by_target_data_type(unit_location)
+    if typeof(teleport_unit) == TYPE_ARRAY:
+        for tu in teleport_unit:
+            teleport_unit_list.append(tu)
+    elif teleport_unit == null:
+        pass
+    else:
+        teleport_unit_list.append(teleport_unit)
     # 运行效果
     #   源单位效果
     if source_effect != null:

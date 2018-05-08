@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Actor/ActorModel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Model/Implement/ModelStalkerBlinkOut.tscn" type="PackedScene" id=2]
+
+[node name="ActorStalkerBlinkOut" instance=ExtResource( 1 )]
+
+check_type_name = "BlinkTeleport"
+model = ExtResource( 2 )
+at_location = 4
+
+
