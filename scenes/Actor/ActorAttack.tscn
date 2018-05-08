@@ -1,13 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Actor/ActorAttack.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Model/Implement/ModelStalkerImpact.tscn" type="PackedScene" id=3]
 
 [node name="ActorAttack" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 launch_model = null
-impact_model = null
+impact_model = ExtResource( 3 )
 launch_location = 5
 impact_location = 7
 

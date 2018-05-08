@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Actor/ActorAttack.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Actor/ActorAttackStalker.gd" type="Script" id=2]
+
+[node name="ActorAttackStalker" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+impact_location = 6
+
+

@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Actor/ActorUnit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Actor/ActorUnitZealot.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Model/Implement/ModelZealot.tscn" type="PackedScene" id=3]
+
+[node name="ActorUnitZealot" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+model = ExtResource( 3 )
+
+

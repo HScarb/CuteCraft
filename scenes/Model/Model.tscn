@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/Model/Model.gd" type="Script" id=1]
 
-[node name="Model" type="Node2D"]
+[node name="Model" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 free_after_finished = false

@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/Unit/Implement/RoachMissile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Effect/Implement/WeaponRoachDamage.tscn" type="PackedScene" id=3]
 
-[node name="RoachLaunchMissile" index="0" instance=ExtResource( 1 )]
+[node name="RoachLaunchMissile" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Pause" ]
 ammo_unit = ExtResource( 2 )

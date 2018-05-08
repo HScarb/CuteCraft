@@ -4,7 +4,7 @@
 
 [node name="EffectDamageTest" instance=ExtResource( 1 )]
 
-amount = 10.0
+amount = 8.0
 launch_location = 3
 impact_location = 7
 

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Weapon/Weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Effect/Implement/WeaponZealotLaunchRay.tscn" type="PackedScene" id=2]
+
+[node name="WeaponZealot" instance=ExtResource( 1 )]
+
+period = 1.2
+weapon_name = "Zealot Knife"
+shoot_range = 25.0
+damage_frame = 3
+effect_scene = ExtResource( 2 )
+
+

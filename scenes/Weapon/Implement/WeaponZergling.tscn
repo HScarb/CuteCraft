@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Weapon/Weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Effect/Implement/WeaponZerglingLaunchRay.tscn" type="PackedScene" id=2]
+
+[node name="WeaponZergling" instance=ExtResource( 1 )]
+
+weapon_name = "Claw"
+shoot_range = 25.0
+damage_frame = 2
+effect_scene = ExtResource( 2 )
+
+

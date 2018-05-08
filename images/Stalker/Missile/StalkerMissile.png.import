@@ -7,10 +7,10 @@ path="res://.import/StalkerMissile.png-c5442004e21bdc3cf20d5cc227fe9acb.stex"
 [deps]
 
 source_file="res://images/Stalker/Missile/StalkerMissile.png"
-source_md5="8aa5b4785530da7494718d4933015196"
+source_md5="b42461fb22ad2e7bbb20b624ad9c4668"
 
 dest_files=[ "res://.import/StalkerMissile.png-c5442004e21bdc3cf20d5cc227fe9acb.stex" ]
-dest_md5="877e9e00835cd8554365bf8d418c8d33"
+dest_md5="3ac4be69c54a66700643743fc7b90585"
 
 [params]
 
