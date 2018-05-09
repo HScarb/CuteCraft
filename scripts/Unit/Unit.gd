@@ -60,6 +60,7 @@ func _ready():
 	shape.set_radius(self.radius)
 	shape.set_height(self.radius)
 	$GroundShape.set_shape(shape)
+	$TimerRecover.start()
 	# 发送全局演算体消息
 	SignalManager.emit_signal("unit_birth", self)
 	# 给Model发送消息
@@ -142,6 +143,14 @@ func attack():
 		self.emit_signal("attack_begin")
 		# 武器攻击
 		self.weapon.fire()
+
+# 每秒恢复生命和能量
+func recover():
+	if get_attr_value("life_recover") != 0:
+		get_attr("life").set_cur_value(get_attr_value("life") + get_attr_value("life_recover"))
+	if get_attr_value("enegy_recover") != 0:
+		get_attr("enegy").set_cur_value(get_attr_value("enegy") + get_attr_value("enegy_recover"))
+	self.emit_signal("life_enegy_change")
 
 # 承受伤害
 func take_damage(amount):
@@ -257,3 +266,6 @@ func get_on_idle_end_condi():
 # virtual 死亡状态开启条件
 func get_on_die_condi():
 	return self.is_dead
+
+func _on_TimerRecover_timeout():
+	recover()

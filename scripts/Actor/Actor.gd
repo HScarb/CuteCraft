@@ -10,8 +10,7 @@ func init():
 
 # 使用check_type检查node的名称
 func check_name(node, check_func = "check_type"):
-	var file_name = node.get_filename()
-	file_name = file_name.get_basename().get_file()
+	var file_name = Global.get_node_name(node)
 	var ret = call(check_func, file_name)
 	return ret
 

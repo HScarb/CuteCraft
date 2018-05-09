@@ -202,8 +202,17 @@ _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
 shape = SubResource( 1 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
-[node name="Abilities" type="Node" parent="." index="3"]
+[node name="TimerRecover" type="Timer" parent="." index="3"]
 
-[node name="Behaviors" type="Node" parent="." index="4"]
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Abilities" type="Node" parent="." index="4"]
+
+[node name="Behaviors" type="Node" parent="." index="5"]
+
+[connection signal="timeout" from="TimerRecover" to="." method="_on_TimerRecover_timeout"]
 
 

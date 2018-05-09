@@ -16,18 +16,19 @@ export(PackedScene) var expire_effect = null            # 效果持续时间到�
 export(PackedScene) var refresh_effect = null           # 效果被刷新触发
 ###### 修改单位 ######
 export(PoolStringArray) var modification
-export(float) var life_max = 0
-export(float) var life = 0
-export(float) var life_recover = 0
-export(float) var enegy_max = 0
-export(float) var enegy = 0
-export(float) var enegy_recover = 0
-export(float) var speed = 0
-export(float) var acceleration = 0
-export(float) var attack_speed_multi = 0
+# export(float) var life_max = 0
+# export(float) var life = 0
+# export(float) var life_recover = 0
+# export(float) var enegy_max = 0
+# export(float) var enegy = 0
+# export(float) var enegy_recover = 0
+# export(float) var speed = 0
+# export(float) var acceleration = 0
+# export(float) var attack_speed_multi = 0
 ###### 伤害响应 ######
 
 ########################
 
 var unit_owner = null
 var stack_count = 1
+

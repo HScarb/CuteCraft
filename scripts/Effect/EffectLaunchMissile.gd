@@ -21,6 +21,7 @@ func run():
     .run()
     # 创建发射物实体
     var missile = ammo_unit.instance()
+    MapManager.get_layer_unit().add_child(missile)
     # 设置发射物持续存在的时间
     add_timer_for_missile(missile)
     # 设置发射物属性
@@ -54,7 +55,6 @@ func run():
     # 将发射物放置在正确位置(单位模型的炮口)
     var map_pos = unit_launch.model.get_muzzle().position + unit_launch.position
     missile.position = map_pos
-    MapManager.get_layer_unit().add_child(missile)
     # 命令发射物移动
     #   根据单位当前的面向角度设置发射物的速度
     var motion = Vector2(cos(unit_launch.face_angle), sin(unit_launch.face_angle) / 2)

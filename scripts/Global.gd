@@ -82,3 +82,9 @@ func is_target_data_unit(target_data_type):
     if target_data_type % 2 == 1:
         return true
     return false
+
+# 获取节点的文件名(没有后缀名)
+func get_node_name(node):
+    var file_name = node.get_filename()
+    file_name = file_name.get_basename().get_file()
+    return file_name
