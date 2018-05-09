@@ -7,3 +7,7 @@ signal unit_birth(unit)                     # 单位被创建
 signal weapon_start(weapon)                 # 武器开火
 
 signal effect_start(effect)                 # 效果开启
+
+signal behavior_on(behavior)                # 行为开启
+
+signal behavior_off(behavior)               # 行为关闭

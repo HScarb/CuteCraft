@@ -8,3 +8,17 @@ export(float) var cost_enegy = 0            # 能量消耗
 export(float) var time_start = 0            # 起始冷却
 export(float) var time_use = 1              # 技能冷却时间
 export(float) var time_prepare = 0          # 读条时间      ***
+
+onready var logicRoot = $"../.."
+
+func init():
+    pass
+
+func run():
+    pass
+
+func on_add():
+    pass
+
+func on_remove():
+    pass

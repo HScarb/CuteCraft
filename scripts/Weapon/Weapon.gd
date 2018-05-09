@@ -85,7 +85,7 @@ func fire():
 
 # 刷新武器的攻击间隔(会将单位的攻击速度加成属性考虑在内)
 func refresh_attack_period():
-	$AttackIntervalTimer.wait_time = period * logicRoot.get_attr_value("attack_speed_multi")
+	$AttackIntervalTimer.wait_time = period / logicRoot.get_attr_value("attack_speed_multi")
 
 # 向子效果传递目标数据
 func trans_target_data(sub_effect):

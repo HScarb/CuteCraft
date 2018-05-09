@@ -28,7 +28,6 @@ func play_animation(animation_name = null):
 
 # 刷新状态条
 func refresh_status_bars():
-	print("refresh_status_bars")
 	$LifeBar.set_value(logicRoot.get_attr_value("life") / logicRoot.get_attr_max("life") * 100)
 	if logicRoot.enegy_max <= 0:
 		$EnegyBar.set_visible(false)

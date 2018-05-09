@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Behavior/Behavior.tscn" type="PackedScene" id=1]
+
+[node name="BehaviorStimPack" instance=ExtResource( 1 )]
+
+duration = 10.0
+modification = PoolStringArray( "speed,1,1.5,1", "attack_speed_multi,1,1.5,1" )
+
+

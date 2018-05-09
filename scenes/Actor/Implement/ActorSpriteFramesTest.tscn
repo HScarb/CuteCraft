@@ -4,13 +4,11 @@
 [ext_resource path="res://scripts/Actor/ActorSpriteFramesTest.gd" type="Script" id=2]
 [ext_resource path="res://frames/marine/marine_impact.tres" type="SpriteFrames" id=3]
 
-
-
-
 [node name="ActorSpriteFramesTest" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
+check_type_name = null
 frames = ExtResource( 3 )
 
 

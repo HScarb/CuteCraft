@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Unit/Hero.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Weapon/Implement/WeaponStalker.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Behavior/Implement/BehaviorStimPack.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -95,5 +96,9 @@ shape = SubResource( 1 )
 [node name="WeaponStalker" parent="." index="3" instance=ExtResource( 2 )]
 
 weapon_name = "粒子碎裂枪"
+
+[node name="BehaviorStimPack" parent="Behaviors" index="0" instance=ExtResource( 3 )]
+
+modification = PoolStringArray( "speed,0.5,1,1", "attack_speed_multi,0,0.5,1" )
 
 

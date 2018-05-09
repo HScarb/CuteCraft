@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Actor/ActorUnit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Actor/ActorStimPackOn.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Model/Implement/ModelStimPackOn.tscn" type="PackedScene" id=3]
+
+[node name="ActorStimPackOn" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+check_type_name = "BehaviorStimPack"
+model = ExtResource( 3 )
+at_location = 6
+
+

@@ -49,12 +49,20 @@ func _init_attr_table():
 	_add_attr("speed", speed)
 	_add_attr("acceleration", 0)
 	_add_attr("attack_speed_multi", 1)
+	_add_attr("damage", 0)
 
 func _ready():
+	print("unit_ready: ", self.name)
 	_init_attr_table()
 	# 设置武器
 	if weapon_path != null:
 		self.weapon = get_node(weapon_path)
+	# 设置技能
+	for ability in $Abilities.get_children():
+		ability.on_add()
+	# 设置行为
+	for behavior in $Behaviors.get_children():
+		behavior.on_add()
 	# 设置移动碰撞体大小
 	var shape = CapsuleShape2D.new()
 	shape.set_radius(self.radius)
@@ -67,6 +75,7 @@ func _ready():
 	self.emit_signal("unit_ready")
 	pass
 
+###### 属性操作 ######
 func _add_attr(attr_name, base, max_value = null):
 	if max_value == null:
 		max_value = base
@@ -86,6 +95,7 @@ func get_attr_max(attr_name):
 
 func get_attr_value(attr_name):
 	return get_attr(attr_name).get_value()
+##################
 
 # func _physics_process(delta):
 # 	# 单位根据面向角度调整朝向
@@ -183,6 +193,8 @@ func die():
 func dead():
 	self.queue_free()
 
+	
+###### 武器技能和行为操作 ######	
 # 获取武器的攻击间隔
 func get_attack_interval():
 	return self.weapon.period
@@ -190,6 +202,35 @@ func get_attack_interval():
 # 获取一次攻击之后等待的时间
 func get_attack_time():
 	return self.weapon.get_attack_time()
+
+# 添加行为
+func add_behavior(behavior):
+	if behavior == null:
+		return
+	$Behaviors.add_child(behavior)
+	behavior.on_add()
+
+# 根据名称移除行为
+func remove_behavior(behavior_name):
+	if behavior_name.empty():
+		return
+	for behavior in $Behaviors.get_children():
+		if Global.get_node_name(behavior) == behavior_name:
+			behavior.on_remove()
+
+# 添加技能
+func add_ability(ability):
+	if ability == null:
+		return
+	$Abilities.add_child(ability)
+	# ability.on_add()
+
+func remove_ability(ability_name):
+	if ability_name.empty():
+		return
+	for ability in $Abilities.get_children():
+		if Global.get_node_name(ability) == ability_name:
+			ability.on_remove()
 
 ###### 播放动画 ######
 # 播放站立动画
@@ -234,6 +275,8 @@ func play_dead_animation():
 		# 	随机播放死亡动画
 		self.emit_signal("play_animation", "death%d" % i)
 
+###### 
+
 ###### 状态切换条件 ######
 # virtual 攻击状态开启条件
 func get_on_attack_condi():
@@ -267,5 +310,6 @@ func get_on_idle_end_condi():
 func get_on_die_condi():
 	return self.is_dead
 
+###### 回调监听 ######
 func _on_TimerRecover_timeout():
 	recover()

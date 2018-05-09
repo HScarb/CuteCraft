@@ -7,6 +7,7 @@
 [node name="ActorStalkerMissile" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+check_type_name = null
 model = ExtResource( 3 )
 
 
