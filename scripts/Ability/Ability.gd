@@ -1,6 +1,6 @@
 # Ability.gd
 # 技能基类
-extends Node
+extends "res://scripts/Effect/EffectTreeNode.gd"
 
 export(String) var ability_name = null      # 技能名称
 export(float) var cost_life = 0             # 生命消耗

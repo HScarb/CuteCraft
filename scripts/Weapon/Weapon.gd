@@ -1,4 +1,4 @@
-extends Node
+extends "res://scripts/Effect/EffectTreeNode.gd"
 
 export(float) var period = 1.0									# 周期
 export(String) var weapon_name = "Unknow Weapon"				# 武器名称

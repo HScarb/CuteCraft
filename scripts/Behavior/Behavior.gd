@@ -1,6 +1,6 @@
 # Behavior.gd
 # 行为
-extends Node
+extends "res://scripts/Effect/EffectTreeNode.gd"
 
 export(int, "positive", "negetive") var alignment = 0   # 对齐
 export(float) var duration = 0                          # 持续时间

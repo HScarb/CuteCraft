@@ -1,4 +1,4 @@
-extends Node
+extends "res://scripts/Effect/EffectTreeNode.gd"
 
 # 效果树数据
 var effect_origin = null		# 效果树的起源(可以是效果、武器、技能等)
