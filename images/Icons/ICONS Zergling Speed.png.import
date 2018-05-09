@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/ICONS Zergling Speed.png-d305411b3e102cb59e00b0cc3fb91558.stex"
+
+[deps]
+
+source_file="res://images/Icons/ICONS Zergling Speed.png"
+source_md5="5d4e3d9b872f6a3c794efa0dd5a75496"
+
+dest_files=[ "res://.import/ICONS Zergling Speed.png-d305411b3e102cb59e00b0cc3fb91558.stex" ]
+dest_md5="b4b1cef993839a1d259002ddd4c3cdd5"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

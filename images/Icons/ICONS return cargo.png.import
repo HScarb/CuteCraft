@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/ICONS return cargo.png-ef2168537e7256c4d89ba2c70a83c3cd.stex"
+
+[deps]
+
+source_file="res://images/Icons/ICONS return cargo.png"
+source_md5="b0d97fc4628631b030ae410cb10b866e"
+
+dest_files=[ "res://.import/ICONS return cargo.png-ef2168537e7256c4d89ba2c70a83c3cd.stex" ]
+dest_md5="96bb14f09c7f5a6a39774a1000be5222"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

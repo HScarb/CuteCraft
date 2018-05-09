@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/ICONS load.png-9f9472f3dd7a147b07d40366ed42a874.stex"
+
+[deps]
+
+source_file="res://images/Icons/ICONS load.png"
+source_md5="376f4778a52817cdfe64de80f11f0b4b"
+
+dest_files=[ "res://.import/ICONS load.png-9f9472f3dd7a147b07d40366ed42a874.stex" ]
+dest_md5="dabda63d726e7a4551c707209d2729ed"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

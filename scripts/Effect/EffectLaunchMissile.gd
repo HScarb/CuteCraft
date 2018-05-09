@@ -66,7 +66,7 @@ func run():
 func add_timer_for_missile(missile):
     var weapon = self.effect_origin
     var shoot_vector = weapon.get_shoot_vector()
-    var burst_time = shoot_vector.length() / missile.speed
+    var burst_time = shoot_vector.length() / missile.get_attr_value("speed")
     var impact_timer = Timer.new()
     impact_timer.set_wait_time(burst_time)
     impact_timer.set_one_shot(true)

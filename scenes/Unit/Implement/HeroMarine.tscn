@@ -13,10 +13,10 @@ height = 30.0
 
 collision_mask = 1
 stand_after_attack = false
-life = 45
-life_max = 45
-enegy = 0
-enegy_max = 0
+life = 45.0
+life_max = 45.0
+enegy = 0.0
+enegy_max = 0.0
 speed = 225.0
 weapon_path = NodePath("WeaponMarine")
 

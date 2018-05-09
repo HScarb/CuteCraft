@@ -11,10 +11,6 @@ height = 50.0
 
 [node name="HeroRoach" instance=ExtResource( 1 )]
 
-life = 125
-life_max = 125
-enegy = 0
-enegy_max = 0
 radius = 25.0
 speed = 225.0
 weapon_path = NodePath("WeaponRoach")

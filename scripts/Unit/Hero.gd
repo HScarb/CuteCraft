@@ -65,5 +65,4 @@ func get_on_idle_end_condi():
 
 # virtual 死亡状态开启条件
 func get_on_die_condi():
-	# return life <= 0
 	return Input.is_action_pressed("ui_die")

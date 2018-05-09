@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/ICON rally.png-4c1906734896cf697f95bb5ac793ff43.stex"
+
+[deps]
+
+source_file="res://images/Icons/ICON rally.png"
+source_md5="c55975f2dfb760b10f1c66290c1fa786"
+
+dest_files=[ "res://.import/ICON rally.png-4c1906734896cf697f95bb5ac793ff43.stex" ]
+dest_md5="7d47cd44c734fc1910aa98102e96c01a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

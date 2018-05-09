@@ -46,7 +46,7 @@ func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param
 	logicRoot.refresh_face_angel_by_motion()
 
 	# 移动
-	logicRoot.motion = logicRoot.motion.normalized() * logicRoot.speed
+	logicRoot.motion = logicRoot.motion.normalized() * logicRoot.get_attr_value("speed")
 	logicRoot.move()
 
 #when exiting state

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/ICONS Roach Warren.png-72e25e63902197890044997ed83430bd.stex"
+
+[deps]
+
+source_file="res://images/Icons/ICONS Roach Warren.png"
+source_md5="2ae97b4f6422a74e70d809ceca75c12c"
+
+dest_files=[ "res://.import/ICONS Roach Warren.png-72e25e63902197890044997ed83430bd.stex" ]
+dest_md5="6a137bb8503970824e2039d87b97c27f"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

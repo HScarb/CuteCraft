@@ -12,10 +12,10 @@ height = 30.0
 [node name="UnitMarine" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Z Index", "collision" ]
-life = 45
-life_max = 45
-enegy = 0
-enegy_max = 0
+life = 45.0
+life_max = 45.0
+enegy = 0.0
+enegy_max = 0.0
 speed = 225.0
 weapon_path = NodePath("WeaponMarine")
 

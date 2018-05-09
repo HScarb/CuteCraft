@@ -45,7 +45,7 @@ func _ready():
 	# 刷新目标数据
 	# self.refresh_target_data()
 	# 初始化攻击计时器
-	$AttackIntervalTimer.wait_time = period * logicRoot.get_attr("attack_speed_multi")
+	$AttackIntervalTimer.wait_time = period
 	$AttackIntervalTimer.connect("timeout", self, "set_can_fire", [true])
 
 # 每次攻击都刷新目标数据
@@ -65,8 +65,10 @@ func fire():
 		return
 	set_can_fire(false)
 	# 刷新目标数据
-	self.refresh_target_data()
+	refresh_target_data()
 	# 重启武器冷却计时器
+	# 	先更新武器冷却时间
+	refresh_attack_period()
 	$AttackIntervalTimer.start()
 	# 发送武器开启信号
 	SignalManager.emit_signal("weapon_start", self)
@@ -80,6 +82,10 @@ func fire():
 	if effect != null:
 		trans_target_data(effect)
 		effect.run()
+
+# 刷新武器的攻击间隔(会将单位的攻击速度加成属性考虑在内)
+func refresh_attack_period():
+	$AttackIntervalTimer.wait_time = period * logicRoot.get_attr_value("attack_speed_multi")
 
 # 向子效果传递目标数据
 func trans_target_data(sub_effect):

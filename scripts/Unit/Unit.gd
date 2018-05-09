@@ -8,10 +8,12 @@ export(bool) var stand_after_attack = true			# 攻击之后是否进入站立动
 export(int) var player = 1							# 隶属玩家
 export(float) var face_angle = PI / 2				# 初始面向角度
 export(int,"east","south_east","south","south_west","west","north_west","north","north_east") var face_direction = 2		# 朝向
-export(int) var life = 10							# 生命值
-export(int) var life_max = 10						# 生命最大值
-export(int) var enegy = 10							# 能量
-export(int) var enegy_max = 10						# 能量最大值
+export(float) var life = 10							# 生命值
+export(float) var life_max = 10						# 生命最大值
+export(float) var life_recover = 0					# 每秒生命回复 
+export(float) var enegy = 10						# 能量
+export(float) var enegy_max = 10					# 能量最大值
+export(float) var enegy_recover = 0					# 每秒能量回复
 export(float) var radius = 10						# 内部半径
 export(float) var speed = 3							# 移动速度
 export(float) var acceleration = 0					# 加速度
@@ -36,17 +38,20 @@ signal attack_begin
 var class_hero = load("res://scripts/Unit/Hero.gd")
 var class_attr = load("res://scripts/Unit/UnitAttr.gd")
 
-func _init():
+func _init_attr_table():
 	# 初始化属性表
 	map_attr.clear()
 	# 初始化添加属性
 	_add_attr("life", life, life_max)
+	_add_attr("life_recover", life_recover)
 	_add_attr("enegy", enegy, enegy_max)
+	_add_attr("enegy_recover", enegy_recover)
 	_add_attr("speed", speed)
 	_add_attr("acceleration", 0)
-	_add_attr("attack_speed_muti", 1)
+	_add_attr("attack_speed_multi", 1)
 
 func _ready():
+	_init_attr_table()
 	# 设置武器
 	if weapon_path != null:
 		self.weapon = get_node(weapon_path)
@@ -61,19 +66,25 @@ func _ready():
 	self.emit_signal("unit_ready")
 	pass
 
-func _add_attr(name, base, max):
-	if max == null:
-		max = base
-	var attr = class_attr.instance()
-	attr.init_by_data(base, max)
-	map_attr["name"] = attr
+func _add_attr(attr_name, base, max_value = null):
+	if max_value == null:
+		max_value = base
+	var attr = class_attr.new()
+	attr.modify(base)
+	map_attr[attr_name] = attr
 	return attr
 
-func modify_attr(name, base = 0.0, percent = 0.0, fix = 0.0):
-	map_attr[name].modify(base, percent, fix)
+func modify_attr(attr_name, base = 0.0, percent = 0.0, fix = 0.0, modify_cur_value = true):
+	map_attr[attr_name].modify(base, percent, fix, modify_cur_value)
 
-func get_attr_value(name):
-	return map_attr[name].get_value()
+func get_attr(attr_name):
+	return map_attr[attr_name]
+
+func get_attr_max(attr_name):
+	return get_attr(attr_name).get_max_value()
+
+func get_attr_value(attr_name):
+	return get_attr(attr_name).get_value()
 
 # func _physics_process(delta):
 # 	# 单位根据面向角度调整朝向
@@ -134,10 +145,25 @@ func attack():
 
 # 承受伤害
 func take_damage(amount):
-	life -= amount
+	# 减少生命
+	var attr_life = get_attr("life")
+	attr_life.set_cur_value(attr_life.get_value() - amount)
+	# 发送消息
 	self.emit_signal("life_enegy_change")
-	if life <= 0:
+	if get_attr_value("life") <= 0:
 		die()
+
+# 消耗能量
+func cost_enegy(amount):
+	# 如果当前能量小于要消耗的能量则返回
+	if get_attr_value("enegy") < amount:
+		return false
+	# 减少能量
+	var attr_enegy = get_attr("enegy")
+	attr_enegy.set_cur_value(attr_enegy.get_value() - amount)
+	# 发送消息
+	self.emit_signal("life_enegy_change")
+	return true
 
 # 单位死亡调用
 func die():

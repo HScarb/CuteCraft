@@ -16,6 +16,15 @@ final_effect = null
 periodic_effect = null
 expire_effect = null
 refresh_effect = null
-testdic = null
+modification = PoolStringArray(  )
+life_max = 0
+life = 0
+life_recover = 0
+enegy_max = 0
+enegy = 0
+enegy_recover = 0
+speed = 0
+acceleration = 0
+attack_speed_multi = 0
 
 

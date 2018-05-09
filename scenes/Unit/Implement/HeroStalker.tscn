@@ -11,10 +11,10 @@ height = 40.0
 
 [node name="HeroStalker" instance=ExtResource( 1 )]
 
-life = 160
-life_max = 160
-enegy = 0
-enegy_max = 0
+life = 160.0
+life_max = 160.0
+enegy = 0.0
+enegy_max = 0.0
 radius = 25.0
 speed = 275.0
 weapon_path = NodePath("WeaponStalker")
@@ -92,7 +92,7 @@ position = Vector2( 0, -40 )
 
 shape = SubResource( 1 )
 
-[node name="WeaponStalker" parent="." index="4" instance=ExtResource( 2 )]
+[node name="WeaponStalker" parent="." index="3" instance=ExtResource( 2 )]
 
 weapon_name = "粒子碎裂枪"
 
