@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Map.gd" type="Script" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/Unit/Implement/UnitMarine.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Unit/Implement/HeroStalker.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Unit/Implement/HeroMarine.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Unit/Implement/HeroMarine.tscn" type="PackedScene" id=4]
 
 [node name="Map" type="Node2D"]
 
@@ -58,12 +57,12 @@ _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
 position = Vector2( 929.566, 189.864 )
 
-[node name="HeroStalker" parent="walls" index="1" instance=ExtResource( 4 )]
+[node name="HeroMarine" parent="walls" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 400, 300 )
+position = Vector2( 664.706, 254.568 )
 is_main_character = true
 
-[node name="Camera2D" type="Camera2D" parent="walls/HeroStalker" index="4"]
+[node name="Camera2D" type="Camera2D" parent="walls/HeroMarine" index="7"]
 
 scale = Vector2( 0.5, 0.5 )
 anchor_mode = 1
@@ -89,11 +88,6 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Transform" ]
-
-[node name="HeroMarine" parent="walls" index="2" instance=ExtResource( 5 )]
-
-position = Vector2( 664.706, 254.568 )
-is_main_character = true
 
 [node name="FrontLayer" type="Node2D" parent="." index="2"]
 

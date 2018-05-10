@@ -4,6 +4,15 @@
 # 2018/04/03
 extends "res://scripts/Unit/Unit.gd"
 
+func _input(event):
+	if not is_main_character:
+		return
+	for index in [1,2,3,4]:
+		if event.is_action_pressed("ui_ability_%d" % index):
+			print("cast ability %d" % index)
+			if $Abilities.get_child_count() >= index:
+				$Abilities.get_children()[index - 1].fire()
+
 #########################
 # override 攻击状态开启条件
 func get_on_attack_condi():

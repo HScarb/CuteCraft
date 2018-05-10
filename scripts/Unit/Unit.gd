@@ -54,6 +54,8 @@ func _init_attr_table():
 func _ready():
 	print("unit_ready: ", self.name)
 	_init_attr_table()
+	# 发送全局演算体消息
+	SignalManager.emit_signal("unit_birth", self)
 	# 设置武器
 	if weapon_path != null:
 		self.weapon = get_node(weapon_path)
@@ -69,8 +71,6 @@ func _ready():
 	shape.set_height(self.radius)
 	$GroundShape.set_shape(shape)
 	$TimerRecover.start()
-	# 发送全局演算体消息
-	SignalManager.emit_signal("unit_birth", self)
 	# 给Model发送消息
 	self.emit_signal("unit_ready")
 	pass
@@ -225,6 +225,7 @@ func add_ability(ability):
 	$Abilities.add_child(ability)
 	# ability.on_add()
 
+# 根据名称移除技能
 func remove_ability(ability_name):
 	if ability_name.empty():
 		return

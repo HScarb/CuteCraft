@@ -35,6 +35,16 @@ func init():
     $TimerPeriodic.wait_time = period
     $TimerExpire.wait_time = duration
 
+# override
+# 向子效果传递目标数据
+func trans_target_data(sub_effect):
+    .trans_target_data(sub_effect)
+    # 效果树源头为行为自身，没有父节点
+    sub_effect.effect_origin = self
+    sub_effect.parent_effect = null
+    self.children_effect.append(sub_effect)
+    pass
+
 # 刷新目标数据
 func refresh_target_data():
 	# 初始化目标数据
