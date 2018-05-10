@@ -172,6 +172,17 @@ func take_damage(amount):
 	if get_attr_value("life") <= 0:
 		die()
 
+# 消耗生命值(技能消耗，如果生命值过低则无法使用技能)
+func cost_life(amount):
+	if get_attr_value("life") < amount:
+		return false
+	# 减少生命值
+	var attr_life = get_attr("life")
+	attr_life.set_cur_value(attr_life.get_value() - amount)
+	# 发送消息
+	self.emit_signal("life_enegy_change")
+	return true
+
 # 消耗能量
 func cost_enegy(amount):
 	# 如果当前能量小于要消耗的能量则返回
@@ -207,8 +218,18 @@ func get_attack_time():
 func add_behavior(behavior):
 	if behavior == null:
 		return
-	$Behaviors.add_child(behavior)
-	behavior.on_add()
+	# 首先判断是否已经存在相同的行为
+	#	如果存在则刷新该行为
+	#	如果不存在则直接添加行为
+	var behavior_name = Global.get_node_name(behavior)
+	var has_same_behavior = false
+	for b in $Behaviors.get_children():
+		if Global.get_node_name(b) == behavior_name:
+			has_same_behavior = true
+			b.on_refresh()
+	if not has_same_behavior:
+		$Behaviors.add_child(behavior)
+		behavior.on_add()
 
 # 根据名称移除行为
 func remove_behavior(behavior_name):

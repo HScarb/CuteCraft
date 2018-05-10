@@ -33,6 +33,11 @@ func get_can_fire():
 func fire():
     if not can_fire:
         return
+    # 消耗能量或者生命值
+    if not logicRoot.cost_enegy(cost_enegy):
+        return
+    if not logicRoot.cost_life(cost_life):
+        return
     if time_use > 0:
         # 如果有冷却时间
         if time_prepare > 0:
@@ -61,6 +66,8 @@ func fire():
 # 运行技能效果
 func run_effect():
     SignalManager.emit_signal("ability_start", self)
+    # 刷新目标数据
+    refresh_target_data()
     pass
 
 # 技能添加到单位时调用

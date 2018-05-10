@@ -137,6 +137,10 @@ func on_refresh():
     # 添加层数
     if not stack_count >= maximum_stack_count:
         stack_count = stack_count + 1
+    # 刷新时间
+    $TimerExpire.set_wait_time(duration)
+    $TimerExpire.start()
+    # 运行刷新效果
     if refresh_effect != null:
         var effect_refresh = effect_refresh.instance()
         trans_target_data(effect_refresh)

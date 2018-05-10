@@ -6,7 +6,6 @@
 [node name="AbilityEffectInstant" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-time_prepare = 0
 effect = null
 
 
