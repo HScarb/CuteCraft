@@ -24,6 +24,7 @@ tracks/0/keys = {
 
 [node name="ModelStimPackOn" instance=ExtResource( 1 )]
 
+self_modulate = Color( 0.588235, 1, 0.392157, 1 )
 texture = ExtResource( 2 )
 offset = Vector2( 0, -100 )
 _sections_unfolded = [ "Offset", "Visibility" ]

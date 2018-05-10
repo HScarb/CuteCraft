@@ -6,11 +6,11 @@
 [node name="Behavior" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+icon = null
 alignment = 0
 duration = 0
 period = 0
 period_count = -1
-icon = null
 maximum_stack_count = 1
 initial_effect = null
 final_effect = null

@@ -2,6 +2,7 @@
 # 技能基类
 extends "res://scripts/Effect/EffectTreeNode.gd"
 
+export(Texture) var icon = null             # 图标
 export(String) var ability_name = null      # 技能名称
 export(float) var cost_life = 0             # 生命消耗
 export(float) var cost_enegy = 0            # 能量消耗

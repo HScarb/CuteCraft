@@ -50,6 +50,10 @@ var PROPERTY = {
     
 }
 
+var ABILITY_SHORTCUT = [
+    "Q", "W", "E", "R"
+]
+
 ###### 全局路径常量 ######
 const ACTOR_DIR = "res://scenes/Actor/Implement/"
 const EFFECT_DIR = "res://scenes/Effect/Implement/"

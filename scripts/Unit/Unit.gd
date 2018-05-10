@@ -239,6 +239,10 @@ func remove_behavior(behavior_name):
 		if Global.get_node_name(behavior) == behavior_name:
 			behavior.on_remove()
 
+# 获取单位目前携带的所有效果
+func get_all_behavior():
+	return $Behaviors.get_children()
+
 # 添加技能
 func add_ability(ability):
 	if ability == null:
@@ -253,6 +257,10 @@ func remove_ability(ability_name):
 	for ability in $Abilities.get_children():
 		if Global.get_node_name(ability) == ability_name:
 			ability.on_remove()
+
+# 获取单位目前携带的所有技能
+func get_all_ability():
+	return $Abilities.get_children()
 
 ###### 播放动画 ######
 # 播放站立动画

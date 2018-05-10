@@ -6,6 +6,7 @@
 [node name="Ability" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+icon = null
 ability_name = null
 cost_life = 0
 cost_enegy = 0

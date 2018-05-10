@@ -2,11 +2,11 @@
 # 行为
 extends "res://scripts/Effect/EffectTreeNode.gd"
 
+export(Texture) var icon = null                         # 图标
 export(int, "positive", "negetive") var alignment = 0   # 对齐
 export(float) var duration = 0                          # 持续时间
 export(float) var period = 0                            # 周期
 export(int) var period_count = -1                       # 周期计数，-1为无限循环
-export(PackedScene) var icon = null                     # 图标
 export(int) var maximum_stack_count = 1                 # 最大叠加层数
 ###### 效果 ######
 export(PackedScene) var initial_effect = null           # 起始效果，在行为应用在单位时触发

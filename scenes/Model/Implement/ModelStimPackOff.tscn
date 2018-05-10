@@ -22,9 +22,9 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="ModelStimPackOff" index="0" instance=ExtResource( 1 )]
+[node name="ModelStimPackOff" instance=ExtResource( 1 )]
 
-modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 0.196078, 0, 1 )
 texture = ExtResource( 2 )
 offset = Vector2( 0, -100 )
 _sections_unfolded = [ "Offset", "Visibility" ]

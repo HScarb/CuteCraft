@@ -3,6 +3,7 @@
 extends Node
 
 var arr_unit = []
+var main_character = null setget set_main_character, get_main_character
 
 func init():
     arr_unit.clear()
@@ -35,3 +36,12 @@ func add_unit(unit):
 # 获取所有单位
 func get_all_units():
     return self.arr_unit
+
+# 设置主角单位
+func set_main_character(unit):
+    if unit != null:
+        main_character = unit
+
+# 获取主角单位
+func get_main_character():
+    return main_character
