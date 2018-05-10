@@ -75,8 +75,8 @@ func on_add():
     # 开始起始冷却计时器
     if time_start > 0:
         $TimerStart.set_wait_time(time_start)
+        $TimerStart.start()
         can_fire = false
-    pass
 
 # 技能从单位身上移除时调用
 func on_remove():

@@ -100,8 +100,6 @@ shape = SubResource( 1 )
 [node name="AbilityStimPack" parent="Abilities" index="0" instance=ExtResource( 3 )]
 
 cost_enegy = 0
-time_start = 0
-time_prepare = 0
 can_fire = true
 
 
