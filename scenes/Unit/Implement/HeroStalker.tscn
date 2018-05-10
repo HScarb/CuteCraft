@@ -12,8 +12,8 @@ height = 40.0
 
 [node name="HeroStalker" instance=ExtResource( 1 )]
 
-life = 160.0
-life_max = 160.0
+life = 80.0
+life_max = 80.0
 enegy = 0.0
 enegy_max = 0.0
 radius = 25.0

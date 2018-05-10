@@ -14,12 +14,5 @@ func play_model_animation(effect_tree_node):
         return
     if not check_name(effect_tree_node):
         return
-    var new_model = null
-    var model_pos = effect_tree_node.get_pos_by_target_data_type(at_location)
-    if typeof(model_pos) == TYPE_ARRAY:
-        new_model = []
-        for pos in model_pos:
-            new_model.append(create_animated_model(model, MapManager.get_layer_front(), pos))
-    else:
-        new_model = create_animated_model(model, MapManager.get_layer_front(), model_pos)
+    var new_model = add_model_at_location(effect_tree_node, model, at_location)
     return new_model

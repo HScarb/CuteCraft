@@ -17,15 +17,6 @@ export(PackedScene) var refresh_effect = null           # 效果被刷新触发
 ###### 修改单位 ######
 # format: attr_name,percent,fix,modify_max_value(0 or 1)
 export(PoolStringArray) var modification                # 单位修改表，用固定的格式表示修改
-# export(float) var life_max = 0
-# export(float) var life = 0
-# export(float) var life_recover = 0
-# export(float) var enegy_max = 0
-# export(float) var enegy = 0
-# export(float) var enegy_recover = 0
-# export(float) var speed = 0
-# export(float) var acceleration = 0
-# export(float) var attack_speed_multi = 0
 ###### 伤害响应 ######
 
 ########################
@@ -43,6 +34,18 @@ func init():
     cur_period = 0
     $TimerPeriodic.wait_time = period
     $TimerExpire.wait_time = duration
+
+# 刷新目标数据
+func refresh_target_data():
+	# 初始化目标数据
+	self.origin_point = logicRoot
+	self.origin_point = logicRoot.position
+	self.source_unit = logicRoot
+	self.source_point = logicRoot.position
+	self.caster_unit = logicRoot
+	self.caster_point = logicRoot.position
+	self.target_unit = []
+	self.target_point = logicRoot.position
 
 # 应用修改单位
 func apply_modification():
@@ -65,6 +68,7 @@ func reverse_modification():
 
 # 添加行为时操作
 func on_add():
+    refresh_target_data()
     if initial_effect != null:
         var effect_initial = initial_effect.instance()
         trans_target_data(effect_initial)
@@ -80,6 +84,8 @@ func on_add():
 
 # 移除行为时操作
 func on_remove():
+    refresh_target_data()
+
     if final_effect != null:
         var effect_final = final_effect.instance()
         trans_target_data(effect_final)
@@ -94,6 +100,7 @@ func on_remove():
 
 # 周期性事件
 func on_period():
+    refresh_target_data()
     # 如果当前周期数超过周期数，暂停计时器并且返回
     cur_period = cur_period + 1
     if period > 0:
@@ -107,6 +114,7 @@ func on_period():
 
 # 行为到期操作
 func on_expire():
+    refresh_target_data()
     if expire_effect != null:
         var effect_expire = expire_effect.instance()
         trans_target_data(effect_expire)
@@ -115,6 +123,7 @@ func on_expire():
         
 # 行为刷新操作
 func on_refresh():
+    refresh_target_data()
     # 添加层数
     if not stack_count >= maximum_stack_count:
         stack_count = stack_count + 1

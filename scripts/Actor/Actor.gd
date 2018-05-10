@@ -21,7 +21,7 @@ func check_type(type_name):
 		return type_name == check_type_name
 	return false
 
-# 创建序列帧动画
+# 创建序列帧动画(废弃)
 # sprite_frames: [SpriteFrames]
 # parent_node: [Node2D]
 # pos: [Vector2]
@@ -56,4 +56,44 @@ func create_animated_model(model_scene, parent_node, pos = null):
 	new_model.set_position(pos)
 	# 添加到父节点
 	parent_node.add_child(new_model)
+	return new_model
+
+# 根据传入地点的不同将模型添加到指定位置
+# 	如果传入地点类型是单位，则模型附着在单位上或单位炮口上
+# 	如果传入地点类型是点，则模型附着在前景层的相应位置
+# effect_tree_node: [EffectTreeNode.gd]
+# model: [Model.tscn]
+# at_location: [TARGET_DATA_TYPE]
+# at_muzzle: [bool]是否附着在单位炮口
+func add_model_at_location(effect_tree_node, model_type, at_location, at_muzzle = false):
+	var new_model = null
+	if Global.is_target_data_unit(at_location):
+		# 如果目标数据类型是单位
+		var target_data = effect_tree_node.get_unit_by_target_data_type(at_location)
+		if typeof(target_data) == TYPE_ARRAY:
+			new_model = []
+			for unit in target_data:
+				if at_muzzle:
+					new_model.append(create_animated_model(model_type, unit.model.get_muzzle()))
+				else:
+					new_model.append(create_animated_model(model_type, unit.model))
+		else:
+			if at_muzzle:
+				new_model = create_animated_model(model_type, target_data.model.get_muzzle())
+			else:
+				new_model = create_animated_model(model_type, target_data.model)
+	else:
+		# 如果目标数据类型是点
+		var target_data = effect_tree_node.get_pos_by_target_data_type(at_location)
+		if typeof(target_data) == TYPE_ARRAY:
+			new_model = []
+			for pos in target_data:
+				var model = create_animated_model(model_type, MapManager.get_layer_front())
+				if model != null:
+					model.set_position(pos)
+					new_model.append(model)
+		else:
+			new_model = create_animated_model(model_type, MapManager.get_layer_front())
+			if new_model != null:
+				new_model.set_position(target_data)
 	return new_model

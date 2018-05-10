@@ -22,3 +22,29 @@ func on_add():
 
 func on_remove():
     pass
+
+# 向子效果传递目标数据
+func trans_target_data(sub_effect):
+	.trans_target_data(sub_effect)
+	# 效果树源头为武器自身，没有父节点
+	sub_effect.effect_origin = self
+	sub_effect.parent_effect = null
+	self.children_effect.append(sub_effect)
+
+# 每次攻击都刷新目标数据
+func refresh_target_data():
+	# 初始化目标数据
+	self.origin_point = logicRoot
+	self.origin_point = logicRoot.position
+	self.source_unit = logicRoot
+	self.source_point = logicRoot.position
+	self.caster_unit = logicRoot
+	self.caster_point = logicRoot.position
+    self.target_unit = []
+	self.target_point = calc_target_point()
+
+# virtual
+# 计算目标点位置
+# return: [Vector2]
+func calc_target_point():
+	return logicRoot.position

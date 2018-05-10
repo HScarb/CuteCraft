@@ -32,10 +32,10 @@ func play_launch_animation(effect_tree_node):
 	# 检测类型
 	if not check_name(effect_tree_node, "check_type_launch"):
 		return
-	# 获取单位
+	# 创建发射动画模型
+	var new_launch_model = add_model_at_location(effect_tree_node, launch_model, launch_location, true)
+	# # 获取单位
 	var unit = effect_tree_node.get_unit_by_target_data_type(launch_location)
-	# 创建动画精灵
-	var new_launch_model = create_animated_model(launch_model, unit.model.get_muzzle())
 	# 根据朝向进行形变
 	new_launch_model.modify_by_direction(unit.face_direction)
 	
@@ -48,29 +48,6 @@ func play_impact_animation(effect_tree_node):
 	# 检测类型
 	if not check_name(effect_tree_node, "check_type_impact"):
 		return
-	var new_impact_model = null
-	# 获取目标单位或点
-	var impact_pos = effect_tree_node.get_pos_by_target_data_type(impact_location)
-	if typeof(impact_pos) == TYPE_ARRAY:
-		new_impact_model = []
-		for pos in impact_pos:
-			new_impact_model.append(create_animated_model(impact_model, MapManager.get_layer_front(), pos))
-	else:
-		new_impact_model = create_animated_model(impact_model, MapManager.get_layer_front(), impact_pos)
-	# if impact_location % 2 == 0:
-	# 	# 如果目标类型是点
-	# 	var impact_pos = effect_tree_node.get_pos_by_target_data_type(impact_location)
-	# 	impact_sprite = create_animated_sprite(impact_frames, MapManager.get_layer_unit(), impact_pos)
-	# else:
-	# 	# 如果目标类型是单位
-	# 	var target_unit = effect_tree_node.get_unit_by_target_data_type(impact_location)
-	# 	if typeof(target_unit) == TYPE_ARRAY:
-	# 		# 如果是单位组
-	# 		impact_sprite = []
-	# 		for unit in target_unit:
-	# 			impact_sprite.append(create_animated_sprite(impact_frames, unit.model.get_impact_node()))
-	# 	else:
-	# 		# 如果是单个单位
-	# 		if target_unit != null:
-	# 			impact_sprite = create_animated_sprite(impact_frames, target_unit.model.get_impact_node())
+	# 创建轰击动画模型
+	var new_impact_model = add_model_at_location(effect_tree_node, impact_model, impact_location)
 	return new_impact_model
