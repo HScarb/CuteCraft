@@ -1,4 +1,7 @@
-extends Node2D
+# Map.gd
+extends Navigation2D
+
+var path = []
 
 func _ready():
 	MapManager.set_map(self)
@@ -9,7 +12,40 @@ func _ready():
 		UnitManager.add_unit(unit)
 		if unit.is_main_character:
 			UnitManager.set_main_character(unit)
-	
-	# TEST:创建一个单位
-	# UnitManager.create_unit("UnitMarine", Vector2(600, 200))
-	pass
+
+func _input(event):
+	if not event.is_action_pressed("click"):
+		return
+	_update_navigation_path(UnitManager.get_main_character().position, get_local_mouse_position())
+
+func _update_navigation_path(start_position, end_position):
+	# get_simple_path is part of the Navigation2D class
+	# it returns a PoolVector2Array of points that lead you from the
+	# start_position to the end_position
+	path = get_simple_path(start_position, end_position, true)
+	# The first point is always the start_position
+	# We don't need it in this example as it corresponds to the character's position
+	path.remove(0)
+	set_process(true)
+
+func _process(delta):
+	var walk_distance = UnitManager.get_main_character().get_attr_value("speed") * delta
+	move_along_path(walk_distance)
+
+func move_along_path(distance):
+	var main_character = UnitManager.get_main_character()
+	var last_point = main_character.position
+	for index in range(path.size()):
+		var distance_between_points = last_point.distance_to(path[0])
+		# the position to move to falls between two points
+		if distance <= distance_between_points:
+			main_character.position = last_point.linear_interpolate(path[0], distance / distance_between_points)
+			break
+		# the character reached the end of the path
+		elif distance < 0.0:
+			main_character.position = path[0]
+			set_process(false)
+			break
+		distance -= distance_between_points
+		last_point = path[0]
+		path.remove(0)
