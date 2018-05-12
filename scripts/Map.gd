@@ -29,8 +29,9 @@ func _update_navigation_path(start_position, end_position):
 	set_process(true)
 
 func _process(delta):
-	var walk_distance = UnitManager.get_main_character().get_attr_value("speed") * delta
-	move_along_path(walk_distance)
+	# var walk_distance = UnitManager.get_main_character().get_attr_value("speed") * delta
+	# move_along_path(walk_distance)
+	_move_along_path()
 
 func move_along_path(distance):
 	var main_character = UnitManager.get_main_character()
@@ -49,3 +50,40 @@ func move_along_path(distance):
 		distance -= distance_between_points
 		last_point = path[0]
 		path.remove(0)
+
+func _move_along_path():
+	var main_character = UnitManager.get_main_character()
+	var last_point = main_character.position
+	var direction_motion = null
+	for index in range(path.size()):
+		var delta_dis = last_point.distance_to(path[index])
+		if delta_dis < 5:
+			# 如果到达了一个路径点，前往下一个路径点
+			path.remove(0)
+			if path.size() <= 0:
+				direction_motion = Vector2()
+				break
+			var rad = path[0].angle_to_point(last_point)
+			direction_motion = Vector2()
+			direction_motion.x = cos(rad)
+			direction_motion.y = sin(rad)
+			break
+		else:
+			# 如果没有到达当前目标路径点，向当前路径点移动
+			var rad = path[0].angle_to_point(last_point)
+			direction_motion = Vector2()
+			direction_motion.x = cos(rad)
+			direction_motion.y = sin(rad)
+			break
+	if direction_motion != null:
+		print("direction_motion = ", direction_motion)
+		main_character.motion = direction_motion.normalized()
+	# for path_point in path:
+	# 	var delta_dis = last_point.distance_to(path_point)
+	# 	if delta_dis < 5:
+	# 		# 如果到达了路径点，移除该路径点并向下一个路径点移动
+	# 		path.remove(0)
+	# 		var direction = path[0].angle_to_point(last_point)
+	# 		main_character.motion = direction.normalized()
+	# 		break
+	pass

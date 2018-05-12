@@ -71,9 +71,28 @@ func _ready():
 	shape.set_height(self.radius)
 	$GroundShape.set_shape(shape)
 	$TimerRecover.start()
+	# 开启单位自身物理刷新
+	set_physics_process(true)
 	# 给Model发送消息
 	self.emit_signal("unit_ready")
 	pass
+
+func _process(delta):
+	if is_main_character and not is_dead and not is_attacking:
+		# if Input.is_action_pressed("ui_up") or\
+		# 	Input.is_action_pressed("ui_down") or\
+		# 	Input.is_action_pressed("ui_left") or\
+		# 	Input.is_action_pressed("ui_right"):
+		motion = Vector2()
+		# 设置motion
+		if Input.is_action_pressed("ui_up"):
+			motion += Vector2(0, -Global.Y_ZOOM)
+		if Input.is_action_pressed("ui_down"):
+			motion += Vector2(0, Global.Y_ZOOM)
+		if Input.is_action_pressed("ui_left"):
+			motion += Vector2(-Global.X_ZOOM, 0)
+		if Input.is_action_pressed("ui_right"):
+			motion += Vector2(Global.X_ZOOM, 0)
 
 ###### 属性操作 ######
 func _add_attr(attr_name, base, max_value = null):
@@ -141,7 +160,7 @@ func move():
 	# 播放移动动画
 	play_move_animation()
 	# 移动
-	move_and_slide(self.motion)
+	move_and_slide(self.motion * get_attr_value("speed"))
 
 func attack():
 	if self.weapon == null:
@@ -320,11 +339,21 @@ func get_on_attack_end_condi():
 
 # virtual 移动状态开启条件
 func get_on_move_condi():
+	var ret = false
 	if is_dead:
 		return false
+	if motion.length() > 0.01:
+		ret = true
+	if is_main_character:
+		print("motion length: ", motion.length())
+		print("on move: ", ret)
+	return ret
 
 # virtual 移动状态结束条件
 func get_on_move_end_condi():
+	var ret = false
+	if abs(motion.length()) < 0.01:
+		return true
 	return false
 
 # virtual 闲置状态开启条件
@@ -341,5 +370,6 @@ func get_on_die_condi():
 	return self.is_dead
 
 ###### 回调监听 ######
+# 生命值和能量回复
 func _on_TimerRecover_timeout():
 	recover()
