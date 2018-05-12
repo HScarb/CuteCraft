@@ -104,3 +104,6 @@ func calc_target_point():
 		# *** 计算近战武器目标点
 		target_pos = logicRoot.position
 	return target_pos
+
+func get_shoot_range():
+	return shoot_range

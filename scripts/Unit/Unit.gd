@@ -16,6 +16,7 @@ export(float) var enegy_max = 10					# 能量最大值
 export(float) var enegy_recover = 0					# 每秒能量回复
 export(float) var radius = 10						# 内部半径
 export(float) var speed = 3							# 移动速度
+export(float) var scan_radius = 600					# 搜索敌人的范围，如果范围内有敌人，则向敌人移动并且攻击
 export(float) var acceleration = 0					# 加速度
 export(NodePath) var weapon_path = null				# 武器路径
 
@@ -70,6 +71,15 @@ func _ready():
 	shape.set_radius(self.radius)
 	shape.set_height(self.radius)
 	$GroundShape.set_shape(shape)
+	# 设置武器攻击搜索区域大小
+	var shape2 = CircleShape2D.new()
+	shape2.set_radius(weapon.get_shoot_range())
+	$WeaponArea/WeaponShape.shape = shape2
+	# 设置侦测搜索区域大小
+	var shape3 = CircleShape2D.new()
+	shape3.set_radius(scan_radius)
+	$ScanArea/ScanShape.shape = shape3
+	###### 区域设置end ######
 	$TimerRecover.start()
 	# 开启单位自身物理刷新
 	set_physics_process(true)
@@ -155,12 +165,26 @@ func stand():
 	# 播放站立动画
 	play_stand_animation()
 
+# 使用当前motion移动
 func move():
 	# 播放移动动画
 	play_move_animation()
 	# 移动
 	move_and_slide(self.motion * get_attr_value("speed"))
 
+func aim(unit):
+	var space_state = get_world_2d().direct_space_state
+	var target_pos = unit.position
+	var result = space_state.intersect_ray(position, target_pos, [$Area2D], Global.MASK_UNIT_BODY)
+	if result:
+		# 修改单位朝向角度
+		var rad = target_pos.angle_to_point(position)
+		face_angle = rad
+		_refresh_face_direction()
+		# 攻击
+		attack()
+
+# 面向当前朝向进行攻击
 func attack():
 	if self.weapon == null:
 		return
@@ -367,3 +391,14 @@ func get_on_die_condi():
 # 生命值和能量回复
 func _on_TimerRecover_timeout():
 	recover()
+
+func _on_WeaponArea_area_entered(area):
+	if area != $BodyArea:
+		print("on_weapon_area_entered ", area)
+	else:
+		print("self area: ", area)
+	if area.get_parent() is load("res://scripts/Unit/Unit.gd"):
+		aim(area.get_parent())
+
+func _on_ScanArea_area_entered(area):
+	pass # replace with function body

@@ -22,7 +22,7 @@ custom_solver_bias = 0.0
 radius = 28.0
 height = 30.0
 
-[node name="Unit" type="KinematicBody2D"]
+[node name="Unit" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -43,6 +43,7 @@ enegy_max = 10
 enegy_recover = 0
 radius = 20.0
 speed = 200.0
+scan_radius = 600
 acceleration = 0
 weapon_path = null
 
@@ -202,16 +203,50 @@ _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
 shape = SubResource( 1 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
-[node name="TimerRecover" type="Timer" parent="." index="3"]
+[node name="WeaponArea" type="Area2D" parent="." index="3"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 16
+collision_mask = 4
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="WeaponShape" type="CollisionShape2D" parent="WeaponArea" index="0"]
+
+[node name="ScanArea" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 32
+collision_mask = 4
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="ScanShape" type="CollisionShape2D" parent="ScanArea" index="0"]
+
+[node name="TimerRecover" type="Timer" parent="." index="5"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="Abilities" type="Node" parent="." index="4"]
+[node name="Abilities" type="Node" parent="." index="6"]
 
-[node name="Behaviors" type="Node" parent="." index="5"]
+[node name="Behaviors" type="Node" parent="." index="7"]
+
+[connection signal="area_entered" from="WeaponArea" to="." method="_on_WeaponArea_area_entered"]
+
+[connection signal="area_entered" from="ScanArea" to="." method="_on_ScanArea_area_entered"]
 
 [connection signal="timeout" from="TimerRecover" to="." method="_on_TimerRecover_timeout"]
 

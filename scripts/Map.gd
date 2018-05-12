@@ -1,6 +1,8 @@
 # Map.gd
 extends Navigation2D
 
+var arr_path = []						# 在寻路中的单位的路径列表
+var arr_nav_unit = []					# 在寻路中的单位列表
 var path = []
 
 func _ready():
@@ -33,23 +35,23 @@ func _process(delta):
 	# move_along_path(walk_distance)
 	unit_move_along_path(UnitManager.get_main_character())
 
-func move_along_path(distance):
-	var main_character = UnitManager.get_main_character()
-	var last_point = main_character.position
-	for index in range(path.size()):
-		var distance_between_points = last_point.distance_to(path[0])
-		# the position to move to falls between two points
-		if distance <= distance_between_points:
-			main_character.position = last_point.linear_interpolate(path[0], distance / distance_between_points)
-			break
-		# the character reached the end of the path
-		elif distance < 0.0:
-			main_character.position = path[0]
-			set_process(false)
-			break
-		distance -= distance_between_points
-		last_point = path[0]
-		path.remove(0)
+# func move_along_path(distance):
+# 	var main_character = UnitManager.get_main_character()
+# 	var last_point = main_character.position
+# 	for index in range(path.size()):
+# 		var distance_between_points = last_point.distance_to(path[0])
+# 		# the position to move to falls between two points
+# 		if distance <= distance_between_points:
+# 			main_character.position = last_point.linear_interpolate(path[0], distance / distance_between_points)
+# 			break
+# 		# the character reached the end of the path
+# 		elif distance < 0.0:
+# 			main_character.position = path[0]
+# 			set_process(false)
+# 			break
+# 		distance -= distance_between_points
+# 		last_point = path[0]
+# 		path.remove(0)
 
 func unit_move_along_path(unit):
 	var last_point = unit.position
@@ -58,7 +60,7 @@ func unit_move_along_path(unit):
 	for index in range(path.size()):
 		var delta_dis = last_point.distance_to(path[index])
 		# 如果到达了一个路径点，前往下一个路径点
-		if delta_dis <= 10:
+		if delta_dis <= unit.radius:
 			path.remove(0)
 			# 如果已经到达目标点，设置速度为0，返回
 			if path.size() <= 0:
@@ -73,6 +75,5 @@ func unit_move_along_path(unit):
 		direction_motion = Vector2()
 		direction_motion.x = cos(move_rad)
 		direction_motion.y = sin(move_rad)
-		print("direction_motion = ", move_rad, direction_motion)
 	unit.motion = direction_motion.normalized()
 	pass

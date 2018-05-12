@@ -58,6 +58,12 @@ var ABILITY_SHORTCUT = [
 const ACTOR_DIR = "res://scenes/Actor/Implement/"
 const EFFECT_DIR = "res://scenes/Effect/Implement/"
 
+###### Bit Mask ######
+var MASK_UNIT_GROUND = 1
+var MASK_GROUND = 2
+var MASK_UNIT_BODY = 4
+var MASK_MISSILE = 8
+
 ###### 全局函数 ######
 # 等视角坐标转换成笛卡尔坐标
 func iso_2_cart(pos):
