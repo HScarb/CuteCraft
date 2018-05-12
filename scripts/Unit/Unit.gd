@@ -79,20 +79,20 @@ func _ready():
 
 func _process(delta):
 	if is_main_character and not is_dead and not is_attacking:
-		# if Input.is_action_pressed("ui_up") or\
-		# 	Input.is_action_pressed("ui_down") or\
-		# 	Input.is_action_pressed("ui_left") or\
-		# 	Input.is_action_pressed("ui_right"):
-		motion = Vector2()
-		# 设置motion
-		if Input.is_action_pressed("ui_up"):
-			motion += Vector2(0, -Global.Y_ZOOM)
-		if Input.is_action_pressed("ui_down"):
-			motion += Vector2(0, Global.Y_ZOOM)
-		if Input.is_action_pressed("ui_left"):
-			motion += Vector2(-Global.X_ZOOM, 0)
-		if Input.is_action_pressed("ui_right"):
-			motion += Vector2(Global.X_ZOOM, 0)
+		if Input.is_action_pressed("ui_up") or\
+			Input.is_action_pressed("ui_down") or\
+			Input.is_action_pressed("ui_left") or\
+			Input.is_action_pressed("ui_right"):
+			motion = Vector2()
+			# 设置motion
+			if Input.is_action_pressed("ui_up"):
+				motion += Vector2(0, -Global.Y_ZOOM)
+			if Input.is_action_pressed("ui_down"):
+				motion += Vector2(0, Global.Y_ZOOM)
+			if Input.is_action_pressed("ui_left"):
+				motion += Vector2(-Global.X_ZOOM, 0)
+			if Input.is_action_pressed("ui_right"):
+				motion += Vector2(Global.X_ZOOM, 0)
 
 ###### 属性操作 ######
 func _add_attr(attr_name, base, max_value = null):
@@ -142,7 +142,7 @@ func _refresh_face_direction():
 	elif self.face_angle >= PI / 8 * 5 and self.face_angle <= PI / 8 * 7:
 		self.face_direction = Global.FACE_DIRECTION.south_west
 	elif (self.face_angle >= PI / 8 * 7 and self.face_angle <= PI)\
-		or (self.face_angle <= - PI / 8 * 7 and self.face_angle >= 0):
+		or (self.face_angle <= - PI / 8 * 7 and self.face_angle >= - PI * 2):
 		self.face_direction = Global.FACE_DIRECTION.west
 	elif self.face_angle <= - PI / 8 * 5 and self.face_angle >= - PI / 8 * 7:
 		self.face_direction = Global.FACE_DIRECTION.north_west
@@ -150,7 +150,6 @@ func _refresh_face_direction():
 		self.face_direction = Global.FACE_DIRECTION.north
 	elif self.face_angle <= - PI / 8 * 1 and self.face_angle >= - PI / 8 * 3:
 		self.face_direction = Global.FACE_DIRECTION.north_east
-	pass
 
 func stand():
 	# 播放站立动画
@@ -339,19 +338,14 @@ func get_on_attack_end_condi():
 
 # virtual 移动状态开启条件
 func get_on_move_condi():
-	var ret = false
 	if is_dead:
 		return false
 	if motion.length() > 0.01:
-		ret = true
-	if is_main_character:
-		print("motion length: ", motion.length())
-		print("on move: ", ret)
-	return ret
+		return true
+	return false
 
 # virtual 移动状态结束条件
 func get_on_move_end_condi():
-	var ret = false
 	if abs(motion.length()) < 0.01:
 		return true
 	return false
