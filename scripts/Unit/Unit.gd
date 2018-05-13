@@ -27,6 +27,8 @@ var is_attacking = false							# 是否攻击中
 var is_idling = false								# 是否摸鱼中
 var weapon = null									# 武器
 var model = null									# 单位模型(包含状态条等)
+var weapon_target = null							# 武器锁定的目标单位
+var scan_target = null								# 单位扫描锁定的目标单位
 
 var map_attr = {}									# 单位真正属性表
 
@@ -81,6 +83,9 @@ func _ready():
 	$ScanArea/ScanShape.shape = shape3
 	###### 区域设置end ######
 	$TimerRecover.start()
+	# 目标设置为空
+	weapon_target = null
+	scan_target = null
 	# 开启单位自身物理刷新
 	set_physics_process(true)
 	# 给Model发送消息
@@ -88,6 +93,24 @@ func _ready():
 	pass
 
 func _process(delta):
+	pass
+	# if is_main_character and not is_dead and not is_attacking:
+	# 	if Input.is_action_pressed("ui_up") or\
+	# 		Input.is_action_pressed("ui_down") or\
+	# 		Input.is_action_pressed("ui_left") or\
+	# 		Input.is_action_pressed("ui_right"):
+	# 		motion = Vector2()
+	# 		# 设置motion
+	# 		if Input.is_action_pressed("ui_up"):
+	# 			motion += Vector2(0, -Global.Y_ZOOM)
+	# 		if Input.is_action_pressed("ui_down"):
+	# 			motion += Vector2(0, Global.Y_ZOOM)
+	# 		if Input.is_action_pressed("ui_left"):
+	# 			motion += Vector2(-Global.X_ZOOM, 0)
+	# 		if Input.is_action_pressed("ui_right"):
+	# 			motion += Vector2(Global.X_ZOOM, 0)
+
+func _physics_process(delta):
 	if is_main_character and not is_dead and not is_attacking:
 		if Input.is_action_pressed("ui_up") or\
 			Input.is_action_pressed("ui_down") or\
@@ -103,6 +126,12 @@ func _process(delta):
 				motion += Vector2(-Global.X_ZOOM, 0)
 			if Input.is_action_pressed("ui_right"):
 				motion += Vector2(Global.X_ZOOM, 0)
+	if weapon_target != null:
+		print("weapon_target", weapon_target)
+		var rad = weapon_target.position.get_angle_to(position)
+		face_angle = rad
+		_refresh_face_direction()
+		attack()
 
 ###### 属性操作 ######
 func _add_attr(attr_name, base, max_value = null):
@@ -172,17 +201,18 @@ func move():
 	# 移动
 	move_and_slide(self.motion * get_attr_value("speed"))
 
-func aim(unit):
+func weapon_aim(unit):
 	var space_state = get_world_2d().direct_space_state
 	var target_pos = unit.position
 	var result = space_state.intersect_ray(position, target_pos, [$Area2D], Global.MASK_UNIT_BODY)
 	if result:
+		weapon_target = unit
 		# 修改单位朝向角度
-		var rad = target_pos.angle_to_point(position)
-		face_angle = rad
-		_refresh_face_direction()
+		# var rad = target_pos.angle_to_point(position)
+		# face_angle = rad
+		# _refresh_face_direction()
 		# 攻击
-		attack()
+		# attack()
 
 # 面向当前朝向进行攻击
 func attack():
@@ -392,13 +422,24 @@ func get_on_die_condi():
 func _on_TimerRecover_timeout():
 	recover()
 
+# 敌方单位进入武器扫描范围
 func _on_WeaponArea_area_entered(area):
+	# 如果武器已经锁定其他目标，无动作 *** 这个需要修改 ***
+	if weapon_target != null:
+		return
 	if area != $BodyArea:
-		print("on_weapon_area_entered ", area)
-	else:
-		print("self area: ", area)
-	if area.get_parent() is load("res://scripts/Unit/Unit.gd"):
-		aim(area.get_parent())
+		if area.get_parent() is load("res://scripts/Unit/Unit.gd"):
+			# 设置武器锁定目标
+			weapon_aim(area.get_parent())
 
+# 单位离开武器扫描范围
+func _on_WeaponArea_area_exited(area):
+	pass # replace with function body
+
+# 敌方单位进入警戒扫描范围
 func _on_ScanArea_area_entered(area):
+	pass # replace with function body
+
+# 单位离开警戒扫描范围
+func _on_ScanArea_area_exited(area):
 	pass # replace with function body

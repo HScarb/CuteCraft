@@ -246,7 +246,11 @@ autostart = false
 
 [connection signal="area_entered" from="WeaponArea" to="." method="_on_WeaponArea_area_entered"]
 
+[connection signal="area_exited" from="WeaponArea" to="." method="_on_WeaponArea_area_exited"]
+
 [connection signal="area_entered" from="ScanArea" to="." method="_on_ScanArea_area_entered"]
+
+[connection signal="area_exited" from="ScanArea" to="." method="_on_ScanArea_area_exited"]
 
 [connection signal="timeout" from="TimerRecover" to="." method="_on_TimerRecover_timeout"]
 
