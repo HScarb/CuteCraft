@@ -128,10 +128,9 @@ func _physics_process(delta):
 				motion += Vector2(Global.X_ZOOM, 0)
 	if weapon_target != null:
 		print("weapon_target", weapon_target)
-		var rad = weapon_target.position.get_angle_to(position)
+		var rad = weapon_target.position.angle_to_point(position)
 		face_angle = rad
 		_refresh_face_direction()
-		attack()
 
 ###### 属性操作 ######
 func _add_attr(attr_name, base, max_value = null):
@@ -207,6 +206,7 @@ func weapon_aim(unit):
 	var result = space_state.intersect_ray(position, target_pos, [$Area2D], Global.MASK_UNIT_BODY)
 	if result:
 		weapon_target = unit
+		is_attacking = true
 		# 修改单位朝向角度
 		# var rad = target_pos.angle_to_point(position)
 		# face_angle = rad
@@ -384,11 +384,11 @@ func play_dead_animation():
 func get_on_attack_condi():
 	if is_dead:
 		return false
-	pass
+	return is_attacking
 
 # virtual 攻击状态结束条件
 func get_on_attack_end_condi():
-	pass
+	return not is_attacking
 
 # virtual 移动状态开启条件
 func get_on_move_condi():
@@ -424,6 +424,8 @@ func _on_TimerRecover_timeout():
 
 # 敌方单位进入武器扫描范围
 func _on_WeaponArea_area_entered(area):
+	if is_main_character:
+		return
 	# 如果武器已经锁定其他目标，无动作 *** 这个需要修改 ***
 	if weapon_target != null:
 		return

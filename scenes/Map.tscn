@@ -11,7 +11,7 @@ vertices = PoolVector2Array( 1337.89, 117.402, 1600, -20, 1710, 30, 1402.11, 189
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8, 9, 10 ), PoolIntArray( 11, 12, 13, 14 ), PoolIntArray( 15, 16, 17, 18 ), PoolIntArray( 19, 11, 14, 20, 18 ), PoolIntArray( 21, 10, 9, 22 ), PoolIntArray( 23, 24, 21, 22, 0, 4 ), PoolIntArray( 20, 25, 26, 27, 28 ), PoolIntArray( 29, 30, 24, 23, 19 ), PoolIntArray( 20, 28, 15, 18 ), PoolIntArray( 19, 18, 29 ) ]
 outlines = [ PoolVector2Array( 381.07, 202.186, 210, 290, 700, 530, 1272.13, 251.712, 1280.71, 191.323, 1344.22, 158.791, 1402.11, 189.602, 1710, 30, 1600, -20, 1337.89, 117.402, 1250.45, 68.4351, 1280, -10, 1440, -90, 1210, -200, 910, -50, 947.65, 17.8222, 1022.01, 53.4518, 1172.24, 67.7356, 1171.54, 120.2, 1114.95, 141.751, 1123.27, 209.74, 1057.52, 210.44, 1054.72, 157.975, 860.9, 50.3535, 852.135, 96.2764, 797.571, 78.0886, 789.177, 30.8003, 756.999, 16.1101, 500, 140, 521.956, 204.284, 442.209, 239.96 ) ]
 
-[node name="Map" type="Navigation2D"]
+[node name="Map" type="Navigation2D" index="0"]
 
 z_index = -2
 script = ExtResource( 1 )
@@ -62,6 +62,7 @@ _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 [node name="UnitMarine" parent="walls" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 929.566, 189.864 )
+stand_after_attack = false
 
 [node name="HeroMarine" parent="walls" index="1" instance=ExtResource( 4 )]
 
@@ -78,6 +79,7 @@ face_direction = 2
 life_recover = 0
 enegy_recover = 0
 radius = 20.0
+scan_radius = 600
 acceleration = 0
 
 [node name="Camera2D" type="Camera2D" parent="walls/HeroMarine" index="7"]
