@@ -66,7 +66,7 @@ stand_after_attack = false
 
 [node name="HeroMarine" parent="walls" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 664.706, 254.568 )
+position = Vector2( 250, 300 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 3
@@ -118,5 +118,14 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="TimerTrace" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="TimerTrace" to="." method="_on_TimerTrace_timeout"]
 
 

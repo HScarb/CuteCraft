@@ -3,10 +3,12 @@
 extends Node
 
 var arr_unit = []
+var arr_tracing = []                                # 地图上正在寻路的单位
 var main_character = null setget set_main_character, get_main_character
 
 func init():
     arr_unit.clear()
+    arr_tracing.clear()
 
 # 根据单位类型创建单位
 # type:[PackedScene] 单位类型，为Scene
@@ -36,6 +38,17 @@ func add_unit(unit):
 # 获取所有单位
 func get_all_units():
     return self.arr_unit
+
+func get_tracing_unit():
+    return arr_tracing
+
+# 添加寻路单位
+func add_tracing_unit(unit):
+    arr_tracing.append(unit)
+
+# 移除寻路单位
+func remove_tracing_unit(unit):
+    arr_tracing.erase(unit)
 
 # 设置主角单位
 func set_main_character(unit):

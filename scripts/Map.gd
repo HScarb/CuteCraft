@@ -14,6 +14,7 @@ func _ready():
 		UnitManager.add_unit(unit)
 		if unit.is_main_character:
 			UnitManager.set_main_character(unit)
+	set_process(true)
 
 func _input(event):
 	if not event.is_action_pressed("click"):
@@ -30,10 +31,22 @@ func _update_navigation_path(start_position, end_position):
 	path.remove(0)
 	set_process(true)
 
+# 更新单位的寻路路径列表
+func update_unit_navigation_path(unit):
+	# get_simple_path is part of the Navigation2D class
+	# it returns a PoolVector2Array of points that lead you from the
+	# start_position to the end_position
+	var unit_path = get_simple_path(unit.position, unit.scan_target.position, true)
+	# The first point is always the start_position
+	# We don't need it in this example as it corresponds to the character's position
+	unit_path.remove(0)
+	unit.tracing_path = unit_path
+
 func _process(delta):
 	# var walk_distance = UnitManager.get_main_character().get_attr_value("speed") * delta
 	# move_along_path(walk_distance)
-	unit_move_along_path(UnitManager.get_main_character())
+	for unit in UnitManager.get_tracing_unit():
+		unit_move_along_path(unit)
 
 # func move_along_path(distance):
 # 	var main_character = UnitManager.get_main_character()
@@ -54,6 +67,11 @@ func _process(delta):
 # 		path.remove(0)
 
 func unit_move_along_path(unit):
+	# 获取单位身上存储的自身寻路路径
+	var path = unit.tracing_path
+	if path.size() <= 0:
+		return
+	
 	var last_point = unit.position
 	var direction_motion = Vector2()
 	var move_rad = null
@@ -76,4 +94,9 @@ func unit_move_along_path(unit):
 		direction_motion.x = cos(move_rad)
 		direction_motion.y = sin(move_rad)
 	unit.motion = direction_motion.normalized()
-	pass
+
+# 每N秒更新一次单位寻路列表
+func _on_TimerTrace_timeout():
+	print("TimerTrace time out")
+	for unit in UnitManager.get_tracing_unit():
+		update_unit_navigation_path(unit)

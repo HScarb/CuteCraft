@@ -25,12 +25,14 @@ var is_dead = false									# 是否死亡
 var is_moving = false								# 是否移动中
 var is_attacking = false							# 是否攻击中
 var is_idling = false								# 是否摸鱼中
+var is_tracing = false								# 是否自动寻路中
 var weapon = null									# 武器
 var model = null									# 单位模型(包含状态条等)
 var weapon_target = null							# 武器锁定的目标单位
 var scan_target = null								# 单位扫描锁定的目标单位
 
 var map_attr = {}									# 单位真正属性表
+var tracing_path = []								# 单位寻路路径
 
 signal unit_ready
 signal life_enegy_change							# 生命值或者能量值变化
@@ -112,11 +114,11 @@ func _process(delta):
 
 func _physics_process(delta):
 	if is_main_character and not is_dead and not is_attacking:
+		motion = Vector2()
 		if Input.is_action_pressed("ui_up") or\
 			Input.is_action_pressed("ui_down") or\
 			Input.is_action_pressed("ui_left") or\
 			Input.is_action_pressed("ui_right"):
-			motion = Vector2()
 			# 设置motion
 			if Input.is_action_pressed("ui_up"):
 				motion += Vector2(0, -Global.Y_ZOOM)
@@ -436,12 +438,25 @@ func _on_WeaponArea_area_entered(area):
 
 # 单位离开武器扫描范围
 func _on_WeaponArea_area_exited(area):
-	pass # replace with function body
+	if area.get_parent() == weapon_target:
+		weapon_target = null
+		is_attacking = false
 
 # 敌方单位进入警戒扫描范围
 func _on_ScanArea_area_entered(area):
-	pass # replace with function body
+	if is_main_character:
+		return
+	if is_attacking:
+		return
+	if scan_target != null:
+		return
+	if area != $BodyArea:
+		if area.get_parent() is load("res://scripts/Unit/Unit.gd"):
+			scan_target = area.get_parent()
+			UnitManager.add_tracing_unit(self)
 
 # 单位离开警戒扫描范围
 func _on_ScanArea_area_exited(area):
-	pass # replace with function body
+	if area.get_parent() == scan_target:
+		scan_target = null
+		UnitManager.remove_tracing_unit(self)
