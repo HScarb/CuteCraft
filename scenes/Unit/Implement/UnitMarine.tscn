@@ -11,12 +11,14 @@ height = 30.0
 
 [node name="UnitMarine" instance=ExtResource( 1 )]
 
+position = Vector2( 0, -0.207169 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Z Index", "collision" ]
 life = 45.0
 life_max = 45.0
 enegy = 0.0
 enegy_max = 0.0
-speed = 225.0
+speed = 50.0
+scan_radius = 500.0
 weapon_path = NodePath("WeaponMarine")
 
 [node name="BodyShape" parent="BodyArea" index="0"]

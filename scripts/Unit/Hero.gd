@@ -67,6 +67,7 @@ func get_on_attack_end_condi():
 func get_on_idle_condi():
 	if is_dead:
 		return false
+	return false
 
 # virtual 闲置状态结束条件
 func get_on_idle_end_condi():
@@ -74,4 +75,4 @@ func get_on_idle_end_condi():
 
 # virtual 死亡状态开启条件
 func get_on_die_condi():
-	return Input.is_action_pressed("ui_die")
+	return self.is_dead

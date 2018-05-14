@@ -56,6 +56,24 @@ func _init_attr_table():
 	_add_attr("attack_speed_multi", 1)
 	_add_attr("damage", 0)
 
+# 为单位的区域设置形状实体
+func _init_shapes():
+	# 设置移动碰撞体大小
+	var shape = CapsuleShape2D.new()
+	shape.set_radius(self.radius)
+	shape.set_height(self.radius)
+	$GroundShape.set_shape(shape)
+	# 设置武器攻击搜索区域大小
+	if weapon.get_shoot_range() > 0:
+		var shape2 = CircleShape2D.new()
+		shape2.set_radius(weapon.get_shoot_range())
+		$WeaponArea/WeaponShape.shape = shape2
+	# 设置侦测搜索区域大小
+	if scan_radius > 0:
+		var shape3 = CircleShape2D.new()
+		shape3.set_radius(scan_radius)
+		$ScanArea/ScanShape.shape = shape3	
+
 func _ready():
 	print("unit_ready: ", self.name)
 	_init_attr_table()
@@ -70,20 +88,8 @@ func _ready():
 	# 设置行为
 	for behavior in $Behaviors.get_children():
 		behavior.on_add()
-	# 设置移动碰撞体大小
-	var shape = CapsuleShape2D.new()
-	shape.set_radius(self.radius)
-	shape.set_height(self.radius)
-	$GroundShape.set_shape(shape)
-	# 设置武器攻击搜索区域大小
-	var shape2 = CircleShape2D.new()
-	shape2.set_radius(weapon.get_shoot_range())
-	$WeaponArea/WeaponShape.shape = shape2
-	# 设置侦测搜索区域大小
-	var shape3 = CircleShape2D.new()
-	shape3.set_radius(scan_radius)
-	$ScanArea/ScanShape.shape = shape3
-	###### 区域设置end ######
+	# 添加形状
+	_init_shapes()
 	$TimerRecover.start()
 	# 目标设置为空
 	weapon_target = null
@@ -96,21 +102,6 @@ func _ready():
 
 func _process(delta):
 	pass
-	# if is_main_character and not is_dead and not is_attacking:
-	# 	if Input.is_action_pressed("ui_up") or\
-	# 		Input.is_action_pressed("ui_down") or\
-	# 		Input.is_action_pressed("ui_left") or\
-	# 		Input.is_action_pressed("ui_right"):
-	# 		motion = Vector2()
-	# 		# 设置motion
-	# 		if Input.is_action_pressed("ui_up"):
-	# 			motion += Vector2(0, -Global.Y_ZOOM)
-	# 		if Input.is_action_pressed("ui_down"):
-	# 			motion += Vector2(0, Global.Y_ZOOM)
-	# 		if Input.is_action_pressed("ui_left"):
-	# 			motion += Vector2(-Global.X_ZOOM, 0)
-	# 		if Input.is_action_pressed("ui_right"):
-	# 			motion += Vector2(Global.X_ZOOM, 0)
 
 func _physics_process(delta):
 	if is_main_character and not is_dead and not is_attacking:
@@ -209,6 +200,8 @@ func weapon_aim(unit):
 	if result:
 		weapon_target = unit
 		is_attacking = true
+		if scan_target == null:
+			scan_target = unit
 		# 修改单位朝向角度
 		# var rad = target_pos.angle_to_point(position)
 		# face_angle = rad
@@ -458,5 +451,7 @@ func _on_ScanArea_area_entered(area):
 # 单位离开警戒扫描范围
 func _on_ScanArea_area_exited(area):
 	if area.get_parent() == scan_target:
+		print("exit scan area")
 		scan_target = null
 		UnitManager.remove_tracing_unit(self)
+		motion = Vector2()
