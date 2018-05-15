@@ -64,10 +64,11 @@ func _init_shapes():
 	shape.set_height(self.radius)
 	$GroundShape.set_shape(shape)
 	# 设置武器攻击搜索区域大小
-	if weapon.get_shoot_range() > 0:
-		var shape2 = CircleShape2D.new()
-		shape2.set_radius(weapon.get_shoot_range())
-		$WeaponArea/WeaponShape.shape = shape2
+	if weapon != null:
+		if weapon.get_shoot_range() > 0:
+			var shape2 = CircleShape2D.new()
+			shape2.set_radius(weapon.get_shoot_range())
+			$WeaponArea/WeaponShape.shape = shape2
 	# 设置侦测搜索区域大小
 	if scan_radius > 0:
 		var shape3 = CircleShape2D.new()

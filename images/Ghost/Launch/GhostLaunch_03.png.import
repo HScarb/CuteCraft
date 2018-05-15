@@ -7,10 +7,10 @@ path="res://.import/GhostLaunch_03.png-756ae2ecbe04ebcd74d8d69cb876f1e9.stex"
 [deps]
 
 source_file="res://images/Ghost/Launch/GhostLaunch_03.png"
-source_md5="23b68192379d2aa12c69a8503128be2f"
+source_md5="3c2ed8e5b3d170aa8c4dd5ebb99e11a1"
 
 dest_files=[ "res://.import/GhostLaunch_03.png-756ae2ecbe04ebcd74d8d69cb876f1e9.stex" ]
-dest_md5="c07ee93609553f4bfe1e016d75678547"
+dest_md5="43801469b8392a0bf5ef6678ec67c1d6"
 
 [params]
 
