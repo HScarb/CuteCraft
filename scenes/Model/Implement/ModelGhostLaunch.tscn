@@ -6,11 +6,10 @@
 [node name="ModelGhostLaunch" instance=ExtResource( 1 )]
 
 free_after_finished = true
-scale_factor = 0.4
+scale_factor = 0.7
 
 [node name="AnimatedSprite" parent="." index="0"]
 
-position = Vector2( -64, -3 )
 frames = ExtResource( 2 )
 
 

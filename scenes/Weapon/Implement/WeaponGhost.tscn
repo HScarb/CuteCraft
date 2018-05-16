@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Weapon/Weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Effect/Implement/WeaponGhostLaunchRay.tscn" type="PackedScene" id=2]
+
+[node name="WeaponGhost" index="0" instance=ExtResource( 1 )]
+
+period = 1.2
+weapon_name = "GhostWeapon"
+shoot_range = 300.0
+damage_frame = 1
+backswing = 3
+effect_scene = ExtResource( 2 )
+
+

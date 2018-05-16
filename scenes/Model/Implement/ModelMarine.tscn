@@ -8,6 +8,7 @@
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+scale_factor = 0.4
 
 [node name="AnimatedSprite" parent="." index="0"]
 

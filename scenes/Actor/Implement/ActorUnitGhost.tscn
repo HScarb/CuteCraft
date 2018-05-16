@@ -4,9 +4,11 @@
 [ext_resource path="res://scripts/Actor/ActorUnitGhost.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Model/Implement/ModelGhost.tscn" type="PackedScene" id=3]
 
-[node name="ActorUnitGhost" index="0" instance=ExtResource( 1 )]
+
+[node name="ActorUnitGhost" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+check_type_name = "Ghost"
 model = ExtResource( 3 )
 
 

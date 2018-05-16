@@ -1,53 +1,71 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Model/ModelUnit.tscn" type="PackedScene" id=1]
-[ext_resource path="res://frames/ghost/ghost.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://scripts/Model/ModelUnit.gd" type="Script" id=2]
+[ext_resource path="res://frames/ghost/ghost.tres" type="SpriteFrames" id=3]
 
 [node name="ModelGhost" index="0" instance=ExtResource( 1 )]
 
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 scale_factor = 0.5
 
 [node name="AnimatedSprite" parent="." index="0"]
 
-frames = ExtResource( 2 )
+position = Vector2( 0, -30 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 3 )
 animation = "attack_7"
-
-[node name="Muzzles" parent="." index="1"]
-
-editor/display_folded = true
 
 [node name="Muzzle_0" type="Position2D" parent="Muzzles" index="0"]
 
-position = Vector2( 128.021, 24.9019 )
+position = Vector2( 50.5531, -17.708 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_1" type="Position2D" parent="Muzzles" index="1"]
 
-position = Vector2( 63.8511, 66.7243 )
+position = Vector2( 23.3294, -1.6112 )
 
 [node name="Muzzle_2" type="Position2D" parent="Muzzles" index="2"]
 
-position = Vector2( -16.282, 78.2175 )
+position = Vector2( -8.36946, -0.428253 )
 
 [node name="Muzzle_3" type="Position2D" parent="Muzzles" index="3"]
 
-position = Vector2( -41.1839, 68.3206 )
+position = Vector2( -11.2122, -1.93309 )
 
 [node name="Muzzle_4" type="Position2D" parent="Muzzles" index="4"]
 
-position = Vector2( -108.547, 26.1789 )
+position = Vector2( -39.9717, -16.0213 )
 
 [node name="Muzzle_5" type="Position2D" parent="Muzzles" index="5"]
 
-position = Vector2( -102.481, -17.559 )
+position = Vector2( -40.1399, -33.1443 )
 
 [node name="Muzzle_6" type="Position2D" parent="Muzzles" index="6"]
 
-position = Vector2( 51.4001, -46.6113 )
+position = Vector2( 29.1012, -40.1374 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_7" type="Position2D" parent="Muzzles" index="7"]
 
-position = Vector2( 112.059, -18.1976 )
+position = Vector2( 46.8406, -35.4613 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="LifeBar" parent="." index="2"]
+
+margin_left = -67.0
+margin_top = -103.0
+margin_right = 74.0
+margin_bottom = -95.0
+rect_scale = Vector2( 0.5, 0.5 )
+
+[node name="EnegyBar" parent="." index="3"]
+
+margin_left = -67.0
+margin_top = -97.0
+margin_right = 74.0
+margin_bottom = -89.0
+rect_scale = Vector2( 0.5, 0.5 )
 
 

@@ -13,6 +13,8 @@ func init_by_unit(unit):
 	# 如果不是发射物，需要监听帧变动，用于武器前摇
 	if not self.logicRoot is load("res://scripts/Unit/Missile.gd"):
 		$AnimatedSprite.connect("frame_changed", self, "_on_AnimatedSprite_frame_changed")
+		# 应用大小参数
+		$AnimatedSprite.set_scale(Vector2(scale_factor, scale_factor))
 
 # 单位定制版播放动画，会根据站立、移动、攻击动作播放响应朝向的动画
 func play_animation(animation_name = null):
