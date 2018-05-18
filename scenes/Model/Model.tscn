@@ -4,6 +4,7 @@
 
 [node name="Model" type="Node2D"]
 
+position = Vector2( 0, -5 )
 script = ExtResource( 1 )
 free_after_finished = false
 scale_factor = 1

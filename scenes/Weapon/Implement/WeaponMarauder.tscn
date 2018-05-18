@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Weapon/Weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Effect/Implement/MarauderLaunchMissile.tscn" type="PackedScene" id=2]
+
+[node name="WeaponMarauder" instance=ExtResource( 1 )]
+
+period = 1.5
+weapon_name = "Punisher Grenade"
+shoot_range = 240.0
+damage_frame = 5
+effect_scene = ExtResource( 2 )
+
+

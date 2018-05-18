@@ -97,6 +97,5 @@ func unit_move_along_path(unit):
 
 # 每N秒更新一次单位寻路列表
 func _on_TimerTrace_timeout():
-	print("TimerTrace time out")
 	for unit in UnitManager.get_tracing_unit():
 		update_unit_navigation_path(unit)

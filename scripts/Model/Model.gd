@@ -24,10 +24,15 @@ func play_animation(animation_name = null):
 		$AnimatedSprite.play("default")
 		return
 	# 尝试播放动画
+	var full_animation_name = animation_name						# 最终动画全名
+	if animation_name.begins_with("stand")\
+        or animation_name.begins_with("move")\
+		or animation_name.begins_with("attack"):
+		full_animation_name = animation_name + "_%d" % logicRoot.face_direction
 	# 如果没有该动画则播放默认
 	var sprite_frames = $AnimatedSprite.get_sprite_frames()
-	if sprite_frames.has_animation(animation_name):
-		$AnimatedSprite.play(animation_name)
+	if sprite_frames.has_animation(full_animation_name):
+		$AnimatedSprite.play(full_animation_name)
 	else:
 		$AnimatedSprite.play("default")
 

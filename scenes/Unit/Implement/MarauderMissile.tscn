@@ -7,20 +7,12 @@
 custom_solver_bias = 0.0
 radius = 12.0
 
-[node name="StalkerMissile" instance=ExtResource( 1 )]
+[node name="MarauderMissile" instance=ExtResource( 1 )]
 
 face_angle = 1.5708
-life = 10
-life_max = 10
-enegy = 10
-enegy_max = 10
 radius = 10.0
-speed = 1200.0
+speed = 1000.0
 scan_radius = 0.0
-
-[node name="BodyArea" parent="." index="2"]
-
-editor/display_folded = true
 
 [node name="BodyShape" parent="BodyArea" index="0"]
 

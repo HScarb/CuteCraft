@@ -12,5 +12,6 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 check_type_name = null
 launch_model = ExtResource( 3 )
 impact_model = ExtResource( 4 )
+impact_location = 6
 
 

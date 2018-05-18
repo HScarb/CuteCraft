@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Map.gd" type="Script" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/Unit/Implement/UnitMarine.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Unit/Implement/HeroMarine.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Unit/Implement/HeroGhost.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Unit/Implement/HeroMarauder.tscn" type="PackedScene" id=4]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -65,18 +64,11 @@ _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 position = Vector2( 1750, 680 )
 stand_after_attack = false
 
-[node name="HeroMarine" parent="walls" index="1" instance=ExtResource( 4 )]
+[node name="HeroMarauder" parent="walls" index="1" instance=ExtResource( 4 )]
 
-visible = false
-position = Vector2( 1450, 820 )
-collision_mask = 3
-is_main_character = true
+position = Vector2( 1020, 1030 )
 
-[node name="HeroGhost" parent="walls" index="2" instance=ExtResource( 5 )]
-
-position = Vector2( 1550, 610 )
-
-[node name="Camera2D" type="Camera2D" parent="walls/HeroGhost" index="8"]
+[node name="Camera2D" type="Camera2D" parent="walls/HeroMarauder" index="8"]
 
 scale = Vector2( 0.5, 0.5 )
 anchor_mode = 1
