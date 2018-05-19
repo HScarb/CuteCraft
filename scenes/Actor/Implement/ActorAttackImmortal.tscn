@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Actor/ActorAttack.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Actor/ActorAttackImmortal.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Model/Implement/ModelImmortalLaunch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Model/Implement/ModelImmortalImpact.tscn" type="PackedScene" id=4]
+
+[node name="ActorAttackImmortal" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+check_type_name = "Null"
+launch_model = ExtResource( 3 )
+impact_model = ExtResource( 4 )
+impact_location = 6
+
+

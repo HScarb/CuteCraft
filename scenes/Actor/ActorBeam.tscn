@@ -3,13 +3,13 @@
 [ext_resource path="res://scenes/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Actor/ActorBeam.gd" type="Script" id=2]
 
-
-
 [node name="ActorBeam" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+check_type_name = null
 model = null
 start_location = 5
 end_location = 6
+beam_width = 1
 
 

@@ -38,17 +38,37 @@ func refresh_status_bars():
 	pass
 
 # 获取炮口位置
-func get_muzzle(index = null):
+func get_muzzle(direction = null):
 	var muzzle_count = 0
 	for child in get_node("Muzzles").get_children():
 		if child.get_name().begins_with("Muzzle"):
 			muzzle_count = muzzle_count + 1
 	if muzzle_count <= 0:
 		return get_node("Muzzles")
-	if index == null:
+	if direction == null:
 		return get_node("Muzzles/Muzzle_%d" % logicRoot.face_direction)
 	else:
-		return get_node("Muzzles/Muzzle_%d" % index)
+		return get_node("Muzzles/Muzzle_%d" % direction)
+
+# 获取炮口位置
+func get_muzzles(direction = null):
+	var muzzle_count = 0
+	for child in get_node("Muzzles").get_children():
+		if child.get_name().begins_with("Muzzle"):
+			muzzle_count = muzzle_count + 1
+	if muzzle_count <= 0:
+		return get_node("Muzzles")
+	var direction_index = null
+	if direction == null:
+		direction_index = logicRoot.face_direction
+	else:
+		direction_index = direction
+	var arr_muzzle = []
+	if has_node("Muzzles/Muzzle_%d" % direction_index):
+		arr_muzzle.append(get_node("Muzzles/Muzzle_%d" % direction_index))
+	if has_node("Muzzles/Muzzle_%dc" % direction_index):
+		arr_muzzle.append(get_node("Muzzles/Muzzle_%dc" % direction_index))
+	return arr_muzzle
 
 # 获取模型被轰击时的轰击点位置
 func get_impact_node():

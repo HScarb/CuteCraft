@@ -92,7 +92,7 @@ position = Vector2( 0, -40 )
 
 shape = SubResource( 1 )
 
-[node name="WeaponStalker" parent="." index="3" instance=ExtResource( 2 )]
+[node name="WeaponStalker" parent="." index="5" instance=ExtResource( 2 )]
 
 weapon_name = "粒子碎裂枪"
 

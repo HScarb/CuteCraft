@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Actor/ActorUnit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Actor/ActorUnitImmortal.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Model/Implement/ModelImmortal.tscn" type="PackedScene" id=3]
+
+[node name="ActorUnitImmortal" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+check_type_name = "Immortal"
+model = ExtResource( 3 )
+
+
