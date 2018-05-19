@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/Model/ModelUnit.gd" type="Script" id=2]
 [ext_resource path="res://frames/immortal/immortal.tres" type="SpriteFrames" id=3]
 
-[node name="ModelImmortal" instance=ExtResource( 1 )]
+[node name="ModelImmortal" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
@@ -23,7 +23,7 @@ frame = 2
 position = Vector2( 5.55158, -47.9519 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Muzzle_0c" type="Position2D" parent="Muzzles" index="1"]
+[node name="Muzzle_01" type="Position2D" parent="Muzzles" index="1"]
 
 position = Vector2( 42.714, -52.9676 )
 _sections_unfolded = [ "Transform" ]
@@ -32,7 +32,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -14.1952, -41.1315 )
 
-[node name="Muzzle_1c" type="Position2D" parent="Muzzles" index="3"]
+[node name="Muzzle_11" type="Position2D" parent="Muzzles" index="3"]
 
 position = Vector2( 47.3496, -51.8448 )
 
@@ -40,7 +40,7 @@ position = Vector2( 47.3496, -51.8448 )
 
 position = Vector2( -48.8607, -47.0754 )
 
-[node name="Muzzle_2c" type="Position2D" parent="Muzzles" index="5"]
+[node name="Muzzle_21" type="Position2D" parent="Muzzles" index="5"]
 
 position = Vector2( 45.052, -47.5313 )
 
@@ -48,7 +48,7 @@ position = Vector2( 45.052, -47.5313 )
 
 position = Vector2( -43.786, -50.3777 )
 
-[node name="Muzzle_3c" type="Position2D" parent="Muzzles" index="7"]
+[node name="Muzzle_31" type="Position2D" parent="Muzzles" index="7"]
 
 position = Vector2( 11.6041, -40.1202 )
 
@@ -56,7 +56,7 @@ position = Vector2( 11.6041, -40.1202 )
 
 position = Vector2( -41.9053, -54.2806 )
 
-[node name="Muzzle_4c" type="Position2D" parent="Muzzles" index="9"]
+[node name="Muzzle_41" type="Position2D" parent="Muzzles" index="9"]
 
 position = Vector2( -5.20641, -50.8614 )
 
@@ -64,7 +64,7 @@ position = Vector2( -5.20641, -50.8614 )
 
 position = Vector2( -1.73723, -76.5726 )
 
-[node name="Muzzle_5c" type="Position2D" parent="Muzzles" index="11"]
+[node name="Muzzle_51" type="Position2D" parent="Muzzles" index="11"]
 
 position = Vector2( -27.039, -55.8297 )
 
@@ -73,7 +73,7 @@ position = Vector2( -27.039, -55.8297 )
 position = Vector2( -40.6466, -71.0591 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Muzzle_6c" type="Position2D" parent="Muzzles" index="13"]
+[node name="Muzzle_61" type="Position2D" parent="Muzzles" index="13"]
 
 position = Vector2( 45.288, -73.7945 )
 _sections_unfolded = [ "Transform" ]
@@ -83,7 +83,7 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 26.7037, -50.3368 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Muzzle_7c" type="Position2D" parent="Muzzles" index="15"]
+[node name="Muzzle_71" type="Position2D" parent="Muzzles" index="15"]
 
 position = Vector2( -2.01712, -79.9695 )
 _sections_unfolded = [ "Transform" ]

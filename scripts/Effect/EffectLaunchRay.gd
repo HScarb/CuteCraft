@@ -36,8 +36,8 @@ func run(muzzle_index = 0):
     cast_vec.y = origin.shoot_range * sin(launch_unit.face_angle)
     cast_vec = Global.cart_2_iso(cast_vec)
     raycast.set_cast_to(cast_vec)
-    # 添加到单位模型
-    launch_unit.model.get_muzzle().add_child(raycast)
+    # 添加到单位模型(从武器中获取单位模型的炮孔)
+    effect_origin.get_muzzle().add_child(raycast)
     # 检测raycast碰撞
     var target = null
     var collision_pos = null

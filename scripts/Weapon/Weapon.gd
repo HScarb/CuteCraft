@@ -6,6 +6,7 @@ export(float) var shoot_range = -1								# 武器射程，<0时为近战
 export(int) var damage_frame = 0								# 造成伤害的攻击动画帧
 export(int) var backswing = 0									# 攻击动画后摇帧数 
 export(PackedScene) var effect_scene = null						# 效果
+export(int) var muzzle_index = 0								# 武器所占用的炮口编号(一般单位模型只有1个炮口，为0号)
 
 export var can_fire = true setget set_can_fire, get_can_fire	# 武器是否可以攻击
 
@@ -94,7 +95,7 @@ func calc_target_point():
 	# 如果不是近战武器
 	if self.shoot_range > 0:
 		# 计算目标点
-		var muzzle_pos = logicRoot.model.get_muzzle().position
+		var muzzle_pos = get_muzzle().position
 		target_pos = muzzle_pos + logicRoot.position
 		# 根据单位的朝向和武器射程计算出目标点
 		# 单位的朝向转化成弧度
@@ -104,6 +105,10 @@ func calc_target_point():
 		# *** 计算近战武器目标点
 		target_pos = logicRoot.position
 	return target_pos
+
+# 根据武器的炮孔编号获取炮口
+func get_muzzle():
+	return logicRoot.model.get_muzzle_by_index(muzzle_index)
 
 func get_shoot_range():
 	return shoot_range

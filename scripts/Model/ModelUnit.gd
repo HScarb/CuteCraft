@@ -37,7 +37,7 @@ func refresh_status_bars():
 		$EnegyBar.set_value(logicRoot.get_attr_value("enegy") / logicRoot.get_attr_max("enegy") * 100)
 	pass
 
-# 获取炮口位置
+# 获取炮口位置(0号炮口)
 func get_muzzle(direction = null):
 	var muzzle_count = 0
 	for child in get_node("Muzzles").get_children():
@@ -51,7 +51,7 @@ func get_muzzle(direction = null):
 		return get_node("Muzzles/Muzzle_%d" % direction)
 
 # 获取炮口位置
-func get_muzzles(direction = null):
+func get_muzzle_by_index(index = 0, direction = null):
 	var muzzle_count = 0
 	for child in get_node("Muzzles").get_children():
 		if child.get_name().begins_with("Muzzle"):
@@ -63,12 +63,12 @@ func get_muzzles(direction = null):
 		direction_index = logicRoot.face_direction
 	else:
 		direction_index = direction
-	var arr_muzzle = []
-	if has_node("Muzzles/Muzzle_%d" % direction_index):
-		arr_muzzle.append(get_node("Muzzles/Muzzle_%d" % direction_index))
-	if has_node("Muzzles/Muzzle_%dc" % direction_index):
-		arr_muzzle.append(get_node("Muzzles/Muzzle_%dc" % direction_index))
-	return arr_muzzle
+	var full_path = "Muzzles/Muzzle_%d" % direction_index
+	if index != 0:
+		if has_node(full_path + "%d" % index):
+			return get_node(full_path + "%d" % index)
+	else:
+		return get_node(full_path)
 
 # 获取模型被轰击时的轰击点位置
 func get_impact_node():

@@ -5,5 +5,6 @@
 [node name="Actor" type="Node" index="0"]
 
 script = ExtResource( 1 )
+check_type_name = null
 
 

@@ -27,6 +27,7 @@ func create_beam(effect_tree_node):
         start_pos = start_data
     else:
         start_pos = start_data.model.get_muzzle().position + start_data.position
+        start_pos = effect_tree_node.effect_origin.get_muzzle().position + start_data.position
     end_pos = effect_tree_node.get_pos_by_target_data_type(end_location)
     # 建立光束模型
     var new_model = model.instance()

@@ -53,7 +53,7 @@ func run():
             effect_impact.target_point = get_pos_by_target_data_type(impact_location)
         missile.effect_impact = effect_impact
     # 将发射物放置在正确位置(单位模型的炮口)
-    var map_pos = unit_launch.model.get_muzzle().position + unit_launch.position
+    var map_pos = effect_origin.get_muzzle().position + unit_launch.position
     missile.position = map_pos
     # 命令发射物移动
     #   根据单位当前的面向角度设置发射物的速度
