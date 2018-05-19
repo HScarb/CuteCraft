@@ -7,10 +7,10 @@ path="res://.import/BanelingExplosion_01.png-bc08156af18b05a75f02a7ece63d3a2a.st
 [deps]
 
 source_file="res://images/Baneling/Explosion/BanelingExplosion_01.png"
-source_md5="15b8f4a210b652e1cfe0f486004afecc"
+source_md5="c3f4963b79abc9baba2d64203677888f"
 
 dest_files=[ "res://.import/BanelingExplosion_01.png-bc08156af18b05a75f02a7ece63d3a2a.stex" ]
-dest_md5="c0901b9a6555669de64dd7e4e3677b49"
+dest_md5="08d60062350303a95354b1cc5fb17161"
 
 [params]
 

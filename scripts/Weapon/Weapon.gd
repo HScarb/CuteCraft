@@ -40,8 +40,6 @@ func refresh_target_data():
 	self.caster_point = logicRoot.position
 	self.target_point = self.calc_target_point()
 	self.target_unit = []
-	print("source_point: ", source_point)
-	print("unit_point: ", caster_point)
 
 func fire():
 	if not can_fire:
@@ -60,7 +58,8 @@ func fire():
 		return
 	# 	等待模型发来的信号
 	# 	等到真正攻击帧时才运行效果
-	yield(logicRoot.model, "reach_damage_frame_%d" % muzzle_index)
+	if damage_frame > 0:
+		yield(logicRoot.model, "reach_damage_frame_%d" % muzzle_index)
 	var effect = effect_scene.instance()
 	if effect != null:
 		trans_target_data(effect)

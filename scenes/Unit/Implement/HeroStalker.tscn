@@ -17,7 +17,6 @@ enegy = 0.0
 enegy_max = 0.0
 radius = 25.0
 speed = 275.0
-weapon_path = NodePath("WeaponStalker")
 
 [node name="FSM2D" parent="." index="0"]
 
@@ -92,8 +91,9 @@ position = Vector2( 0, -40 )
 
 shape = SubResource( 1 )
 
-[node name="WeaponStalker" parent="." index="5" instance=ExtResource( 2 )]
+[node name="WeaponStalker" parent="Weapons" index="0" instance=ExtResource( 2 )]
 
 weapon_name = "粒子碎裂枪"
+muzzle_index = 0
 
 

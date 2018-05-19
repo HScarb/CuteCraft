@@ -12,13 +12,8 @@ height = 24.0
 [node name="HeroZergling" instance=ExtResource( 1 )]
 
 is_main_character = true
-life = 35
-life_max = 35
-enegy = 0
-enegy_max = 0
 radius = 18.0
 speed = 300.0
-weapon_path = NodePath("WeaponZergling")
 
 [node name="FSM2D" parent="." index="0"]
 
@@ -28,6 +23,8 @@ editor/display_folded = true
 
 shape = SubResource( 1 )
 
-[node name="WeaponZergling" parent="." index="4" instance=ExtResource( 2 )]
+[node name="WeaponZergling" parent="Weapons" index="0" instance=ExtResource( 2 )]
+
+muzzle_index = 0
 
 

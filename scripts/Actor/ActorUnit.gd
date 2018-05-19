@@ -10,8 +10,10 @@ func init():
 
 # virtual
 # 检测创建的单位类型是否为该演算体对应的类型，需要派生类重载
-# func check_type(type_name):
-# 	return true
+func check_type(type_name):
+	if type_name.ends_with(check_type_name):
+		return true
+	return false
 
 # 为父单位创建模型
 # parent_unit:[Unit.gd]

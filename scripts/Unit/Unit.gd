@@ -115,8 +115,8 @@ func _physics_process(delta):
 				motion += Vector2(-Global.X_ZOOM, 0)
 			if Input.is_action_pressed("ui_right"):
 				motion += Vector2(Global.X_ZOOM, 0)
+	# AI自动攻击
 	if weapon_target != null:
-		print("weapon_target", weapon_target)
 		var rad = weapon_target.position.angle_to_point(position)
 		face_angle = rad
 		_refresh_face_direction()

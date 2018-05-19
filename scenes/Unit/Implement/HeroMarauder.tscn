@@ -19,7 +19,6 @@ enegy_max = 0.0
 radius = 25.0
 speed = 225.0
 scan_radius = 500.0
-weapon_path = NodePath("WeaponMarauder")
 
 [node name="FSM2D" parent="." index="0"]
 
@@ -104,6 +103,8 @@ editor/display_folded = true
 
 editor/display_folded = true
 
-[node name="WeaponMarauder" parent="." index="5" instance=ExtResource( 2 )]
+[node name="WeaponMarauder" parent="Weapons" index="0" instance=ExtResource( 2 )]
+
+muzzle_index = 0
 
 

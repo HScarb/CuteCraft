@@ -89,7 +89,6 @@ func run():
 			var unit_to_end = end_pos - unit_plane_pos
 			# 单位点到线段终点的向量与 与线段垂直的单位向量 的点积
 			var dis = unit_to_end.dot(vector_vertical.normalized())
-			print("dis = ", dis)
 			# 将单位与点的距离和单位的半径比较
 			if abs(dis) <= unit.radius + self.radius\
 				and check_point_in_line(unit_plane_pos, search_pos, end_pos):
@@ -115,7 +114,6 @@ func check_point_in_line(p, p1, p2):
 	var v2 = p - p2		# vector2
 	var d1 = v1.dot(l1)	# dot1
 	var d2 = v2.dot(l1)	# dot2
-	print("d1 = ", d1, " d2 = ", d2)
 	if d1 <= 0 and d2 >= 0 or d1 >= 0 and d2 <= 0:
 		return true
 	return false

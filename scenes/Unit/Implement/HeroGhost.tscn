@@ -19,7 +19,6 @@ enegy = 0.0
 enegy_max = 0.0
 speed = 315.0
 scan_radius = 500.0
-weapon_path = NodePath("WeaponGhost")
 
 [node name="FSM2D" parent="." index="0"]
 
@@ -104,6 +103,8 @@ editor/display_folded = true
 
 editor/display_folded = true
 
-[node name="WeaponGhost" parent="." index="5" instance=ExtResource( 2 )]
+[node name="WeaponGhost" parent="Weapons" index="0" instance=ExtResource( 2 )]
+
+muzzle_index = 0
 
 
