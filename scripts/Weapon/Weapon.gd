@@ -60,7 +60,7 @@ func fire():
 		return
 	# 	等待模型发来的信号
 	# 	等到真正攻击帧时才运行效果
-	yield(logicRoot.model, "reach_damage_frame")
+	yield(logicRoot.model, "reach_damage_frame_%d" % muzzle_index)
 	var effect = effect_scene.instance()
 	if effect != null:
 		trans_target_data(effect)
