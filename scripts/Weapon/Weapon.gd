@@ -35,11 +35,13 @@ func refresh_target_data():
 	self.origin_point = logicRoot
 	self.origin_point = logicRoot.position
 	self.source_unit = logicRoot
-	self.source_point = logicRoot.position
+	self.source_point = get_muzzle().position + logicRoot.position
 	self.caster_unit = logicRoot
 	self.caster_point = logicRoot.position
 	self.target_point = self.calc_target_point()
 	self.target_unit = []
+	print("source_point: ", source_point)
+	print("unit_point: ", caster_point)
 
 func fire():
 	if not can_fire:

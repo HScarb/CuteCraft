@@ -5,7 +5,7 @@ extends "res://scripts/Actor/Actor.gd"
 export(PackedScene) var launch_model = null
 export(PackedScene) var impact_model = null
 export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit", "effect_tree_descendent")\
-var launch_location = 5
+var launch_location = 2
 export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit", "effect_tree_descendent")\
 var impact_location = 7
 
@@ -35,7 +35,7 @@ func play_launch_animation(effect_tree_node):
 	# 创建发射动画模型
 	var new_launch_model = add_model_at_location(effect_tree_node, launch_model, launch_location, true)
 	# # 获取单位
-	var unit = effect_tree_node.get_unit_by_target_data_type(launch_location)
+	var unit = effect_tree_node.source_unit
 	# 根据朝向进行形变
 	new_launch_model.modify_by_direction(unit.face_direction)
 	

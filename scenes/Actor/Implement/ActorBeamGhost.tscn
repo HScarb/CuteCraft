@@ -8,5 +8,6 @@
 
 script = ExtResource( 2 )
 model = ExtResource( 3 )
+start_location = 2
 
 

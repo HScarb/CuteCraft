@@ -9,7 +9,7 @@
 script = ExtResource( 2 )
 launch_model = null
 impact_model = ExtResource( 3 )
-launch_location = 5
+launch_location = 2
 impact_location = 7
 
 

@@ -95,8 +95,6 @@ func get_pos_by_target_data_type(target_data_type):
 				return self.origin_unit.position
 			return self.origin_point
 		Global.TARGET_DATA.source_point:
-			if self.source_unit != null:
-				return self.source_unit.position
 			return self.source_point
 		Global.TARGET_DATA.caster_point:
 			if self.caster_unit != null:

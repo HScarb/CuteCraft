@@ -4,7 +4,7 @@ extends "res://scripts/Actor/Actor.gd"
 
 export(PackedScene) var model = null
 export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit", "effect_tree_descendent")\
-var start_location = 5
+var start_location = 2
 export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit", "effect_tree_descendent")\
 var end_location = 6
 export(int) var beam_width = 1
@@ -22,12 +22,13 @@ func create_beam(effect_tree_node):
     # 从效果中获取开始位置和结束位置
     var start_pos = Vector2()
     var end_pos = Vector2()
-    var start_data = effect_tree_node.get_data_by_target_data_type(start_location)
-    if typeof(start_data) == TYPE_VECTOR2:
-        start_pos = start_data
+    var start_data = effect_tree_node.get_pos_by_target_data_type(start_location)
+    if typeof(start_data) == TYPE_ARRAY:
+        start_pos = start_data[0]
     else:
-        start_pos = start_data.model.get_muzzle().position + start_data.position
-        start_pos = effect_tree_node.effect_origin.get_muzzle().position + start_data.position
+        start_pos = start_data
+        # start_pos = start_data.model.get_muzzle().position + start_data.position
+        # start_pos = effect_tree_node.effect_origin.get_muzzle().position + start_data.position
     end_pos = effect_tree_node.get_pos_by_target_data_type(end_location)
     # 建立光束模型
     var new_model = model.instance()
