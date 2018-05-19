@@ -1,359 +1,380 @@
-[gd_resource type="SpriteFrames" load_steps=233 format=2]
+[gd_resource type="SpriteFrames" load_steps=249 format=2]
 
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_46.png" type="Texture" id=1]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_47.png" type="Texture" id=2]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_48.png" type="Texture" id=3]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_49.png" type="Texture" id=4]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_50.png" type="Texture" id=5]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_51.png" type="Texture" id=6]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_52.png" type="Texture" id=7]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_53.png" type="Texture" id=8]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_54.png" type="Texture" id=9]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_31.png" type="Texture" id=10]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_32.png" type="Texture" id=11]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_33.png" type="Texture" id=12]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_34.png" type="Texture" id=13]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_35.png" type="Texture" id=14]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_36.png" type="Texture" id=15]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_37.png" type="Texture" id=16]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_38.png" type="Texture" id=17]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_39.png" type="Texture" id=18]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_40.png" type="Texture" id=19]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_21.png" type="Texture" id=20]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_22.png" type="Texture" id=21]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_23.png" type="Texture" id=22]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_24.png" type="Texture" id=23]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_25.png" type="Texture" id=24]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_26.png" type="Texture" id=25]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_27.png" type="Texture" id=26]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_28.png" type="Texture" id=27]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_29.png" type="Texture" id=28]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_30.png" type="Texture" id=29]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_41.png" type="Texture" id=30]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_42.png" type="Texture" id=31]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_43.png" type="Texture" id=32]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_44.png" type="Texture" id=33]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_45.png" type="Texture" id=34]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_46.png" type="Texture" id=35]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_47.png" type="Texture" id=36]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_48.png" type="Texture" id=37]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_49.png" type="Texture" id=38]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_50.png" type="Texture" id=39]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_41.png" type="Texture" id=40]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_42.png" type="Texture" id=41]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_43.png" type="Texture" id=42]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_44.png" type="Texture" id=43]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_45.png" type="Texture" id=44]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_46.png" type="Texture" id=45]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_47.png" type="Texture" id=46]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_48.png" type="Texture" id=47]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_49.png" type="Texture" id=48]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_50.png" type="Texture" id=49]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_01.png" type="Texture" id=50]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_02.png" type="Texture" id=51]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_03.png" type="Texture" id=52]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_04.png" type="Texture" id=53]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_05.png" type="Texture" id=54]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_06.png" type="Texture" id=55]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_07.png" type="Texture" id=56]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_08.png" type="Texture" id=57]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_09.png" type="Texture" id=58]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_10.png" type="Texture" id=59]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_31.png" type="Texture" id=60]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_32.png" type="Texture" id=61]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_33.png" type="Texture" id=62]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_34.png" type="Texture" id=63]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_35.png" type="Texture" id=64]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_36.png" type="Texture" id=65]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_37.png" type="Texture" id=66]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_38.png" type="Texture" id=67]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_39.png" type="Texture" id=68]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_40.png" type="Texture" id=69]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_11.png" type="Texture" id=70]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_12.png" type="Texture" id=71]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_13.png" type="Texture" id=72]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_14.png" type="Texture" id=73]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_15.png" type="Texture" id=74]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_16.png" type="Texture" id=75]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_17.png" type="Texture" id=76]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_18.png" type="Texture" id=77]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_19.png" type="Texture" id=78]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_20.png" type="Texture" id=79]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_11.png" type="Texture" id=80]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_12.png" type="Texture" id=81]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_13.png" type="Texture" id=82]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_14.png" type="Texture" id=83]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_15.png" type="Texture" id=84]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_16.png" type="Texture" id=85]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_17.png" type="Texture" id=86]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_18.png" type="Texture" id=87]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_19.png" type="Texture" id=88]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_20.png" type="Texture" id=89]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_50.png" type="Texture" id=90]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_51.png" type="Texture" id=91]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_52.png" type="Texture" id=92]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_53.png" type="Texture" id=93]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_54.png" type="Texture" id=94]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_55.png" type="Texture" id=95]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_56.png" type="Texture" id=96]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_57.png" type="Texture" id=97]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_58.png" type="Texture" id=98]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_51.png" type="Texture" id=99]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_52.png" type="Texture" id=100]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_53.png" type="Texture" id=101]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_54.png" type="Texture" id=102]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_55.png" type="Texture" id=103]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_56.png" type="Texture" id=104]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_57.png" type="Texture" id=105]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_58.png" type="Texture" id=106]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_59.png" type="Texture" id=107]
-[ext_resource path="res://images/Thor/Move/Thor2StandMove_60.png" type="Texture" id=108]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_31.png" type="Texture" id=109]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_32.png" type="Texture" id=110]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_33.png" type="Texture" id=111]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_34.png" type="Texture" id=112]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_35.png" type="Texture" id=113]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_36.png" type="Texture" id=114]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_37.png" type="Texture" id=115]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_38.png" type="Texture" id=116]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_39.png" type="Texture" id=117]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_40.png" type="Texture" id=118]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_28.png" type="Texture" id=119]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_29.png" type="Texture" id=120]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_30.png" type="Texture" id=121]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_31.png" type="Texture" id=122]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_32.png" type="Texture" id=123]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_33.png" type="Texture" id=124]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_34.png" type="Texture" id=125]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_35.png" type="Texture" id=126]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_36.png" type="Texture" id=127]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_10.png" type="Texture" id=128]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_11.png" type="Texture" id=129]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_12.png" type="Texture" id=130]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_13.png" type="Texture" id=131]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_14.png" type="Texture" id=132]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_15.png" type="Texture" id=133]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_16.png" type="Texture" id=134]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_17.png" type="Texture" id=135]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_18.png" type="Texture" id=136]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_01.png" type="Texture" id=137]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_02.png" type="Texture" id=138]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_03.png" type="Texture" id=139]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_04.png" type="Texture" id=140]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_05.png" type="Texture" id=141]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_06.png" type="Texture" id=142]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_07.png" type="Texture" id=143]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_08.png" type="Texture" id=144]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_09.png" type="Texture" id=145]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_19.png" type="Texture" id=146]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_20.png" type="Texture" id=147]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_21.png" type="Texture" id=148]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_22.png" type="Texture" id=149]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_23.png" type="Texture" id=150]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_24.png" type="Texture" id=151]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_25.png" type="Texture" id=152]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_26.png" type="Texture" id=153]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_27.png" type="Texture" id=154]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_21.png" type="Texture" id=155]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_22.png" type="Texture" id=156]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_23.png" type="Texture" id=157]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_24.png" type="Texture" id=158]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_25.png" type="Texture" id=159]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_26.png" type="Texture" id=160]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_27.png" type="Texture" id=161]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_28.png" type="Texture" id=162]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_29.png" type="Texture" id=163]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_30.png" type="Texture" id=164]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_21.png" type="Texture" id=165]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_22.png" type="Texture" id=166]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_23.png" type="Texture" id=167]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_24.png" type="Texture" id=168]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_25.png" type="Texture" id=169]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_26.png" type="Texture" id=170]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_27.png" type="Texture" id=171]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_28.png" type="Texture" id=172]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_29.png" type="Texture" id=173]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_30.png" type="Texture" id=174]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_51.png" type="Texture" id=175]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_52.png" type="Texture" id=176]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_53.png" type="Texture" id=177]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_54.png" type="Texture" id=178]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_55.png" type="Texture" id=179]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_56.png" type="Texture" id=180]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_57.png" type="Texture" id=181]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_58.png" type="Texture" id=182]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_59.png" type="Texture" id=183]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_60.png" type="Texture" id=184]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_01.png" type="Texture" id=185]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_02.png" type="Texture" id=186]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_03.png" type="Texture" id=187]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_04.png" type="Texture" id=188]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_05.png" type="Texture" id=189]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_06.png" type="Texture" id=190]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_07.png" type="Texture" id=191]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_08.png" type="Texture" id=192]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_09.png" type="Texture" id=193]
-[ext_resource path="res://images/Thor/Stand/Thor2StandMove_10.png" type="Texture" id=194]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_11.png" type="Texture" id=195]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_12.png" type="Texture" id=196]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_13.png" type="Texture" id=197]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_14.png" type="Texture" id=198]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_15.png" type="Texture" id=199]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_16.png" type="Texture" id=200]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_17.png" type="Texture" id=201]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_18.png" type="Texture" id=202]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_19.png" type="Texture" id=203]
-[ext_resource path="res://images/Thor/Stand/Thor1Stand_20.png" type="Texture" id=204]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_37.png" type="Texture" id=205]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_38.png" type="Texture" id=206]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_39.png" type="Texture" id=207]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_40.png" type="Texture" id=208]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_41.png" type="Texture" id=209]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_42.png" type="Texture" id=210]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_43.png" type="Texture" id=211]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_44.png" type="Texture" id=212]
-[ext_resource path="res://images/Thor/Attack/Thor4Attack_45.png" type="Texture" id=213]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_01.png" type="Texture" id=214]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_02.png" type="Texture" id=215]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_03.png" type="Texture" id=216]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_04.png" type="Texture" id=217]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_05.png" type="Texture" id=218]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_06.png" type="Texture" id=219]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_07.png" type="Texture" id=220]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_08.png" type="Texture" id=221]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_09.png" type="Texture" id=222]
-[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_10.png" type="Texture" id=223]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_41.png" type="Texture" id=224]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_42.png" type="Texture" id=225]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_43.png" type="Texture" id=226]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_44.png" type="Texture" id=227]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_45.png" type="Texture" id=228]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_46.png" type="Texture" id=229]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_47.png" type="Texture" id=230]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_48.png" type="Texture" id=231]
-[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_49.png" type="Texture" id=232]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_01.png" type="Texture" id=1]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_02.png" type="Texture" id=2]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_03.png" type="Texture" id=3]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_04.png" type="Texture" id=4]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_05.png" type="Texture" id=5]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_06.png" type="Texture" id=6]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_07.png" type="Texture" id=7]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_08.png" type="Texture" id=8]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_09.png" type="Texture" id=9]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_10.png" type="Texture" id=10]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_11.png" type="Texture" id=11]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_12.png" type="Texture" id=12]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_13.png" type="Texture" id=13]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_14.png" type="Texture" id=14]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_15.png" type="Texture" id=15]
+[ext_resource path="res://images/Thor/Death/TerranSmallExplosion_16.png" type="Texture" id=16]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_31.png" type="Texture" id=17]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_32.png" type="Texture" id=18]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_33.png" type="Texture" id=19]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_34.png" type="Texture" id=20]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_35.png" type="Texture" id=21]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_36.png" type="Texture" id=22]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_37.png" type="Texture" id=23]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_38.png" type="Texture" id=24]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_39.png" type="Texture" id=25]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_40.png" type="Texture" id=26]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_11.png" type="Texture" id=27]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_12.png" type="Texture" id=28]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_13.png" type="Texture" id=29]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_14.png" type="Texture" id=30]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_15.png" type="Texture" id=31]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_16.png" type="Texture" id=32]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_17.png" type="Texture" id=33]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_18.png" type="Texture" id=34]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_19.png" type="Texture" id=35]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_20.png" type="Texture" id=36]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_11.png" type="Texture" id=37]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_12.png" type="Texture" id=38]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_13.png" type="Texture" id=39]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_14.png" type="Texture" id=40]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_15.png" type="Texture" id=41]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_16.png" type="Texture" id=42]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_17.png" type="Texture" id=43]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_18.png" type="Texture" id=44]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_19.png" type="Texture" id=45]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_20.png" type="Texture" id=46]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_50.png" type="Texture" id=47]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_51.png" type="Texture" id=48]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_52.png" type="Texture" id=49]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_53.png" type="Texture" id=50]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_54.png" type="Texture" id=51]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_55.png" type="Texture" id=52]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_56.png" type="Texture" id=53]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_57.png" type="Texture" id=54]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_58.png" type="Texture" id=55]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_51.png" type="Texture" id=56]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_52.png" type="Texture" id=57]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_53.png" type="Texture" id=58]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_54.png" type="Texture" id=59]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_55.png" type="Texture" id=60]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_56.png" type="Texture" id=61]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_57.png" type="Texture" id=62]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_58.png" type="Texture" id=63]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_59.png" type="Texture" id=64]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_60.png" type="Texture" id=65]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_31.png" type="Texture" id=66]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_32.png" type="Texture" id=67]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_33.png" type="Texture" id=68]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_34.png" type="Texture" id=69]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_35.png" type="Texture" id=70]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_36.png" type="Texture" id=71]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_37.png" type="Texture" id=72]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_38.png" type="Texture" id=73]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_39.png" type="Texture" id=74]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_40.png" type="Texture" id=75]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_28.png" type="Texture" id=76]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_29.png" type="Texture" id=77]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_30.png" type="Texture" id=78]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_31.png" type="Texture" id=79]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_32.png" type="Texture" id=80]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_33.png" type="Texture" id=81]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_34.png" type="Texture" id=82]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_35.png" type="Texture" id=83]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_36.png" type="Texture" id=84]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_10.png" type="Texture" id=85]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_11.png" type="Texture" id=86]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_12.png" type="Texture" id=87]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_13.png" type="Texture" id=88]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_14.png" type="Texture" id=89]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_15.png" type="Texture" id=90]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_16.png" type="Texture" id=91]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_17.png" type="Texture" id=92]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_18.png" type="Texture" id=93]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_01.png" type="Texture" id=94]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_02.png" type="Texture" id=95]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_03.png" type="Texture" id=96]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_04.png" type="Texture" id=97]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_05.png" type="Texture" id=98]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_06.png" type="Texture" id=99]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_07.png" type="Texture" id=100]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_08.png" type="Texture" id=101]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_09.png" type="Texture" id=102]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_19.png" type="Texture" id=103]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_20.png" type="Texture" id=104]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_21.png" type="Texture" id=105]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_22.png" type="Texture" id=106]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_23.png" type="Texture" id=107]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_24.png" type="Texture" id=108]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_25.png" type="Texture" id=109]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_26.png" type="Texture" id=110]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_27.png" type="Texture" id=111]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_21.png" type="Texture" id=112]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_22.png" type="Texture" id=113]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_23.png" type="Texture" id=114]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_24.png" type="Texture" id=115]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_25.png" type="Texture" id=116]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_26.png" type="Texture" id=117]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_27.png" type="Texture" id=118]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_28.png" type="Texture" id=119]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_29.png" type="Texture" id=120]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_30.png" type="Texture" id=121]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_21.png" type="Texture" id=122]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_22.png" type="Texture" id=123]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_23.png" type="Texture" id=124]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_24.png" type="Texture" id=125]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_25.png" type="Texture" id=126]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_26.png" type="Texture" id=127]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_27.png" type="Texture" id=128]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_28.png" type="Texture" id=129]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_29.png" type="Texture" id=130]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_30.png" type="Texture" id=131]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_46.png" type="Texture" id=132]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_47.png" type="Texture" id=133]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_48.png" type="Texture" id=134]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_49.png" type="Texture" id=135]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_50.png" type="Texture" id=136]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_51.png" type="Texture" id=137]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_52.png" type="Texture" id=138]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_53.png" type="Texture" id=139]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_54.png" type="Texture" id=140]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_31.png" type="Texture" id=141]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_32.png" type="Texture" id=142]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_33.png" type="Texture" id=143]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_34.png" type="Texture" id=144]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_35.png" type="Texture" id=145]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_36.png" type="Texture" id=146]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_37.png" type="Texture" id=147]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_38.png" type="Texture" id=148]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_39.png" type="Texture" id=149]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_40.png" type="Texture" id=150]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_21.png" type="Texture" id=151]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_22.png" type="Texture" id=152]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_23.png" type="Texture" id=153]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_24.png" type="Texture" id=154]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_25.png" type="Texture" id=155]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_26.png" type="Texture" id=156]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_27.png" type="Texture" id=157]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_28.png" type="Texture" id=158]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_29.png" type="Texture" id=159]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_30.png" type="Texture" id=160]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_41.png" type="Texture" id=161]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_42.png" type="Texture" id=162]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_43.png" type="Texture" id=163]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_44.png" type="Texture" id=164]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_45.png" type="Texture" id=165]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_46.png" type="Texture" id=166]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_47.png" type="Texture" id=167]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_48.png" type="Texture" id=168]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_49.png" type="Texture" id=169]
+[ext_resource path="res://images/Thor/Move/Thor2StandMove_50.png" type="Texture" id=170]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_41.png" type="Texture" id=171]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_42.png" type="Texture" id=172]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_43.png" type="Texture" id=173]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_44.png" type="Texture" id=174]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_45.png" type="Texture" id=175]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_46.png" type="Texture" id=176]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_47.png" type="Texture" id=177]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_48.png" type="Texture" id=178]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_49.png" type="Texture" id=179]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_50.png" type="Texture" id=180]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_01.png" type="Texture" id=181]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_02.png" type="Texture" id=182]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_03.png" type="Texture" id=183]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_04.png" type="Texture" id=184]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_05.png" type="Texture" id=185]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_06.png" type="Texture" id=186]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_07.png" type="Texture" id=187]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_08.png" type="Texture" id=188]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_09.png" type="Texture" id=189]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_10.png" type="Texture" id=190]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_41.png" type="Texture" id=191]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_42.png" type="Texture" id=192]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_43.png" type="Texture" id=193]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_44.png" type="Texture" id=194]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_45.png" type="Texture" id=195]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_46.png" type="Texture" id=196]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_47.png" type="Texture" id=197]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_48.png" type="Texture" id=198]
+[ext_resource path="res://images/Thor/Attack/Thor3MoveAttack_49.png" type="Texture" id=199]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_51.png" type="Texture" id=200]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_52.png" type="Texture" id=201]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_53.png" type="Texture" id=202]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_54.png" type="Texture" id=203]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_55.png" type="Texture" id=204]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_56.png" type="Texture" id=205]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_57.png" type="Texture" id=206]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_58.png" type="Texture" id=207]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_59.png" type="Texture" id=208]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_60.png" type="Texture" id=209]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_01.png" type="Texture" id=210]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_02.png" type="Texture" id=211]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_03.png" type="Texture" id=212]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_04.png" type="Texture" id=213]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_05.png" type="Texture" id=214]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_06.png" type="Texture" id=215]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_07.png" type="Texture" id=216]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_08.png" type="Texture" id=217]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_09.png" type="Texture" id=218]
+[ext_resource path="res://images/Thor/Stand/Thor2StandMove_10.png" type="Texture" id=219]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_11.png" type="Texture" id=220]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_12.png" type="Texture" id=221]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_13.png" type="Texture" id=222]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_14.png" type="Texture" id=223]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_15.png" type="Texture" id=224]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_16.png" type="Texture" id=225]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_17.png" type="Texture" id=226]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_18.png" type="Texture" id=227]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_19.png" type="Texture" id=228]
+[ext_resource path="res://images/Thor/Stand/Thor1Stand_20.png" type="Texture" id=229]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_37.png" type="Texture" id=230]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_38.png" type="Texture" id=231]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_39.png" type="Texture" id=232]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_40.png" type="Texture" id=233]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_41.png" type="Texture" id=234]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_42.png" type="Texture" id=235]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_43.png" type="Texture" id=236]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_44.png" type="Texture" id=237]
+[ext_resource path="res://images/Thor/Attack/Thor4Attack_45.png" type="Texture" id=238]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_01.png" type="Texture" id=239]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_02.png" type="Texture" id=240]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_03.png" type="Texture" id=241]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_04.png" type="Texture" id=242]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_05.png" type="Texture" id=243]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_06.png" type="Texture" id=244]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_07.png" type="Texture" id=245]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_08.png" type="Texture" id=246]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_09.png" type="Texture" id=247]
+[ext_resource path="res://images/Thor/Move/Thor3MoveAttack_10.png" type="Texture" id=248]
 
 [resource]
 
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
-"name": "attack_3",
+"name": "death0",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
-"loop": true,
-"name": "move_1",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
-"loop": true,
-"name": "move_2",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
-"loop": true,
-"name": "move_0",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
-"loop": true,
-"name": "stand_6",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ) ],
-"loop": true,
-"name": "stand_2",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "stand_7",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ) ],
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
 "loop": true,
 "name": "stand_3",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ) ],
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ) ],
 "loop": true,
 "name": "move_5",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ) ],
+"frames": [ ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ) ],
 "loop": true,
 "name": "attack_1",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ) ],
+"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ) ],
 "loop": true,
 "name": "move_7",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ) ],
+"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
 "loop": true,
 "name": "move_3",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ) ],
+"frames": [ ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ) ],
 "loop": true,
 "name": "attack_5",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ) ],
+"frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ) ],
 "loop": true,
 "name": "attack_7",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ) ],
+"frames": [ ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ) ],
 "loop": true,
 "name": "attack_0",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ) ],
+"frames": [ ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ) ],
 "loop": true,
 "name": "attack_6",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 155 ), ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ) ],
+"frames": [ ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ) ],
 "loop": true,
 "name": "move_4",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ) ],
+"frames": [ ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ) ],
 "loop": true,
 "name": "stand_0",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ) ],
+"frames": [ ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ) ],
+"loop": true,
+"name": "attack_3",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ) ],
+"loop": true,
+"name": "move_1",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ), ExtResource( 160 ) ],
+"loop": true,
+"name": "move_2",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ) ],
+"loop": true,
+"name": "move_0",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 171 ), ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ) ],
+"loop": true,
+"name": "stand_6",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 188 ), ExtResource( 189 ), ExtResource( 190 ) ],
+"loop": true,
+"name": "stand_2",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ) ],
+"loop": true,
+"name": "attack_2",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 209 ) ],
 "loop": true,
 "name": "stand_5",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 185 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 188 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ) ],
+"frames": [ ExtResource( 210 ), ExtResource( 211 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 214 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 217 ), ExtResource( 218 ), ExtResource( 219 ) ],
 "loop": true,
 "name": "stand_4",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ) ],
+"frames": [ ExtResource( 220 ), ExtResource( 221 ), ExtResource( 222 ), ExtResource( 223 ), ExtResource( 224 ), ExtResource( 225 ), ExtResource( 226 ), ExtResource( 227 ), ExtResource( 228 ), ExtResource( 229 ) ],
 "loop": true,
 "name": "stand_1",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 211 ), ExtResource( 212 ), ExtResource( 213 ) ],
+"frames": [ ExtResource( 230 ), ExtResource( 231 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 234 ), ExtResource( 235 ), ExtResource( 236 ), ExtResource( 237 ), ExtResource( 238 ) ],
 "loop": true,
 "name": "attack_4",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 214 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 217 ), ExtResource( 218 ), ExtResource( 219 ), ExtResource( 220 ), ExtResource( 221 ), ExtResource( 222 ), ExtResource( 223 ) ],
+"frames": [ ExtResource( 239 ), ExtResource( 240 ), ExtResource( 241 ), ExtResource( 242 ), ExtResource( 243 ), ExtResource( 244 ), ExtResource( 245 ), ExtResource( 246 ), ExtResource( 247 ), ExtResource( 248 ) ],
 "loop": true,
 "name": "move_6",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 224 ), ExtResource( 225 ), ExtResource( 226 ), ExtResource( 227 ), ExtResource( 228 ), ExtResource( 229 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 232 ) ],
-"loop": true,
-"name": "attack_2",
 "speed": 12.0
 } ]
 _sections_unfolded = [ "Resource" ]

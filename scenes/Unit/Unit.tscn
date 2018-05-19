@@ -22,7 +22,7 @@ custom_solver_bias = 0.0
 radius = 28.0
 height = 30.0
 
-[node name="Unit" type="KinematicBody2D" index="0"]
+[node name="Unit" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -43,9 +43,9 @@ enegy_max = 10
 enegy_recover = 0
 radius = 20.0
 speed = 200.0
+attack_radius = 240
 scan_radius = 600
 acceleration = 0
-weapon_path = null
 
 [node name="FSM2D" type="Node2D" parent="." index="0"]
 

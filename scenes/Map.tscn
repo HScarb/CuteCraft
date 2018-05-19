@@ -3,7 +3,7 @@
 [ext_resource path="res://scripts/Map.gd" type="Script" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/Unit/Implement/UnitMarine.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Unit/Implement/HeroImmortal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Unit/Implement/HeroThor.tscn" type="PackedScene" id=4]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -64,11 +64,11 @@ _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 position = Vector2( 1750, 680 )
 stand_after_attack = false
 
-[node name="HeroImmortal" parent="walls" index="1" instance=ExtResource( 4 )]
+[node name="HeroThor" parent="walls" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 1150, 930 )
+position = Vector2( 1140, 1130 )
 
-[node name="Camera2D" type="Camera2D" parent="walls/HeroImmortal" index="8"]
+[node name="Camera2D" type="Camera2D" parent="walls/HeroThor" index="9"]
 
 scale = Vector2( 0.5, 0.5 )
 anchor_mode = 1

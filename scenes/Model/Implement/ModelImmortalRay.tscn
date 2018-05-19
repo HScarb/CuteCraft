@@ -22,7 +22,7 @@ tracks/0/keys = {
 "values": [ Color( 0.588235, 0.784314, 1, 1 ), Color( 0.392157, 1, 1, 1 ), Color( 0.392157, 1, 1, 0 ) ]
 }
 
-[node name="ModelImmortalRay" index="0" instance=ExtResource( 1 )]
+[node name="ModelImmortalRay" instance=ExtResource( 1 )]
 
 modulate = Color( 0.392157, 1, 1, 1 )
 position = Vector2( 0, -1.5 )

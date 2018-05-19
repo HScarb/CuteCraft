@@ -6,8 +6,8 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 40.0
-height = 36.0
+radius = 44.0
+height = 34.0
 
 [node name="HeroImmortal" instance=ExtResource( 1 )]
 
@@ -16,9 +16,8 @@ life = 200.0
 life_max = 200.0
 enegy = 0.0
 enegy_max = 0.0
-radius = 27.0
+radius = 30.0
 speed = 225.0
-attack_radius = 240
 
 [node name="FSM2D" parent="." index="0"]
 
@@ -97,5 +96,9 @@ shape = SubResource( 1 )
 [node name="WeaponImmortal" parent="Weapons" index="0" instance=ExtResource( 2 )]
 
 muzzle_index = 0
+
+[node name="WeaponImmortal12" parent="Weapons" index="1" instance=ExtResource( 2 )]
+
+muzzle_index = 1
 
 

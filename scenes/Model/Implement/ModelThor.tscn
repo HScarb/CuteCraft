@@ -8,100 +8,99 @@
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
-scale_factor = 0.5
+scale_factor = 0.7
 
 [node name="AnimatedSprite" parent="." index="0"]
 
 position = Vector2( 0, -40 )
 scale = Vector2( 0.6, 0.6 )
 frames = ExtResource( 3 )
-animation = "attack_0"
-frame = 8
+animation = "attack_6"
 
 [node name="Muzzle_0" type="Position2D" parent="Muzzles" index="0"]
 
-position = Vector2( 5.55158, -47.9519 )
+position = Vector2( 23.7098, -5.4493 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Muzzle_0c" type="Position2D" parent="Muzzles" index="1"]
+[node name="Muzzle_01" type="Position2D" parent="Muzzles" index="1"]
 
-position = Vector2( 42.714, -52.9676 )
+position = Vector2( 64.9237, -20.8781 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_1" type="Position2D" parent="Muzzles" index="2"]
 
-position = Vector2( -14.1952, -41.1315 )
+position = Vector2( 0.182364, -11.7024 )
 
-[node name="Muzzle_1c" type="Position2D" parent="Muzzles" index="3"]
+[node name="Muzzle_11" type="Position2D" parent="Muzzles" index="3"]
 
-position = Vector2( 47.3496, -51.8448 )
+position = Vector2( 54.763, -24.2129 )
 
 [node name="Muzzle_2" type="Position2D" parent="Muzzles" index="4"]
 
-position = Vector2( -48.8607, -47.0754 )
+position = Vector2( 45.0428, 3.69538 )
 
-[node name="Muzzle_2c" type="Position2D" parent="Muzzles" index="5"]
+[node name="Muzzle_21" type="Position2D" parent="Muzzles" index="5"]
 
-position = Vector2( 45.052, -47.5313 )
+position = Vector2( -45.4817, 1.21763 )
 
 [node name="Muzzle_3" type="Position2D" parent="Muzzles" index="6"]
 
-position = Vector2( -43.786, -50.3777 )
+position = Vector2( -1.1026, -13.9845 )
 
-[node name="Muzzle_3c" type="Position2D" parent="Muzzles" index="7"]
+[node name="Muzzle_31" type="Position2D" parent="Muzzles" index="7"]
 
-position = Vector2( 11.6041, -40.1202 )
+position = Vector2( -54.8921, -26.8659 )
 
 [node name="Muzzle_4" type="Position2D" parent="Muzzles" index="8"]
 
-position = Vector2( -41.9053, -54.2806 )
+position = Vector2( -27.5277, -2.38658 )
 
-[node name="Muzzle_4c" type="Position2D" parent="Muzzles" index="9"]
+[node name="Muzzle_41" type="Position2D" parent="Muzzles" index="9"]
 
-position = Vector2( -5.20641, -50.8614 )
+position = Vector2( -61.3688, -20.0844 )
 
 [node name="Muzzle_5" type="Position2D" parent="Muzzles" index="10"]
 
-position = Vector2( -1.73723, -76.5726 )
+position = Vector2( -65.7623, -26.7004 )
 
-[node name="Muzzle_5c" type="Position2D" parent="Muzzles" index="11"]
+[node name="Muzzle_51" type="Position2D" parent="Muzzles" index="11"]
 
-position = Vector2( -27.039, -55.8297 )
+position = Vector2( 27.5508, -63.4678 )
 
 [node name="Muzzle_6" type="Position2D" parent="Muzzles" index="12"]
 
-position = Vector2( -40.6466, -71.0591 )
+position = Vector2( 43.5969, -63.421 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Muzzle_6c" type="Position2D" parent="Muzzles" index="13"]
+[node name="Muzzle_61" type="Position2D" parent="Muzzles" index="13"]
 
-position = Vector2( 45.288, -73.7945 )
+position = Vector2( -48.8401, -63.0113 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Muzzle_7" type="Position2D" parent="Muzzles" index="14"]
 
-position = Vector2( 26.7037, -50.3368 )
+position = Vector2( 64.8941, -25.4007 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Muzzle_7c" type="Position2D" parent="Muzzles" index="15"]
+[node name="Muzzle_71" type="Position2D" parent="Muzzles" index="15"]
 
-position = Vector2( -2.01712, -79.9695 )
+position = Vector2( -6.5101, -69.411 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="LifeBar" parent="." index="2"]
 
-margin_left = -67.0
-margin_top = -103.0
-margin_right = 74.0
-margin_bottom = -95.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = -82.0
+margin_top = -125.0
+margin_right = 59.0
+margin_bottom = -117.0
+rect_scale = Vector2( 0.7, 0.7 )
 
 [node name="EnegyBar" parent="." index="3"]
 
-margin_left = -67.0
-margin_top = -97.0
-margin_right = 74.0
-margin_bottom = -89.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = -82.0
+margin_top = -119.0
+margin_right = 59.0
+margin_bottom = -111.0
+rect_scale = Vector2( 0.7, 0.7 )
 
 
