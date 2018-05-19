@@ -10,7 +10,7 @@ export(int) var muzzle_index = 0								# 武器所占用的炮口编号(一般�
 
 export var can_fire = true setget set_can_fire, get_can_fire	# 武器是否可以攻击
 
-onready var logicRoot = $".."
+onready var logicRoot = $"../.."
 
 signal can_fire_again											# 可以再次开火
 
@@ -32,7 +32,7 @@ func _ready():
 # 每次攻击都刷新目标数据
 func refresh_target_data():
 	# 初始化目标数据
-	self.origin_point = logicRoot
+	self.origin_unit = logicRoot
 	self.origin_point = logicRoot.position
 	self.source_unit = logicRoot
 	self.source_point = get_muzzle().position + logicRoot.position

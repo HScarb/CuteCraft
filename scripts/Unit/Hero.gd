@@ -18,10 +18,16 @@ func _input(event):
 func get_on_attack_condi():
 	if is_dead:
 		return false
-	if self.weapon == null:
+	if $Weapons.get_child_count() <= 0:
 		return false
-	var ret = Input.is_action_pressed("ui_attack")\
-			and self.weapon.get_can_fire()
+	# 攻击按钮是否按下
+	if not Input.is_action_pressed("ui_attack"):
+		return false
+	var ret = false
+	for weapon in $Weapons.get_children():
+		if weapon.get_can_fire():
+			ret = true
+			break
 	return ret
 
 # virtual 攻击状态结束条件

@@ -64,7 +64,7 @@ func run():
 
 # 子弹到达攻击距离后如果没有遇到单位则原地爆炸
 func add_timer_for_missile(missile):
-    var weapon = self.effect_origin
+    var weapon = effect_origin
     var shoot_vector = weapon.get_shoot_vector()
     var burst_time = shoot_vector.length() / missile.get_attr_value("speed")
     var impact_timer = Timer.new()

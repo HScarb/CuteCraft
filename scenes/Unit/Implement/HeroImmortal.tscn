@@ -18,7 +18,7 @@ enegy = 0.0
 enegy_max = 0.0
 radius = 27.0
 speed = 225.0
-weapon_path = NodePath("WeaponImmortal")
+attack_radius = 240
 
 [node name="FSM2D" parent="." index="0"]
 
@@ -94,6 +94,8 @@ position = Vector2( 0, -40 )
 
 shape = SubResource( 1 )
 
-[node name="WeaponImmortal" parent="." index="5" instance=ExtResource( 2 )]
+[node name="WeaponImmortal" parent="Weapons" index="0" instance=ExtResource( 2 )]
+
+muzzle_index = 0
 
 

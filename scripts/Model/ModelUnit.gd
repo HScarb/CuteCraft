@@ -88,9 +88,9 @@ func _on_AnimatedSprite_animation_finished():
 
 # 在动画的每一帧调用 攻击动画伤害帧
 func _on_AnimatedSprite_frame_changed():
-	if logicRoot.weapon == null:
+	if logicRoot.get_weapons().size() <= 0:
 		return
-	if $AnimatedSprite.animation.begins_with("attack"):
-		if $AnimatedSprite.frame == logicRoot.weapon.damage_frame:
-			emit_signal("reach_damage_frame")
-			
+	for weapon in logicRoot.get_weapons():
+		if $AnimatedSprite.animation.begins_with("attack"):
+			if $AnimatedSprite.frame == weapon.damage_frame:
+				emit_signal("reach_damage_frame", weapon)

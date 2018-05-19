@@ -9,7 +9,7 @@ custom_solver_bias = 0.0
 radius = 28.0
 height = 30.0
 
-[node name="UnitMarine" instance=ExtResource( 1 )]
+[node name="UnitMarine" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 0, -0.207169 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Z Index", "collision" ]
@@ -18,13 +18,15 @@ life_max = 45.0
 enegy = 0.0
 enegy_max = 0.0
 speed = 50.0
+attack_radius = 240
 scan_radius = 500.0
-weapon_path = NodePath("WeaponMarine")
 
 [node name="BodyShape" parent="BodyArea" index="0"]
 
 shape = SubResource( 1 )
 
-[node name="WeaponMarine" parent="." index="4" instance=ExtResource( 2 )]
+[node name="WeaponMarine" parent="Weapons" index="0" instance=ExtResource( 2 )]
+
+muzzle_index = 0
 
 

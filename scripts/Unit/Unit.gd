@@ -16,9 +16,9 @@ export(float) var enegy_max = 10					# 能量最大值
 export(float) var enegy_recover = 0					# 每秒能量回复
 export(float) var radius = 10						# 内部半径
 export(float) var speed = 3							# 移动速度
+export(float) var attack_radius = 240				# 攻击搜索区域半径
 export(float) var scan_radius = 600					# 搜索敌人的范围，如果范围内有敌人，则向敌人移动并且攻击
 export(float) var acceleration = 0					# 加速度
-export(NodePath) var weapon_path = null				# 武器路径
 
 var motion = Vector2()								# 真实移动向量
 var is_dead = false									# 是否死亡
@@ -26,7 +26,6 @@ var is_moving = false								# 是否移动中
 var is_attacking = false							# 是否攻击中
 var is_idling = false								# 是否摸鱼中
 var is_tracing = false								# 是否自动寻路中
-var weapon = null									# 武器
 var model = null									# 单位模型(包含状态条等)
 var weapon_target = null							# 武器锁定的目标单位
 var scan_target = null								# 单位扫描锁定的目标单位
@@ -64,11 +63,10 @@ func _init_shapes():
 	shape.set_height(self.radius)
 	$GroundShape.set_shape(shape)
 	# 设置武器攻击搜索区域大小
-	if weapon != null:
-		if weapon.get_shoot_range() > 0:
-			var shape2 = CircleShape2D.new()
-			shape2.set_radius(weapon.get_shoot_range())
-			$WeaponArea/WeaponShape.shape = shape2
+	if attack_radius > 0:
+		var shape2 = CircleShape2D.new()
+		shape2.set_radius(attack_radius)
+		$WeaponArea/WeaponShape.shape = shape2
 	# 设置侦测搜索区域大小
 	if scan_radius > 0:
 		var shape3 = CircleShape2D.new()
@@ -80,9 +78,6 @@ func _ready():
 	_init_attr_table()
 	# 发送全局演算体消息
 	SignalManager.emit_signal("unit_birth", self)
-	# 设置武器
-	if weapon_path != null:
-		self.weapon = get_node(weapon_path)
 	# 设置技能
 	for ability in $Abilities.get_children():
 		ability.on_add()
@@ -212,15 +207,16 @@ func weapon_aim(unit):
 
 # 面向当前朝向进行攻击
 func attack():
-	if self.weapon == null:
+	if $Weapons.get_child_count() <= 0:
 		return
-	if self.weapon.get_can_fire():
-		# 播放攻击动画
-		play_attack_animation()
-		# 攻击开始信号
-		self.emit_signal("attack_begin")
-		# 武器攻击
-		self.weapon.fire()
+	# 攻击开始信号
+	self.emit_signal("attack_begin")
+	for weapon in $Weapons.get_children():
+		if weapon.get_can_fire():
+			# 播放攻击动画
+			play_attack_animation()
+			# 武器攻击
+			weapon.fire()
 
 # 每秒恢复生命和能量
 func recover():
@@ -272,8 +268,15 @@ func die():
 func dead():
 	self.queue_free()
 
-	
-###### 武器技能和行为操作 ######	
+###### 武器技能和行为操作 ######
+## 武器
+# 获取单位所有武器，返回一个列表
+func get_weapons():
+	return $Weapons.get_children()
+
+func get_weapon_by_index(index = 0):
+	return $Weapons.get_child(index)
+
 # 获取武器的攻击间隔
 func get_attack_interval():
 	return self.weapon.period
@@ -282,6 +285,7 @@ func get_attack_interval():
 func get_attack_time():
 	return self.weapon.get_attack_time()
 
+## 行为
 # 添加行为
 func add_behavior(behavior):
 	if behavior == null:
@@ -307,10 +311,11 @@ func remove_behavior(behavior_name):
 		if Global.get_node_name(behavior) == behavior_name:
 			behavior.on_remove()
 
-# 获取单位目前携带的所有效果
+# 获取单位目前携带的所有行为
 func get_all_behavior():
 	return $Behaviors.get_children()
 
+## 技能
 # 添加技能
 func add_ability(ability):
 	if ability == null:
