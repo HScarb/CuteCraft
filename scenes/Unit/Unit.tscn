@@ -22,7 +22,7 @@ custom_solver_bias = 0.0
 radius = 28.0
 height = 30.0
 
-[node name="Unit" type="KinematicBody2D"]
+[node name="Unit" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -243,6 +243,8 @@ autostart = false
 [node name="Abilities" type="Node" parent="." index="6"]
 
 [node name="Behaviors" type="Node" parent="." index="7"]
+
+[node name="Weapons" type="Node" parent="." index="8"]
 
 [connection signal="area_entered" from="WeaponArea" to="." method="_on_WeaponArea_area_entered"]
 
