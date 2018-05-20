@@ -2,13 +2,13 @@
 # 传送效果
 extends "res://scripts/Effect/Effect.gd"
 
-export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+export(int,"oritin_point", "origin_unit", "source_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
 var source_location = 5                         # 效果源单位
 export(PackedScene) var source_effect = null    # 对于源单位引发的效果
 export(int,"null", "origin_unit", "null", "source_unit", "null", "caster_unit", "null", "target_unit")\
 var unit_location = 7                           # 需要被传送的单位，只能是单位
 export(PackedScene) var unit_effect = null      # 对于被传送单位运行的效果
-export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+export(int,"oritin_point", "origin_unit", "source_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
 var target_location = 6                         # 传送的目标点
 export(PackedScene) var target_effect = null    # 在目标点运行的效果
 export(float) var teleport_range = -1           # 传送(最大)距离

@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/Weapon/Weapon.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Effect/Implement/WeaponBanelingAreaSearch.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Effect/Implement/WeaponBanelingSet.tscn" type="PackedScene" id=2]
 
 [node name="WeaponBaneling" instance=ExtResource( 1 )]
 
+period = 2.0
 weapon_name = "Bane"
 shoot_range = 0.0
 effect_scene = ExtResource( 2 )

@@ -374,6 +374,10 @@ func play_dead_animation():
 		var death_anim_num = 0
 		while frames.has_animation("death%d" % death_anim_num):
 			death_anim_num += 1
+		# 	如果没有死亡动画，直接去死
+		if death_anim_num <= 0:
+			dead()
+			return
 		var i = randi() % death_anim_num
 		# 	随机播放死亡动画
 		self.emit_signal("play_animation", "death%d" % i)
@@ -457,7 +461,6 @@ func _on_ScanArea_area_entered(area):
 # 单位离开警戒扫描范围
 func _on_ScanArea_area_exited(area):
 	if area.get_parent() == scan_target:
-		print("exit scan area")
 		scan_target = null
 		UnitManager.remove_tracing_unit(self)
 		motion = Vector2()

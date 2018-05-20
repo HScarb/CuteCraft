@@ -8,9 +8,9 @@ export(PackedScene) var ammo_unit = null                # 发射物单位
 export(PackedScene) var launch_effect = null            # 发射效果
 # 轰击效果的作用是当飞弹命中目标以后，“对目标引发的效果”。因此，对于轰击效果属性的子效果而言，飞弹单位是其源单位，轰击的单位/点(通常也是发射飞弹效果的目标单位/点)是其目标单位/点。
 export(PackedScene) var impact_effect = null            # 轰击效果
-export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+export(int,"oritin_point", "origin_unit", "source_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
 var launch_location = 3                                 # 发射位置，默认是源单位
-export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+export(int,"oritin_point", "origin_unit", "source_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
 var impact_location = 6                                 # 轰击位置，默认是目标点
 
 func run():

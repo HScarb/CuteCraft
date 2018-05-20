@@ -13,8 +13,9 @@ func run():
 	.run()
 	self._append_effect()
 	for effect in arr_effect:
-		self.trans_target_data(effect)
-		effect.run()
+		var sub_effect = effect.instance()
+		trans_target_data(sub_effect)
+		sub_effect.run()
 	pass
 
 func _append_effect():

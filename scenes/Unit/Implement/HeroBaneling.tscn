@@ -14,11 +14,10 @@ height = 0.0
 is_main_character = true
 life = 30.0
 life_max = 30.0
-life_recover = 10.0
 enegy = 0.0
 enegy_max = 0.0
 radius = 24.0
-speed = 300.0
+speed = 275.0
 attack_radius = 100.0
 scan_radius = 500.0
 

@@ -4,9 +4,9 @@ extends "res://scripts/Effect/Effect.gd"
 
 export(PackedScene) var unit_type = null                # 单位类型
 export(PackedScene) var effect_spawn = null             # 生成单位时的效果
-export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+export(int,"oritin_point", "origin_unit", "source_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
 var target_origin = 5
-export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+export(int,"oritin_point", "origin_unit", "source_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
 var target_location = 6
 
 var class_unit = load("res://scripts/Unit.gd")

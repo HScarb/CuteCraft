@@ -10,9 +10,9 @@ export(int) var maximum_count = -1					# 最大搜索数量，-1为无限 ***
 export(PackedScene) var effect = null				# 执行子效果
 export(bool) var include_self = false				# 是否包含自身，默认不包含 
 
-export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+export(int,"oritin_point", "origin_unit", "source_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
 var launch_location = 3
-export(int,"oritin_point", "origin_unit", "srouce_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
+export(int,"oritin_point", "origin_unit", "source_point", "source_unit", "caster_point", "caster_unit", "target_point", "target_unit")\
 var impact_location = 6		# 搜索起始点，可以是点或单位，如果是单位那只能以某个具体单位为起点搜索
 
 var arr_search_unit = []							# 搜索效果搜索到的单位列表
