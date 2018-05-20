@@ -57,5 +57,4 @@ func run(muzzle_index = 0):
             effect_impact.target_point = collision_pos
         effect_impact.run()
     # 销毁raycast
-    print(target)
     raycast.queue_free()

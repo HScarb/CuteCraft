@@ -26,7 +26,7 @@ func run():
 	if effect == null:
 		return
 	# 搜索起始点
-	var search_pos = get_pos_by_target_data_type(self.impact_location)
+	var search_pos = get_pos_by_target_data_type(impact_location)
 	search_pos = Global.iso_2_cart(search_pos)
 	print("Search_pos: ", search_pos)
 	var target_list = []
@@ -98,7 +98,7 @@ func run():
 	self.arr_search_unit = target_list
 	# 创建自效果实例并且运行
 	var sub_effect = self.effect.instance()
-	self.trans_target_data(sub_effect)
+	trans_target_data(sub_effect)
 	sub_effect.run()
 
 # 判断一个点在线段上的垂直点是否在这条线段的范围内
