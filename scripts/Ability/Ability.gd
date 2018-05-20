@@ -98,11 +98,16 @@ func refresh_target_data():
 	self.origin_point = logicRoot
 	self.origin_point = logicRoot.position
 	self.source_unit = logicRoot
-	self.source_point = logicRoot.position
+	if ClassDB.class_get_property(self, "shoot_range") != null:
+		self.source_point = get_muzzle().position + logicRoot.position
+	else:
+		self.source_point = logicRoot.position
 	self.caster_unit = logicRoot
 	self.caster_point = logicRoot.position
 	self.target_unit = []
 	self.target_point = calc_target_point()
+	print("source: ", source_point)
+	print("target: ", target_point)
 
 # virtual
 # 计算目标点位置

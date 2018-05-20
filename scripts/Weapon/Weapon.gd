@@ -94,7 +94,7 @@ func get_shoot_vector():
 func calc_target_point():
 	var target_pos = null
 	# 如果不是近战武器
-	if self.shoot_range > 0:
+	if shoot_range > 0:
 		# 计算目标点
 		var muzzle_pos = get_muzzle().position
 		target_pos = muzzle_pos + logicRoot.position

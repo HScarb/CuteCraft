@@ -27,7 +27,7 @@ func init_with_ability(ability, index):
 func set_cooldown_text():
     if node_ability == null:
         return
-    var time_left =node_ability.get_node("TimerCoolDown").get_time_left()
+    var time_left = node_ability.get_node("TimerCoolDown").get_time_left()
     if time_left > 0:
         $LabelCoolDown.set_text(String(ceil(time_left)))
     else:

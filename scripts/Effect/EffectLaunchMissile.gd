@@ -16,8 +16,6 @@ var impact_location = 6                                 # 轰击位置，默认�
 func run():
     if ammo_unit == null:
         return
-    # if launch_effect == null and impact_effect == null:
-    #     return
     .run()
     # 创建发射物实体
     var missile = ammo_unit.instance()

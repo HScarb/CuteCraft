@@ -7,6 +7,9 @@
 
 script = ExtResource( 2 )
 effect = null
-shoot_range = null
+shoot_range = 240.0
+animation_name = "attack"
+cast_frame = 0
+muzzle_index = 0
 
 

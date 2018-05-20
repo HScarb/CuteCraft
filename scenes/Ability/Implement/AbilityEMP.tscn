@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Ability/AbilityEffectTarget.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/Icons/ICONEMP.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Effect/Implement/EMPLaunchMissile.tscn" type="PackedScene" id=3]
+
+[node name="AbilityEMP" instance=ExtResource( 1 )]
+
+icon = ExtResource( 2 )
+ability_name = "EMP"
+effect = ExtResource( 3 )
+
+
