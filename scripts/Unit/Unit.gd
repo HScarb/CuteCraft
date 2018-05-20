@@ -26,6 +26,7 @@ var is_moving = false								# 是否移动中
 var is_attacking = false							# 是否攻击中
 var is_idling = false								# 是否摸鱼中
 var is_tracing = false								# 是否自动寻路中
+var is_casting = false								# 是否在施法中
 var model = null									# 单位模型(包含状态条等)
 var weapon_target = null							# 武器锁定的目标单位
 var scan_target = null								# 单位扫描锁定的目标单位
@@ -180,11 +181,15 @@ func _refresh_face_direction():
 		self.face_direction = Global.FACE_DIRECTION.north_east
 
 func stand():
+	if is_casting:
+		return
 	# 播放站立动画
 	play_stand_animation()
 
 # 使用当前motion移动
 func move():
+	if is_casting:
+		return
 	# 播放移动动画
 	play_move_animation()
 	# 移动
@@ -202,6 +207,8 @@ func weapon_aim(unit):
 
 # 面向当前朝向进行攻击
 func attack():
+	if is_casting:
+		return
 	if $Weapons.get_child_count() <= 0:
 		return
 	# 攻击开始信号

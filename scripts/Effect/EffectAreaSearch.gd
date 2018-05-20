@@ -48,9 +48,10 @@ func run():
     area.position = search_pos
     # 获取碰撞的形状，从而获取碰撞单位
     # area._physics_process()
+    yield(area.get_tree(), "idle_frame")
     yield(area.get_tree(), "physics_frame")
     var overlapping_areas = area.get_overlapping_areas()
-    print("area search target: ", overlapping_areas)
+    print("Area searched area: ", overlapping_areas)
     for area in overlapping_areas:
         if area == launch_unit.get_node("BodyArea") and not include_self:
             continue
@@ -60,4 +61,8 @@ func run():
     #   传递目标数据，目标单位是搜索到的单位
     trans_target_data(sub_effect)
     sub_effect.run()
-    # area.queue_free()
+    area.queue_free()
+    SignalManager.emit_signal("effect_stop", self)
+
+func printu(unit):
+	print(unit)

@@ -4,19 +4,24 @@ extends "res://scripts/Ability/Ability.gd"
 
 export(PackedScene) var effect
 export(float) var shoot_range = 240              # 施法距离
-export(String) var animation_name = "attack"    # 施法动画名称
-export(int) var cast_frame = 0                  # 施法前摇帧数(如果有施法动画)
 export(int) var muzzle_index = 0                # 炮口编号
-    
+
 # override
 func run_effect():
     # 发送全局消息: ability_start
     .run_effect()
     if effect == null:
         return
+    if animation_name != null:
+        logicRoot.is_casting = true
+        logicRoot.emit_signal("play_animation", animation_name)
+    if cast_frame >= 0:
+        yield(logicRoot.model, "reach_attack_frame_%d" % muzzle_index)
     var new_effect = effect.instance()
     trans_target_data(new_effect)
     new_effect.run()
+    yield(logicRoot.model.get_animated_sprite(), "animation_finished")
+    logicRoot.is_casting = false
 
 # 计算技能目标点位置
 func calc_target_point():

@@ -16,6 +16,8 @@ signal ability_prepare_stop(ability)        # 技能准备结束
 
 signal effect_start(effect)                 # 效果开启
 
+signal effect_stop(effect)                  # 效果关闭
+
 signal behavior_on(behavior)                # 行为开启
 
 signal behavior_off(behavior)               # 行为关闭

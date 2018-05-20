@@ -48,7 +48,7 @@ func trans_target_data(sub_effect):
 # 刷新目标数据
 func refresh_target_data():
 	# 初始化目标数据
-	self.origin_point = logicRoot
+	self.origin_unir = logicRoot
 	self.origin_point = logicRoot.position
 	self.source_unit = logicRoot
 	self.source_point = logicRoot.position

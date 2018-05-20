@@ -3,10 +3,10 @@
 extends "res://scripts/Model/Model.gd"
 
 # 多炮孔位置武器的信号不同
-signal reach_damage_frame_0
-signal reach_damage_frame_1
-signal reach_damage_frame_2
-signal reach_damage_frame_3
+signal reach_attack_frame_0
+signal reach_attack_frame_1
+signal reach_attack_frame_2
+signal reach_attack_frame_3
 
 # 用Unit初始化ModelUnit
 func init_by_unit(unit):
@@ -97,4 +97,4 @@ func _on_AnimatedSprite_frame_changed():
 	for weapon in logicRoot.get_weapons():
 		if $AnimatedSprite.animation.begins_with("attack"):
 			if $AnimatedSprite.frame == weapon.damage_frame:
-				emit_signal("reach_damage_frame_%d" % weapon.muzzle_index)
+				emit_signal("reach_attack_frame_%d" % weapon.muzzle_index)

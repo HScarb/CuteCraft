@@ -8,6 +8,7 @@
 
 icon = ExtResource( 2 )
 ability_name = "EMP"
+cast_frame = 1
 effect = ExtResource( 3 )
 
 

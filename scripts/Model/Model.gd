@@ -48,6 +48,9 @@ func get_playing_animation():
 func is_playing():
 	return $AnimatedSprite.is_playing()
 
+func get_animated_sprite():
+	return $AnimatedSprite
+
 func modify_by_direction(direction):
 	var scale = $AnimatedSprite.get_scale()
 	match direction:

@@ -9,6 +9,9 @@ export(float) var cost_enegy = 0            # 能量消耗
 export(float) var time_start = 0            # 起始冷却
 export(float) var time_use = 1              # 技能冷却时间
 export(float) var time_prepare = 0          # 读条时间      ***
+export(String) var animation_name = null    # 施法动画名称
+export(int) var cast_frame = 0              # 施法前摇帧数(如果有施法动画)
+
 
 export(float) var can_fire = true setget set_can_fire, get_can_fire # 是否可以释放
 
@@ -95,7 +98,7 @@ func trans_target_data(sub_effect):
 # 每次攻击都刷新目标数据
 func refresh_target_data():
 	# 初始化目标数据
-	self.origin_point = logicRoot
+	self.origin_unit = logicRoot
 	self.origin_point = logicRoot.position
 	self.source_unit = logicRoot
 	if ClassDB.class_get_property(self, "shoot_range") != null:

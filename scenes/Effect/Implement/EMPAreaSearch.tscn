@@ -7,5 +7,6 @@
 
 radius = 100.0
 effect = ExtResource( 2 )
+launch_location = 5
 
 

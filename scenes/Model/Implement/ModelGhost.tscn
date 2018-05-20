@@ -15,7 +15,7 @@ scale_factor = 0.5
 position = Vector2( 0, -30 )
 scale = Vector2( 0.5, 0.5 )
 frames = ExtResource( 3 )
-animation = "attack_7"
+animation = "attack_0"
 
 [node name="Muzzle_0" type="Position2D" parent="Muzzles" index="0"]
 
