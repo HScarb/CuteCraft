@@ -60,4 +60,4 @@ func run():
     #   传递目标数据，目标单位是搜索到的单位
     trans_target_data(sub_effect)
     sub_effect.run()
-    area.queue_free()
+    # area.queue_free()

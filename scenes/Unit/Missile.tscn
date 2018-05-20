@@ -13,11 +13,13 @@ radius = 30.0
 collision_layer = 8
 collision_mask = 4
 script = ExtResource( 2 )
-life = 1
-life_max = 1
-enegy = 0
-enegy_max = 0
+life = 1.0
+life_max = 1.0
+enegy = 0.0
+enegy_max = 0.0
 radius = 0.0
+speed = 800.0
+attack_radius = 0.0
 
 [node name="FSM2D" parent="." index="0"]
 

@@ -40,6 +40,7 @@ signal stop_animation
 signal attack_begin
 
 var class_hero = load("res://scripts/Unit/Hero.gd")
+var class_missile = load("res://scripts/Unit/Missile.gd")
 var class_attr = load("res://scripts/Unit/UnitAttr.gd")
 
 func _init_attr_table():
@@ -198,12 +199,6 @@ func weapon_aim(unit):
 		is_attacking = true
 		if scan_target == null:
 			scan_target = unit
-		# 修改单位朝向角度
-		# var rad = target_pos.angle_to_point(position)
-		# face_angle = rad
-		# _refresh_face_direction()
-		# 攻击
-		# attack()
 
 # 面向当前朝向进行攻击
 func attack():
@@ -399,15 +394,13 @@ func get_on_attack_end_condi():
 func get_on_move_condi():
 	if is_dead:
 		return false
-	if motion.length() > 0.01:
+	if motion.length() > 0.0001:
 		return true
 	return false
 
 # virtual 移动状态结束条件
 func get_on_move_end_condi():
-	if abs(motion.length()) < 0.01:
-		return true
-	return false
+	return abs(motion.length()) < 0.0001
 
 # virtual 闲置状态开启条件
 func get_on_idle_condi():

@@ -26,7 +26,7 @@ autostart = false
 
 process_mode = 1
 wait_time = 1.0
-one_shot = false
+one_shot = true
 autostart = false
 
 [node name="TimerPrepare" type="Timer" parent="." index="2"]
