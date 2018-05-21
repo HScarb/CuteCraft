@@ -7,7 +7,7 @@
 [node name="ModelRoach" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+scale_factor = 0.6
 
 [node name="AnimatedSprite" parent="." index="0"]
 

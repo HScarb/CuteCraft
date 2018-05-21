@@ -55,7 +55,7 @@ func run():
     missile.position = map_pos
     # 命令发射物移动
     #   根据单位当前的面向角度设置发射物的速度
-    var motion = Vector2(cos(unit_launch.face_angle), sin(unit_launch.face_angle) / 2)
+    var motion = Vector2(cos(unit_launch.face_angle), sin(unit_launch.face_angle) * Global.Y_ZOOM)
     missile.motion = motion.normalized()
     missile.refresh_face_angel_by_motion()
     missile.modify_by_direction()

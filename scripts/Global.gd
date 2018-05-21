@@ -9,7 +9,7 @@ const DESIGN_SCREEN_SIZE = Vector2(1920, 1080)
 const MOTION_SPEED = 250
 
 const X_ZOOM = 1
-const Y_ZOOM = 0.5 
+const Y_ZOOM = 1
 
 const Z_INDEX_UNIT = 2
 const PLAYER_SUM = 8
@@ -71,11 +71,11 @@ var MASK_MISSILE = 8
 ###### 全局函数 ######
 # 等视角坐标转换成笛卡尔坐标
 func iso_2_cart(pos):
-    return Vector2(pos.x, pos.y * 2)
+    return Vector2(pos.x, pos.y / Y_ZOOM)
 
 # 笛卡尔坐标转换成等视角坐标
 func cart_2_iso(pos):
-    return Vector2(pos.x, pos.y / 2)
+    return Vector2(pos.x, pos.y * Y_ZOOM)
 
 # 将角度转换成godot坐标系的角度
 func deg_2_godot(degree):
