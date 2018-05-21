@@ -35,6 +35,7 @@ func create_unit(type_name, pos):
 func add_unit(unit):
     arr_unit.append(unit)
 
+# 移除单位
 func remove_unit(unit):
     arr_unit.erase(unit)
     if unit == main_character:

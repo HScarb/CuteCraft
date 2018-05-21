@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Model/ModelUnit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Model/ModelUnit.gd" type="Script" id=2]
+[ext_resource path="res://frames/ultralisk/ultralisk.tres" type="SpriteFrames" id=3]
+
+[node name="ModelUltralisk" instance=ExtResource( 1 )]
+
+position = Vector2( 0, 0 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+scale_factor = 0.8
+
+[node name="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( 0, -30 )
+scale = Vector2( 0.8, 0.8 )
+frames = ExtResource( 3 )
+animation = "attack_7"
+frame = 4
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="Muzzles" parent="." index="1"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Muzzle_0" type="Position2D" parent="Muzzles" index="0"]
+
+position = Vector2( 60, 4.28217 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Muzzle_1" type="Position2D" parent="Muzzles" index="1"]
+
+position = Vector2( 43.3915, 16.4095 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Muzzle_2" type="Position2D" parent="Muzzles" index="2"]
+
+position = Vector2( -0.847076, 21.7421 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Muzzle_3" type="Position2D" parent="Muzzles" index="3"]
+
+position = Vector2( -43.0552, 14.773 )
+
+[node name="Muzzle_4" type="Position2D" parent="Muzzles" index="4"]
+
+position = Vector2( -57.0594, 0.177412 )
+
+[node name="Muzzle_5" type="Position2D" parent="Muzzles" index="5"]
+
+position = Vector2( -62.2052, -45.9556 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Muzzle_6" type="Position2D" parent="Muzzles" index="6"]
+
+position = Vector2( 0, -70 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Muzzle_7" type="Position2D" parent="Muzzles" index="7"]
+
+position = Vector2( 63.6745, -44.6376 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="LifeBar" parent="." index="2"]
+
+margin_left = -82.0
+margin_top = -110.0
+margin_right = 59.0
+margin_bottom = -102.0
+rect_scale = Vector2( 0.7, 0.7 )
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Textures" ]
+
+[node name="EnegyBar" parent="." index="3"]
+
+margin_left = -82.0
+margin_top = -104.0
+margin_right = 59.0
+margin_bottom = -96.0
+rect_scale = Vector2( 0.7, 0.7 )
+
+

@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/Unit/Implement/StalkerMissile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Effect/Implement/WeaponStalkerDamage.tscn" type="PackedScene" id=3]
 
-[node name="StalkerLaunchMissile" instance=ExtResource( 1 )]
+[node name="StalkerLaunchMissile" index="0" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Pause" ]
 ammo_unit = ExtResource( 2 )

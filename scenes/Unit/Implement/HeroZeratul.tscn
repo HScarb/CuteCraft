@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Unit/Hero.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Weapon/Implement/WeaponZeratul.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 24.0
+height = 40.0
+
+[node name="HeroZeratul" instance=ExtResource( 1 )]
+
+is_main_character = true
+life = 80.0
+life_max = 80.0
+enegy = 0.0
+enegy_max = 0.0
+radius = 18.0
+speed = 270.0
+
+[node name="FSM2D" parent="." index="0"]
+
+editor/display_folded = true
+
+[node name="BodyShape" parent="BodyArea" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="WeaponZeratul" parent="Weapons" index="0" instance=ExtResource( 2 )]
+
+

@@ -7,7 +7,6 @@
 [node name="ActorAttackRoach" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-check_type_name = null
 impact_model = ExtResource( 3 )
 impact_location = 6
 

@@ -12,13 +12,9 @@ height = 40.0
 [node name="HeroZealot" instance=ExtResource( 1 )]
 
 is_main_character = true
-life = 80
-life_max = 80
-enegy = 0
-enegy_max = 0
 radius = 18.0
 speed = 225.0
-weapon_path = NodePath("WeaponZealot")
+attack_radius = 80.0
 
 [node name="FSM2D" parent="." index="0"]
 
@@ -28,6 +24,8 @@ editor/display_folded = true
 
 shape = SubResource( 1 )
 
-[node name="WeaponZealot" parent="." index="4" instance=ExtResource( 2 )]
+[node name="WeaponZealot" parent="Weapons" index="0" instance=ExtResource( 2 )]
+
+muzzle_index = 0
 
 
