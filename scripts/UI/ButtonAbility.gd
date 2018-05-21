@@ -4,7 +4,7 @@
 extends TextureRect
 
 var ability_shortcut = null                                    # 该技能按钮的快捷键
-var node_ability = null                                         # 该按钮对应的技能
+var node_ability = null                                        # 该按钮对应的技能
 
 func init():
     pass
@@ -25,6 +25,8 @@ func init_with_ability(ability, index):
     pass
 
 func set_cooldown_text():
+    if UnitManager.get_main_character() == null:
+        set_process(false)
     if node_ability == null:
         return
     var time_left = node_ability.get_node("TimerCoolDown").get_time_left()

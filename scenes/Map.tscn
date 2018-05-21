@@ -64,6 +64,7 @@ _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
 position = Vector2( 680, 400 )
 stand_after_attack = false
+player = 5
 
 [node name="HeroBaneling" parent="walls" index="1" instance=ExtResource( 4 )]
 

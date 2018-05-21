@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Unit/Hero.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Ability/Implement/AbilityEMP.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Weapon/Implement/WeaponGhost.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Ability/Implement/AbilityStimPack.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Weapon/Implement/WeaponGhost.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -108,7 +109,12 @@ editor/display_folded = true
 
 time_use = 2.0
 
-[node name="WeaponGhost" parent="Weapons" index="0" instance=ExtResource( 3 )]
+[node name="AbilityStimPack" parent="Abilities" index="1" instance=ExtResource( 3 )]
+
+animation_name = null
+cast_frame = 0
+
+[node name="WeaponGhost" parent="Weapons" index="0" instance=ExtResource( 4 )]
 
 muzzle_index = 0
 

@@ -40,6 +40,7 @@ signal play_animation(anim_name)
 signal stop_animation
 signal attack_begin
 
+var class_unit = load("res://scripts/Unit/Unit.gd")
 var class_hero = load("res://scripts/Unit/Hero.gd")
 var class_missile = load("res://scripts/Unit/Missile.gd")
 var class_attr = load("res://scripts/Unit/UnitAttr.gd")
@@ -268,6 +269,7 @@ func die():
 
 # 死亡动画播放完成调用
 func dead():
+	UnitManager.remove_unit(self)
 	self.queue_free()
 
 ###### 武器技能和行为操作 ######
@@ -435,9 +437,10 @@ func _on_WeaponArea_area_entered(area):
 	if weapon_target != null:
 		return
 	if area != $BodyArea:
-		if area.get_parent() is load("res://scripts/Unit/Unit.gd"):
-			# 设置武器锁定目标
-			weapon_aim(area.get_parent())
+		if area.get_parent() is class_unit:
+			if not Global.is_ally(player, area.get_parent().player):
+				# 设置武器锁定目标
+				weapon_aim(area.get_parent())
 
 # 单位离开武器扫描范围
 func _on_WeaponArea_area_exited(area):
@@ -453,10 +456,13 @@ func _on_ScanArea_area_entered(area):
 		return
 	if scan_target != null:
 		return
+	# 如果不是自身
 	if area != $BodyArea:
-		if area.get_parent() is load("res://scripts/Unit/Unit.gd"):
-			scan_target = area.get_parent()
-			UnitManager.add_tracing_unit(self)
+		if area.get_parent() is class_unit:
+			# 如果不是同队
+			if not Global.is_ally(player, area.get_parent().player):
+				scan_target = area.get_parent()
+				UnitManager.add_tracing_unit(self)
 
 # 单位离开警戒扫描范围
 func _on_ScanArea_area_exited(area):

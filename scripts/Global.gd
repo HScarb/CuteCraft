@@ -12,6 +12,7 @@ const X_ZOOM = 1
 const Y_ZOOM = 0.5 
 
 const Z_INDEX_UNIT = 2
+const PLAYER_SUM = 8
 
 var FACE_DIRECTION = {
     "east": 0,
@@ -53,6 +54,9 @@ var PROPERTY = {
 var ABILITY_SHORTCUT = [
     "Q", "W", "E", "R"
 ]
+
+var T1_PLAYERS = [1,2,3,4]              # 队伍1中的玩家
+var T2_PLAYERS = [5,6,7,8]              # 队伍2中的玩家
 
 ###### 全局路径常量 ######
 const ACTOR_DIR = "res://scenes/Actor/Implement/"
@@ -98,3 +102,22 @@ func get_node_name(node):
     var file_name = node.get_filename()
     file_name = file_name.get_basename().get_file()
     return file_name
+
+# 根据玩家编号获取玩家所在的队伍
+func get_player_team(player):
+    var team = -1
+    if T1_PLAYERS.has(player):
+        team = 1
+    elif T2_PLAYERS.has(player):
+        team = 2
+    return team
+
+# 判断两个玩家是否是同队
+func is_ally(player1, player2):
+    if player1 == null or player2 == null:
+        return false
+    var player1_team = get_player_team(player1)
+    var player2_team = get_player_team(player2)
+    if player1_team == player2_team:
+        return true
+    return false

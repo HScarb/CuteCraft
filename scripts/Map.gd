@@ -19,7 +19,7 @@ func _ready():
 func _input(event):
 	if not event.is_action_pressed("click"):
 		return
-	_update_navigation_path(UnitManager.get_main_character().position, get_local_mouse_position())
+	#_update_navigation_path(UnitManager.get_main_character().position, get_local_mouse_position())
 
 func _update_navigation_path(start_position, end_position):
 	# get_simple_path is part of the Navigation2D class

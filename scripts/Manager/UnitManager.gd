@@ -35,6 +35,11 @@ func create_unit(type_name, pos):
 func add_unit(unit):
     arr_unit.append(unit)
 
+func remove_unit(unit):
+    arr_unit.erase(unit)
+    if unit == main_character:
+        main_character = null
+
 # 获取所有单位
 func get_all_units():
     return self.arr_unit

@@ -14,7 +14,7 @@ use_filter = false
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="ButtonAbility" type="TextureRect"]
+[node name="ButtonAbility" type="TextureRect" index="0"]
 
 self_modulate = Color( 0, 0.686275, 1, 0.392157 )
 anchor_left = 0.0
