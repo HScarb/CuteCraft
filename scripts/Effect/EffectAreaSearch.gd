@@ -52,10 +52,12 @@ func run():
     yield(area.get_tree(), "physics_frame")
     var overlapping_areas = area.get_overlapping_areas()
     print("Area searched area: ", overlapping_areas)
+    print(launch_unit)
     for area in overlapping_areas:
         if area == launch_unit.get_node("BodyArea") and not include_self:
             continue
         arr_search_unit.append(area.get_parent())
+    print("arr_search_unit: ", arr_search_unit)
     # 运行子效果
     var sub_effect = effect.instance()
     #   传递目标数据，目标单位是搜索到的单位
@@ -63,6 +65,3 @@ func run():
     sub_effect.run()
     area.queue_free()
     SignalManager.emit_signal("effect_stop", self)
-
-func printu(unit):
-	print(unit)
