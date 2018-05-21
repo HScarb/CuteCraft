@@ -1,0 +1,104 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Unit/Unit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Weapon/Implement/WeaponImmortal.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 44.0
+height = 34.0
+
+[node name="HeroImmortal" instance=ExtResource( 1 )]
+
+is_main_character = true
+life = 200.0
+life_max = 200.0
+enegy = 0.0
+enegy_max = 0.0
+radius = 30.0
+speed = 225.0
+
+[node name="FSM2D" parent="." index="0"]
+
+editor/display_folded = true
+GraphData = {
+"ATTACK": Vector2( 1078, 507 ),
+"ATTACK_": Vector2( 1078, 507 ),
+"ATTACK__": Vector2( 931, 444 ),
+"DEAD": Vector2( 428, 804 ),
+"DEAD_": Vector2( 428, 804 ),
+"DEAD__": Vector2( 415, 793 ),
+"IDLE": Vector2( 489, 84 ),
+"IDLE_": Vector2( 489, 84 ),
+"IDLE__": Vector2( 489, 84 ),
+"MOVE": Vector2( 17, 430 ),
+"MOVE_": Vector2( 17, 430 ),
+"MOVE__": Vector2( 17, 430 ),
+"STAND": Vector2( 443, 451 ),
+"STAND_": Vector2( 443, 451 ),
+"STAND__": Vector2( 438, 442 ),
+"on_attack": Vector2( 750, 263 ),
+"on_attack_": Vector2( 750, 263 ),
+"on_attack__": Vector2( 694, 372 ),
+"on_attack_end": Vector2( 683, 482 ),
+"on_attack_end_": Vector2( 683, 482 ),
+"on_attack_end__": Vector2( 683, 482 ),
+"on_die": Vector2( 415, 604 ),
+"on_die2": Vector2( 451, 639 ),
+"on_die2_": Vector2( 451, 639 ),
+"on_die2__": Vector2( 451, 639 ),
+"on_die_": Vector2( 415, 604 ),
+"on_die__": Vector2( 415, 604 ),
+"on_idle": Vector2( 382, 247 ),
+"on_idle_": Vector2( 382, 247 ),
+"on_idle__": Vector2( 382, 247 ),
+"on_idle_end": Vector2( 551, 258 ),
+"on_idle_end_": Vector2( 551, 258 ),
+"on_idle_end__": Vector2( 551, 258 ),
+"on_move": Vector2( 198, 342 ),
+"on_move_": Vector2( 198, 342 ),
+"on_move__": Vector2( 198, 342 ),
+"on_move_end": Vector2( 116, 579 ),
+"on_move_end_": Vector2( 116, 579 ),
+"on_move_end__": Vector2( 216, 515 ),
+"state1": Vector2( 310, 103 ),
+"state1_": Vector2( 310, 103 ),
+"state1__": Vector2( 310, 103 ),
+"state2": Vector2( 299, 425 ),
+"state2_": Vector2( 299, 425 ),
+"state2__": Vector2( 263, 422 ),
+"t_attack": Vector2( 722, 368 ),
+"t_attack_": Vector2( 722, 368 ),
+"t_attack__": Vector2( 722, 368 ),
+"t_die": Vector2( 127, 529 ),
+"t_die_": Vector2( 127, 529 ),
+"t_die__": Vector2( 127, 529 ),
+"t_idle": Vector2( 914, 525 ),
+"t_idle_": Vector2( 914, 525 ),
+"t_idle__": Vector2( 914, 525 ),
+"trans1": Vector2( 305, 267 ),
+"trans1_": Vector2( 305, 267 ),
+"trans1__": Vector2( 289, 249 ),
+"trans2": Vector2( 641, 256 ),
+"trans2_": Vector2( 641, 256 ),
+"trans2__": Vector2( 641, 256 )
+}
+
+[node name="BodyArea" parent="." index="2"]
+
+position = Vector2( 0, -40 )
+
+[node name="BodyShape" parent="BodyArea" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="WeaponImmortal" parent="Weapons" index="0" instance=ExtResource( 2 )]
+
+muzzle_index = 0
+
+[node name="WeaponImmortal12" parent="Weapons" index="1" instance=ExtResource( 2 )]
+
+muzzle_index = 1
+
+
