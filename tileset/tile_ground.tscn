@@ -1,0 +1,702 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://images/Terrain/M_Terrain_LightGrass.png" type="Texture" id=1]
+[ext_resource path="res://images/Terrain/M_Terrain_Dirt.png" type="Texture" id=2]
+[ext_resource path="res://images/Terrain/M_Terrain_DarkGrass.png" type="Texture" id=3]
+[ext_resource path="res://images/Terrain/Terrain_Sand.png" type="Texture" id=4]
+[ext_resource path="res://images/Terrain/Terrain_Snow.png" type="Texture" id=5]
+[ext_resource path="res://images/Terrain/Terrain_Snow2.png" type="Texture" id=6]
+[ext_resource path="res://images/Terrain/zcreep.png" type="Texture" id=7]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=2]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=13]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=22]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=23]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=24]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=25]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=26]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=27]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=28]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=3]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=4]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=5]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=6]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=7]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=8]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=9]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=10]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=11]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=12]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=14]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=15]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=16]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=17]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=18]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=19]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=20]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=21]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[node name="tile_ground" type="Node2D"]
+
+[node name="light_grass_0" type="Sprite" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 128, 128 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 0, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="light_grass_0" index="0"]
+
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="light_grass_1" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 512, 128 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+frame = 1
+region_enabled = true
+region_rect = Rect2( 256, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="light_grass_1" index="0"]
+
+navpoly = SubResource( 2 )
+enabled = true
+
+[node name="light_grass_2" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 896, 128 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+frame = 2
+region_enabled = true
+region_rect = Rect2( 0, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="light_grass_2" index="0"]
+
+navpoly = SubResource( 13 )
+enabled = true
+
+[node name="light_grass_3" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 1280, 128 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+frame = 3
+region_enabled = true
+region_rect = Rect2( 256, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="light_grass_3" index="0"]
+
+navpoly = SubResource( 22 )
+enabled = true
+
+[node name="dirt_0" type="Sprite" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 128, 512 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 0, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dirt_0" index="0"]
+
+navpoly = SubResource( 23 )
+enabled = true
+
+[node name="dirt_1" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 512, 512 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 2
+frame = 1
+region_enabled = true
+region_rect = Rect2( 256, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dirt_1" index="0"]
+
+navpoly = SubResource( 24 )
+enabled = true
+
+[node name="dirt_2" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 896, 512 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 2
+frame = 2
+region_enabled = true
+region_rect = Rect2( 0, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dirt_2" index="0"]
+
+navpoly = SubResource( 25 )
+enabled = true
+
+[node name="dirt_3" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 1280, 512 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 2
+frame = 3
+region_enabled = true
+region_rect = Rect2( 256, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dirt_3" index="0"]
+
+navpoly = SubResource( 26 )
+enabled = true
+
+[node name="dark_grass_0" type="Sprite" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( 128, 896 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 0, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dark_grass_0" index="0"]
+
+navpoly = SubResource( 27 )
+enabled = true
+
+[node name="dark_grass_1" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 512, 896 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 1
+region_enabled = true
+region_rect = Rect2( 256, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dark_grass_1" index="0"]
+
+navpoly = SubResource( 28 )
+enabled = true
+
+[node name="dark_grass_2" type="Sprite" parent="." index="10"]
+
+editor/display_folded = true
+position = Vector2( 896, 896 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+region_enabled = true
+region_rect = Rect2( 0, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dark_grass_2" index="0"]
+
+navpoly = SubResource( 3 )
+enabled = true
+
+[node name="dark_grass_3" type="Sprite" parent="." index="11"]
+
+editor/display_folded = true
+position = Vector2( 1280, 896 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 3
+region_enabled = true
+region_rect = Rect2( 256, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dark_grass_3" index="0"]
+
+navpoly = SubResource( 4 )
+enabled = true
+
+[node name="sand_0" type="Sprite" parent="." index="12"]
+
+editor/display_folded = true
+position = Vector2( 128, 1280 )
+texture = ExtResource( 4 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 0, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="sand_0" index="0"]
+
+navpoly = SubResource( 5 )
+enabled = true
+
+[node name="sand_1" type="Sprite" parent="." index="13"]
+
+editor/display_folded = true
+position = Vector2( 512, 1280 )
+texture = ExtResource( 4 )
+vframes = 2
+hframes = 2
+frame = 1
+region_enabled = true
+region_rect = Rect2( 256, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="sand_1" index="0"]
+
+navpoly = SubResource( 6 )
+enabled = true
+
+[node name="sand_2" type="Sprite" parent="." index="14"]
+
+editor/display_folded = true
+position = Vector2( 896, 1280 )
+texture = ExtResource( 4 )
+vframes = 2
+hframes = 2
+frame = 2
+region_enabled = true
+region_rect = Rect2( 0, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="sand_2" index="0"]
+
+navpoly = SubResource( 7 )
+enabled = true
+
+[node name="sand_3" type="Sprite" parent="." index="15"]
+
+editor/display_folded = true
+position = Vector2( 1280, 1280 )
+texture = ExtResource( 4 )
+vframes = 2
+hframes = 2
+frame = 3
+region_enabled = true
+region_rect = Rect2( 256, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="sand_3" index="0"]
+
+navpoly = SubResource( 8 )
+enabled = true
+
+[node name="snow_0" type="Sprite" parent="." index="16"]
+
+position = Vector2( 128, 1664 )
+texture = ExtResource( 5 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 0, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow_0" index="0"]
+
+navpoly = SubResource( 9 )
+enabled = true
+
+[node name="snow_1" type="Sprite" parent="." index="17"]
+
+position = Vector2( 512, 1664 )
+texture = ExtResource( 5 )
+vframes = 2
+hframes = 2
+frame = 1
+region_enabled = true
+region_rect = Rect2( 256, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow_1" index="0"]
+
+navpoly = SubResource( 10 )
+enabled = true
+
+[node name="snow_2" type="Sprite" parent="." index="18"]
+
+position = Vector2( 896, 1664 )
+texture = ExtResource( 5 )
+vframes = 2
+hframes = 2
+frame = 2
+region_enabled = true
+region_rect = Rect2( 0, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow_2" index="0"]
+
+navpoly = SubResource( 11 )
+enabled = true
+
+[node name="snow_3" type="Sprite" parent="." index="19"]
+
+position = Vector2( 1280, 1664 )
+texture = ExtResource( 5 )
+vframes = 2
+hframes = 2
+frame = 3
+region_enabled = true
+region_rect = Rect2( 256, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow_3" index="0"]
+
+navpoly = SubResource( 12 )
+enabled = true
+
+[node name="snow2_0" type="Sprite" parent="." index="20"]
+
+editor/display_folded = true
+position = Vector2( 128, 2048 )
+texture = ExtResource( 6 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 0, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow2_0" index="0"]
+
+navpoly = SubResource( 14 )
+enabled = true
+
+[node name="snow2_1" type="Sprite" parent="." index="21"]
+
+editor/display_folded = true
+position = Vector2( 512, 2048 )
+texture = ExtResource( 6 )
+vframes = 2
+hframes = 2
+frame = 1
+region_enabled = true
+region_rect = Rect2( 256, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow2_1" index="0"]
+
+navpoly = SubResource( 15 )
+enabled = true
+
+[node name="snow2_2" type="Sprite" parent="." index="22"]
+
+editor/display_folded = true
+position = Vector2( 896, 2048 )
+texture = ExtResource( 6 )
+vframes = 2
+hframes = 2
+frame = 2
+region_enabled = true
+region_rect = Rect2( 0, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow2_2" index="0"]
+
+navpoly = SubResource( 16 )
+enabled = true
+
+[node name="snow2_3" type="Sprite" parent="." index="23"]
+
+editor/display_folded = true
+position = Vector2( 1280, 2048 )
+texture = ExtResource( 6 )
+vframes = 2
+hframes = 2
+frame = 3
+region_enabled = true
+region_rect = Rect2( 256, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow2_3" index="0"]
+
+navpoly = SubResource( 17 )
+enabled = true
+
+[node name="creep_0" type="Sprite" parent="." index="24"]
+
+editor/display_folded = true
+position = Vector2( 128, 2432 )
+texture = ExtResource( 7 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 0, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="creep_0" index="0"]
+
+navpoly = SubResource( 18 )
+enabled = true
+
+[node name="creep_1" type="Sprite" parent="." index="25"]
+
+editor/display_folded = true
+position = Vector2( 512, 2432 )
+texture = ExtResource( 7 )
+vframes = 2
+hframes = 2
+frame = 1
+region_enabled = true
+region_rect = Rect2( 256, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="creep_1" index="0"]
+
+navpoly = SubResource( 19 )
+enabled = true
+
+[node name="creep_2" type="Sprite" parent="." index="26"]
+
+editor/display_folded = true
+position = Vector2( 896, 2432 )
+texture = ExtResource( 7 )
+vframes = 2
+hframes = 2
+frame = 2
+region_enabled = true
+region_rect = Rect2( 0, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="creep_2" index="0"]
+
+navpoly = SubResource( 20 )
+enabled = true
+
+[node name="creep_3" type="Sprite" parent="." index="27"]
+
+editor/display_folded = true
+position = Vector2( 1280, 2432 )
+texture = ExtResource( 7 )
+vframes = 2
+hframes = 2
+frame = 3
+region_enabled = true
+region_rect = Rect2( 256, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="creep_3" index="0"]
+
+navpoly = SubResource( 21 )
+enabled = true
+
+

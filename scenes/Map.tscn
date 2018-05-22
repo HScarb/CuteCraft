@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/Map.gd" type="Script" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
-[ext_resource path="res://scenes/Unit/Implement/HeroStalker.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Unit/Implement/HeroGhost.tscn" type="PackedScene" id=4]
+[ext_resource path="res://tileset/tile_ground.tres" type="TileSet" id=3]
+[ext_resource path="res://scenes/Unit/Implement/HeroStalker.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Unit/Implement/UnitBaneling.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Unit/Implement/HeroGhost.tscn" type="PackedScene" id=6]
+[ext_resource path="res://tileset/tile_doodle.tres" type="TileSet" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -12,7 +14,7 @@ vertices = PoolVector2Array( 1337.89, 117.402, 1600, -20, 1710, 30, 1402.11, 189
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8, 9, 10 ), PoolIntArray( 11, 12, 13, 14 ), PoolIntArray( 15, 16, 17, 18 ), PoolIntArray( 19, 11, 14, 20, 18 ), PoolIntArray( 21, 10, 9, 22 ), PoolIntArray( 23, 24, 21, 22, 0, 4 ), PoolIntArray( 20, 25, 26, 27, 28 ), PoolIntArray( 29, 30, 24, 23, 19 ), PoolIntArray( 20, 28, 15, 18 ), PoolIntArray( 19, 18, 29 ), PoolIntArray( 31, 32, 33, 34, 35 ), PoolIntArray( 31, 35, 36 ) ]
 outlines = [ PoolVector2Array( 381.07, 202.186, 210, 290, 700, 530, 1272.13, 251.712, 1280.71, 191.323, 1344.22, 158.791, 1402.11, 189.602, 1710, 30, 1600, -20, 1337.89, 117.402, 1250.45, 68.4351, 1280, -10, 1440, -90, 1210, -200, 910, -50, 947.65, 17.8222, 1022.01, 53.4518, 1172.24, 67.7356, 1171.54, 120.2, 1114.95, 141.751, 1123.27, 209.74, 1057.52, 210.44, 1054.72, 157.975, 860.9, 50.3535, 852.135, 96.2764, 797.571, 78.0886, 789.177, 30.8003, 756.999, 16.1101, 500, 140, 521.956, 204.284, 442.209, 239.96 ), PoolVector2Array( 1550, 430, 480, 960, 1020, 1760, 2770, 1540, 2870, 290, 2720, -210 ) ]
 
-[node name="Map" type="Navigation2D"]
+[node name="Map" type="Navigation2D" index="0"]
 
 z_index = -2
 script = ExtResource( 1 )
@@ -39,7 +41,28 @@ format = 1
 tile_data = PoolIntArray( -851962, 1, 0, -851961, 1, 0, -851960, 1, 0, -851959, 1, 0, -851958, 1, 0, -851957, 1, 0, -851956, 0, 0, -851955, 0, -1200553578, -851954, 0, -1200553578, -786426, 1, 0, -786425, 1, 0, -786424, 1, 0, -786423, 1, 0, -786422, 1, 0, -786421, 1, 0, -786420, 1, 0, -786419, 0, -1200553578, -786418, 0, -1200553578, -720890, 1, 0, -720889, 1, 0, -720888, 1, 0, -720887, 1, 0, -720886, 1, 0, -720885, 1, 0, -720884, 0, 0, -720883, 0, -1200553578, -720882, 0, -1200553578, -655354, 1, 0, -655353, 1, 0, -655352, 1, 0, -655351, 1, 0, -655350, 1, 0, -655349, 1, 0, -655348, 1, 0, -655347, 0, -1200553578, -655346, 0, -1200553578, -589818, 1, 0, -589817, 1, 0, -589816, 1, 0, -589815, 1, 0, -589814, 1, 0, -589813, 1, 0, -589812, 1, 0, -589811, 0, -1200553578, -589810, 0, -1200553578, -524282, 1, 0, -524281, 1, 0, -524280, 1, 0, -524279, 1, 0, -524278, 1, 0, -524277, 1, 0, -524276, 0, 0, -524275, 1, -1200553578, -524274, 0, -1200553578, -458746, 1, 0, -458745, 1, 0, -458744, 1, 0, -458743, 1, 0, -458742, 1, 0, -458741, 1, 0, -458740, 0, 0, -458739, 0, -1200553578, -458738, 0, -1200553578, -393210, 0, 0, -393209, 0, 0, -393208, 0, 0, -393207, 0, 0, -393206, 0, 0, -393205, 0, 0, -393204, 0, 0, -393203, 0, -1200553578, -393202, 0, -1200553578, -327674, 0, -1200553578, -327673, 0, -1200553578, -327672, 1, -1200553578, -327671, 1, -1200553578, -327670, 1, -1200553578, -327669, 1, -1200553578, -327668, 1, -1200553578, -327667, 0, -1200553578, -327666, 0, -1200553578, -262138, 0, -1200553578, -262137, 0, -1200553578, -262136, 0, -1200553578, -262135, 0, -1200553578, -262134, 0, -1200553578, -262133, 0, -1200553578, -262132, 0, -1200553578, -262131, 0, -1200553578, -262130, 0, -1200553578, -196602, 0, -1200553578, -196601, 0, -1200553578, -196600, 0, -1200553578, -196599, 0, 0, -196598, 0, 0, -196597, 0, 0, -196596, 0, 0, -196595, 0, 0, -196594, 0, 0, -131066, 0, -1200553578, -131065, 0, -1200553578, -131064, 0, -1200553578, -131063, 0, 0, -131062, 0, 0, -131061, 1, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -65530, 0, -1200553578, -65529, 0, -1200553578, -65528, 0, -1200553578, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, 6, 0, -1200553578, 7, 1, -1200553578, 8, 0, -1200553578, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 65542, 0, -1200553578, 65543, 0, -1200553578, 65544, 0, -1200553578, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 131078, 0, -1200553578, 131079, 0, -1200553578, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 196614, 0, -1200553578, 196615, 0, -1200553578, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0 )
 _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
-[node name="walls" type="TileMap" parent="." index="1"]
+[node name="ground" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 256, 256 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 15, 0, 1, 15, 0, 2, 15, 0, 3, 13, 0, 4, 13, 0, 65536, 15, 0, 65537, 15, 0, 65538, 15, 0, 65539, 13, 0, 65540, 13, 0, 131072, 14, 0, 131073, 14, 0, 131074, 15, 0, 131075, 13, 0, 131076, 13, 0, 131077, 5, 0, 131078, 5, 0, 131079, 5, 0, 131084, 5, 0, 131085, 5, 0, 196608, 14, 0, 196609, 14, 0, 196610, 15, 0, 196611, 15, 0, 196612, 15, 0, 196613, 6, 0, 196614, 7, 0, 196615, 7, 0, 196617, 5, 0, 196618, 5, 0, 196620, 7, 0, 196621, 7, 0, 262153, 7, 0, 262154, 7, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="walls" type="TileMap" parent="." index="2"]
 
 mode = 1
 tile_set = ExtResource( 2 )
@@ -57,26 +80,46 @@ collision_layer = 2
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -917499, 2, 0, -917498, 2, 0, -917497, 2, 0, -917496, 2, 0, -917495, 2, 0, -917494, 2, 0, -917493, 2, 0, -917492, 2, -1200553578, -917491, 2, -1200553578, -917490, 2, -1200553578, -917489, 2, -1200553578, -851963, 2, 0, -851957, 2, 0, -851956, 3, -1200553578, -851954, 3, -1200553578, -851953, 2, -1200553578, -786427, 2, 0, -786421, 2, -1200553578, -786420, 3, -1200553578, -786418, 3, -1200553578, -786417, 2, -1200553578, -720891, 2, 0, -720885, 2, 0, -720881, 2, -1200553578, -655355, 2, 0, -655349, 2, 0, -655346, 3, -1200553578, -655345, 2, -1200553578, -589819, 2, 0, -589809, 2, -1200553578, -524283, 2, 0, -524273, 2, -1200553578, -458747, 2, 0, -458746, 2, 0, -458745, 2, 0, -458744, 536870916, 0, -458743, 536870916, -1200553578, -458742, 2, 0, -458738, 2, -1200553578, -458737, 2, -1200553578, -393211, 2, 0, -393209, 3, 0, -393205, 3, 0, -393201, 2, -1200553578, -327675, 5, 0, -327665, 2, -1200553578, -262139, 4, 0, -262129, 2, -1200553578, -196603, 2, 0, -196593, 2, 0, -131067, 2, 0, -131057, 2, 0, -65531, 2, 0, -65530, 2, 0, -65521, 2, 0, 5, 2, -1200553578, 15, 2, 0, 65541, 2, -1200553578, 65551, 2, 0, 131077, 2, -1200553578, 131081, 3, 0, 131087, 2, 0, 196613, 2, -1200553578, 196623, 2, 0, 262149, 2, -1200553578, 262150, 2, -1200553578, 262151, 2, -1200553578, 262152, 2, -1200553578, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0 )
+tile_data = PoolIntArray( -917499, 2, 0, -917498, 2, 0, -917497, 2, 0, -917496, 2, 0, -917495, 2, 0, -917494, 2, 0, -917493, 2, 0, -917492, 2, -1200553578, -917491, 2, -1200553578, -917490, 2, -1200553578, -917489, 2, -1200553578, -851963, 2, 0, -851957, 2, 0, -851956, 3, -1200553578, -851954, 3, -1200553578, -851953, 2, -1200553578, -786427, 2, 0, -786421, 2, -1200553578, -786420, 3, -1200553578, -786418, 3, -1200553578, -786417, 2, -1200553578, -720891, 2, 0, -720885, 2, 0, -720881, 2, -1200553578, -655355, 2, 0, -655349, 2, 0, -655346, 3, -1200553578, -655345, 2, -1200553578, -589819, 2, 0, -589809, 2, -1200553578, -524283, 2, 0, -524273, 2, -1200553578, -458747, 2, 0, -458746, 2, 0, -458745, 2, 0, -458744, 536870916, 0, -458743, 536870916, -1200553578, -458742, 2, 0, -458738, 2, -1200553578, -458737, 2, -1200553578, -393211, 2, 0, -393209, 3, 0, -393205, 3, 0, -393201, 2, -1200553578, -327675, 5, 0, -327665, 2, -1200553578, -262139, 4, 0, -262129, 2, -1200553578, -196603, 2, 0, -196593, 2, 0, -131067, 2, 0, -131057, 2, 0, -65531, 2, 0, -65530, 2, 0, -65521, 2, 0, 5, 2, -1200553578, 65541, 2, -1200553578, 131077, 2, -1200553578, 131081, 3, 0, 131087, 2, 0, 196613, 2, -1200553578, 196623, 2, 0, 262149, 2, -1200553578, 262150, 2, -1200553578, 262151, 2, -1200553578, 262152, 2, -1200553578, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0 )
 _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
-[node name="HeroStalker" parent="walls" index="0" instance=ExtResource( 3 )]
+[node name="HeroStalker" parent="walls" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 1510, 70 )
 is_main_character = true
 
-[node name="HeroGhost" parent="walls" index="1" instance=ExtResource( 4 )]
+[node name="UnitBaneling" parent="walls" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 550, 290 )
+player = 5
+speed = 200.0
+attack_radius = 80.0
+
+[node name="UnitBaneling2" parent="walls" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 610, 380 )
+player = 5
+speed = 200.0
+attack_radius = 80.0
+
+[node name="UnitBaneling3" parent="walls" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 750, 410 )
+player = 5
+speed = 200.0
+attack_radius = 80.0
+
+[node name="HeroGhost" parent="walls" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 1190, -150 )
 life_recover = 5.0
 
 [node name="Camera2D" type="Camera2D" parent="walls/HeroGhost" index="9"]
 
-scale = Vector2( 0.5, 0.5 )
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 1, 1 )
+zoom = Vector2( 1.2, 1.2 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
@@ -95,45 +138,46 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing", "Transform" ]
 
-[node name="UnitBaneling" parent="walls" index="2" instance=ExtResource( 5 )]
-
-position = Vector2( 550, 290 )
-player = 5
-speed = 200.0
-attack_radius = 80.0
-
-[node name="UnitBaneling2" parent="walls" index="3" instance=ExtResource( 5 )]
-
-position = Vector2( 610, 380 )
-player = 5
-speed = 200.0
-attack_radius = 80.0
-
-[node name="UnitBaneling3" parent="walls" index="4" instance=ExtResource( 5 )]
-
-position = Vector2( 750, 410 )
-player = 5
-speed = 200.0
-attack_radius = 80.0
-
-[node name="FrontLayer" type="Node2D" parent="." index="2"]
+[node name="FrontLayer" type="Node2D" parent="." index="3"]
 
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
-[node name="NavPolygon" type="NavigationPolygonInstance" parent="." index="3"]
+[node name="NavPolygon" type="NavigationPolygonInstance" parent="." index="4"]
 
+visible = false
 navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
-[node name="TimerTrace" type="Timer" parent="." index="4"]
+[node name="TimerTrace" type="Timer" parent="." index="5"]
 
 process_mode = 1
 wait_time = 0.5
 one_shot = false
 autostart = true
+
+[node name="doodle" type="TileMap" parent="." index="6"]
+
+mode = 0
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 256, 256 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 1
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65537, 0, 0, 65539, 1, 0, 131076, 4, 0, 196608, 0, 0, 196610, 0, 0 )
+_sections_unfolded = [ "Cell" ]
 
 [connection signal="timeout" from="TimerTrace" to="." method="_on_TimerTrace_timeout"]
 
