@@ -7,7 +7,7 @@ var path = []
 
 func _ready():
 	MapManager.set_map(self)
-	MapManager.set_layer_unit($walls)
+	MapManager.set_layer_unit($doodle)
 	MapManager.set_layer_front($FrontLayer)
 	# 将地图上已经摆放的单位添加到单位管理器中
 	for unit in $walls.get_children():
