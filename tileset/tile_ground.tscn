@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://images/Terrain/M_Terrain_LightGrass.png" type="Texture" id=1]
 [ext_resource path="res://images/Terrain/M_Terrain_Dirt.png" type="Texture" id=2]
@@ -7,6 +7,11 @@
 [ext_resource path="res://images/Terrain/Terrain_Snow.png" type="Texture" id=5]
 [ext_resource path="res://images/Terrain/Terrain_Snow2.png" type="Texture" id=6]
 [ext_resource path="res://images/Terrain/zcreep.png" type="Texture" id=7]
+[ext_resource path="res://images/Terrain/Terrain_DryEarth.png" type="Texture" id=8]
+[ext_resource path="res://images/Terrain/Terrain_ScorchedEarth.png" type="Texture" id=9]
+[ext_resource path="res://images/Terrain/TextureLavaBright.png" type="Texture" id=10]
+[ext_resource path="res://images/Terrain/TextureLavaDarker.png" type="Texture" id=11]
+[ext_resource path="res://images/Terrain/water_still.png" type="Texture" id=12]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -15,54 +20,6 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
 
 [sub_resource type="NavigationPolygon" id=2]
-
-vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
-
-[sub_resource type="NavigationPolygon" id=13]
-
-vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
-
-[sub_resource type="NavigationPolygon" id=22]
-
-vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
-
-[sub_resource type="NavigationPolygon" id=23]
-
-vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
-
-[sub_resource type="NavigationPolygon" id=24]
-
-vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
-
-[sub_resource type="NavigationPolygon" id=25]
-
-vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
-
-[sub_resource type="NavigationPolygon" id=26]
-
-vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
-
-[sub_resource type="NavigationPolygon" id=27]
-
-vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
-
-[sub_resource type="NavigationPolygon" id=28]
 
 vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
@@ -128,6 +85,12 @@ vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
 
+[sub_resource type="NavigationPolygon" id=13]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
 [sub_resource type="NavigationPolygon" id=14]
 
 vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
@@ -171,6 +134,96 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
 
 [sub_resource type="NavigationPolygon" id=21]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=22]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=23]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=24]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=25]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=26]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=27]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=28]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=29]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=30]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=31]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=32]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=33]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=34]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=35]
+
+vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=36]
 
 vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
@@ -231,7 +284,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="light_grass_2" index="0"]
 
-navpoly = SubResource( 13 )
+navpoly = SubResource( 3 )
 enabled = true
 
 [node name="light_grass_3" type="Sprite" parent="." index="3"]
@@ -250,7 +303,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="light_grass_3" index="0"]
 
-navpoly = SubResource( 22 )
+navpoly = SubResource( 4 )
 enabled = true
 
 [node name="dirt_0" type="Sprite" parent="." index="4"]
@@ -268,7 +321,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dirt_0" index="0"]
 
-navpoly = SubResource( 23 )
+navpoly = SubResource( 5 )
 enabled = true
 
 [node name="dirt_1" type="Sprite" parent="." index="5"]
@@ -287,7 +340,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dirt_1" index="0"]
 
-navpoly = SubResource( 24 )
+navpoly = SubResource( 6 )
 enabled = true
 
 [node name="dirt_2" type="Sprite" parent="." index="6"]
@@ -306,7 +359,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dirt_2" index="0"]
 
-navpoly = SubResource( 25 )
+navpoly = SubResource( 7 )
 enabled = true
 
 [node name="dirt_3" type="Sprite" parent="." index="7"]
@@ -325,7 +378,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dirt_3" index="0"]
 
-navpoly = SubResource( 26 )
+navpoly = SubResource( 8 )
 enabled = true
 
 [node name="dark_grass_0" type="Sprite" parent="." index="8"]
@@ -343,7 +396,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dark_grass_0" index="0"]
 
-navpoly = SubResource( 27 )
+navpoly = SubResource( 9 )
 enabled = true
 
 [node name="dark_grass_1" type="Sprite" parent="." index="9"]
@@ -362,7 +415,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dark_grass_1" index="0"]
 
-navpoly = SubResource( 28 )
+navpoly = SubResource( 10 )
 enabled = true
 
 [node name="dark_grass_2" type="Sprite" parent="." index="10"]
@@ -381,7 +434,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dark_grass_2" index="0"]
 
-navpoly = SubResource( 3 )
+navpoly = SubResource( 11 )
 enabled = true
 
 [node name="dark_grass_3" type="Sprite" parent="." index="11"]
@@ -400,7 +453,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dark_grass_3" index="0"]
 
-navpoly = SubResource( 4 )
+navpoly = SubResource( 12 )
 enabled = true
 
 [node name="sand_0" type="Sprite" parent="." index="12"]
@@ -418,7 +471,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="sand_0" index="0"]
 
-navpoly = SubResource( 5 )
+navpoly = SubResource( 13 )
 enabled = true
 
 [node name="sand_1" type="Sprite" parent="." index="13"]
@@ -437,7 +490,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="sand_1" index="0"]
 
-navpoly = SubResource( 6 )
+navpoly = SubResource( 14 )
 enabled = true
 
 [node name="sand_2" type="Sprite" parent="." index="14"]
@@ -456,7 +509,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="sand_2" index="0"]
 
-navpoly = SubResource( 7 )
+navpoly = SubResource( 15 )
 enabled = true
 
 [node name="sand_3" type="Sprite" parent="." index="15"]
@@ -475,7 +528,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="sand_3" index="0"]
 
-navpoly = SubResource( 8 )
+navpoly = SubResource( 16 )
 enabled = true
 
 [node name="snow_0" type="Sprite" parent="." index="16"]
@@ -492,7 +545,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow_0" index="0"]
 
-navpoly = SubResource( 9 )
+navpoly = SubResource( 17 )
 enabled = true
 
 [node name="snow_1" type="Sprite" parent="." index="17"]
@@ -510,7 +563,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow_1" index="0"]
 
-navpoly = SubResource( 10 )
+navpoly = SubResource( 18 )
 enabled = true
 
 [node name="snow_2" type="Sprite" parent="." index="18"]
@@ -528,7 +581,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow_2" index="0"]
 
-navpoly = SubResource( 11 )
+navpoly = SubResource( 19 )
 enabled = true
 
 [node name="snow_3" type="Sprite" parent="." index="19"]
@@ -546,7 +599,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow_3" index="0"]
 
-navpoly = SubResource( 12 )
+navpoly = SubResource( 20 )
 enabled = true
 
 [node name="snow2_0" type="Sprite" parent="." index="20"]
@@ -564,7 +617,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow2_0" index="0"]
 
-navpoly = SubResource( 14 )
+navpoly = SubResource( 21 )
 enabled = true
 
 [node name="snow2_1" type="Sprite" parent="." index="21"]
@@ -583,7 +636,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow2_1" index="0"]
 
-navpoly = SubResource( 15 )
+navpoly = SubResource( 22 )
 enabled = true
 
 [node name="snow2_2" type="Sprite" parent="." index="22"]
@@ -602,7 +655,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow2_2" index="0"]
 
-navpoly = SubResource( 16 )
+navpoly = SubResource( 23 )
 enabled = true
 
 [node name="snow2_3" type="Sprite" parent="." index="23"]
@@ -621,7 +674,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="snow2_3" index="0"]
 
-navpoly = SubResource( 17 )
+navpoly = SubResource( 24 )
 enabled = true
 
 [node name="creep_0" type="Sprite" parent="." index="24"]
@@ -639,7 +692,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="creep_0" index="0"]
 
-navpoly = SubResource( 18 )
+navpoly = SubResource( 25 )
 enabled = true
 
 [node name="creep_1" type="Sprite" parent="." index="25"]
@@ -658,7 +711,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="creep_1" index="0"]
 
-navpoly = SubResource( 19 )
+navpoly = SubResource( 26 )
 enabled = true
 
 [node name="creep_2" type="Sprite" parent="." index="26"]
@@ -677,7 +730,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="creep_2" index="0"]
 
-navpoly = SubResource( 20 )
+navpoly = SubResource( 27 )
 enabled = true
 
 [node name="creep_3" type="Sprite" parent="." index="27"]
@@ -696,7 +749,485 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="creep_3" index="0"]
 
-navpoly = SubResource( 21 )
+navpoly = SubResource( 28 )
 enabled = true
+
+[node name="dry_earth_0" type="Sprite" parent="." index="28"]
+
+editor/display_folded = true
+position = Vector2( 128, -256 )
+texture = ExtResource( 8 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 0, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dry_earth_0" index="0"]
+
+navpoly = SubResource( 29 )
+enabled = true
+
+[node name="dry_earth_1" type="Sprite" parent="." index="29"]
+
+editor/display_folded = true
+position = Vector2( 512, -256 )
+texture = ExtResource( 8 )
+vframes = 2
+hframes = 2
+frame = 1
+region_enabled = true
+region_rect = Rect2( 256, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dry_earth_1" index="0"]
+
+navpoly = SubResource( 30 )
+enabled = true
+
+[node name="dry_earth_2" type="Sprite" parent="." index="30"]
+
+editor/display_folded = true
+position = Vector2( 896, -256 )
+texture = ExtResource( 8 )
+vframes = 2
+hframes = 2
+frame = 2
+region_enabled = true
+region_rect = Rect2( 0, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dry_earth_2" index="0"]
+
+navpoly = SubResource( 31 )
+enabled = true
+
+[node name="dry_earth_3" type="Sprite" parent="." index="31"]
+
+editor/display_folded = true
+position = Vector2( 1280, -256 )
+texture = ExtResource( 8 )
+vframes = 2
+hframes = 2
+frame = 3
+region_enabled = true
+region_rect = Rect2( 256, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="dry_earth_3" index="0"]
+
+navpoly = SubResource( 32 )
+enabled = true
+
+[node name="scorched_earth_0" type="Sprite" parent="." index="32"]
+
+editor/display_folded = true
+position = Vector2( 128, -640 )
+texture = ExtResource( 9 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 0, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="scorched_earth_0" index="0"]
+
+navpoly = SubResource( 33 )
+enabled = true
+
+[node name="scorched_earth_1" type="Sprite" parent="." index="33"]
+
+editor/display_folded = true
+position = Vector2( 512, -640 )
+texture = ExtResource( 9 )
+vframes = 2
+hframes = 2
+frame = 1
+region_enabled = true
+region_rect = Rect2( 256, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="scorched_earth_1" index="0"]
+
+navpoly = SubResource( 34 )
+enabled = true
+
+[node name="scorched_earth_2" type="Sprite" parent="." index="34"]
+
+editor/display_folded = true
+position = Vector2( 896, -640 )
+texture = ExtResource( 9 )
+vframes = 2
+hframes = 2
+frame = 2
+region_enabled = true
+region_rect = Rect2( 0, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="scorched_earth_2" index="0"]
+
+navpoly = SubResource( 35 )
+enabled = true
+
+[node name="scorched_earth_3" type="Sprite" parent="." index="35"]
+
+editor/display_folded = true
+position = Vector2( 1280, -640 )
+texture = ExtResource( 9 )
+vframes = 2
+hframes = 2
+frame = 3
+region_enabled = true
+region_rect = Rect2( 256, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="scorched_earth_3" index="0"]
+
+navpoly = SubResource( 36 )
+enabled = true
+
+[node name="lava_bright_0" type="Sprite" parent="." index="36"]
+
+editor/display_folded = true
+position = Vector2( 128, -1024 )
+texture = ExtResource( 10 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 0, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lava_bright_0" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lava_bright_0/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+
+[node name="lava_bright_1" type="Sprite" parent="." index="37"]
+
+editor/display_folded = true
+position = Vector2( 512, -1024 )
+texture = ExtResource( 10 )
+vframes = 2
+hframes = 2
+frame = 1
+region_enabled = true
+region_rect = Rect2( 256, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lava_bright_1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lava_bright_1/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+
+[node name="lava_bright_2" type="Sprite" parent="." index="38"]
+
+editor/display_folded = true
+position = Vector2( 896, -1024 )
+texture = ExtResource( 10 )
+vframes = 2
+hframes = 2
+frame = 2
+region_enabled = true
+region_rect = Rect2( 0, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lava_bright_2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lava_bright_2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+
+[node name="lava_bright_3" type="Sprite" parent="." index="39"]
+
+editor/display_folded = true
+position = Vector2( 1280, -1024 )
+texture = ExtResource( 10 )
+vframes = 2
+hframes = 2
+frame = 3
+region_enabled = true
+region_rect = Rect2( 256, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lava_bright_3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lava_bright_3/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+
+[node name="lava_darker_0" type="Sprite" parent="." index="40"]
+
+editor/display_folded = true
+position = Vector2( 128, -1408 )
+texture = ExtResource( 11 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 0, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lava_darker_0" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lava_darker_0/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+
+[node name="lava_darker_1" type="Sprite" parent="." index="41"]
+
+position = Vector2( 512, -1408 )
+texture = ExtResource( 11 )
+vframes = 2
+hframes = 2
+frame = 1
+region_enabled = true
+region_rect = Rect2( 256, 0, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lava_darker_1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lava_darker_1/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+
+[node name="lava_darker_2" type="Sprite" parent="." index="42"]
+
+editor/display_folded = true
+position = Vector2( 896, -1408 )
+texture = ExtResource( 11 )
+vframes = 2
+hframes = 2
+frame = 2
+region_enabled = true
+region_rect = Rect2( 0, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lava_darker_2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lava_darker_2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+
+[node name="lava_darker_3" type="Sprite" parent="." index="43"]
+
+editor/display_folded = true
+position = Vector2( 1280, -1408 )
+texture = ExtResource( 11 )
+vframes = 2
+hframes = 2
+frame = 3
+region_enabled = true
+region_rect = Rect2( 256, 256, 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lava_darker_3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lava_darker_3/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+
+[node name="water_still_0" type="Sprite" parent="." index="44"]
+
+position = Vector2( 1664, -1408 )
+texture = ExtResource( 12 )
+vframes = 32
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="water_still_0" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_still_0/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+
+[node name="water_still_1" type="Sprite" parent="." index="45"]
+
+position = Vector2( 1664, -1024 )
+texture = ExtResource( 12 )
+vframes = 32
+frame = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="water_still_1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_still_1/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+
+[node name="water_still_2" type="Sprite" parent="." index="46"]
+
+position = Vector2( 1664, -640 )
+texture = ExtResource( 12 )
+vframes = 32
+frame = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="water_still_2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_still_2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
+
+[node name="water_still_3" type="Sprite" parent="." index="47"]
+
+position = Vector2( 1664, -256 )
+texture = ExtResource( 12 )
+vframes = 32
+frame = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="water_still_3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="water_still_3/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
 
 
