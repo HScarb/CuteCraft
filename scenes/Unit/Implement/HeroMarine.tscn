@@ -13,6 +13,7 @@ height = 30.0
 
 [node name="HeroMarine" index="0" instance=ExtResource( 1 )]
 
+is_main_character = true
 stand_after_attack = false
 icon = ExtResource( 2 )
 life = 45.0

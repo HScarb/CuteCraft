@@ -33,7 +33,7 @@ func auto_add_actors():
             if dir.current_is_dir():
                 pass
             else:
-                self.add_actor_by_name(file_name)
+                add_actor_by_name(file_name)
             file_name = dir.get_next()
     else:
         print("An error occurred when trying to access the path.")

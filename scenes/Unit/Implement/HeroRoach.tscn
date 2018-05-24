@@ -12,6 +12,7 @@ height = 50.0
 
 [node name="HeroRoach" index="0" instance=ExtResource( 1 )]
 
+is_main_character = true
 icon = ExtResource( 2 )
 radius = 25.0
 speed = 225.0

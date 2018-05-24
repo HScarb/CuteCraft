@@ -61,6 +61,7 @@ var T2_PLAYERS = [5,6,7,8]              # 队伍2中的玩家
 ###### 全局路径常量 ######
 const ACTOR_DIR = "res://scenes/Actor/Implement/"
 const EFFECT_DIR = "res://scenes/Effect/Implement/"
+const UNIT_DIR = "res://scenes/Unit/Implement/"
 
 ###### Bit Mask ######
 var MASK_UNIT_GROUND = 1

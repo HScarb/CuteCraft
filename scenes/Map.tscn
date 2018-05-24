@@ -1,49 +1,48 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://scripts/Map.gd" type="Script" id=1]
 [ext_resource path="res://tileset/tile_ground.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/Unit/Implement/UnitBaneling.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Unit/Implement/HeroGhost.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Doodle/Cactus1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Doodle/Bones4.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/Doodle/Grass_Hide_Bush3.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/Doodle/Grass_Hide_Bush1.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/Doodle/Grass_Hide_Bush2.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/Doodle/Show_IceIgloo.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/Doodle/Show_BallPile.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/Doodle/Grass_Tree3.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/Doodle/Grass_Tree1.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/Doodle/Grass_Tree2.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/Doodle/Lava_Pit.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/Doodle/Desert_DeadGrass3.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/Doodle/Desert_DeadGrass1.tscn" type="PackedScene" id=17]
-[ext_resource path="res://scenes/Doodle/Desert_DeadGrass2.tscn" type="PackedScene" id=18]
-[ext_resource path="res://scenes/Doodle/Desert_SandStone3.tscn" type="PackedScene" id=19]
-[ext_resource path="res://scenes/Doodle/Desert_SandStone1.tscn" type="PackedScene" id=20]
-[ext_resource path="res://scenes/Doodle/Bones3.tscn" type="PackedScene" id=21]
-[ext_resource path="res://scenes/Doodle/Grass_Cabin.tscn" type="PackedScene" id=22]
-[ext_resource path="res://scenes/Doodle/Grass_PlantRiver1.tscn" type="PackedScene" id=23]
-[ext_resource path="res://scenes/Doodle/Grass_Well1.tscn" type="PackedScene" id=24]
-[ext_resource path="res://scenes/Doodle/Grass_Stump.tscn" type="PackedScene" id=25]
-[ext_resource path="res://scenes/Doodle/Desert_SandMount.tscn" type="PackedScene" id=26]
-[ext_resource path="res://scenes/Doodle/Snow_Pile.tscn" type="PackedScene" id=27]
-[ext_resource path="res://scenes/Doodle/Show_IcePatch1.tscn" type="PackedScene" id=28]
-[ext_resource path="res://scenes/Doodle/Grass_DeadColossus.tscn" type="PackedScene" id=29]
-[ext_resource path="res://scenes/Doodle/Desert_Tumbleweed.tscn" type="PackedScene" id=30]
-[ext_resource path="res://scenes/Doodle/Grass_DirtMound.tscn" type="PackedScene" id=31]
-[ext_resource path="res://scenes/Doodle/Grass_PlantColor1.tscn" type="PackedScene" id=32]
-[ext_resource path="res://scenes/Doodle/Grass_PlantColor2.tscn" type="PackedScene" id=33]
-[ext_resource path="res://scenes/Doodle/Grass_GrassPatch1.tscn" type="PackedScene" id=34]
-[ext_resource path="res://scenes/Doodle/Grass_GrassPatch2.tscn" type="PackedScene" id=35]
-[ext_resource path="res://scenes/Doodle/Show_IcePatch2.tscn" type="PackedScene" id=36]
-[ext_resource path="res://scenes/Doodle/Show_Man.tscn" type="PackedScene" id=37]
-[ext_resource path="res://scenes/Doodle/Desert_House.tscn" type="PackedScene" id=38]
-[ext_resource path="res://scenes/Doodle/Desert_Cactus3.tscn" type="PackedScene" id=39]
-[ext_resource path="res://scenes/Doodle/Desert_Cactus7.tscn" type="PackedScene" id=40]
-[ext_resource path="res://scenes/Doodle/Desert_Cactus4.tscn" type="PackedScene" id=41]
-[ext_resource path="res://scenes/Doodle/Desert_Bone1.tscn" type="PackedScene" id=42]
-[ext_resource path="res://scenes/Doodle/Desert_OutHouse.tscn" type="PackedScene" id=43]
-[ext_resource path="res://scenes/Doodle/Desert_Flower.tscn" type="PackedScene" id=44]
+[ext_resource path="res://scenes/Doodle/Cactus1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Doodle/Bones4.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Doodle/Grass_Hide_Bush3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Doodle/Grass_Hide_Bush1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Doodle/Grass_Hide_Bush2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Doodle/Show_IceIgloo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Doodle/Show_BallPile.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Doodle/Grass_Tree3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Doodle/Grass_Tree1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Doodle/Grass_Tree2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/Doodle/Lava_Pit.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/Doodle/Desert_DeadGrass3.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/Doodle/Desert_DeadGrass1.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/Doodle/Desert_DeadGrass2.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/Doodle/Desert_SandStone3.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/Doodle/Desert_SandStone1.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/Doodle/Bones3.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/Doodle/Grass_Cabin.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/Doodle/Grass_PlantRiver1.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/Doodle/Grass_Well1.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/Doodle/Grass_Stump.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/Doodle/Desert_SandMount.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/Doodle/Snow_Pile.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/Doodle/Show_IcePatch1.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/Doodle/Grass_DeadColossus.tscn" type="PackedScene" id=28]
+[ext_resource path="res://scenes/Doodle/Desert_Tumbleweed.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scenes/Doodle/Grass_DirtMound.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scenes/Doodle/Grass_PlantColor1.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scenes/Doodle/Grass_PlantColor2.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scenes/Doodle/Grass_GrassPatch1.tscn" type="PackedScene" id=33]
+[ext_resource path="res://scenes/Doodle/Grass_GrassPatch2.tscn" type="PackedScene" id=34]
+[ext_resource path="res://scenes/Doodle/Show_IcePatch2.tscn" type="PackedScene" id=35]
+[ext_resource path="res://scenes/Doodle/Show_Man.tscn" type="PackedScene" id=36]
+[ext_resource path="res://scenes/Doodle/Desert_House.tscn" type="PackedScene" id=37]
+[ext_resource path="res://scenes/Doodle/Desert_Cactus3.tscn" type="PackedScene" id=38]
+[ext_resource path="res://scenes/Doodle/Desert_Cactus7.tscn" type="PackedScene" id=39]
+[ext_resource path="res://scenes/Doodle/Desert_Cactus4.tscn" type="PackedScene" id=40]
+[ext_resource path="res://scenes/Doodle/Desert_Bone1.tscn" type="PackedScene" id=41]
+[ext_resource path="res://scenes/Doodle/Desert_OutHouse.tscn" type="PackedScene" id=42]
+[ext_resource path="res://scenes/Doodle/Desert_Flower.tscn" type="PackedScene" id=43]
 
 [node name="Map" type="Navigation2D" index="0"]
 
@@ -75,6 +74,7 @@ _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="doodle" type="TileMap" parent="." index="1"]
 
+editor/display_folded = true
 mode = 0
 tile_set = null
 cell_size = Vector2( 256, 256 )
@@ -94,602 +94,574 @@ format = 1
 tile_data = PoolIntArray(  )
 _sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="UnitBaneling" parent="doodle" index="0" instance=ExtResource( 3 )]
+[node name="HeroSpawnPoint" type="Position2D" parent="doodle" index="0"]
+
+position = Vector2( 1190, -150 )
+
+[node name="UnitBaneling" parent="doodle" index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 550, 290 )
 player = 5
 speed = 200.0
 attack_radius = 80.0
 
-[node name="UnitBaneling2" parent="doodle" index="1" instance=ExtResource( 3 )]
+[node name="UnitBaneling2" parent="doodle" index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 610, 380 )
 player = 5
 speed = 200.0
 attack_radius = 80.0
 
-[node name="UnitBaneling3" parent="doodle" index="2" instance=ExtResource( 3 )]
+[node name="UnitBaneling3" parent="doodle" index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 750, 410 )
 player = 5
 speed = 200.0
 attack_radius = 80.0
 
-[node name="HeroGhost" parent="doodle" index="3" instance=ExtResource( 4 )]
-
-editor/display_folded = true
-position = Vector2( 1190, -150 )
-life_recover = 5.0
-
-[node name="Camera2D" type="Camera2D" parent="doodle/HeroGhost" index="9"]
-
-anchor_mode = 1
-rotating = false
-current = true
-zoom = Vector2( 1.2, 2 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = false
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing", "Transform" ]
-
-[node name="Doodle" parent="doodle" index="4" instance=ExtResource( 5 )]
+[node name="Doodle" parent="doodle" index="4" instance=ExtResource( 4 )]
 
 position = Vector2( 390, 0 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle2" parent="doodle" index="5" instance=ExtResource( 6 )]
+[node name="Doodle2" parent="doodle" index="5" instance=ExtResource( 5 )]
 
 position = Vector2( 1780, 1600 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle35" parent="doodle" index="6" instance=ExtResource( 6 )]
+[node name="Doodle35" parent="doodle" index="6" instance=ExtResource( 5 )]
 
 position = Vector2( 12690, -240 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle98" parent="doodle" index="7" instance=ExtResource( 6 )]
+[node name="Doodle98" parent="doodle" index="7" instance=ExtResource( 5 )]
 
 position = Vector2( 11980, -1040 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle36" parent="doodle" index="8" instance=ExtResource( 6 )]
+[node name="Doodle36" parent="doodle" index="8" instance=ExtResource( 5 )]
 
 position = Vector2( 12360, 1340 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle3" parent="doodle" index="9" instance=ExtResource( 7 )]
+[node name="Doodle3" parent="doodle" index="9" instance=ExtResource( 6 )]
 
 position = Vector2( 1620, 560 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle11" parent="doodle" index="10" instance=ExtResource( 7 )]
+[node name="Doodle11" parent="doodle" index="10" instance=ExtResource( 6 )]
 
 position = Vector2( 1020, -750 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle4" parent="doodle" index="11" instance=ExtResource( 8 )]
+[node name="Doodle4" parent="doodle" index="11" instance=ExtResource( 7 )]
 
 position = Vector2( 2250, -770 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle13" parent="doodle" index="12" instance=ExtResource( 8 )]
+[node name="Doodle13" parent="doodle" index="12" instance=ExtResource( 7 )]
 
 position = Vector2( 2340, 1040 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle5" parent="doodle" index="13" instance=ExtResource( 9 )]
+[node name="Doodle5" parent="doodle" index="13" instance=ExtResource( 8 )]
 
 position = Vector2( 1440, -160 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle41" parent="doodle" index="14" instance=ExtResource( 9 )]
+[node name="Doodle41" parent="doodle" index="14" instance=ExtResource( 8 )]
 
 position = Vector2( 4200, -80 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle12" parent="doodle" index="15" instance=ExtResource( 9 )]
+[node name="Doodle12" parent="doodle" index="15" instance=ExtResource( 8 )]
 
 position = Vector2( 2830, 510 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle40" parent="doodle" index="16" instance=ExtResource( 9 )]
+[node name="Doodle40" parent="doodle" index="16" instance=ExtResource( 8 )]
 
 position = Vector2( 4860, 1040 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle7" parent="doodle" index="17" instance=ExtResource( 10 )]
+[node name="Doodle7" parent="doodle" index="17" instance=ExtResource( 9 )]
 
 position = Vector2( 8590, -1480 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle8" parent="doodle" index="18" instance=ExtResource( 11 )]
+[node name="Doodle8" parent="doodle" index="18" instance=ExtResource( 10 )]
 
 position = Vector2( 8700, -1460 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle9" parent="doodle" index="19" instance=ExtResource( 11 )]
+[node name="Doodle9" parent="doodle" index="19" instance=ExtResource( 10 )]
 
 position = Vector2( 8460, -1530 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle10" parent="doodle" index="20" instance=ExtResource( 11 )]
+[node name="Doodle10" parent="doodle" index="20" instance=ExtResource( 10 )]
 
 position = Vector2( 8500, -910 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle67" parent="doodle" index="21" instance=ExtResource( 11 )]
+[node name="Doodle67" parent="doodle" index="21" instance=ExtResource( 10 )]
 
 position = Vector2( 8720, -1540 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle14" parent="doodle" index="22" instance=ExtResource( 12 )]
+[node name="Doodle14" parent="doodle" index="22" instance=ExtResource( 11 )]
 
 position = Vector2( 2210, 490 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle54" parent="doodle" index="23" instance=ExtResource( 12 )]
+[node name="Doodle54" parent="doodle" index="23" instance=ExtResource( 11 )]
 
 position = Vector2( 5070, -1230 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle15" parent="doodle" index="24" instance=ExtResource( 12 )]
+[node name="Doodle15" parent="doodle" index="24" instance=ExtResource( 11 )]
 
 position = Vector2( 2910, -920 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle38" parent="doodle" index="25" instance=ExtResource( 12 )]
+[node name="Doodle38" parent="doodle" index="25" instance=ExtResource( 11 )]
 
 position = Vector2( 5680, 120 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle16" parent="doodle" index="26" instance=ExtResource( 13 )]
+[node name="Doodle16" parent="doodle" index="26" instance=ExtResource( 12 )]
 
 position = Vector2( 670, -770 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle17" parent="doodle" index="27" instance=ExtResource( 13 )]
+[node name="Doodle17" parent="doodle" index="27" instance=ExtResource( 12 )]
 
 position = Vector2( 780, 880 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle18" parent="doodle" index="28" instance=ExtResource( 14 )]
+[node name="Doodle18" parent="doodle" index="28" instance=ExtResource( 13 )]
 
 position = Vector2( 3050, -160 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle47" parent="doodle" index="29" instance=ExtResource( 14 )]
+[node name="Doodle47" parent="doodle" index="29" instance=ExtResource( 13 )]
 
 position = Vector2( 3960, -1020 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle48" parent="doodle" index="30" instance=ExtResource( 14 )]
+[node name="Doodle48" parent="doodle" index="30" instance=ExtResource( 13 )]
 
 position = Vector2( 4080, -1090 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle49" parent="doodle" index="31" instance=ExtResource( 14 )]
+[node name="Doodle49" parent="doodle" index="31" instance=ExtResource( 13 )]
 
 position = Vector2( 4240, -1040 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle39" parent="doodle" index="32" instance=ExtResource( 14 )]
+[node name="Doodle39" parent="doodle" index="32" instance=ExtResource( 13 )]
 
 position = Vector2( 4130, -950 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle19" parent="doodle" index="33" instance=ExtResource( 15 )]
+[node name="Doodle19" parent="doodle" index="33" instance=ExtResource( 14 )]
 
 position = Vector2( 9470, 790 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle20" parent="doodle" index="34" instance=ExtResource( 16 )]
+[node name="Doodle20" parent="doodle" index="34" instance=ExtResource( 15 )]
 
 position = Vector2( 300, 960 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle21" parent="doodle" index="35" instance=ExtResource( 16 )]
+[node name="Doodle21" parent="doodle" index="35" instance=ExtResource( 15 )]
 
 position = Vector2( 680, 150 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle22" parent="doodle" index="36" instance=ExtResource( 16 )]
+[node name="Doodle22" parent="doodle" index="36" instance=ExtResource( 15 )]
 
 position = Vector2( 1960, 1480 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle23" parent="doodle" index="37" instance=ExtResource( 17 )]
+[node name="Doodle23" parent="doodle" index="37" instance=ExtResource( 16 )]
 
 position = Vector2( 2800, 1900 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle24" parent="doodle" index="38" instance=ExtResource( 17 )]
+[node name="Doodle24" parent="doodle" index="38" instance=ExtResource( 16 )]
 
 position = Vector2( 1060, 1180 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle25" parent="doodle" index="39" instance=ExtResource( 17 )]
+[node name="Doodle25" parent="doodle" index="39" instance=ExtResource( 16 )]
 
 position = Vector2( 4600, 1910 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle26" parent="doodle" index="40" instance=ExtResource( 18 )]
+[node name="Doodle26" parent="doodle" index="40" instance=ExtResource( 17 )]
 
 position = Vector2( 140, -700 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle37" parent="doodle" index="41" instance=ExtResource( 18 )]
+[node name="Doodle37" parent="doodle" index="41" instance=ExtResource( 17 )]
 
 position = Vector2( 12540, 1000 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle93" parent="doodle" index="42" instance=ExtResource( 18 )]
+[node name="Doodle93" parent="doodle" index="42" instance=ExtResource( 17 )]
 
 position = Vector2( 13010, 220 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle27" parent="doodle" index="43" instance=ExtResource( 18 )]
+[node name="Doodle27" parent="doodle" index="43" instance=ExtResource( 17 )]
 
 position = Vector2( 6540, 1480 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle28" parent="doodle" index="44" instance=ExtResource( 18 )]
+[node name="Doodle28" parent="doodle" index="44" instance=ExtResource( 17 )]
 
 position = Vector2( 6540, -430 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle29" parent="doodle" index="45" instance=ExtResource( 19 )]
+[node name="Doodle29" parent="doodle" index="45" instance=ExtResource( 18 )]
 
 position = Vector2( 2410, 1590 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Doodle30" parent="doodle" index="46" instance=ExtResource( 19 )]
+[node name="Doodle30" parent="doodle" index="46" instance=ExtResource( 18 )]
 
 position = Vector2( 7120, 1200 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Doodle31" parent="doodle" index="47" instance=ExtResource( 20 )]
+[node name="Doodle31" parent="doodle" index="47" instance=ExtResource( 19 )]
 
 position = Vector2( 150, 280 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Doodle32" parent="doodle" index="48" instance=ExtResource( 20 )]
+[node name="Doodle32" parent="doodle" index="48" instance=ExtResource( 19 )]
 
 position = Vector2( 11860, 880 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Doodle33" parent="doodle" index="49" instance=ExtResource( 20 )]
+[node name="Doodle33" parent="doodle" index="49" instance=ExtResource( 19 )]
 
 position = Vector2( 14310, 400 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Doodle34" parent="doodle" index="50" instance=ExtResource( 20 )]
+[node name="Doodle34" parent="doodle" index="50" instance=ExtResource( 19 )]
 
 position = Vector2( 15440, 1290 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Doodle42" parent="doodle" index="51" instance=ExtResource( 21 )]
+[node name="Doodle42" parent="doodle" index="51" instance=ExtResource( 20 )]
 
 position = Vector2( 580, 1400 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle43" parent="doodle" index="52" instance=ExtResource( 21 )]
+[node name="Doodle43" parent="doodle" index="52" instance=ExtResource( 20 )]
 
 position = Vector2( 12710, 380 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle44" parent="doodle" index="53" instance=ExtResource( 21 )]
+[node name="Doodle44" parent="doodle" index="53" instance=ExtResource( 20 )]
 
 position = Vector2( 14910, 1610 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle45" parent="doodle" index="54" instance=ExtResource( 21 )]
+[node name="Doodle45" parent="doodle" index="54" instance=ExtResource( 20 )]
 
 position = Vector2( 15410, 2340 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle46" parent="doodle" index="55" instance=ExtResource( 22 )]
+[node name="Doodle46" parent="doodle" index="55" instance=ExtResource( 21 )]
 
 position = Vector2( 3940, -690 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle50" parent="doodle" index="56" instance=ExtResource( 23 )]
+[node name="Doodle50" parent="doodle" index="56" instance=ExtResource( 22 )]
 
 position = Vector2( 2380, -140 )
 scale = Vector2( 0.4, 0.4 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Doodle51" parent="doodle" index="57" instance=ExtResource( 23 )]
+[node name="Doodle51" parent="doodle" index="57" instance=ExtResource( 22 )]
 
 position = Vector2( 3510, 1340 )
 scale = Vector2( 0.3, 0.3 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Doodle52" parent="doodle" index="58" instance=ExtResource( 23 )]
+[node name="Doodle52" parent="doodle" index="58" instance=ExtResource( 22 )]
 
 position = Vector2( 5530, 1520 )
 scale = Vector2( 0.3, 0.3 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Doodle53" parent="doodle" index="59" instance=ExtResource( 23 )]
+[node name="Doodle53" parent="doodle" index="59" instance=ExtResource( 22 )]
 
 position = Vector2( 5510, -670 )
 scale = Vector2( 0.3, 0.3 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Doodle55" parent="doodle" index="60" instance=ExtResource( 24 )]
+[node name="Doodle55" parent="doodle" index="60" instance=ExtResource( 23 )]
 
 position = Vector2( 4750, 200 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle56" parent="doodle" index="61" instance=ExtResource( 25 )]
+[node name="Doodle56" parent="doodle" index="61" instance=ExtResource( 24 )]
 
 position = Vector2( 1550, -650 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle57" parent="doodle" index="62" instance=ExtResource( 25 )]
+[node name="Doodle57" parent="doodle" index="62" instance=ExtResource( 24 )]
 
 position = Vector2( 3720, -1020 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle58" parent="doodle" index="63" instance=ExtResource( 25 )]
+[node name="Doodle58" parent="doodle" index="63" instance=ExtResource( 24 )]
 
 position = Vector2( 3800, -1150 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle59" parent="doodle" index="64" instance=ExtResource( 25 )]
+[node name="Doodle59" parent="doodle" index="64" instance=ExtResource( 24 )]
 
 position = Vector2( 3810, -1060 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle60" parent="doodle" index="65" instance=ExtResource( 25 )]
+[node name="Doodle60" parent="doodle" index="65" instance=ExtResource( 24 )]
 
 position = Vector2( 4420, -260 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle61" parent="doodle" index="66" instance=ExtResource( 26 )]
+[node name="Doodle61" parent="doodle" index="66" instance=ExtResource( 25 )]
 
 position = Vector2( 14380, 890 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle63" parent="doodle" index="67" instance=ExtResource( 26 )]
+[node name="Doodle63" parent="doodle" index="67" instance=ExtResource( 25 )]
 
 position = Vector2( 15690, 2000 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle62" parent="doodle" index="68" instance=ExtResource( 26 )]
+[node name="Doodle62" parent="doodle" index="68" instance=ExtResource( 25 )]
 
 position = Vector2( 14030, 1080 )
 
-[node name="Doodle64" parent="doodle" index="69" instance=ExtResource( 27 )]
+[node name="Doodle64" parent="doodle" index="69" instance=ExtResource( 26 )]
 
 position = Vector2( 7310, -1410 )
 scale = Vector2( 0.8, 0.8 )
 
-[node name="Doodle66" parent="doodle" index="70" instance=ExtResource( 27 )]
+[node name="Doodle66" parent="doodle" index="70" instance=ExtResource( 26 )]
 
 position = Vector2( 10480, -2330 )
 scale = Vector2( 0.8, 0.8 )
 
-[node name="Doodle65" parent="doodle" index="71" instance=ExtResource( 27 )]
+[node name="Doodle65" parent="doodle" index="71" instance=ExtResource( 26 )]
 
 position = Vector2( 10160, -1140 )
 scale = Vector2( 0.8, 0.8 )
 
-[node name="Doodle6" parent="doodle" index="72" instance=ExtResource( 28 )]
+[node name="Doodle6" parent="doodle" index="72" instance=ExtResource( 27 )]
 
 position = Vector2( 10310, -2370 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle69" parent="doodle" index="73" instance=ExtResource( 29 )]
+[node name="Doodle69" parent="doodle" index="73" instance=ExtResource( 28 )]
 
 position = Vector2( 5470, -980 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle68" parent="doodle" index="74" instance=ExtResource( 30 )]
+[node name="Doodle68" parent="doodle" index="74" instance=ExtResource( 29 )]
 
 position = Vector2( 270, 1050 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle70" parent="doodle" index="75" instance=ExtResource( 31 )]
+[node name="Doodle70" parent="doodle" index="75" instance=ExtResource( 30 )]
 
 position = Vector2( 3280, 200 )
 
-[node name="Doodle71" parent="doodle" index="76" instance=ExtResource( 31 )]
+[node name="Doodle71" parent="doodle" index="76" instance=ExtResource( 30 )]
 
 position = Vector2( 3720, -1940 )
 
-[node name="Doodle72" parent="doodle" index="77" instance=ExtResource( 32 )]
+[node name="Doodle72" parent="doodle" index="77" instance=ExtResource( 31 )]
 
 position = Vector2( 1230, 400 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle73" parent="doodle" index="78" instance=ExtResource( 32 )]
+[node name="Doodle73" parent="doodle" index="78" instance=ExtResource( 31 )]
 
 position = Vector2( 5220, -780 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle74" parent="doodle" index="79" instance=ExtResource( 33 )]
+[node name="Doodle74" parent="doodle" index="79" instance=ExtResource( 32 )]
 
 position = Vector2( 3510, -380 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle75" parent="doodle" index="80" instance=ExtResource( 33 )]
+[node name="Doodle75" parent="doodle" index="80" instance=ExtResource( 32 )]
 
 position = Vector2( 1910, -1090 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle76" parent="doodle" index="81" instance=ExtResource( 34 )]
+[node name="Doodle76" parent="doodle" index="81" instance=ExtResource( 33 )]
 
 position = Vector2( 990, -520 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle77" parent="doodle" index="82" instance=ExtResource( 34 )]
+[node name="Doodle77" parent="doodle" index="82" instance=ExtResource( 33 )]
 
 position = Vector2( 3810, -110 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle78" parent="doodle" index="83" instance=ExtResource( 35 )]
+[node name="Doodle78" parent="doodle" index="83" instance=ExtResource( 34 )]
 
 position = Vector2( 1930, 650 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle79" parent="doodle" index="84" instance=ExtResource( 35 )]
+[node name="Doodle79" parent="doodle" index="84" instance=ExtResource( 34 )]
 
 position = Vector2( 3110, 1420 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle80" parent="doodle" index="85" instance=ExtResource( 35 )]
+[node name="Doodle80" parent="doodle" index="85" instance=ExtResource( 34 )]
 
 position = Vector2( 5940, 1150 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle81" parent="doodle" index="86" instance=ExtResource( 36 )]
+[node name="Doodle81" parent="doodle" index="86" instance=ExtResource( 35 )]
 
 position = Vector2( 10360, -1210 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle82" parent="doodle" index="87" instance=ExtResource( 37 )]
+[node name="Doodle82" parent="doodle" index="87" instance=ExtResource( 36 )]
 
 position = Vector2( 9510, -2080 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Doodle83" parent="doodle" index="88" instance=ExtResource( 11 )]
+[node name="Doodle83" parent="doodle" index="88" instance=ExtResource( 10 )]
 
 position = Vector2( 7440, -2370 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle84" parent="doodle" index="89" instance=ExtResource( 38 )]
+[node name="Doodle84" parent="doodle" index="89" instance=ExtResource( 37 )]
 
 position = Vector2( 15170, 780 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle85" parent="doodle" index="90" instance=ExtResource( 39 )]
+[node name="Doodle85" parent="doodle" index="90" instance=ExtResource( 38 )]
 
 position = Vector2( 3610, 1890 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle86" parent="doodle" index="91" instance=ExtResource( 39 )]
+[node name="Doodle86" parent="doodle" index="91" instance=ExtResource( 38 )]
 
 position = Vector2( 11820, 1260 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle87" parent="doodle" index="92" instance=ExtResource( 40 )]
+[node name="Doodle87" parent="doodle" index="92" instance=ExtResource( 39 )]
 
 position = Vector2( 7050, -70 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle88" parent="doodle" index="93" instance=ExtResource( 40 )]
+[node name="Doodle88" parent="doodle" index="93" instance=ExtResource( 39 )]
 
 position = Vector2( 14820, 2050 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle105" parent="doodle" index="94" instance=ExtResource( 40 )]
+[node name="Doodle105" parent="doodle" index="94" instance=ExtResource( 39 )]
 
 position = Vector2( 14140, 1680 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle89" parent="doodle" index="95" instance=ExtResource( 40 )]
+[node name="Doodle89" parent="doodle" index="95" instance=ExtResource( 39 )]
 
 position = Vector2( 13850, 280 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle90" parent="doodle" index="96" instance=ExtResource( 26 )]
+[node name="Doodle90" parent="doodle" index="96" instance=ExtResource( 25 )]
 
 position = Vector2( 12670, -480 )
 scale = Vector2( 0.8, 0.8 )
 
-[node name="Doodle91" parent="doodle" index="97" instance=ExtResource( 41 )]
+[node name="Doodle91" parent="doodle" index="97" instance=ExtResource( 40 )]
 
 position = Vector2( 90, -1420 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle92" parent="doodle" index="98" instance=ExtResource( 41 )]
+[node name="Doodle92" parent="doodle" index="98" instance=ExtResource( 40 )]
 
 position = Vector2( 13230, 1260 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle94" parent="doodle" index="99" instance=ExtResource( 42 )]
+[node name="Doodle94" parent="doodle" index="99" instance=ExtResource( 41 )]
 
 position = Vector2( 380, -1100 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle95" parent="doodle" index="100" instance=ExtResource( 42 )]
+[node name="Doodle95" parent="doodle" index="100" instance=ExtResource( 41 )]
 
 position = Vector2( 6060, -1430 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle96" parent="doodle" index="101" instance=ExtResource( 42 )]
+[node name="Doodle96" parent="doodle" index="101" instance=ExtResource( 41 )]
 
 position = Vector2( 13770, 830 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle97" parent="doodle" index="102" instance=ExtResource( 43 )]
+[node name="Doodle97" parent="doodle" index="102" instance=ExtResource( 42 )]
 
 position = Vector2( 11880, -960 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle99" parent="doodle" index="103" instance=ExtResource( 16 )]
+[node name="Doodle99" parent="doodle" index="103" instance=ExtResource( 15 )]
 
 position = Vector2( 12290, 70 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle100" parent="doodle" index="104" instance=ExtResource( 16 )]
+[node name="Doodle100" parent="doodle" index="104" instance=ExtResource( 15 )]
 
 position = Vector2( 14930, 880 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle101" parent="doodle" index="105" instance=ExtResource( 16 )]
+[node name="Doodle101" parent="doodle" index="105" instance=ExtResource( 15 )]
 
 position = Vector2( 14910, 820 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle102" parent="doodle" index="106" instance=ExtResource( 16 )]
+[node name="Doodle102" parent="doodle" index="106" instance=ExtResource( 15 )]
 
 position = Vector2( 14920, 770 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle103" parent="doodle" index="107" instance=ExtResource( 16 )]
+[node name="Doodle103" parent="doodle" index="107" instance=ExtResource( 15 )]
 
 position = Vector2( 14860, 760 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle104" parent="doodle" index="108" instance=ExtResource( 16 )]
+[node name="Doodle104" parent="doodle" index="108" instance=ExtResource( 15 )]
 
 position = Vector2( 14840, 810 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Doodle106" parent="doodle" index="109" instance=ExtResource( 44 )]
+[node name="Doodle106" parent="doodle" index="109" instance=ExtResource( 43 )]
 
 position = Vector2( 12240, 410 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle109" parent="doodle" index="110" instance=ExtResource( 44 )]
+[node name="Doodle109" parent="doodle" index="110" instance=ExtResource( 43 )]
 
 position = Vector2( 13480, 890 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle107" parent="doodle" index="111" instance=ExtResource( 44 )]
+[node name="Doodle107" parent="doodle" index="111" instance=ExtResource( 43 )]
 
 position = Vector2( 11260, 720 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Doodle108" parent="doodle" index="112" instance=ExtResource( 44 )]
+[node name="Doodle108" parent="doodle" index="112" instance=ExtResource( 43 )]
 
 position = Vector2( 15990, 1500 )
 scale = Vector2( 0.5, 0.5 )
