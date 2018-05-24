@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Doodle/Doodle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/Doodle/Desert_Cactus7.png" type="Texture" id=2]
+
+[node name="Doodle" instance=ExtResource( 1 )]
+
+position = Vector2( 1, 0 )
+
+[node name="Sprite" parent="." index="0"]
+
+position = Vector2( 0, -100 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" parent="Sprite/StaticBody2D" index="0"]
+
+position = Vector2( 20.91, -130.507 )
+polygon = PoolVector2Array( -116.475, 221.629, -72.492, 251.698, 22.6843, 258.909, 63.0621, 231.509, 11.1478, 216.368, -60.9554, 214.926 )
+_sections_unfolded = [ "Transform" ]
+
+

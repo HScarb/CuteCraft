@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Doodle/Doodle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/Doodle/Grass_DirtMound.png" type="Texture" id=2]
+
+[node name="Doodle" index="0" instance=ExtResource( 1 )]
+
+[node name="Sprite" parent="." index="0"]
+
+position = Vector2( 0, -30 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" parent="Sprite/StaticBody2D" index="0"]
+
+polygon = PoolVector2Array( -125.433, 31.746, -96.9505, 60.2288, 37.488, 62.5074, 128.633, 26.0495, 34.0701, -14.9657, -79.8609, -11.5477 )
+
+

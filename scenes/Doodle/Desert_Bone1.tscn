@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Doodle/Doodle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/Doodle/Desert_Bones1.png" type="Texture" id=2]
+
+[node name="Doodle" index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 0, -13 )
+
+[node name="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" parent="Sprite/StaticBody2D" index="0"]
+
+polygon = PoolVector2Array( -124.161, 55.5975, -21.3042, 128.558, -1.72943, 127.134, -1.72943, 112.542, -113.484, 41.0054, -130.567, 42.7849 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Sprite/StaticBody2D" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -3.50894, -12.3803, 95.7885, 69.1219, 115.363, 72.325, 127.464, 58.8006, 6.10049, -27.3283 )
+
+

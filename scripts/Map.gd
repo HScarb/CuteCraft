@@ -10,10 +10,11 @@ func _ready():
 	MapManager.set_layer_unit($doodle)
 	MapManager.set_layer_front($FrontLayer)
 	# 将地图上已经摆放的单位添加到单位管理器中
-	for unit in $walls.get_children():
-		UnitManager.add_unit(unit)
-		if unit.is_main_character:
-			UnitManager.set_main_character(unit)
+	for unit in $doodle.get_children():
+		if unit is load("res://scripts/Unit/Unit.gd"):
+			UnitManager.add_unit(unit)
+			if unit.is_main_character:
+				UnitManager.set_main_character(unit)
 	set_process(true)
 
 func _input(event):

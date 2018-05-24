@@ -22,7 +22,7 @@ custom_solver_bias = 0.0
 radius = 28.0
 height = 30.0
 
-[node name="Unit" type="KinematicBody2D"]
+[node name="Unit" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -32,6 +32,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 is_main_character = false
 stand_after_attack = true
+icon = null
 player = 1
 face_angle = 1.571
 face_direction = 2
