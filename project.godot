@@ -16,10 +16,11 @@ config/icon="res://icon.png"
 
 [autoload]
 
+LayerManager="*res://scripts/Manager/LayerManager.gd"
 Global="*res://scripts/Global.gd"
+Util="*res://scripts/Util.gd"
 UnitManager="*res://scripts/Manager/UnitManager.gd"
 MapManager="*res://scripts/Manager/MapManager.gd"
-Util="*res://scripts/Util.gd"
 SignalManager="*res://scripts/Manager/SignalManager.gd"
 ActorManager="*res://scripts/Manager/ActorManager.gd"
 

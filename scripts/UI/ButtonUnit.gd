@@ -24,4 +24,7 @@ func _on_TextureButton_pressed():
         # 添加摄像头
         hero.add_child(class_camera.instance())
         # 关闭英雄选择界面
-        MapManager.get_layer_hero_select().queue_free()
+        LayerManager.get_layer_hero_select().queue_free()
+        # 初始化UI
+        LayerManager.get_layer_hud().init()
+        
