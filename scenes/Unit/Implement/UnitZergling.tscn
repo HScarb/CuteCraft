@@ -13,6 +13,10 @@ height = 24.0
 [node name="UnitZergling" index="0" instance=ExtResource( 1 )]
 
 icon = ExtResource( 2 )
+life = 30.0
+life_max = 30.0
+enegy = 0.0
+enegy_max = 0.0
 radius = 18.0
 speed = 300.0
 

@@ -12,13 +12,14 @@ custom_solver_bias = 0.0
 radius = 30.0
 height = 34.0
 
-[node name="HeroGhost" index="0" instance=ExtResource( 1 )]
+[node name="HeroGhost" instance=ExtResource( 1 )]
 
 is_main_character = true
 stand_after_attack = false
 icon = ExtResource( 2 )
 life = 100.0
 life_max = 100.0
+life_recover = 2.0
 enegy = 0.0
 enegy_max = 0.0
 speed = 315.0
