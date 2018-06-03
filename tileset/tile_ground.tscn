@@ -229,7 +229,7 @@ vertices = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 ) ]
 
-[node name="tile_ground" type="Node2D"]
+[node name="tile_ground" type="Node2D" index="0"]
 
 [node name="light_grass_0" type="Sprite" parent="." index="0"]
 

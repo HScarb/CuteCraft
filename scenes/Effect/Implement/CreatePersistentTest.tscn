@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Effect/EffectCreatePersistent.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Effect/EffectTest.tscn" type="PackedScene" id=2]
+
+[node name="CreatePersistentTest" index="0" instance=ExtResource( 1 )]
+
+period_count = 5
+period_durations = PoolRealArray( 0.5, 0.5, 0.5, 0.5, 0.5 )
+periodic_offsets = PoolVector2Array( 0, 50, 0, 100, 0, 150, 0, 200, 0, 250 )
+expire_delay = 1.0
+offset_direction = 1
+final_effect = ExtResource( 2 )
+periodic_effect = ExtResource( 2 )
+
+

@@ -100,14 +100,6 @@ position = Vector2( 0, 0 )
 position = Vector2( 0, -30 )
 shape = SubResource( 1 )
 
-[node name="WeaponArea" parent="." index="3"]
-
-editor/display_folded = true
-
-[node name="ScanArea" parent="." index="4"]
-
-editor/display_folded = true
-
 [node name="AbilityEMP" parent="Abilities" index="0" instance=ExtResource( 3 )]
 
 time_use = 2.0

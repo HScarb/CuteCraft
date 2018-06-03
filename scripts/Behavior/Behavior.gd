@@ -23,7 +23,7 @@ export(PoolStringArray) var modification                # 单位修改表，用�
 var stack_count = 1                                     # 当前层数
 var cur_period = 0                                      # 当前周期数
 
-onready var logicRoot = $"../.."                        # 所有单位
+onready var logicRoot = $"../.."                        # 行为携带者(单位)
 
 func _ready():
     init()
@@ -130,7 +130,7 @@ func on_expire():
         trans_target_data(effect_expire)
         effect_expire.run()
     on_remove()
-        
+
 # 行为刷新操作
 func on_refresh():
     refresh_target_data()

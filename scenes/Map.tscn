@@ -53,7 +53,7 @@
 [ext_resource path="res://scenes/Unit/Implement/UnitGhost.tscn" type="PackedScene" id=51]
 [ext_resource path="res://scenes/Unit/Implement/UnitZergling.tscn" type="PackedScene" id=52]
 
-[node name="Map" type="Navigation2D" index="0"]
+[node name="Map" type="Navigation2D"]
 
 z_index = -2
 script = ExtResource( 1 )

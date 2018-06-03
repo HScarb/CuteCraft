@@ -3,8 +3,49 @@
 [ext_resource path="res://scenes/Effect/Effect.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Effect/EffectCreatePersistent.gd" type="Script" id=2]
 
-[node name="EffectCreatePersistent" index="0" instance=ExtResource( 1 )]
+[node name="EffectCreatePersistent" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+period_count = -1
+period_durations = null
+periodic_offsets = null
+initial_delay = 0
+expire_delay = 0
+offset_direction = 0
+target_location = 6
+offset_start_location = 3
+offset_end_location = 6
+offset_facing_fallback = 3
+initial_effect = null
+final_effect = null
+expire_effect = null
+periodic_effect = null
+
+[node name="TimerInitialDelay" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="TimerExpireDelay" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="TimerPeriodic" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="TimerInitialDelay" to="." method="_on_TimerInitialDelay_timeout"]
+
+[connection signal="timeout" from="TimerExpireDelay" to="." method="_on_TimerExpireDelay_timeout"]
+
+[connection signal="timeout" from="TimerPeriodic" to="." method="_on_TimerPeriodic_timeout"]
 
 
