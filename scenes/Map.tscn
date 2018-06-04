@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://scripts/Map.gd" type="Script" id=1]
 [ext_resource path="res://tileset/tile_ground.tres" type="TileSet" id=2]
@@ -52,6 +52,9 @@
 [ext_resource path="res://scenes/Unit/Implement/UnitMarauder.tscn" type="PackedScene" id=50]
 [ext_resource path="res://scenes/Unit/Implement/UnitGhost.tscn" type="PackedScene" id=51]
 [ext_resource path="res://scenes/Unit/Implement/UnitZergling.tscn" type="PackedScene" id=52]
+[ext_resource path="res://scenes/Unit/Implement/UnitBaneling.tscn" type="PackedScene" id=53]
+[ext_resource path="res://scenes/Unit/Implement/UnitRoach.tscn" type="PackedScene" id=54]
+[ext_resource path="res://scenes/Unit/Implement/UnitUltralisk.tscn" type="PackedScene" id=55]
 
 [node name="Map" type="Navigation2D"]
 
@@ -848,6 +851,181 @@ player = 5
 [node name="UnitZergling" parent="doodle" index="150" instance=ExtResource( 52 )]
 
 position = Vector2( 11820, -260 )
+player = 5
+
+[node name="UnitZergling2" parent="doodle" index="151" instance=ExtResource( 52 )]
+
+position = Vector2( 11885, -193.077 )
+player = 5
+
+[node name="UnitZergling3" parent="doodle" index="152" instance=ExtResource( 52 )]
+
+position = Vector2( 11242.6, 351.867 )
+player = 5
+
+[node name="UnitZergling4" parent="doodle" index="153" instance=ExtResource( 52 )]
+
+position = Vector2( 11201, 255.842 )
+player = 5
+
+[node name="UnitZergling5" parent="doodle" index="154" instance=ExtResource( 52 )]
+
+position = Vector2( 11154.3, 362.248 )
+player = 5
+
+[node name="UnitZergling6" parent="doodle" index="155" instance=ExtResource( 52 )]
+
+position = Vector2( 13087.8, 315.533 )
+player = 5
+
+[node name="UnitZergling7" parent="doodle" index="156" instance=ExtResource( 52 )]
+
+position = Vector2( 12485.7, 938.395 )
+player = 5
+
+[node name="UnitZergling8" parent="doodle" index="157" instance=ExtResource( 52 )]
+
+position = Vector2( 11336, 1685.83 )
+player = 5
+
+[node name="UnitZergling9" parent="doodle" index="158" instance=ExtResource( 52 )]
+
+position = Vector2( 14455.5, 530.94 )
+player = 5
+
+[node name="UnitZergling10" parent="doodle" index="159" instance=ExtResource( 52 )]
+
+position = Vector2( 12246.9, 2277.55 )
+player = 5
+
+[node name="UnitZergling11" parent="doodle" index="160" instance=ExtResource( 52 )]
+
+position = Vector2( 13658.5, 2277.55 )
+player = 5
+
+[node name="UnitZergling12" parent="doodle" index="161" instance=ExtResource( 52 )]
+
+position = Vector2( 13350.6, 2521.57 )
+player = 5
+
+[node name="UnitZergling13" parent="doodle" index="162" instance=ExtResource( 52 )]
+
+position = Vector2( 13620.9, 1984.72 )
+player = 5
+
+[node name="UnitBaneling" parent="doodle" index="163" instance=ExtResource( 53 )]
+
+position = Vector2( 13230, 1158.21 )
+player = 5
+
+[node name="UnitBaneling2" parent="doodle" index="164" instance=ExtResource( 53 )]
+
+position = Vector2( 13836.5, 247.023 )
+player = 5
+
+[node name="UnitBaneling3" parent="doodle" index="165" instance=ExtResource( 53 )]
+
+position = Vector2( 12063, -247.377 )
+player = 5
+
+[node name="UnitBaneling4" parent="doodle" index="166" instance=ExtResource( 53 )]
+
+position = Vector2( 11689.3, 517.218 )
+player = 5
+
+[node name="UnitBaneling5" parent="doodle" index="167" instance=ExtResource( 53 )]
+
+position = Vector2( 12666.6, 959.879 )
+player = 5
+
+[node name="UnitBaneling6" parent="doodle" index="168" instance=ExtResource( 53 )]
+
+position = Vector2( 11942.2, 1845.2 )
+player = 5
+
+[node name="UnitBaneling7" parent="doodle" index="169" instance=ExtResource( 53 )]
+
+position = Vector2( 12025.6, 1879.69 )
+player = 5
+
+[node name="UnitBaneling8" parent="doodle" index="170" instance=ExtResource( 53 )]
+
+position = Vector2( 13129.3, 2326.44 )
+player = 5
+
+[node name="UnitBaneling9" parent="doodle" index="171" instance=ExtResource( 53 )]
+
+position = Vector2( 13091.8, 2221.32 )
+player = 5
+
+[node name="UnitBaneling10" parent="doodle" index="172" instance=ExtResource( 53 )]
+
+position = Vector2( 14214.3, 1890.96 )
+player = 5
+
+[node name="UnitBaneling11" parent="doodle" index="173" instance=ExtResource( 53 )]
+
+position = Vector2( 14090.4, 1924.74 )
+player = 5
+
+[node name="UnitRoach" parent="doodle" index="174" instance=ExtResource( 54 )]
+
+position = Vector2( 13298.7, 1127.47 )
+player = 5
+
+[node name="UnitRoach2" parent="doodle" index="175" instance=ExtResource( 54 )]
+
+position = Vector2( 10967.3, 1326.44 )
+player = 5
+
+[node name="UnitRoach3" parent="doodle" index="176" instance=ExtResource( 54 )]
+
+position = Vector2( 13264.9, -257.816 )
+player = 5
+
+[node name="UnitRoach4" parent="doodle" index="177" instance=ExtResource( 54 )]
+
+position = Vector2( 12277.6, 233.98 )
+player = 5
+
+[node name="UnitRoach5" parent="doodle" index="178" instance=ExtResource( 54 )]
+
+position = Vector2( 13707.9, 1713.12 )
+player = 5
+
+[node name="UnitRoach6" parent="doodle" index="179" instance=ExtResource( 54 )]
+
+position = Vector2( 14308.6, 1067.41 )
+player = 5
+
+[node name="UnitRoach7" parent="doodle" index="180" instance=ExtResource( 54 )]
+
+position = Vector2( 15194.5, 1014.85 )
+player = 5
+
+[node name="UnitRoach8" parent="doodle" index="181" instance=ExtResource( 54 )]
+
+position = Vector2( 13197.3, 2621.63 )
+player = 5
+
+[node name="UnitRoach9" parent="doodle" index="182" instance=ExtResource( 54 )]
+
+position = Vector2( 14518.8, 2310.04 )
+player = 5
+
+[node name="UnitRoach10" parent="doodle" index="183" instance=ExtResource( 54 )]
+
+position = Vector2( 15825.2, 1776.94 )
+player = 5
+
+[node name="UnitUltralisk" parent="doodle" index="184" instance=ExtResource( 55 )]
+
+position = Vector2( 14163.1, 2627.63 )
+player = 5
+
+[node name="UnitUltralisk2" parent="doodle" index="185" instance=ExtResource( 55 )]
+
+position = Vector2( 15591.8, 2055.14 )
 player = 5
 
 [node name="FrontLayer" type="Node2D" parent="." index="2"]

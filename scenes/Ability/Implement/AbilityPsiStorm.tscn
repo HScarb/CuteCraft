@@ -4,7 +4,7 @@
 [ext_resource path="res://images/Icons/ICONPsiStorm.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Effect/Implement/PsiStormPersistent.tscn" type="PackedScene" id=3]
 
-[node name="AbilityPsiStorm" index="0" instance=ExtResource( 1 )]
+[node name="AbilityPsiStorm" instance=ExtResource( 1 )]
 
 icon = ExtResource( 2 )
 ability_name = "PsiStorm"

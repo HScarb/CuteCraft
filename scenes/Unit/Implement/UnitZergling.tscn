@@ -19,6 +19,7 @@ enegy = 0.0
 enegy_max = 0.0
 radius = 18.0
 speed = 300.0
+attack_radius = 40.0
 
 [node name="BodyShape" parent="BodyArea" index="0"]
 

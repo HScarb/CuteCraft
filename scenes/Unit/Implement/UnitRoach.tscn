@@ -10,9 +10,13 @@ custom_solver_bias = 0.0
 radius = 35.0
 height = 50.0
 
-[node name="UnitRoach" index="0" instance=ExtResource( 1 )]
+[node name="UnitRoach" instance=ExtResource( 1 )]
 
 icon = ExtResource( 2 )
+life = 135.0
+life_max = 135.0
+enegy = 0.0
+enegy_max = 0.0
 radius = 25.0
 speed = 225.0
 

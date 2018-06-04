@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GhostNukeDot.png-664f4b7b601cc51f3a6e0dfb92668ab8.stex"
+path="res://.import/NukeAB.png-990464b9acff39a8e4de39c8bd717b96.stex"
 
 [deps]
 
-source_file="res://images/Ghost/Nuke/GhostNukeDot.png"
-source_md5="6be46570d796fe4d481afd694d5ddf3a"
+source_file="res://images/Ghost/Nuke/NukeAB.png"
+source_md5="6b03208cf7d708eb5ff1f1d187c77167"
 
-dest_files=[ "res://.import/GhostNukeDot.png-664f4b7b601cc51f3a6e0dfb92668ab8.stex" ]
-dest_md5="c58d42748a95d5b0bb97e655cf610515"
+dest_files=[ "res://.import/NukeAB.png-990464b9acff39a8e4de39c8bd717b96.stex" ]
+dest_md5="144f9350c48e6f9c1fd15b587d78083f"
 
 [params]
 
