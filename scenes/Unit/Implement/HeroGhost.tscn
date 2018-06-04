@@ -111,6 +111,4 @@ cast_frame = 0
 
 [node name="WeaponGhost" parent="Weapons" index="0" instance=ExtResource( 5 )]
 
-muzzle_index = 0
-
 

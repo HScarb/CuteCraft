@@ -50,7 +50,6 @@ func refresh_target_data():
     elif offset_direction == 1:
         offset_start_pos = offset_facing_fallback_unit.position
         offset_vector_rad = offset_facing_fallback_unit.face_angle
-    print(rad2deg(offset_vector_rad))
 
 # 起始效果
 func on_initial():
@@ -68,9 +67,10 @@ func on_initial():
 
 # 周期到期事件
 func on_period():
-    var target_pos = offset_start_pos
+    # 如果没有周期性偏移，默认目标点为该效果目标点
+    var target_pos = target_point
     # 进行周期偏移(如果有偏移量)，计算实际目标点
-    if periodic_offsets.size() > cur_period and periodic_offsets[cur_period] != null:
+    if periodic_offsets != null and periodic_offsets.size() > cur_period and periodic_offsets[cur_period] != null:
         target_pos = calc_target_point(periodic_offsets[cur_period])
     # 运行周期效果
     var sub_effect = periodic_effect.instance()
