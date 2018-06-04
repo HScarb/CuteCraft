@@ -58,7 +58,7 @@ func on_initial():
         trans_target_data(sub_effect)
         sub_effect.run()
     # 判断是否进入周期循环，如果周期列表为空则开启耗尽计时器；否则开启周期循环计时器，进入周期循环
-    if period_durations.size() == 0:
+    if period_durations == null:
         $TimerExpireDelay.set_wait_time(expire_delay)
         $TimerExpireDelay.start()
     else:
@@ -118,6 +118,7 @@ func on_final():
         var sub_effect = final_effect.instance()
         trans_target_data(sub_effect)
         sub_effect.run()
+    SignalManager.emit_signal("effect_stop", self)
     queue_free()
 
 func _on_TimerInitialDelay_timeout():

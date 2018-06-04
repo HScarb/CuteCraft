@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Ability/AbilityEffectTarget.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/Icons/ICONNuke.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Effect/Implement/NukePersistent.tscn" type="PackedScene" id=3]
+
+[node name="AbilityNuke" instance=ExtResource( 1 )]
+
+icon = ExtResource( 2 )
+ability_name = "Nuke"
+time_use = 5.0
+cast_frame = 1
+can_fire = 1.0
+effect = ExtResource( 3 )
+shoot_range = 300.0
+
+
