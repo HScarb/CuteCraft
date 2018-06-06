@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Actor/ActorModel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Model/Implement/ModelNukeSplat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Actor/ActorNukeSplat.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Model/Implement/ModelNukeSplat.tscn" type="PackedScene" id=3]
 
 [node name="ActorNukeSplat" instance=ExtResource( 1 )]
 
+script = ExtResource( 2 )
 check_type_name = "NukeAreaSearch"
-model = ExtResource( 2 )
+model = ExtResource( 3 )
 
 

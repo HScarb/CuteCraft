@@ -24,7 +24,11 @@ tracks/0/keys = {
 
 [node name="ModelThorRay" instance=ExtResource( 1 )]
 
-modulate = Color( 1, 0.686275, 0.392157, 1 )
+free_after_finished = true
+
+[node name="Sprite" parent="." index="0"]
+
+modulate = Color( 1, 0.686275, 0.392157, 5.96046e-08 )
 position = Vector2( 0, -4 )
 texture = ExtResource( 2 )
 centered = false
@@ -32,7 +36,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 300, 8 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
-[node name="AnimationPlayer" parent="." index="0"]
+[node name="AnimationPlayer" parent="Sprite" index="0"]
 
 anims/default = SubResource( 1 )
 

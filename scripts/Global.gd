@@ -14,6 +14,10 @@ const Y_ZOOM = 1
 const Z_INDEX_UNIT = 2
 const PLAYER_SUM = 8
 
+const MAP_LAYER_GROUND = 0
+const MAP_LAYER_UNIT = 1
+const MAP_LAYER_FRONT = 2
+
 var FACE_DIRECTION = {
     "east": 0,
     "south_east": 1,

@@ -8,7 +8,7 @@
 
 icon = ExtResource( 2 )
 ability_name = "Nuke"
-time_use = 5.0
+time_use = 3.0
 cast_frame = 1
 can_fire = 1.0
 effect = ExtResource( 3 )

@@ -24,6 +24,10 @@ tracks/0/keys = {
 
 [node name="ModelMarineRay" instance=ExtResource( 1 )]
 
+free_after_finished = true
+
+[node name="Sprite" parent="." index="0"]
+
 modulate = Color( 1, 1, 0.607843, 1 )
 texture = ExtResource( 2 )
 centered = false
@@ -31,7 +35,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 300, 1 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
-[node name="AnimationPlayer" parent="." index="0"]
+[node name="AnimationPlayer" parent="Sprite" index="0"]
 
 anims/default = SubResource( 1 )
 

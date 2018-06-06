@@ -65,7 +65,8 @@ func create_animated_model(model_scene, parent_node, pos = null):
 # model: [Model.tscn]
 # at_location: [TARGET_DATA_TYPE]
 # at_muzzle: [bool]是否附着在单位炮口
-func add_model_at_location(effect_tree_node, model_type, at_location, at_muzzle = false):
+# at_layer: [int]所添加的层，0为地面层，1为单位和装饰物层，2为前景层
+func add_model_at_location(effect_tree_node, model_type, at_location, at_muzzle = false, at_layer = 2):
 	var new_model = null
 	if Global.is_target_data_unit(at_location):
 		# 如果目标数据类型是单位
@@ -85,15 +86,22 @@ func add_model_at_location(effect_tree_node, model_type, at_location, at_muzzle 
 	else:
 		# 如果目标数据类型是点
 		var target_data = effect_tree_node.get_pos_by_target_data_type(at_location)
+		var add_layer = null
+		if at_layer == Global.MAP_LAYER_FRONT:
+			add_layer = MapManager.get_layer_front()
+		elif at_layer == Global.MAP_LAYER_UNIT:
+			add_layer = MapManager.get_layer_unit()
+		elif at_layer == Global.MAP_LAYER_GROUND:
+			add_layer = MapManager.get_layer_ground()
 		if typeof(target_data) == TYPE_ARRAY:
 			new_model = []
 			for pos in target_data:
-				var model = create_animated_model(model_type, MapManager.get_layer_front())
+				var model = create_animated_model(model_type, add_layer)
 				if model != null:
 					model.set_position(pos)
 					new_model.append(model)
 		else:
-			new_model = create_animated_model(model_type, MapManager.get_layer_front())
+			new_model = create_animated_model(model_type, add_layer)
 			if new_model != null:
 				new_model.set_position(target_data)
 	return new_model

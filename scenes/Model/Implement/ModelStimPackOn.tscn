@@ -24,13 +24,16 @@ tracks/0/keys = {
 
 [node name="ModelStimPackOn" instance=ExtResource( 1 )]
 
+free_after_finished = true
+
+[node name="Sprite" parent="." index="0"]
+
 self_modulate = Color( 0.588235, 1, 0.392157, 1 )
 texture = ExtResource( 2 )
 offset = Vector2( 0, -100 )
 _sections_unfolded = [ "Offset", "Visibility" ]
-free_after_finished = true
 
-[node name="AnimationPlayer" parent="." index="0"]
+[node name="AnimationPlayer" parent="Sprite" index="0"]
 
 anims/default = SubResource( 1 )
 

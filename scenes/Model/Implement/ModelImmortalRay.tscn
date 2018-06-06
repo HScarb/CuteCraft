@@ -16,13 +16,17 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.01, 0.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ Color( 0.588235, 0.784314, 1, 1 ), Color( 0.392157, 1, 1, 1 ), Color( 0.392157, 1, 1, 0 ) ]
+"values": [  ]
 }
 
 [node name="ModelImmortalRay" instance=ExtResource( 1 )]
+
+free_after_finished = true
+
+[node name="Sprite" parent="." index="0"]
 
 modulate = Color( 0.392157, 1, 1, 1 )
 position = Vector2( 0, -1.5 )
@@ -32,7 +36,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 300, 3 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
-[node name="AnimationPlayer" parent="." index="0"]
+[node name="AnimationPlayer" parent="Sprite" index="0"]
 
 anims/default = SubResource( 1 )
 

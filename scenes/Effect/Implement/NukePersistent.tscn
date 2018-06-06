@@ -5,7 +5,7 @@
 
 [node name="NukePersistent" instance=ExtResource( 1 )]
 
-expire_delay = 5.0
+expire_delay = 3.0
 final_effect = ExtResource( 2 )
 
 

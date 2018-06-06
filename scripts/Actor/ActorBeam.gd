@@ -33,9 +33,9 @@ func create_beam(effect_tree_node):
     # 建立光束模型
     var new_model = model.instance()
     # 调整模型光束
-    new_model.set_region_rect(Rect2(0, 0, start_pos.distance_to(end_pos), beam_width))
-    new_model.set_rotation(end_pos.angle_to_point(start_pos))
-    new_model.set_position(start_pos)
+    new_model.sprite.set_region_rect(Rect2(0, 0, start_pos.distance_to(end_pos), beam_width))
+    new_model.sprite.set_rotation(end_pos.angle_to_point(start_pos))
+    new_model.sprite.set_position(start_pos)
     MapManager.get_layer_front().add_child(new_model)
     new_model.play_animation()
     

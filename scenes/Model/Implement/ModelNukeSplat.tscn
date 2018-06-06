@@ -16,21 +16,24 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 1.1, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1.1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="ModelNukeSplat" index="0" instance=ExtResource( 1 )]
+[node name="ModelNukeSplat" instance=ExtResource( 1 )]
 
-self_modulate = Color( 1, 1, 1, 0.5 )
+free_after_finished = true
+
+[node name="Sprite" parent="." index="0"]
+
+self_modulate = Color( 1, 1, 1, 0 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
-free_after_finished = true
 
-[node name="AnimationPlayer" parent="." index="0"]
+[node name="AnimationPlayer" parent="Sprite" index="0"]
 
 anims/default = SubResource( 1 )
 

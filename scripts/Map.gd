@@ -9,6 +9,7 @@ func _ready():
 	MapManager.set_map(self)
 	MapManager.set_layer_unit($doodle)
 	MapManager.set_layer_front($FrontLayer)
+	MapManager.set_layer_ground($ground)
 	MapManager.set_hero_spawn_point($doodle/HeroSpawnPoint.position)
 	# 将地图上已经摆放的单位添加到单位管理器中
 	for unit in $doodle.get_children():
