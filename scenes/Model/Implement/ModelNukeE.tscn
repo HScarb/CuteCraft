@@ -17,9 +17,9 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
+"transitions": PoolRealArray( 0.25, 1 ),
 "update": 0,
-"values": [ Vector2( 0.4, 0.4 ), Vector2( 0.5, 0.5 ) ]
+"values": [ Vector2( 0.3, 0.3 ), Vector2( 0.35, 0.35 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:self_modulate")
@@ -29,9 +29,9 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
+"transitions": PoolRealArray( 0.25, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ) ]
 }
 
 [node name="ModelNukeE" index="0" instance=ExtResource( 1 )]
@@ -41,8 +41,9 @@ free_after_finished = true
 
 [node name="Sprite" parent="." index="0"]
 
-position = Vector2( 0, -150 )
-scale = Vector2( 0.4, 0.4 )
+self_modulate = Color( 1, 1, 1, 0.392157 )
+position = Vector2( 0, -60 )
+scale = Vector2( 0.35, 0.35 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
