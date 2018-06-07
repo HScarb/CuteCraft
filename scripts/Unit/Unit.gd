@@ -172,15 +172,14 @@ func _refresh_face_direction():
 		self.face_direction = Global.FACE_DIRECTION.south
 	elif self.face_angle >= PI / 8 * 5 and self.face_angle <= PI / 8 * 7:
 		self.face_direction = Global.FACE_DIRECTION.south_west
-	elif (self.face_angle >= PI / 8 * 7 and self.face_angle <= PI)\
-		or (self.face_angle <= - PI / 8 * 7 and self.face_angle >= - PI * 2):
-		self.face_direction = Global.FACE_DIRECTION.west
 	elif self.face_angle <= - PI / 8 * 5 and self.face_angle >= - PI / 8 * 7:
 		self.face_direction = Global.FACE_DIRECTION.north_west
 	elif self.face_angle <= - PI / 8 * 3 and self.face_angle >= - PI / 8 * 5:
 		self.face_direction = Global.FACE_DIRECTION.north
 	elif self.face_angle <= - PI / 8 * 1 and self.face_angle >= - PI / 8 * 3:
 		self.face_direction = Global.FACE_DIRECTION.north_east
+	elif self.face_angle >= PI / 8 * 7 or self.face_angle <= - PI / 8 * 7:
+		self.face_direction = Global.FACE_DIRECTION.west
 
 func stand():
 	if is_casting:
