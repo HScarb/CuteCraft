@@ -8,7 +8,7 @@
 period = 1.5
 weapon_name = "粒子碎裂枪"
 shoot_range = 300.0
-damage_frame = 3
+damage_frame = 2
 effect_scene = ExtResource( 2 )
 muzzle_index = 0
 

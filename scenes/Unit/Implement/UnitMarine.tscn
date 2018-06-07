@@ -19,7 +19,7 @@ life = 45.0
 life_max = 45.0
 enegy = 0.0
 enegy_max = 0.0
-speed = 50.0
+speed = 225.0
 scan_radius = 500.0
 
 [node name="BodyShape" parent="BodyArea" index="0"]

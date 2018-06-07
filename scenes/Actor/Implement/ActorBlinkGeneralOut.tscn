@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Actor/ActorModel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Model/Implement/ModelWarpPrismPickdown.tscn" type="PackedScene" id=2]
+
+[node name="ActorBlinkGeneralOut" instance=ExtResource( 1 )]
+
+check_type_name = "BlinkGeneralTeleport"
+model = ExtResource( 2 )
+
+

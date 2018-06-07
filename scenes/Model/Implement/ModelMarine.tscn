@@ -65,15 +65,15 @@ margin_left = -60.0
 margin_top = -83.0
 margin_right = 81.0
 margin_bottom = -75.0
-rect_scale = Vector2( 0.4, 0.4 )
+rect_scale = Vector2( 0.4, 0.6 )
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Textures" ]
 
 [node name="EnegyBar" parent="." index="3"]
 
 margin_left = -60.0
-margin_top = -79.0
+margin_top = -78.0
 margin_right = 81.0
-margin_bottom = -71.0
-rect_scale = Vector2( 0.4, 0.4 )
+margin_bottom = -70.0
+rect_scale = Vector2( 0.4, 0.6 )
 
 

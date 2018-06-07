@@ -5,8 +5,6 @@
 
 [node name="ModelMarineImpact" index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 0, 0 )
-_sections_unfolded = [ "Transform" ]
 free_after_finished = true
 scale_factor = 0.2
 

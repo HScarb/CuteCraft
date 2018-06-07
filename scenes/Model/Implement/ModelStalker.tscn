@@ -15,6 +15,7 @@ position = Vector2( 0, -40 )
 scale = Vector2( 0.6, 0.6 )
 frames = ExtResource( 3 )
 animation = "attack_7"
+frame = 2
 
 [node name="Muzzles" parent="." index="1"]
 

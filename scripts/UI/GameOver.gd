@@ -1,0 +1,3 @@
+# GameOver.gd
+extends CanvasLayer
+

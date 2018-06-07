@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Effect/EffectTeleport.tscn" type="PackedScene" id=1]
+
+[node name="BlinkGeneralTeleport" instance=ExtResource( 1 )]
+
+source_location = 5
+source_effect = null
+unit_location = 5
+unit_effect = null
+target_location = 6
+target_effect = null
+teleport_range = 500.0
+
+
