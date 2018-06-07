@@ -10,7 +10,7 @@ custom_solver_bias = 0.0
 radius = 24.0
 height = 40.0
 
-[node name="UnitZealot" instance=ExtResource( 1 )]
+[node name="UnitZealot" index="0" instance=ExtResource( 1 )]
 
 icon = ExtResource( 2 )
 player = 5
@@ -20,7 +20,7 @@ enegy = 0.0
 enegy_max = 0.0
 radius = 18.0
 speed = 225.0
-attack_radius = 80.0
+attack_radius = 50.0
 scan_radius = 500.0
 
 [node name="BodyShape" parent="BodyArea" index="0"]

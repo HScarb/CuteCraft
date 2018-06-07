@@ -18,7 +18,7 @@ life_max = 135.0
 enegy = 0.0
 enegy_max = 0.0
 radius = 25.0
-speed = 225.0
+speed = 250.0
 
 [node name="FSM2D" parent="." index="0"]
 

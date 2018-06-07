@@ -14,8 +14,12 @@ height = 50.0
 
 is_main_character = true
 icon = ExtResource( 2 )
+life = 135.0
+life_max = 135.0
+enegy = 0.0
+enegy_max = 0.0
 radius = 25.0
-speed = 225.0
+speed = 250.0
 
 [node name="FSM2D" parent="." index="0"]
 
@@ -90,7 +94,7 @@ position = Vector2( 0, -50 )
 
 shape = SubResource( 1 )
 
-[node name="WeaponRoach" parent="." index="4" instance=ExtResource( 3 )]
+[node name="WeaponRoach" parent="Weapons" index="0" instance=ExtResource( 3 )]
 
 weapon_name = "Acid Saliva"
 muzzle_index = 0
