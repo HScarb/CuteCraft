@@ -266,6 +266,9 @@ func cost_enegy(amount):
 func remove_collision():
 	$GroundShape.disabled = true
 	$BodyArea/BodyShape.disabled = true
+	# *** 隐藏血条
+	self.model.get_node("LifeBar").visible = false
+	self.model.get_node("EnegyBar").visible = false
 
 # 单位死亡调用
 func die():

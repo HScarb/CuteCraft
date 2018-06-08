@@ -1,3 +1,3 @@
 # GameOver.gd
-extends CanvasLayer
+extends ColorRect
 

@@ -6,8 +6,9 @@
 [node name="WeaponZergling" instance=ExtResource( 1 )]
 
 weapon_name = "Claw"
-shoot_range = 25.0
+shoot_range = 35.0
 damage_frame = 2
 effect_scene = ExtResource( 2 )
+muzzle_index = 0
 
 

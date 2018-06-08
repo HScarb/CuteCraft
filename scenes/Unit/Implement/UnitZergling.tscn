@@ -10,7 +10,7 @@ custom_solver_bias = 0.0
 radius = 24.0
 height = 24.0
 
-[node name="UnitZergling" index="0" instance=ExtResource( 1 )]
+[node name="UnitZergling" instance=ExtResource( 1 )]
 
 icon = ExtResource( 2 )
 life = 30.0
@@ -26,7 +26,5 @@ attack_radius = 40.0
 shape = SubResource( 1 )
 
 [node name="WeaponZergling" parent="Weapons" index="0" instance=ExtResource( 3 )]
-
-muzzle_index = 0
 
 

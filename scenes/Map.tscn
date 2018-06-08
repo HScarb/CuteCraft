@@ -107,7 +107,7 @@ _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="HeroSpawnPoint" type="Position2D" parent="doodle" index="0"]
 
-position = Vector2( 800, 910 )
+position = Vector2( 10982.6, -419.749 )
 
 [node name="Doodle" parent="doodle" index="1" instance=ExtResource( 3 )]
 
@@ -840,7 +840,7 @@ player = 5
 
 [node name="UnitGhost2" parent="doodle" index="148" instance=ExtResource( 51 )]
 
-position = Vector2( 10410, -760 )
+position = Vector2( 10032.5, -1060.54 )
 player = 5
 
 [node name="UnitGhost3" parent="doodle" index="149" instance=ExtResource( 51 )]
@@ -928,102 +928,112 @@ player = 5
 position = Vector2( 12063, -247.377 )
 player = 5
 
-[node name="UnitBaneling4" parent="doodle" index="166" instance=ExtResource( 53 )]
+[node name="UnitBaneling12" parent="doodle" index="166" instance=ExtResource( 53 )]
+
+position = Vector2( 12362.1, -521.415 )
+player = 5
+
+[node name="UnitBaneling13" parent="doodle" index="167" instance=ExtResource( 53 )]
+
+position = Vector2( 12435.5, -436.502 )
+player = 5
+
+[node name="UnitBaneling4" parent="doodle" index="168" instance=ExtResource( 53 )]
 
 position = Vector2( 11689.3, 517.218 )
 player = 5
 
-[node name="UnitBaneling5" parent="doodle" index="167" instance=ExtResource( 53 )]
+[node name="UnitBaneling5" parent="doodle" index="169" instance=ExtResource( 53 )]
 
 position = Vector2( 12666.6, 959.879 )
 player = 5
 
-[node name="UnitBaneling6" parent="doodle" index="168" instance=ExtResource( 53 )]
+[node name="UnitBaneling6" parent="doodle" index="170" instance=ExtResource( 53 )]
 
 position = Vector2( 11942.2, 1845.2 )
 player = 5
 
-[node name="UnitBaneling7" parent="doodle" index="169" instance=ExtResource( 53 )]
+[node name="UnitBaneling7" parent="doodle" index="171" instance=ExtResource( 53 )]
 
 position = Vector2( 12025.6, 1879.69 )
 player = 5
 
-[node name="UnitBaneling8" parent="doodle" index="170" instance=ExtResource( 53 )]
+[node name="UnitBaneling8" parent="doodle" index="172" instance=ExtResource( 53 )]
 
 position = Vector2( 13129.3, 2326.44 )
 player = 5
 
-[node name="UnitBaneling9" parent="doodle" index="171" instance=ExtResource( 53 )]
+[node name="UnitBaneling9" parent="doodle" index="173" instance=ExtResource( 53 )]
 
 position = Vector2( 13091.8, 2221.32 )
 player = 5
 
-[node name="UnitBaneling10" parent="doodle" index="172" instance=ExtResource( 53 )]
+[node name="UnitBaneling10" parent="doodle" index="174" instance=ExtResource( 53 )]
 
 position = Vector2( 14214.3, 1890.96 )
 player = 5
 
-[node name="UnitBaneling11" parent="doodle" index="173" instance=ExtResource( 53 )]
+[node name="UnitBaneling11" parent="doodle" index="175" instance=ExtResource( 53 )]
 
 position = Vector2( 14090.4, 1924.74 )
 player = 5
 
-[node name="UnitRoach" parent="doodle" index="174" instance=ExtResource( 54 )]
+[node name="UnitRoach" parent="doodle" index="176" instance=ExtResource( 54 )]
 
 position = Vector2( 13298.7, 1127.47 )
 player = 5
 
-[node name="UnitRoach2" parent="doodle" index="175" instance=ExtResource( 54 )]
+[node name="UnitRoach2" parent="doodle" index="177" instance=ExtResource( 54 )]
 
 position = Vector2( 10967.3, 1326.44 )
 player = 5
 
-[node name="UnitRoach3" parent="doodle" index="176" instance=ExtResource( 54 )]
+[node name="UnitRoach3" parent="doodle" index="178" instance=ExtResource( 54 )]
 
 position = Vector2( 13264.9, -257.816 )
 player = 5
 
-[node name="UnitRoach4" parent="doodle" index="177" instance=ExtResource( 54 )]
+[node name="UnitRoach4" parent="doodle" index="179" instance=ExtResource( 54 )]
 
 position = Vector2( 12277.6, 233.98 )
 player = 5
 
-[node name="UnitRoach5" parent="doodle" index="178" instance=ExtResource( 54 )]
+[node name="UnitRoach5" parent="doodle" index="180" instance=ExtResource( 54 )]
 
 position = Vector2( 13707.9, 1713.12 )
 player = 5
 
-[node name="UnitRoach6" parent="doodle" index="179" instance=ExtResource( 54 )]
+[node name="UnitRoach6" parent="doodle" index="181" instance=ExtResource( 54 )]
 
 position = Vector2( 14308.6, 1067.41 )
 player = 5
 
-[node name="UnitRoach7" parent="doodle" index="180" instance=ExtResource( 54 )]
+[node name="UnitRoach7" parent="doodle" index="182" instance=ExtResource( 54 )]
 
 position = Vector2( 15194.5, 1014.85 )
 player = 5
 
-[node name="UnitRoach8" parent="doodle" index="181" instance=ExtResource( 54 )]
+[node name="UnitRoach8" parent="doodle" index="183" instance=ExtResource( 54 )]
 
 position = Vector2( 13197.3, 2621.63 )
 player = 5
 
-[node name="UnitRoach9" parent="doodle" index="182" instance=ExtResource( 54 )]
+[node name="UnitRoach9" parent="doodle" index="184" instance=ExtResource( 54 )]
 
 position = Vector2( 14518.8, 2310.04 )
 player = 5
 
-[node name="UnitRoach10" parent="doodle" index="183" instance=ExtResource( 54 )]
+[node name="UnitRoach10" parent="doodle" index="185" instance=ExtResource( 54 )]
 
 position = Vector2( 15825.2, 1776.94 )
 player = 5
 
-[node name="UnitUltralisk" parent="doodle" index="184" instance=ExtResource( 55 )]
+[node name="UnitUltralisk" parent="doodle" index="186" instance=ExtResource( 55 )]
 
 position = Vector2( 14163.1, 2627.63 )
 player = 5
 
-[node name="UnitUltralisk2" parent="doodle" index="185" instance=ExtResource( 55 )]
+[node name="UnitUltralisk2" parent="doodle" index="187" instance=ExtResource( 55 )]
 
 position = Vector2( 15591.8, 2055.14 )
 player = 5
