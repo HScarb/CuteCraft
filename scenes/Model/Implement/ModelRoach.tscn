@@ -7,7 +7,7 @@
 [node name="ModelRoach" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+scale_factor = 0.6
 
 [node name="AnimatedSprite" parent="." index="0"]
 
@@ -63,18 +63,18 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="LifeBar" parent="." index="2"]
 
-margin_left = -75.0
-margin_top = -142.0
-margin_right = 66.0
-margin_bottom = -134.0
-rect_scale = Vector2( 0.6, 0.6 )
+margin_left = -74.0
+margin_top = -148.0
+margin_right = 67.0
+margin_bottom = -140.0
+rect_scale = Vector2( 0.6, 0.8 )
 
 [node name="EnegyBar" parent="." index="3"]
 
-margin_left = -75.0
-margin_top = -137.0
-margin_right = 66.0
-margin_bottom = -129.0
-rect_scale = Vector2( 0.6, 0.6 )
+margin_left = -74.0
+margin_top = -141.0
+margin_right = 67.0
+margin_bottom = -133.0
+rect_scale = Vector2( 0.6, 0.8 )
 
 

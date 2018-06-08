@@ -52,7 +52,6 @@ func run():
     yield(area.get_tree(), "physics_frame")
     var overlapping_areas = area.get_overlapping_areas()
     print("Area searched area: ", overlapping_areas)
-    print(launch_unit)
     for area in overlapping_areas:
         if area == launch_unit.get_node("BodyArea") and not include_self:
             continue

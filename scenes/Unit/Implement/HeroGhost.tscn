@@ -22,10 +22,10 @@ stand_after_attack = false
 icon = ExtResource( 2 )
 life = 150.0
 life_max = 150.0
-life_recover = 4.0
+life_recover = 6.0
 enegy = 100.0
 enegy_max = 100.0
-enegy_recover = 3.0
+enegy_recover = 4.0
 speed = 315.0
 scan_radius = 500.0
 
