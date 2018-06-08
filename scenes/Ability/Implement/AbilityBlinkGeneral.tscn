@@ -8,6 +8,7 @@
 
 icon = ExtResource( 2 )
 ability_name = "Blink"
+cost_enegy = 25.0
 time_use = 5.0
 cast_frame = 2
 effect = ExtResource( 3 )

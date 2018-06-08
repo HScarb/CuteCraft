@@ -8,6 +8,7 @@
 
 icon = ExtResource( 2 )
 ability_name = "EMP"
+cost_enegy = 25.0
 cast_frame = 1
 effect = ExtResource( 3 )
 

@@ -43,10 +43,11 @@ func run(muzzle_index = 0):
     var collision_pos = null
     raycast.force_raycast_update()
     if raycast.is_colliding():
-        # 获取碰撞单位
-        target = raycast.get_collider()     # BodyArea
-        target = target.get_parent()        # Unit
-        collision_pos = raycast.get_collision_point()
+        if not raycast.get_collider().get_node("BodyShape").disabled:
+            # 获取碰撞单位
+            target = raycast.get_collider()     # BodyArea
+            target = target.get_parent()        # Unit
+            collision_pos = raycast.get_collision_point()
     # 运行轰击效果
     var effect_impact = null
     if impact_effect != null:

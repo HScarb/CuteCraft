@@ -15,16 +15,17 @@ custom_solver_bias = 0.0
 radius = 30.0
 height = 34.0
 
-[node name="HeroGhost" index="0" instance=ExtResource( 1 )]
+[node name="HeroGhost" instance=ExtResource( 1 )]
 
 is_main_character = true
 stand_after_attack = false
 icon = ExtResource( 2 )
 life = 150.0
 life_max = 150.0
-life_recover = 2.0
-enegy = 0.0
-enegy_max = 0.0
+life_recover = 4.0
+enegy = 100.0
+enegy_max = 100.0
+enegy_recover = 3.0
 speed = 315.0
 scan_radius = 500.0
 
@@ -115,6 +116,8 @@ cast_frame = 0
 [node name="AbilityBlinkGeneral" parent="Abilities" index="2" instance=ExtResource( 5 )]
 
 [node name="AbilityNuke" parent="Abilities" index="3" instance=ExtResource( 6 )]
+
+cost_enegy = 50.0
 
 [node name="BehaviorHero" parent="Behaviors" index="0" instance=ExtResource( 7 )]
 

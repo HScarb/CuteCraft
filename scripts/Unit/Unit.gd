@@ -262,9 +262,15 @@ func cost_enegy(amount):
 	self.emit_signal("life_enegy_change")
 	return true
 
+# 单位死亡时调用，防止单位播放死亡动画时候仍进行碰撞
+func remove_collision():
+	$GroundShape.disabled = true
+	$BodyArea/BodyShape.disabled = true
+
 # 单位死亡调用
 func die():
 	self.is_dead = true
+	remove_collision()
 	pass
 
 # 死亡动画播放完成调用

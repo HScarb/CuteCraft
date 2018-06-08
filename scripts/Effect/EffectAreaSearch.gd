@@ -56,6 +56,8 @@ func run():
     for area in overlapping_areas:
         if area == launch_unit.get_node("BodyArea") and not include_self:
             continue
+        if area.get_node("BodyShape").disabled:
+            continue
         arr_search_unit.append(area.get_parent())
     print("arr_search_unit: ", arr_search_unit)
     # 运行子效果
