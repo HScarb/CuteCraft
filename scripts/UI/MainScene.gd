@@ -3,7 +3,14 @@
 extends Node
 
 func _ready():
-	LayerManager.set_layer_hud($HUD)
-	LayerManager.set_layer_hero_select($HeroSelect)
-	LayerManager.set_layer_gameover($GameOver)
-	LayerManager.get_layer_gameover().set_visible(false)
+	init()
+
+func init():
+	LayerManager.set_hud($HUD)
+	$HUD.init()
+	SignalManager.connect("game_restart", self, "game_restart")
+
+func game_restart():
+	$HUD.layer_gameover.visible = false
+	$HUD.layer_bottom.init()
+	$HUD.layer_hero_select.visible = true

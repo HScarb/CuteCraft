@@ -1,17 +1,22 @@
 # HeroSelect.gd
 # 英雄选择界面
-extends CanvasLayer
+extends CenterContainer
 
 var class_button_hero = preload("res://scenes/UI/ButtonUnit.tscn")
 
 var arr_hero = []
 
 func _ready():
+    # init()
+    pass
+
+func init():
     auto_add_heros()
     for hero in arr_hero:
         var button_hero = class_button_hero.instance()
         button_hero.init_with_unit(hero)
-        $CenterContainer/GridContainer.add_child(button_hero)
+        $GridContainer.add_child(button_hero)
+    set_visible(true)
 
 func add_unit_by_name(unit_file_name):
     arr_hero.append(load("%s%s" % [Global.UNIT_DIR, unit_file_name]))
@@ -23,7 +28,7 @@ func auto_add_heros():
     if dir.open(path) == OK:
         dir.list_dir_begin()
         var file_name = dir.get_next()
-        while(file_name != ""):
+        while file_name != "":
             print(file_name)
             if dir.current_is_dir():
                 pass

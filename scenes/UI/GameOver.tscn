@@ -69,4 +69,6 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
+[connection signal="pressed" from="ButtonRestart" to="." method="_on_ButtonRestart_pressed"]
+
 

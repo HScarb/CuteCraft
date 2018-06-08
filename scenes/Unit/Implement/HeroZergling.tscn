@@ -10,12 +10,17 @@ custom_solver_bias = 0.0
 radius = 24.0
 height = 24.0
 
-[node name="HeroZergling" index="0" instance=ExtResource( 1 )]
+[node name="HeroZergling" instance=ExtResource( 1 )]
 
 is_main_character = true
 icon = ExtResource( 2 )
+life = 60.0
+life_max = 60.0
+life_recover = 10.0
+enegy = 0.0
+enegy_max = 0.0
 radius = 18.0
-speed = 300.0
+speed = 380.0
 
 [node name="FSM2D" parent="." index="0"]
 
@@ -26,7 +31,5 @@ editor/display_folded = true
 shape = SubResource( 1 )
 
 [node name="WeaponZergling" parent="Weapons" index="0" instance=ExtResource( 3 )]
-
-muzzle_index = 0
 
 

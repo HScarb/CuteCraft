@@ -279,6 +279,8 @@ func die():
 # 死亡动画播放完成调用
 func dead():
 	UnitManager.remove_unit(self)
+	if is_main_character:
+		SignalManager.emit_signal("game_over")
 	self.queue_free()
 
 ###### 武器技能和行为操作 ######
