@@ -13,4 +13,5 @@ func init():
 func game_restart():
 	$HUD.layer_gameover.visible = false
 	$HUD.layer_bottom.init()
+	UnitManager.reset()
 	$HUD.layer_hero_select.visible = true

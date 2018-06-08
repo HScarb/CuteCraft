@@ -2,13 +2,43 @@
 # 单位管理器，储存并管理地图中所有单位
 extends Node
 
+var class_unit = load("res://scripts/Unit/Unit.gd")
+
 var arr_unit = []
 var arr_tracing = []                                # 地图上正在寻路的单位
 var main_character = null setget set_main_character, get_main_character
+var arr_init_unit_info = []
 
 func init():
     arr_unit.clear()
     arr_tracing.clear()
+
+# 将节点的子单位全部加入到单位列表
+func add_all_units_in_node(node):
+    for unit in node.get_children():
+        if unit is class_unit:
+            add_unit(unit)
+            if unit.is_main_character:
+                set_main_character(unit)
+
+# 根据地图上摆放的单位记录单位类型和位置
+# info : {"pos": Vector2, "type": String}
+func record_init_unit_info():
+    for unit in arr_unit:
+        if not unit.is_main_character:
+            var info = {}
+            info.pos = unit.position
+            info.type = Global.get_node_name(unit)
+            arr_init_unit_info.append(info)
+
+# 摧毁所有单位，根据记录刷新怪物单位
+func reset():
+    for unit in arr_unit:
+        unit.queue_free()
+    init()
+    for info in arr_init_unit_info:
+        var unit = create_unit(info.type, info.pos)
+        unit.player = 5    # *** 临时处理
 
 # 根据单位类型创建单位
 # type:[PackedScene] 单位类型，为Scene
@@ -19,6 +49,7 @@ func create_unit_by_type(type, pos):
     var unit = type.instance()
     unit.set_position(pos)
     MapManager.get_layer_unit().add_child(unit)
+    add_unit(unit)
     return unit
 
 # 根据单位类型的名称创建单位
@@ -27,7 +58,7 @@ func create_unit_by_type(type, pos):
 func create_unit(type_name, pos):
     if type_name == null:
         return null
-    var unit_path = "res://scenes/Unit/%s.tscn" % type_name
+    var unit_path = Global.UNIT_DIR + "%s.tscn" % type_name
     var unit_type = load(unit_path)
     return create_unit_by_type(unit_type, pos)
 

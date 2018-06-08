@@ -12,11 +12,8 @@ func _ready():
 	MapManager.set_layer_ground($ground)
 	MapManager.set_hero_spawn_point($doodle/HeroSpawnPoint.position)
 	# 将地图上已经摆放的单位添加到单位管理器中
-	for unit in $doodle.get_children():
-		if unit is load("res://scripts/Unit/Unit.gd"):
-			UnitManager.add_unit(unit)
-			if unit.is_main_character:
-				UnitManager.set_main_character(unit)
+	UnitManager.add_all_units_in_node($doodle)
+	UnitManager.record_init_unit_info()
 	set_process(true)
 
 func _input(event):
