@@ -63,18 +63,18 @@ _sections_unfolded = [ "Transform" ]
 [node name="LifeBar" parent="." index="2"]
 
 margin_left = -61.0
-margin_top = -109.0
+margin_top = -123.0
 margin_right = 80.0
-margin_bottom = -101.0
-rect_scale = Vector2( 0.4, 0.4 )
+margin_bottom = -115.0
+rect_scale = Vector2( 0.4, 0.8 )
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Textures" ]
 
 [node name="EnegyBar" parent="." index="3"]
 
 margin_left = -61.0
-margin_top = -105.0
+margin_top = -117.0
 margin_right = 80.0
-margin_bottom = -97.0
-rect_scale = Vector2( 0.4, 0.4 )
+margin_bottom = -109.0
+rect_scale = Vector2( 0.4, 0.8 )
 
 
