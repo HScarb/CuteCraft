@@ -4,7 +4,7 @@ extends "res://scripts/Effect/EffectTreeNode.gd"
 
 export(Texture) var icon = null                         # 图标
 export(int, "positive", "negetive") var alignment = 0   # 对齐
-export(float) var duration = 0                          # 持续时间
+export(float) var duration = 0                          # 持续时间，-1为永久行为
 export(float) var period = 0                            # 周期
 export(int) var period_count = -1                       # 周期计数，-1为无限循环
 export(int) var maximum_stack_count = 1                 # 最大叠加层数
@@ -89,8 +89,10 @@ func on_add():
     print("behavior on")
     SignalManager.emit_signal("behavior_on", self)
     # 启动计时器
-    $TimerPeriodic.start()
-    $TimerExpire.start()
+    if period > 0:
+        $TimerPeriodic.start()
+    if duration > 0:
+        $TimerExpire.start()
 
 # 移除行为时操作
 func on_remove():
