@@ -11,8 +11,8 @@ var impact_location = 7
 func run():
 	.run()
 	var damage_amount = amount
-	if origin_unit != null:
-		damage_amount += origin_unit.get_attr_value("damage")
+	#if origin_unit != null:
+	#	damage_amount += origin_unit.get_attr_value("damage")
 	if target_unit != null and not target_unit.empty():
 		for unit in target_unit:
 			unit.take_damage(damage_amount)
